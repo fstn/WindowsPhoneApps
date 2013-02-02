@@ -1,0 +1,30 @@
+﻿<Application 
+    x:Class="Library.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"       
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:vms="clr-namespace:Library.ViewModel"
+    xmlns:mgr="clr-namespace:Library.Manager"
+    xmlns:local="clr-namespace:Library"
+    xmlns:ress="clr-namespace:Library.Ress"
+    >
+
+    <!--Application Resources-->
+    <Application.Resources>
+        <!--x key= key pour retoruver la propriété statique-->
+        <vms:ViewModelLocator x:Key="Locator"/>
+        <ress:ResourceWrapper x:Key="LocalizedStrings"/>
+        <mgr:DatabindingDebugConverter x:Key="DatabindingDebugConverter"/>
+    </Application.Resources>
+    
+
+
+    <Application.ApplicationLifetimeObjects>
+        <!--Required object that handles lifetime events for the application-->
+        <shell:PhoneApplicationService 
+            Launching="Application_Launching" Closing="Application_Closing" 
+            Activated="Application_Activated" Deactivated="Application_Deactivated"/>
+    </Application.ApplicationLifetimeObjects>
+
+</Application>

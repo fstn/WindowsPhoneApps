@@ -1,0 +1,93 @@
+﻿<phone:PhoneApplicationPage
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:tookit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+    x:Class="Library.AddBook"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True" DataContext="{Binding AddBookViewModel, Source={StaticResource Locator}}">
+
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton Click="Home_Click" IconUri="/img/appbar.home.png" Text="Home"/>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+
+
+	<i:Interaction.Triggers>
+		<i:EventTrigger>
+			<i:InvokeCommandAction Command="{Binding ViewLoadedCommand}"/>
+		</i:EventTrigger>
+	</i:Interaction.Triggers>
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Text="{Binding ResourceGetter.Title,Source={StaticResource LocalizedStrings}}" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock Text="Ajouter un livre" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}" FontSize="48"/>
+        </StackPanel>
+        
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="10,10,14,-10">
+
+            <Rectangle HorizontalAlignment="Left" Height="498" Margin="18,0,0,0" VerticalAlignment="Top" Width="428" Canvas.ZIndex="-1000" >
+                <Rectangle.Fill>
+                    <SolidColorBrush Color="{StaticResource PhoneAccentColor}"/>
+                </Rectangle.Fill>
+            </Rectangle>
+
+
+            <TextBlock Text="ISBN" 
+                       TextAlignment="Center" 
+                       Foreground="White" 
+                       FontSize="24" 
+                       Style="{StaticResource PhoneTextTitle1Style}"/>
+            <TextBox x:Name="ISBN2"
+                     Text="{Binding ISBN,Mode=TwoWay}" 
+                     Background="{StaticResource PhoneTextBoxBrush}" 
+                     Margin="43,32,28,463"
+                     Height="72"
+                     />
+            <TextBlock Text="Title" 
+                       Margin="10,118,14,402" 
+                       TextAlignment="Center" 
+                       Foreground="White" 
+                       FontSize="24" 
+                       Style="{StaticResource PhoneTextTitle1Style}"/>
+            <TextBox x:Name="Title" 
+                     Text="{Binding Title,Mode=TwoWay}"                      
+                     Margin="43,156,28,0" 
+                     TextWrapping="Wrap" VerticalAlignment="Top"/>
+            <TextBlock Text="Author" 
+                       Margin="14,233,10,293"
+                       TextAlignment="Center" 
+                       Foreground="White"
+                       FontSize="24" 
+                       Style="{StaticResource PhoneTextTitle1Style}"/>
+            <TextBox x:Name="Author" 
+                     Text="{Binding Author,Mode=TwoWay}" 
+                     HorizontalAlignment="Left" 
+                     Margin="43,274,0,0" 
+                     TextWrapping="Wrap" 
+                     VerticalAlignment="Top" Width="385" 
+                     />
+            <Button Content="Ajouter" HorizontalAlignment="Left" Margin="69,381,0,0" VerticalAlignment="Top" Width="329" Background="#FF323232" Command="{Binding AddBook}"/>
+
+        </Grid>
+    </Grid>
+
+
+</phone:PhoneApplicationPage>

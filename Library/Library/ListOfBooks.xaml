@@ -1,0 +1,81 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="Library.MainPage"
+    x:Name="window"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    shell:SystemTray.IsVisible="True">
+    <phone:PhoneApplicationPage.DataContext>
+        <Binding Path="ListOfBooksViewModel" Source="{StaticResource Locator}"/>
+    </phone:PhoneApplicationPage.DataContext>
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel x:Name="defaut" Margin="10,0,0,0" Grid.Row="1">
+            <ListBox  ItemsSource="{Binding LstBooks}" SelectedItem="{Binding SelectedBook, Mode=TwoWay}" Height="593" >
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Width="453" Height="215">
+                            <Rectangle Width="453" Margin="10,10,-10,0" Fill="{StaticResource PhoneLightAccentBrush}" />
+                            <TextBlock Text="{Binding ISBN}" Margin="22,10,143,95"  Style="{StaticResource PhoneTextTitle1Style}"  />
+                            <TextBlock Text="{Binding Title}" Margin="22,111,143,34"  Style="{StaticResource PhoneTextTitle2Style}" />
+                            <TextBlock Text="{Binding Author}" Margin="22,160,143,0" Height="44" VerticalAlignment="Top"  Style="{StaticResource PhoneTextTitle3Style}"  />
+                            <Button  Margin="377,128,0,11" 
+        						Command="{Binding ListOfBooksViewModel.ShowEditBook, Source={StaticResource Locator}}" 
+        						CommandParameter="{Binding}" 
+        						Height="76"
+        						Width="76"
+                                       >
+                                <Button.Background>
+                                    <ImageBrush Stretch="None" ImageSource="/img/appbar.edit.png"/>
+                                </Button.Background>
+                            </Button>
+                            <Button  Margin="377,10,0,129" 
+
+        						Command="{Binding ListOfBooksViewModel.ShowDetailBook, Source={StaticResource Locator}}"
+        						CommandParameter="{Binding}" 
+        						Height="76"
+        						Width="76">
+                                <Button.Background>
+                                    <ImageBrush Stretch="None" ImageSource="/img/appbar.details.png"/>
+                                </Button.Background>
+                            </Button>
+                        </Grid>
+                    </DataTemplate>
+
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </StackPanel>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock x:Name="ApplicationTitle" Text="{Binding ResourceGetter.Title,Source={StaticResource LocalizedStrings}}" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock x:Name="PageTitle" Text="Liste de Livres" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0"/>
+    </Grid>
+    
+    <phone:PhoneApplicationPage.ApplicationBar>        
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton Click="Home_Click" IconUri="/img/appbar.home.png" Text="Home"/>
+            <shell:ApplicationBarIconButton Click="Add_Click" IconUri="/img/appbar.add.png" Text="Ajouter"/>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar> 
+
+</phone:PhoneApplicationPage>

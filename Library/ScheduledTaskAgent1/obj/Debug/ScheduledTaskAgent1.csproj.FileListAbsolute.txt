@@ -1,0 +1,4 @@
+E:\DevTools\C#\project\Library\ScheduledTaskAgent1\Bin\Debug\ScheduledTaskAgent1.dll
+E:\DevTools\C#\project\Library\ScheduledTaskAgent1\Bin\Debug\ScheduledTaskAgent1.pdb
+E:\DevTools\C#\project\Library\ScheduledTaskAgent1\obj\Debug\ScheduledTaskAgent1.dll
+E:\DevTools\C#\project\Library\ScheduledTaskAgent1\obj\Debug\ScheduledTaskAgent1.pdb
