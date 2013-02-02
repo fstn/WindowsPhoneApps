@@ -1,16 +1,23 @@
-﻿<xapCache source="E:\DevTools\C#\project\AppsRoulet\AppsRoulet\Bin\Debug\AppsRoulet.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="02/02/2013 14:39:44">
-  <file source="E:\DevTools\C#\project\AppsRoulet\AppsRoulet\Bin\Debug\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="02/02/2013 12:06:45" />
-  <file source="E:\DevTools\C#\project\AppsRoulet\AppsRoulet\Background.png" archivePath="Background.png" lastWriteTime="02/02/2013 12:04:56" />
-  <file source="E:\DevTools\C#\project\AppsRoulet\AppsRoulet\ApplicationIcon.png" archivePath="ApplicationIcon.png" lastWriteTime="02/02/2013 12:04:56" />
-  <file source="E:\DevTools\C#\project\AppsRoulet\AppsRoulet\obj\Debug\AppsRoulet.dll" archivePath="AppsRoulet.dll" lastWriteTime="02/02/2013 14:39:43" />
+﻿<xapCache source="C:\DevTools\Git\windowsPhone\AppsRoulet\AppsRoulet\Bin\Debug\AppsRoulet.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="02/02/2013 19:07:27">
+  <file source="C:\DevTools\Git\windowsPhone\AppsRoulet\AppsRoulet\Bin\Debug\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="02/02/2013 12:06:45" />
+  <file source="C:\DevTools\Git\windowsPhone\AppsRoulet\AppsRoulet\Background.png" archivePath="Background.png" lastWriteTime="02/02/2013 12:04:56" />
+  <file source="C:\DevTools\Git\windowsPhone\AppsRoulet\AppsRoulet\ApplicationIcon.png" archivePath="ApplicationIcon.png" lastWriteTime="02/02/2013 12:04:56" />
+  <file source="C:\DevTools\Git\windowsPhone\AppsRoulet\AppsRoulet\obj\Debug\AppsRoulet.dll" archivePath="AppsRoulet.dll" lastWriteTime="02/02/2013 19:07:27" />
   <file source="C:\Program Files (x86)\Microsoft SDKs\Expression\Blend\Windows Phone\v7.1\Libraries\Microsoft.Expression.Interactions.dll" archivePath="Microsoft.Expression.Interactions.dll" lastWriteTime="17/08/2011 02:48:22" />
   <file source="C:\Program Files (x86)\Microsoft SDKs\Windows Phone\v7.1\Libraries\Silverlight\Microsoft.Phone.Controls.dll" archivePath="Microsoft.Phone.Controls.dll" lastWriteTime="06/07/2012 02:40:16" />
-  <file source="E:\DevTools\C#\project\number picker\libs\Microsoft.Phone.Controls.Toolkit.dll" archivePath="Microsoft.Phone.Controls.Toolkit.dll" lastWriteTime="02/11/2010 15:36:16" />
+  <file source="C:\DevTools\Git\windowsPhone\AppsRoulet\AppsRoulet\Bin\Debug\Microsoft.Phone.Controls.Toolkit.dll" archivePath="Microsoft.Phone.Controls.Toolkit.dll" lastWriteTime="02/11/2010 15:36:16" />
   <file source="C:\Program Files (x86)\Microsoft SDKs\Expression\Blend\Windows Phone\v7.1\Libraries\System.Windows.Interactivity.dll" archivePath="System.Windows.Interactivity.dll" lastWriteTime="17/08/2011 02:48:22" />
-  <file source="E:\DevTools\C#\project\AppsRoulet\AppsRoulet\images\bad.png" archivePath="images\bad.png" lastWriteTime="28/01/2013 23:09:37" />
-  <file source="E:\DevTools\C#\project\AppsRoulet\AppsRoulet\images\great.png" archivePath="images\great.png" lastWriteTime="28/01/2013 23:09:59" />
-  <file source="E:\DevTools\C#\project\AppsRoulet\AppsRoulet\SplashScreenImage.jpg" archivePath="SplashScreenImage.jpg" lastWriteTime="02/02/2013 12:04:56" />
-  <file source="E:\DevTools\C#\project\AppsRoulet\AppsRoulet\Bin\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="02/02/2013 14:39:44" />
-  <file source="E:\DevTools\C#\project\AppsRoulet\AppsRoulet\Bin\Debug\ApplicationIcon.png" archivePath="ApplicationIcon.png" lastWriteTime="02/02/2013 12:04:56" />
-  <file source="E:\DevTools\C#\project\AppsRoulet\AppsRoulet\Bin\Debug\Background.png" archivePath="Background.png" lastWriteTime="02/02/2013 12:04:56" />
+  <file source="C:\DevTools\Git\windowsPhone\AppsRoulet\AppsRoulet\images\bad.png" archivePath="images\bad.png" lastWriteTime="28/01/2013 23:09:37" />
+  <file source="C:\DevTools\Git\windowsPhone\AppsRoulet\AppsRoulet\images\broke.jpg" archivePath="images\broke.jpg" lastWriteTime="02/02/2013 18:51:54" />
+  <file source="C:\DevTools\Git\windowsPhone\AppsRoulet\AppsRoulet\images\great.png" archivePath="images\great.png" lastWriteTime="28/01/2013 23:09:59" />
+  <file source="C:\DevTools\Git\windowsPhone\AppsRoulet\AppsRoulet\images\non.png" archivePath="images\non.png" lastWriteTime="02/02/2013 18:06:08" />
+  <file source="C:\DevTools\Git\windowsPhone\AppsRoulet\AppsRoulet\images\oui.png" archivePath="images\oui.png" lastWriteTime="02/02/2013 18:06:08" />
+  <file source="C:\DevTools\Git\windowsPhone\AppsRoulet\AppsRoulet\images\sun.png" archivePath="images\sun.png" lastWriteTime="02/02/2013 18:27:15" />
+  <file source="C:\DevTools\Git\windowsPhone\AppsRoulet\AppsRoulet\SplashScreenImage.jpg" archivePath="SplashScreenImage.jpg" lastWriteTime="02/02/2013 12:04:56" />
+  <file source="C:\DevTools\Git\windowsPhone\AppsRoulet\AppsRoulet\Bin\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="02/02/2013 14:39:44" />
+  <file source="C:\DevTools\Git\windowsPhone\AppsRoulet\AppsRoulet\Bin\Debug\images\broke.jpg" archivePath="images\broke.jpg" lastWriteTime="02/02/2013 18:51:54" />
+  <file source="C:\DevTools\Git\windowsPhone\AppsRoulet\AppsRoulet\Bin\Debug\images\non.png" archivePath="images\non.png" lastWriteTime="02/02/2013 18:06:08" />
+  <file source="C:\DevTools\Git\windowsPhone\AppsRoulet\AppsRoulet\Bin\Debug\images\oui.png" archivePath="images\oui.png" lastWriteTime="02/02/2013 18:06:08" />
+  <file source="C:\DevTools\Git\windowsPhone\AppsRoulet\AppsRoulet\Bin\Debug\ApplicationIcon.png" archivePath="ApplicationIcon.png" lastWriteTime="02/02/2013 12:04:56" />
+  <file source="C:\DevTools\Git\windowsPhone\AppsRoulet\AppsRoulet\Bin\Debug\Background.png" archivePath="Background.png" lastWriteTime="02/02/2013 12:04:56" />
 </xapCache>

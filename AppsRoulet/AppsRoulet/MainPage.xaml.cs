@@ -12,6 +12,7 @@ using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
 using System.IO.IsolatedStorage;
 using Microsoft.Phone.Shell;
+using System.Windows.Media.Imaging;
 
 namespace AppsRoulet
 {
@@ -24,7 +25,7 @@ namespace AppsRoulet
         public MainPage()
         {
             InitializeComponent();
-
+           
         }
 
         private bool isWeekend(){
@@ -57,19 +58,27 @@ namespace AppsRoulet
                 endOfWeek.Value = new DateTime(2012, 12, 12, 18, 0, 0);
             }
 
-            Image image = new Image();
-            Uri uri = new Uri("images/bad.png", UriKind.Relative);
-            String isWeekendResult = "NON";
+            //resultImage.SetValue(Image.SourceProperty, img);
+           // resultText.Text = isWeekendResult;
+            Uri nonReponseImg;
+            Uri uriFinalReponseImg;
+            Uri uriFinalScreenImg;
             if (isWeekend())
             {
-                uri = new Uri("images/great.png", UriKind.Relative);
-                isWeekendResult = "OUI";
+                nonReponseImg = new Uri("/images/non.png", UriKind.Relative);
+                uriFinalReponseImg = new Uri("/images/oui.png", UriKind.Relative);
+                uriFinalScreenImg = new Uri("/images/sun.png", UriKind.Relative);
             }
-            ImageSource img = new System.Windows.Media.Imaging.BitmapImage(uri);
-            resultImage.SetValue(Image.SourceProperty, img);
-            resultText.Text = isWeekendResult;
-
-            Storyboard2.Begin();
+            else
+            {
+                nonReponseImg = new Uri("/images/oui.png", UriKind.Relative);
+                uriFinalReponseImg = new Uri("/images/non.png", UriKind.Relative);
+                uriFinalScreenImg = new Uri("/images/broke.png", UriKind.Relative);
+            }
+            non.Source = new BitmapImage(nonReponseImg);
+            finalResponseImg.Source = new BitmapImage(uriFinalReponseImg);
+            finalScreenImg.Source = new BitmapImage(uriFinalScreenImg);
+            StoryBoard.Begin();
         }
         StandardTileData tileData = new StandardTileData()
         {
