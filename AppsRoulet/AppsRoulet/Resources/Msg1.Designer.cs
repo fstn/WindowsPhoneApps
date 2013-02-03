@@ -61,7 +61,7 @@ namespace AppsRoulet.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Jour début.
+        ///   Looks up a localized string similar to Début WE.
         /// </summary>
         public static string DayOfWeekend {
             get {
@@ -70,7 +70,7 @@ namespace AppsRoulet.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Heure début.
+        ///   Looks up a localized string similar to Début WE.
         /// </summary>
         public static string EndOfWeekeTime {
             get {
@@ -93,6 +93,15 @@ namespace AppsRoulet.Resources {
         public static string Monday {
             get {
                 return ResourceManager.GetString("Monday", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to NON.
+        /// </summary>
+        public static string No {
+            get {
+                return ResourceManager.GetString("No", resourceCulture);
             }
         }
         
@@ -169,11 +178,20 @@ namespace AppsRoulet.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Durée.
+        ///   Looks up a localized string similar to Durée WE.
         /// </summary>
         public static string WeekendDuration {
             get {
                 return ResourceManager.GetString("WeekendDuration", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to OUI.
+        /// </summary>
+        public static string Yes {
+            get {
+                return ResourceManager.GetString("Yes", resourceCulture);
             }
         }
     }

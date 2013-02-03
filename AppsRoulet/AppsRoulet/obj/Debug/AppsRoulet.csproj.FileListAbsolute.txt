@@ -39,7 +39,6 @@ E:\DevTools\C#\project\AppsRoulet\AppsRoulet\Bin\Debug\ja\System.Windows.Interac
 E:\DevTools\C#\project\AppsRoulet\AppsRoulet\Bin\Debug\ko\System.Windows.Interactivity.resources.dll
 E:\DevTools\C#\project\AppsRoulet\AppsRoulet\Bin\Debug\zh-Hans\System.Windows.Interactivity.resources.dll
 E:\DevTools\C#\project\AppsRoulet\AppsRoulet\Bin\Debug\zh-Hant\System.Windows.Interactivity.resources.dll
-C:\DevTools\Git\windowsPhone\AppsRoulet\AppsRoulet\obj\Debug\AppsRoulet.csprojResolveAssemblyReference.cache
 C:\DevTools\Git\windowsPhone\AppsRoulet\AppsRoulet\obj\Debug\App.g.cs
 C:\DevTools\Git\windowsPhone\AppsRoulet\AppsRoulet\obj\Debug\Controls\NumericTextBoxUserControl.g.cs
 C:\DevTools\Git\windowsPhone\AppsRoulet\AppsRoulet\obj\Debug\MainPage.g.cs
@@ -48,9 +47,12 @@ C:\DevTools\Git\windowsPhone\AppsRoulet\AppsRoulet\obj\Debug\AppsRoulet.Resource
 C:\DevTools\Git\windowsPhone\AppsRoulet\AppsRoulet\obj\Debug\AppsRoulet.csproj.GenerateResource.Cache
 C:\DevTools\Git\windowsPhone\AppsRoulet\AppsRoulet\Bin\Debug\ApplicationIcon.png
 C:\DevTools\Git\windowsPhone\AppsRoulet\AppsRoulet\Bin\Debug\Background.png
-C:\DevTools\Git\windowsPhone\AppsRoulet\AppsRoulet\Bin\Debug\images\broke.png
 C:\DevTools\Git\windowsPhone\AppsRoulet\AppsRoulet\Bin\Debug\images\non.png
 C:\DevTools\Git\windowsPhone\AppsRoulet\AppsRoulet\Bin\Debug\images\oui.png
+C:\DevTools\Git\windowsPhone\AppsRoulet\AppsRoulet\Bin\Debug\Fonts\digital-7.ttf
+C:\DevTools\Git\windowsPhone\AppsRoulet\AppsRoulet\Bin\Debug\Fonts\erbos_draco_1st_nbp.ttf
+C:\DevTools\Git\windowsPhone\AppsRoulet\AppsRoulet\Bin\Debug\images\broke.png
+C:\DevTools\Git\windowsPhone\AppsRoulet\AppsRoulet\Bin\Debug\images\chrono.png
 C:\DevTools\Git\windowsPhone\AppsRoulet\AppsRoulet\Bin\Debug\AppsRoulet.dll
 C:\DevTools\Git\windowsPhone\AppsRoulet\AppsRoulet\Bin\Debug\AppsRoulet.pdb
 C:\DevTools\Git\windowsPhone\AppsRoulet\AppsRoulet\Bin\Debug\AppManifest.xaml
@@ -90,9 +92,7 @@ C:\DevTools\Git\windowsPhone\AppsRoulet\AppsRoulet\Bin\Debug\ja\System.Windows.I
 C:\DevTools\Git\windowsPhone\AppsRoulet\AppsRoulet\Bin\Debug\ko\System.Windows.Interactivity.resources.dll
 C:\DevTools\Git\windowsPhone\AppsRoulet\AppsRoulet\Bin\Debug\zh-Hans\System.Windows.Interactivity.resources.dll
 C:\DevTools\Git\windowsPhone\AppsRoulet\AppsRoulet\Bin\Debug\zh-Hant\System.Windows.Interactivity.resources.dll
+C:\DevTools\Git\windowsPhone\AppsRoulet\AppsRoulet\obj\Debug\AppsRoulet.csprojResolveAssemblyReference.cache
 C:\DevTools\Git\windowsPhone\AppsRoulet\AppsRoulet\obj\Debug\AppsRoulet.dll
 C:\DevTools\Git\windowsPhone\AppsRoulet\AppsRoulet\obj\Debug\AppsRoulet.pdb
 C:\DevTools\Git\windowsPhone\AppsRoulet\AppsRoulet\obj\Debug\XapCacheFile.xml
-C:\DevTools\Git\windowsPhone\AppsRoulet\AppsRoulet\Bin\Debug\Fonts\digital-7.ttf
-C:\DevTools\Git\windowsPhone\AppsRoulet\AppsRoulet\Bin\Debug\images\chrono.png
-C:\DevTools\Git\windowsPhone\AppsRoulet\AppsRoulet\Bin\Debug\Fonts\erbos_draco_1st_nbp.ttf

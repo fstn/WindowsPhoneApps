@@ -107,6 +107,8 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Toolkit.Content\ApplicationBar.Cancel.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Check.png" />
     <None Include="Fonts\digital-7 %28italic%29.ttf" />
     <None Include="Fonts\digital-7 %28mono%29.ttf" />
     <Content Include="Fonts\digital-7.ttf">

@@ -118,16 +118,19 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="DayOfWeekend" xml:space="preserve">
-    <value>Jour début</value>
+    <value>Début WE</value>
   </data>
   <data name="EndOfWeekeTime" xml:space="preserve">
-    <value>Heure début</value>
+    <value>Début WE</value>
   </data>
   <data name="Friday" xml:space="preserve">
     <value>Vendredi</value>
   </data>
   <data name="Monday" xml:space="preserve">
     <value>Lundi</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>NON</value>
   </data>
   <data name="Response" xml:space="preserve">
     <value>Weekend?</value>
@@ -154,6 +157,9 @@
     <value>Mercredi</value>
   </data>
   <data name="WeekendDuration" xml:space="preserve">
-    <value>Durée</value>
+    <value>Durée WE</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>OUI</value>
   </data>
 </root>

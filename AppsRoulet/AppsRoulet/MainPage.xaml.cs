@@ -16,6 +16,7 @@ using System.Windows.Media.Imaging;
 using BugSense;
 using AppsRoulet.ViewModel;
 using System.Diagnostics;
+using AppsRoulet.Resources;
 
 namespace AppsRoulet
 {
@@ -54,37 +55,28 @@ namespace AppsRoulet
 
         public void Reload()
         {
-            StoryBoard.Seek(new TimeSpan(0));
-            StoryBoard.Resume();
-            StoryBoard.GetCurrentTime();
             timeCounterTextBox.Opacity = 100;
             canvas.Opacity = 100;
             canvas.RenderTransform.Transform(new Point(0, 0));
-            finalResponseImg.RenderTransform.Transform(new Point(0, 0));
-            finalResponseImg.RenderTransform.Transform(new Point(0, 0));
-            //resultImage.SetValue(Image.SourceProperty, img);
-            // resultText.Text = isWeekendResult;
-            Uri nonResponseImg;
-            Uri uriFinalResponseImg;
             Uri uriFinalScreenImg;
             if (IsWeekend())
             {
                 timeCounterTextBox.Visibility = Visibility.Collapsed;
-                nonResponseImg = new Uri("/images/non.png", UriKind.Relative);
-                uriFinalResponseImg = new Uri("/images/oui.png", UriKind.Relative);
+                non.ImageSource = "/images/non.png";
+                non.Text = Msg.No;
+                finalResponseImg.ImageSource = "/images/oui.png";
+                finalResponseImg.Text = Msg.Yes;
                 uriFinalScreenImg = new Uri("/images/sun.png", UriKind.Relative);
-                ResultText.Text = "OUIIIII";
             }
             else
             {
                 timeCounterTextBox.Visibility = Visibility.Visible;
-                nonResponseImg = new Uri("/images/oui.png", UriKind.Relative);
-                uriFinalResponseImg = new Uri("/images/non.png", UriKind.Relative);
+                non.ImageSource = "/images/oui.png";
+                non.Text = Msg.Yes;
+                finalResponseImg.ImageSource = "/images/non.png";
+                finalResponseImg.Text = Msg.No;
                 uriFinalScreenImg = new Uri("/images/chrono.png", UriKind.Relative);
-                ResultText.Text = "NON";
             }
-            non.Source = new BitmapImage(nonResponseImg);
-            finalResponseImg.Source = new BitmapImage(uriFinalResponseImg);
             finalScreenImg.Source = new BitmapImage(uriFinalScreenImg);
             ShellTile TileToFind = ShellTile.ActiveTiles.FirstOrDefault(x => x.NavigationUri.ToString().Contains("MainPage.xaml?TileID=2"));
             //test if Tile was created
@@ -98,8 +90,18 @@ namespace AppsRoulet
                     BackContent = "Info au dos...",
                     BackTitle = "Mon appli"
                 };
-                StoryBoard.Begin();
+                finalResponseImg.Loaded += finalResponseImg_Loaded;
             }
+
+            if (!IsWeekend())
+            {
+                timeCounterTextBox.StartCount();
+            }
+        }
+
+        void finalResponseImg_Loaded(object sender, EventArgs e)
+        {
+            StoryBoard1.Begin();
         }
 
         private void daysOfweek_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -109,10 +111,6 @@ namespace AppsRoulet
 
         private void StoryBoard_Completed(object sender, EventArgs e)
         {
-            if (!IsWeekend())
-            {
-                timeCounterTextBox.StartCount();
-            }
 
 
 
