@@ -12,7 +12,7 @@
     <!--Application Resources-->
     <Application.Resources>
         <vms:ViewModelLocator x:Key="Locator"/>
-        <ress:ResourceWrapper x:Key="LocalizedStrings"/>
+        <ress:ResourceWrapper x:Key="LocalizedStrings"/>      
     </Application.Resources>
 
     <Application.ApplicationLifetimeObjects>

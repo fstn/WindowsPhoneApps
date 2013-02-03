@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Net;
 using System.Windows;
@@ -10,6 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using BugSense;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 
@@ -37,6 +39,7 @@ namespace AppsRoulet
             // Phone-specific initialization
             InitializePhoneApplication();
 
+            BugSenseHandler.Instance.Init(this, "f1c6103a");
             // Show graphics profiling information while debugging.
             if (System.Diagnostics.Debugger.IsAttached)
             {
@@ -89,6 +92,7 @@ namespace AppsRoulet
         {
             if (System.Diagnostics.Debugger.IsAttached)
             {
+                Debugger.Log(3, "warning", e.Exception.ToString());
                 // A navigation has failed; break into the debugger
                 System.Diagnostics.Debugger.Break();
             }
@@ -99,6 +103,7 @@ namespace AppsRoulet
         {
            if (System.Diagnostics.Debugger.IsAttached)
             {
+                Debugger.Log(3, "warning", e.ExceptionObject.ToString());
                 // An unhandled exception has occurred; break into the debugger
                 System.Diagnostics.Debugger.Break();
             }

@@ -46,7 +46,7 @@
                             </Button>
                             <Button  Margin="377,10,0,129" 
 
-        						Command="{Binding ListOfBooksViewModel.ShowDetailBook, Source={StaticResource Locator}}"
+        					a	Command="{Binding ListOfBooksViewModel.ShowDetailBook, Source={StaticResource Locator}}"
         						CommandParameter="{Binding}" 
         						Height="76"
         						Width="76">

@@ -11,75 +11,150 @@
     xmlns:el="clr-namespace:Microsoft.Expression.Interactivity.Layout;assembly=Microsoft.Expression.Interactions"
     xmlns:myNameSpace="clr-namespace:AppsRoulet"
     xmlns:Lib="clr-namespace:AppsRoulet.Lib"
+    xmlns:local="clr-namespace:AppsRoulet.Controls"
     x:Class="AppsRoulet.MainPage" 
+    xmlns:userControl="clr-namespace:FstnUserControl;assembly=FstnUserControl"
     mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768"
     SupportedOrientations="Portrait" Orientation="Portrait"
     shell:SystemTray.IsVisible="True" Loaded="PhoneApplicationPage_Loaded_1">
-    <phone:PhoneApplicationPage.Resources>
-        <Storyboard x:Name="StoryBoard">
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="finalResponseImg">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <BackEase EasingMode="EaseIn"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.95" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.983" Value="1"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.RotationX)" Storyboard.TargetName="finalResponseImg">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-86.9787"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.95" Value="-450"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.983" Value="-90"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="0"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.RotationX)" Storyboard.TargetName="non">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <BackEase EasingMode="EaseOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.933" Value="450"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="non" d:IsOptimized="True">
-                <DoubleAnimation.EasingFunction>
-            		<BackEase EasingMode="EaseOut"/>
-            	</DoubleAnimation.EasingFunction>
-            </DoubleAnimation>
 
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.GlobalOffsetZ)" Storyboard.TargetName="non">
-                <EasingDoubleKeyFrame KeyTime="0" Value="100">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <BackEase EasingMode="EaseOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.933" Value="0"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimation Duration="0:0:1.983" To="60" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="canvas" d:IsOptimized="True"/>
-            <DoubleAnimation Duration="0:0:1.983" To="438" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="canvas" d:IsOptimized="True"/>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.RotationY)" Storyboard.TargetName="finalResponseImg">
-            	<EasingDoubleKeyFrame KeyTime="0:0:2" Value="0"/>
-            	<EasingDoubleKeyFrame KeyTime="0:0:4" Value="1"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.RotationZ)" Storyboard.TargetName="finalResponseImg">
-            	<EasingDoubleKeyFrame KeyTime="0:0:2" Value="0"/>
-            	<EasingDoubleKeyFrame KeyTime="0:0:4" Value="-720"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="finalResponseImg">
-            	<EasingDoubleKeyFrame KeyTime="0:0:2" Value="0"/>
-            	<EasingDoubleKeyFrame KeyTime="0:0:4" Value="222"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="finalResponseImg">
-            	<EasingDoubleKeyFrame KeyTime="0:0:2" Value="0"/>
-            	<EasingDoubleKeyFrame KeyTime="0:0:4" Value="-3"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimation Duration="0:0:4" To="-54" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="finalScreenImg" d:IsOptimized="True"/>
-            <DoubleAnimation Duration="0:0:4" To="-403.5" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="finalScreenImg" d:IsOptimized="True"/>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="finalScreenImg">
-            	<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-            	<EasingDoubleKeyFrame KeyTime="0:0:3.8" Value="0"/>
-            	<EasingDoubleKeyFrame KeyTime="0:0:4" Value="1"/>
-            </DoubleAnimationUsingKeyFrames>
-        </Storyboard>
+    <phone:PhoneApplicationPage.DataContext>
+        <Binding Path="MainViewModel" Source="{StaticResource Locator}"/>
+    </phone:PhoneApplicationPage.DataContext>
+    <phone:PhoneApplicationPage.Resources>
+
+        <Storyboard x:Name="StoryBoard" Completed="StoryBoard_Completed">
+    		<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="finalResponseImg">
+    			<EasingDoubleKeyFrame KeyTime="0" Value="0">
+    				<EasingDoubleKeyFrame.EasingFunction>
+    					<BackEase EasingMode="EaseIn"/>
+    				</EasingDoubleKeyFrame.EasingFunction>
+    			</EasingDoubleKeyFrame>
+    			<EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:0.22" Value="1"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:0.488" Value="1"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:0.967" Value="0"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:0.983" Value="1"/>
+    		</DoubleAnimationUsingKeyFrames>
+    		<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.RotationX)" Storyboard.TargetName="finalResponseImg">
+    			<EasingDoubleKeyFrame KeyTime="0" Value="-86.9787"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="90"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:0.217" Value="90"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:0.22" Value="81.0284"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:0.488" Value="-88"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-90"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:0.967" Value="-450"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:0.983" Value="90"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:2" Value="0"/>
+    		</DoubleAnimationUsingKeyFrames>
+    		<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.RotationX)" Storyboard.TargetName="non">
+    			<EasingDoubleKeyFrame KeyTime="0" Value="0">
+    				<EasingDoubleKeyFrame.EasingFunction>
+    					<BackEase EasingMode="EaseOut"/>
+    				</EasingDoubleKeyFrame.EasingFunction>
+    			</EasingDoubleKeyFrame>
+    			<EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="90"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="267"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:0.967" Value="90"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:0.983" Value="90"/>
+    		</DoubleAnimationUsingKeyFrames>
+    		<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="non">
+    			<EasingDoubleKeyFrame KeyTime="0" Value="1">
+    				<EasingDoubleKeyFrame.EasingFunction>
+    					<BackEase EasingMode="EaseOut"/>
+    				</EasingDoubleKeyFrame.EasingFunction>
+    			</EasingDoubleKeyFrame>
+    			<EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:0.217" Value="0"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:0.488" Value="0"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:0.967" Value="1"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:0.983" Value="0"/>
+    		</DoubleAnimationUsingKeyFrames>
+
+    		<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.GlobalOffsetZ)" Storyboard.TargetName="non">
+    			<EasingDoubleKeyFrame KeyTime="0" Value="100">
+    				<EasingDoubleKeyFrame.EasingFunction>
+    					<BackEase EasingMode="EaseOut"/>
+    				</EasingDoubleKeyFrame.EasingFunction>
+    			</EasingDoubleKeyFrame>
+    			<EasingDoubleKeyFrame KeyTime="0:0:0.967" Value="0"/>
+    		</DoubleAnimationUsingKeyFrames>
+    		<DoubleAnimation Duration="0:0:1.983" To="60" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="canvas" d:IsOptimized="True"/>
+    		<DoubleAnimation Duration="0:0:1.983" To="438" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="canvas" d:IsOptimized="True"/>
+    		<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.RotationY)" Storyboard.TargetName="finalResponseImg">
+    			<EasingDoubleKeyFrame KeyTime="0:0:2" Value="0"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:4" Value="1"/>
+    		</DoubleAnimationUsingKeyFrames>
+    		<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.RotationZ)" Storyboard.TargetName="finalResponseImg">
+    			<EasingDoubleKeyFrame KeyTime="0:0:2" Value="0"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:4" Value="-720"/>
+    		</DoubleAnimationUsingKeyFrames>
+    		<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="finalResponseImg">
+    			<EasingDoubleKeyFrame KeyTime="0:0:2" Value="-1.5"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:4" Value="210"/>
+    		</DoubleAnimationUsingKeyFrames>
+    		<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="finalResponseImg">
+    			<EasingDoubleKeyFrame KeyTime="0:0:2" Value="39"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:4" Value="37.5"/>
+    		</DoubleAnimationUsingKeyFrames>
+
+    		<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="non">
+    			<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:0.517" Value="3"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:0.967" Value="0"/>
+    		</DoubleAnimationUsingKeyFrames>
+    		<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="non">
+    			<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:0.517" Value="13.5"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:0.967" Value="0"/>
+    		</DoubleAnimationUsingKeyFrames>
+    		<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="finalScreenImg">
+    			<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:2" Value="0"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="1"/>
+    		</DoubleAnimationUsingKeyFrames>
+    		<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="ResultText">
+    			<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:4.4" Value="0"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:4.8" Value="1"/>
+    		</DoubleAnimationUsingKeyFrames>
+    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.HorizontalAlignment)" Storyboard.TargetName="ResultText">
+    			<DiscreteObjectKeyFrame KeyTime="0">
+    				<DiscreteObjectKeyFrame.Value>
+    					<HorizontalAlignment>Stretch</HorizontalAlignment>
+    				</DiscreteObjectKeyFrame.Value>
+    			</DiscreteObjectKeyFrame>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:4.4">
+    				<DiscreteObjectKeyFrame.Value>
+    					<HorizontalAlignment>Center</HorizontalAlignment>
+    				</DiscreteObjectKeyFrame.Value>
+    			</DiscreteObjectKeyFrame>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:4.8">
+    				<DiscreteObjectKeyFrame.Value>
+    					<HorizontalAlignment>Stretch</HorizontalAlignment>
+    				</DiscreteObjectKeyFrame.Value>
+    			</DiscreteObjectKeyFrame>
+    		</ObjectAnimationUsingKeyFrames>
+    		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.VerticalAlignment)" Storyboard.TargetName="ResultText">
+    			<DiscreteObjectKeyFrame KeyTime="0">
+    				<DiscreteObjectKeyFrame.Value>
+    					<VerticalAlignment>Stretch</VerticalAlignment>
+    				</DiscreteObjectKeyFrame.Value>
+    			</DiscreteObjectKeyFrame>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:4.4">
+    				<DiscreteObjectKeyFrame.Value>
+    					<VerticalAlignment>Center</VerticalAlignment>
+    				</DiscreteObjectKeyFrame.Value>
+    			</DiscreteObjectKeyFrame>
+    			<DiscreteObjectKeyFrame KeyTime="0:0:4.8">
+    				<DiscreteObjectKeyFrame.Value>
+    					<VerticalAlignment>Stretch</VerticalAlignment>
+    				</DiscreteObjectKeyFrame.Value>
+    			</DiscreteObjectKeyFrame>
+    		</ObjectAnimationUsingKeyFrames>
+    	</Storyboard>
     </phone:PhoneApplicationPage.Resources>
     <phone:PhoneApplicationPage.FontFamily>
         <StaticResource ResourceKey="PhoneFontFamilyNormal"/>
@@ -90,28 +165,25 @@
     <phone:PhoneApplicationPage.Foreground>
         <StaticResource ResourceKey="PhoneForegroundBrush"/>
     </phone:PhoneApplicationPage.Foreground>
+
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="146*"/>
+            <RowDefinition Height="35*"/>
         </Grid.RowDefinitions>
 
         <!--ContentPanel - place additional content here-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0" Grid.RowSpan="2">
         	<controls:Pivot HorizontalAlignment="Left" Height="797" VerticalAlignment="Top" Width="456" Margin="-10,-56,0,-65">
         		<controls:PivotItem Header="{Binding ResourceGetter.Response, Source={StaticResource LocalizedStrings}}">
-        			<StackPanel>
-        				<Canvas x:Name="canvas"  >
+        			<Canvas>
+        				<Canvas x:Name="canvas" Opacity="0"  >
         					<Canvas.RenderTransform>
         						<CompositeTransform/>
         					</Canvas.RenderTransform>
-        					<Image x:Name="non" Stretch="Fill" Height="160" Width="170" >
-        						<Image.Projection>
-        							<PlaneProjection/>
-        						</Image.Projection>
-        					</Image>
-        					<Image x:Name="finalResponseImg" Stretch="Fill" Height="160" Width="170" RenderTransformOrigin="0.5,0.5" >
+        					<Image x:Name="non" Source="/images/non.png" Stretch="Fill" Height="160" Width="170" RenderTransformOrigin="0.5,0.5" >
         						<Image.RenderTransform>
         							<CompositeTransform/>
         						</Image.RenderTransform>
@@ -119,7 +191,7 @@
         							<PlaneProjection/>
         						</Image.Projection>
         					</Image>
-        					<Image x:Name="finalScreenImg"  Stretch="Fill" Height="374" Width="396" RenderTransformOrigin="0.5,0.5" Canvas.Left="28" Canvas.Top="-16" >
+        					<Image x:Name="finalResponseImg" Source="/images/oui.png" Stretch="Fill" Height="160" Width="170" RenderTransformOrigin="0.5,0.5" Canvas.Top="8" Canvas.Left="-1" >
         						<Image.RenderTransform>
         							<CompositeTransform/>
         						</Image.RenderTransform>
@@ -127,25 +199,79 @@
         							<PlaneProjection/>
         						</Image.Projection>
         					</Image>
-                            <TextBlock x:Name="resultText" Height="72" FontWeight="Bold" FontSize="48" Width="408" Canvas.Top="88">
-        					
-        					</TextBlock>
-                        </Canvas>
 
-                    </StackPanel>
+
+        				</Canvas>
+                        
+        				<userControl:CoinFlip x:Name="finalScreenImg" ImageSource="/images/sun.png" Stretch="Fill" Height="374" Width="396" RenderTransformOrigin="0.5,0.5" Canvas.Left="32" Canvas.Top="74" >
+                            <userControl:CoinFlip.RenderTransform>
+        						<CompositeTransform/>
+                            </userControl:CoinFlip.RenderTransform>
+                            <userControl:CoinFlip.Projection>
+        						<PlaneProjection/>
+                            </userControl:CoinFlip.Projection>
+                        </userControl:CoinFlip>
+        				<userControl:TimeCounter   x:Name="timeCounterTextBox"  UpdateTime="1000"  
+        					EventDate="{Binding EventDate, Mode=TwoWay}" Height="135" Width="448" Canvas.Top="190" Background="{x:Null}" Foreground="White" Canvas.Left="10"   />
+        				<TextBlock x:Name="ResultText" Text="{Binding ResultText}" TextWrapping="Wrap"  Canvas.Left="282" Canvas.Top="534" FontSize="32" FontWeight="Bold" Height="75" Width="176" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        			</Canvas>
 
         		</controls:PivotItem>
-        		<controls:PivotItem  Header="{Binding ResourceGetter.Settings, Source={StaticResource LocalizedStrings}}" Margin="10,42,-227,7" RenderTransformOrigin="0.806,0.861">
-        			<my:TimePicker x:Name="endOfWeek" Margin="0,139,0,0"/>
+        		<controls:PivotItem  Header="{Binding ResourceGetter.Settings, Source={StaticResource LocalizedStrings}}" Margin="10,-106,-432,-7" RenderTransformOrigin="0.806,0.861">
+
+        			<Grid Height="771" >
+        				<Grid.RowDefinitions>
+        					<RowDefinition Height="150"/>
+        					<RowDefinition Height="100"/>
+        					<RowDefinition Height="100"/>
+        					<RowDefinition Height="400"/>
+        				</Grid.RowDefinitions>
+        				<Grid.ColumnDefinitions>
+        					<ColumnDefinition Width="200"/>
+        					<ColumnDefinition Width="250"/>
+        				</Grid.ColumnDefinitions>
+        				<Grid Grid.Column="0" Grid.Row="1">
+        					<TextBlock  
+        						Style="{StaticResource PhoneTextTitle2Style}"
+                                
+        						TextWrapping="Wrap"
+        						Text="{Binding ResourceGetter.EndOfWeekeTime, Source={StaticResource LocalizedStrings}}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        				</Grid>
+        				<Grid Grid.Column="1" Grid.Row="1">
+        					<my:TimePicker x:Name="endOfWeek" 
+        						Value="{Binding EndOfWeekTime, Mode=TwoWay}" 
+        						HorizontalAlignment="Center" VerticalAlignment="Center"  />
+        				</Grid>
+        				<Grid Grid.Column="0" Grid.Row="2">
+        					<TextBlock  
+        						Style="{StaticResource PhoneTextTitle2Style}"    
+        						Text="{Binding ResourceGetter.WeekendDuration, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        				</Grid>
+        				<Grid Grid.Column="1" Grid.Row="2">
+        					<local:NumericTextBox x:Name="weekendDuration"  Text="{Binding WeekendDuration, Mode=TwoWay}" HorizontalAlignment="Left" 
+        						VerticalAlignment="Center" Margin="59,18,0,10" Width="135"/>
+        				</Grid>
+        				<Grid  Grid.Column="0" Grid.Row="3">
+        					<TextBlock 
+        						Text="{Binding ResourceGetter.DayOfWeekend, Source={StaticResource LocalizedStrings}}"
+        						Style="{StaticResource PhoneTextTitle2Style}" 
+        						HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        				</Grid>
+
+        				<Grid  Grid.Column="1" Grid.Row="3" >
+        					<ListBox x:Name="daysOfweek"  ItemsSource="{Binding ListDay}" SelectedItem="{Binding EndOfWeek, Mode=TwoWay}"  SelectionChanged="daysOfweek_SelectionChanged" HorizontalAlignment="Left" Width="236">
+        						<ListBox.ItemTemplate>
+        							<DataTemplate>
+        								<TextBlock Text="{Binding}" FontSize="40"/>
+        							</DataTemplate>
+        						</ListBox.ItemTemplate>
+        					</ListBox>
+        				</Grid>
+        			</Grid>
         		</controls:PivotItem>
         	</controls:Pivot>
         </Grid>
-        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock x:Name="ApplicationTitle" Style="{StaticResource PhoneTextNormalStyle}" FontSize="35" FontWeight="Bold">
-        		<Run Text="{Binding ResourceGetter.Title, Source={StaticResource LocalizedStrings}}"/>
-
-            </TextBlock>
-        </StackPanel>
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28"/>
     </Grid>
 
 </phone:PhoneApplicationPage>

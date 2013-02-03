@@ -1,7 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Express 2012 for Windows Phone
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppsRoulet", "AppsRoulet\AppsRoulet.csproj", "{23FB4989-7519-4223-B1EC-72F5AC01E920}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FstnUserControl", "FstnUserControl\FstnUserControl.csproj", "{C19FEDFB-44B9-4390-8979-1EFD1A902AEB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{23FB4989-7519-4223-B1EC-72F5AC01E920}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{23FB4989-7519-4223-B1EC-72F5AC01E920}.Release|Any CPU.Build.0 = Release|Any CPU
 		{23FB4989-7519-4223-B1EC-72F5AC01E920}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{C19FEDFB-44B9-4390-8979-1EFD1A902AEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C19FEDFB-44B9-4390-8979-1EFD1A902AEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C19FEDFB-44B9-4390-8979-1EFD1A902AEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C19FEDFB-44B9-4390-8979-1EFD1A902AEB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

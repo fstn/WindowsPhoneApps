@@ -117,13 +117,43 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="DayOfWeekend" xml:space="preserve">
+    <value>Jour début</value>
+  </data>
+  <data name="EndOfWeekeTime" xml:space="preserve">
+    <value>Heure début</value>
+  </data>
+  <data name="Friday" xml:space="preserve">
+    <value>Vendredi</value>
+  </data>
+  <data name="Monday" xml:space="preserve">
+    <value>Lundi</value>
+  </data>
   <data name="Response" xml:space="preserve">
-    <value>Réponse</value>
+    <value>Weekend?</value>
+  </data>
+  <data name="Saturday" xml:space="preserve">
+    <value>Samedi</value>
   </data>
   <data name="Settings" xml:space="preserve">
     <value>Réglage</value>
   </data>
+  <data name="Sunday" xml:space="preserve">
+    <value>Dimanche</value>
+  </data>
+  <data name="Thursday" xml:space="preserve">
+    <value>Jeudi</value>
+  </data>
   <data name="Title" xml:space="preserve">
     <value>Weekend?</value>
+  </data>
+  <data name="Tuesday" xml:space="preserve">
+    <value>Mardi</value>
+  </data>
+  <data name="Wednesday" xml:space="preserve">
+    <value>Mercredi</value>
+  </data>
+  <data name="WeekendDuration" xml:space="preserve">
+    <value>Durée</value>
   </data>
 </root>

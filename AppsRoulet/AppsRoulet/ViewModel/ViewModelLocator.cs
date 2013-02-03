@@ -7,8 +7,9 @@ namespace AppsRoulet.ViewModel
 {
     public class ViewModelLocator
     {
-        public MainViewModel mainViewModel{get;set;}
+        public MainViewModel MainViewModel{get;set;}
         public ViewModelLocator (){
+            MainViewModel = new MainViewModel();
         }
     }
 }

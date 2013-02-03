@@ -49,6 +49,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BugSense">
+      <HintPath>..\packages\BugSense.WP7.0.9.9.1\lib\sl3-wp\BugSense.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Extras.WP71, Version=4.1.24.17306, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="GalaSoft.MvvmLight.WP71, Version=4.1.24.17306, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Expression.Interactions, Version=3.8.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Phone" />
     <Reference Include="Microsoft.Phone.Controls, Version=7.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e, processorArchitecture=MSIL" />
@@ -67,6 +72,10 @@
   <ItemGroup>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\NumericTextBox.cs" />
+    <Compile Include="Controls\NumericTextBoxUserControl.xaml.cs">
+      <DependentUpon>NumericTextBoxUserControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Lib\TextTransitionBehavior.cs" />
     <Compile Include="MainPage.xaml.cs">
@@ -88,12 +97,25 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
+    <Page Include="Controls\NumericTextBoxUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="MainPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Fonts\digital-7 %28italic%29.ttf" />
+    <None Include="Fonts\digital-7 %28mono%29.ttf" />
+    <Content Include="Fonts\digital-7.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Fonts\erbos_draco_1st_nbp.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="packages.config" />
     <None Include="Properties\AppManifest.xml" />
     <None Include="Properties\WMAppManifest.xml" />
   </ItemGroup>
@@ -108,6 +130,9 @@
     <Content Include="images\broke.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="images\chrono.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="images\great.png" />
     <Content Include="images\non.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -115,7 +140,10 @@
     <Content Include="images\oui.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="images\small_icon.png" />
     <Content Include="images\sun.png" />
+    <Content Include="Sounds\Click.mp3" />
+    <Content Include="Sounds\Tic.mp3" />
     <Content Include="SplashScreenImage.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -126,6 +154,15 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\casque.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FstnUserControl\FstnUserControl.csproj">
+      <Project>{C19FEDFB-44B9-4390-8979-1EFD1A902AEB}</Project>
+      <Name>FstnUserControl</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="NewFolder1\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />

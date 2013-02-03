@@ -61,11 +61,56 @@ namespace AppsRoulet.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Réponse.
+        ///   Looks up a localized string similar to Jour début.
+        /// </summary>
+        public static string DayOfWeekend {
+            get {
+                return ResourceManager.GetString("DayOfWeekend", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Heure début.
+        /// </summary>
+        public static string EndOfWeekeTime {
+            get {
+                return ResourceManager.GetString("EndOfWeekeTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vendredi.
+        /// </summary>
+        public static string Friday {
+            get {
+                return ResourceManager.GetString("Friday", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lundi.
+        /// </summary>
+        public static string Monday {
+            get {
+                return ResourceManager.GetString("Monday", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Weekend?.
         /// </summary>
         public static string Response {
             get {
                 return ResourceManager.GetString("Response", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Samedi.
+        /// </summary>
+        public static string Saturday {
+            get {
+                return ResourceManager.GetString("Saturday", resourceCulture);
             }
         }
         
@@ -79,11 +124,56 @@ namespace AppsRoulet.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Dimanche.
+        /// </summary>
+        public static string Sunday {
+            get {
+                return ResourceManager.GetString("Sunday", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Jeudi.
+        /// </summary>
+        public static string Thursday {
+            get {
+                return ResourceManager.GetString("Thursday", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Weekend?.
         /// </summary>
         public static string Title {
             get {
                 return ResourceManager.GetString("Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mardi.
+        /// </summary>
+        public static string Tuesday {
+            get {
+                return ResourceManager.GetString("Tuesday", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mercredi.
+        /// </summary>
+        public static string Wednesday {
+            get {
+                return ResourceManager.GetString("Wednesday", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Durée.
+        /// </summary>
+        public static string WeekendDuration {
+            get {
+                return ResourceManager.GetString("WeekendDuration", resourceCulture);
             }
         }
     }
