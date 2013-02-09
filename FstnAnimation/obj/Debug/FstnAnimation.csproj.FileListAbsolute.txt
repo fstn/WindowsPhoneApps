@@ -1,0 +1,11 @@
+C:\DevTools\Git\windowsPhone\FstnAnimation\Bin\Debug\FstnAnimation.dll
+C:\DevTools\Git\windowsPhone\FstnAnimation\Bin\Debug\FstnAnimation.pdb
+C:\DevTools\Git\windowsPhone\FstnAnimation\Bin\Debug\FstnCommon.dll
+C:\DevTools\Git\windowsPhone\FstnAnimation\Bin\Debug\Microsoft.Phone.Controls.Toolkit.dll
+C:\DevTools\Git\windowsPhone\FstnAnimation\Bin\Debug\FstnCommon.pdb
+C:\DevTools\Git\windowsPhone\FstnAnimation\Bin\Debug\Microsoft.Phone.Controls.Toolkit.pdb
+C:\DevTools\Git\windowsPhone\FstnAnimation\obj\Debug\FstnAnimation.csprojResolveAssemblyReference.cache
+C:\DevTools\Git\windowsPhone\FstnAnimation\obj\Debug\Page1.g.cs
+C:\DevTools\Git\windowsPhone\FstnAnimation\obj\Debug\FstnAnimation.g.resources
+C:\DevTools\Git\windowsPhone\FstnAnimation\obj\Debug\FstnAnimation.dll
+C:\DevTools\Git\windowsPhone\FstnAnimation\obj\Debug\FstnAnimation.pdb

@@ -1,0 +1,21 @@
+﻿<ResourceDictionary  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                     xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+                     mc:Ignorable="d">
+    <DataTemplate x:Key="ListPickerFullModeItemTemplate">
+        <TextBlock Text="{Binding}"
+                   FontSize="{StaticResource PhoneFontSizeExtraLarge}"
+                   FontFamily="{StaticResource PhoneFontFamilySemiLight}"
+                   Margin="0,19,0,19"/>
+    </DataTemplate>
+    <Style TargetType="toolkit:ListPicker" x:Key="ListPickerSimpleStyle">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Foreground" Value="{StaticResource PhoneTextBoxForegroundBrush}"/>
+        <Setter Property="FontSize" Value="{StaticResource PhoneFontSizeMediumLarge}"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="BorderBrush" Value="Transparent"/>
+       
+    </Style>
+</ResourceDictionary>

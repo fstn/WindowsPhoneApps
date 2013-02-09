@@ -1,0 +1,9 @@
+C:\DevTools\Git\windowsPhone\Weekend\FstnDesign\Bin\Debug\FstnDesign.dll
+C:\DevTools\Git\windowsPhone\Weekend\FstnDesign\Bin\Debug\FstnDesign.pdb
+C:\DevTools\Git\windowsPhone\Weekend\FstnDesign\Bin\Debug\Microsoft.Phone.Controls.Toolkit.dll
+C:\DevTools\Git\windowsPhone\Weekend\FstnDesign\Bin\Debug\Microsoft.Phone.Controls.dll
+C:\DevTools\Git\windowsPhone\Weekend\FstnDesign\Bin\Debug\Microsoft.Phone.Controls.xml
+C:\DevTools\Git\windowsPhone\Weekend\FstnDesign\obj\Debug\FstnDesign.g.resources
+C:\DevTools\Git\windowsPhone\Weekend\FstnDesign\obj\Debug\FstnDesign.dll
+C:\DevTools\Git\windowsPhone\Weekend\FstnDesign\obj\Debug\FstnDesign.pdb
+C:\DevTools\Git\windowsPhone\Weekend\FstnDesign\obj\Debug\FstnDesign.csprojResolveAssemblyReference.cache

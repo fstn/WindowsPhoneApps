@@ -1,0 +1,73 @@
+@using MvcApplication2.Models.Generated
+@model List<Article>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table-striped">
+    <tr>
+        <th></th>
+        <th>
+            Id
+        </th>
+        <th>
+            Title
+        </th>
+        <th>
+            Text
+        </th>
+        <th>
+            DateCreated
+        </th>
+        <th>
+            IdAuthor
+        </th>
+        <th>
+            Author
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td class="minSizeTD">
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+         <td>
+			@item.Id
+        </td>
+        <td>
+			@item.Title
+        </td>
+        <td>
+            @if (@item.Text.Length > 99)
+            {
+                @item.Text.Substring(0,99)
+            }
+            else
+            {
+                @item.Text
+            }
+			
+        </td>
+        <td>
+			@String.Format("{0:g}", item.DateCreated)
+        </td>
+        <td>
+			@item.IdAuthor
+        </td>
+        <td>
+			@(item.Author == null ? "None" : item.Author.LastName)
+        </td>
+    </tr>
+}
+
+</table>
+
+

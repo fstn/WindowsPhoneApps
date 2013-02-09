@@ -1,0 +1,4 @@
+C:\DevTools\Git\windowsPhone\Weekend\FstnCommon\Bin\Release\FstnCommon.dll
+C:\DevTools\Git\windowsPhone\Weekend\FstnCommon\Bin\Release\FstnCommon.pdb
+C:\DevTools\Git\windowsPhone\Weekend\FstnCommon\obj\Release\FstnCommon.dll
+C:\DevTools\Git\windowsPhone\Weekend\FstnCommon\obj\Release\FstnCommon.pdb

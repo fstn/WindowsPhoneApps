@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="FstnUserControl.CoinFlip"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"             
+    xmlns:local="clr-namespace:FstnUserControl;assembly=FstnUserControl"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}" Width="400" Height="400" RenderTransformOrigin=".5,.5"
+    >
+
+    <Grid x:Name="LayoutRoot" Height="170" Width="170" RenderTransformOrigin="0.5,0.5" >
+        <Canvas Name="finalCanvas" Margin="-116,-115,-116,-116">
+        	<Canvas.Projection>
+        		<PlaneProjection CenterOfRotationZ="0"/>
+        	</Canvas.Projection>
+            <Canvas.RenderTransform>
+                <CompositeTransform/>
+            </Canvas.RenderTransform>
+            <Image Name="finalImage" Source="/images/non.png" RenderTransformOrigin="0.5,0.5" Stretch="Fill" HorizontalAlignment="Center"  VerticalAlignment="Center" Height="400" Width="400"  />
+        
+        </Canvas>
+        <Canvas Name="nonFinalCanvas" Margin="-116,-115,-116,-116">
+        	<Canvas.Projection>
+        		<PlaneProjection CenterOfRotationZ="0"/>
+        	</Canvas.Projection>
+            <Canvas.RenderTransform>
+                <CompositeTransform/>
+            </Canvas.RenderTransform>
+            <Image Name="nonFinalImage" Source="/images/non.png" RenderTransformOrigin="0.5,0.5" Stretch="Fill" HorizontalAlignment="Center"  VerticalAlignment="Center" Height="400" Width="400"   />
+              </Canvas>
+      
+    </Grid>
+</UserControl>

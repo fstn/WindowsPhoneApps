@@ -1,0 +1,3 @@
+C:\DevTools\Git\windowsPhone\Release\WindowsPhone71\Microsoft.Phone.Controls.Toolkit.Design\obj\Debug\Microsoft.Phone.Controls.Toolkit.Design.csprojResolveAssemblyReference.cache
+C:\DevTools\Git\windowsPhone\Release\WindowsPhone71\Microsoft.Phone.Controls.Toolkit.Design\obj\Debug\Microsoft.Phone.Controls.Toolkit.Design.Properties.Resources.resources
+C:\DevTools\Git\windowsPhone\Release\WindowsPhone71\Microsoft.Phone.Controls.Toolkit.Design\obj\Debug\Microsoft.Phone.Controls.Toolkit.Design.csproj.GenerateResource.Cache

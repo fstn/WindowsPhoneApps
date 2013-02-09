@@ -1,0 +1,950 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5964E3F9-CF75-4500-85EE-574444831F0B}</ProjectGuid>
+    <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CustomToolkit</RootNamespace>
+    <AssemblyName>CustomToolkit</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <TargetFrameworkProfile>WindowsPhone71</TargetFrameworkProfile>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <SilverlightApplication>false</SilverlightApplication>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Phone" />
+    <Reference Include="Microsoft.Phone.Interop" />
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Net" />
+    <Reference Include="mscorlib.extensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit.Design\AutoCompleteBoxMetadata.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit.Design\ExpanderViewDesign.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit.Design\ExpanderViewMetadata.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit.Design\GlobalSuppressions.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit.Design\HubTileDesign.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit.Design\HubTileMetadata.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit.Design\MenuItemDesign.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit.Design\Metadata.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit.Design\MultiselectItemDesign.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit.Design\MultiselectItemMetadata.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit.Design\MultiselectListDesign.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit.Design\MultiselectListMetadata.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit.Design\PhoneTextBoxDesign.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit.Design\PhoneTextBoxMetadata.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit.Design\Properties\AssemblyInfo.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit.Design\Properties\Resources.Designer.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit.Design\ToggleSwitchDesign.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit.Design\ToggleSwitchMetadata.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit.Design\TransitionsMetadata.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit.VisualStudio.Design\GlobalSuppressions.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit.VisualStudio.Design\Metadata.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit.VisualStudio.Design\Properties\AssemblyInfo.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\AutoCompleteBox\AutoCompleteBox.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\AutoCompleteBox\AutoCompleteFilter.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\AutoCompleteBox\AutoCompleteFilterMode.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\AutoCompleteBox\AutoCompleteFilterPredicate.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\AutoCompleteBox\ISelectionAdapter.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\AutoCompleteBox\PopulatedEventArgs.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\AutoCompleteBox\PopulatedEventHandler.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\AutoCompleteBox\PopulatingEventArgs.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\AutoCompleteBox\PopulatingEventHandler.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\AutoCompleteBox\PopupHelper.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\AutoCompleteBox\SelectorSelectionAdapter.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\Common\BindingEvaluator.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\Common\CultureInfoExtensions.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\Common\Extensions.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\Common\InteractionHelper.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\Common\ItemsControlExtensions.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\Common\ItemsControlHelper.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\Common\IUpdateVisualState.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\Common\LengthConverter.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\Common\MathHelpers.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\Common\NumericExtensions.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\Common\OpacityAnimator.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\Common\PhoneHelper.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\Common\PhysicsConstants.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\Common\RoutedPropertyChangingEventArgs.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\Common\RoutedPropertyChangingEventHandler.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\Common\SafeRaise.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\Common\TemplatedVisualTreeExtensions.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\Common\TimeTypeConverter.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\Common\TransformAnimator.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\Common\Tuple.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\Common\TypeConverters.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\Common\VisualStates.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\Common\VisualTreeExtensions.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\Common\WeakEventListener.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\Common\WeakReferenceHelper.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\ContextMenu\ContextMenu.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\ContextMenu\ContextMenuService.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\ContextMenu\MenuBase.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\ContextMenu\MenuItem.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\ContextMenu\Separator.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\CustomMessageBox\CustomMessageBox.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\CustomMessageBox\CustomMessageBoxResult.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\CustomMessageBox\DismissedEventArgs.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\CustomMessageBox\DismissingEventArgs.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\Data\HierarchicalDataTemplate.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\DateTimeConverters\DailyDateTimeConverter.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\DateTimeConverters\DateTimeFormatHelper.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\DateTimeConverters\FullViewDateTimeConverter.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\DateTimeConverters\HourlyDateTimeConverter.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\DateTimeConverters\ListViewDateTimeConverter.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\DateTimeConverters\RelativeTimeConverter.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\DateTimeConverters\ThreadDateTimeConverter.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\DateTimePickers\DataSource.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\DateTimePickers\DatePicker.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\DateTimePickers\DatePickerPage.xaml.cs">
+      <DependentUpon>DatePickerPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\DateTimePickers\DateTimePickerBase.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\DateTimePickers\DateTimePickerPageBase.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\DateTimePickers\DateTimePickerResources.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\DateTimePickers\DateTimeValueChangedEventArgs.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\DateTimePickers\DateTimeWrapper.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\DateTimePickers\IDateTimePickerPage.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\DateTimePickers\RecurringDaysPicker.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\DateTimePickers\TimePicker.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\DateTimePickers\TimePickerPage.xaml.cs">
+      <DependentUpon>TimePickerPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\Effects\SlideInEffect.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\Effects\TiltEffect.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\Effects\TurnstileFeatherEffect.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\ExpanderView\ExpanderView.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\GlobalSuppressions.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\HeaderedItemsControl\HeaderedItemsControl.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\HubTile\HubTile.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\HubTile\HubTileConverters.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\HubTile\HubTileService.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\Input\GestureHelperEventArgs.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\Input\GestureListener.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\Input\GestureListenerStatic.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\Input\GestureService.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\ListPicker\ExpansionMode.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\ListPicker\ListPicker.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\ListPicker\ListPickerItem.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\ListPicker\ListPickerMode.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\ListPicker\ListPickerPage.xaml.cs">
+      <DependentUpon>ListPickerPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\LocalizedResources\ControlResources.cs.Designer.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\LocalizedResources\ControlResources.da.Designer.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\LocalizedResources\ControlResources.de-DE.Designer.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\LocalizedResources\ControlResources.Designer.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\LocalizedResources\ControlResources.el.Designer.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\LocalizedResources\ControlResources.en-GB.Designer.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\LocalizedResources\ControlResources.es-ES.Designer.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\LocalizedResources\ControlResources.fi.Designer.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\LocalizedResources\ControlResources.fr-FR.Designer.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\LocalizedResources\ControlResources.hu.Designer.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\LocalizedResources\ControlResources.it-IT.Designer.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\LocalizedResources\ControlResources.ja.Designer.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\LocalizedResources\ControlResources.ko.Designer.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\LocalizedResources\ControlResources.nb-NO.Designer.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\LocalizedResources\ControlResources.nl-NL.Designer.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\LocalizedResources\ControlResources.pl.Designer.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\LocalizedResources\ControlResources.pt-BR.Designer.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\LocalizedResources\ControlResources.pt-PT.Designer.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\LocalizedResources\ControlResources.ru.Designer.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\LocalizedResources\ControlResources.sv-SE.Designer.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\LocalizedResources\ControlResources.zh-CN.Designer.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\LocalizedResources\ControlResources.zh-TW.Designer.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\LongListSelector\LongListSelector.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\LongListSelector\LongListSelectorEventArgs.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\LongListSelector\LongListSelectorGroup.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\LongListSelector\LongListSelectorItem.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\LongListSelector\LongListSelectorItemsControl.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\LongListSelector\LongListSelectorItemType.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\LongListSelector\TemplatedListBox.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\LongListSelector\TemplatedListBoxItem.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\MultiselectList\MultiselectItem.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\MultiselectList\MultiselectList.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\PhoneTextBox\PhoneTextBox.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\Pivot\LockablePivot.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\Primitives\ClipToBounds.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\Primitives\LoopingSelector.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\Primitives\LoopingSelectorDataSource.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\Primitives\LoopingSelectorItem.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\Primitives\ToggleSwitchButton.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\ProgressBar\PerformanceProgressBar.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\ProgressBar\RelativeAnimatingContentControl.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\Properties\AssemblyInfo.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\Properties\Resources.Designer.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\RatingControl\Rating.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\RatingControl\RatingItem.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\ToggleSwitch\OffOnConverter.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\ToggleSwitch\ToggleSwitch.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\Transitions\ITransition.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\Transitions\NavigationInTransition.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\Transitions\NavigationOutTransition.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\Transitions\NavigationTransition.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\Transitions\TransitionElement.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\Transitions\TransitionFrame.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\Transitions\Transitions.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\Transitions\TransitionService.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\Transitions\Transitions\FeatheredTransition.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\Transitions\Transitions\RollTransition.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\Transitions\Transitions\RotateTransition.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\Transitions\Transitions\RotateTransitionMode.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\Transitions\Transitions\SlideTransition.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\Transitions\Transitions\SlideTransitionMode.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\Transitions\Transitions\SwivelTransition.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\Transitions\Transitions\SwivelTransitionMode.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\Transitions\Transitions\Transition.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\Transitions\Transitions\TurnstileFeatherTransition.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\Transitions\Transitions\TurnstileFeatherTransitionMode.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\Transitions\Transitions\TurnstileTransition.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\Transitions\Transitions\TurnstileTransitionMode.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\Viewbox\StretchDirection.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\Viewbox\Viewbox.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\WrapPanel\OrientedSize.cs" />
+    <Compile Include="Microsoft.Phone.Controls.Toolkit\WrapPanel\WrapPanel.cs" />
+    <Compile Include="PhoneToolkitSample\App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PhoneToolkitSample\Data\AccentColorNameToBrush.cs" />
+    <Compile Include="PhoneToolkitSample\Data\AllPeople.cs" />
+    <Compile Include="PhoneToolkitSample\Data\ColorExtensions.cs" />
+    <Compile Include="PhoneToolkitSample\Data\ConversationObject.cs" />
+    <Compile Include="PhoneToolkitSample\Data\DateTimeCollection.cs" />
+    <Compile Include="PhoneToolkitSample\Data\DateTimeObject.cs" />
+    <Compile Include="PhoneToolkitSample\Data\EmailCollection.cs" />
+    <Compile Include="PhoneToolkitSample\Data\EmailObject.cs" />
+    <Compile Include="PhoneToolkitSample\Data\GroupToBackgroundBrushValueConverter.cs" />
+    <Compile Include="PhoneToolkitSample\Data\GroupToForegroundBrushValueConverter.cs" />
+    <Compile Include="PhoneToolkitSample\Data\InboxObject.cs" />
+    <Compile Include="PhoneToolkitSample\Data\LoremIpsum.cs" />
+    <Compile Include="PhoneToolkitSample\Data\LoremIpsumWebsites.cs" />
+    <Compile Include="PhoneToolkitSample\Data\Movie.cs" />
+    <Compile Include="PhoneToolkitSample\Data\MoviesByCategory.cs" />
+    <Compile Include="PhoneToolkitSample\Data\MoviesInCategory.cs" />
+    <Compile Include="PhoneToolkitSample\Data\MultilineItem.cs" />
+    <Compile Include="PhoneToolkitSample\Data\MultilineItemCollection.cs" />
+    <Compile Include="PhoneToolkitSample\Data\PeopleByFirstName.cs" />
+    <Compile Include="PhoneToolkitSample\Data\PeopleInGroup.cs" />
+    <Compile Include="PhoneToolkitSample\Data\Person.cs" />
+    <Compile Include="PhoneToolkitSample\Data\RandomPeople.cs" />
+    <Compile Include="PhoneToolkitSample\Data\Tuple.cs" />
+    <Compile Include="PhoneToolkitSample\Data\UnreadToBrushConverter.cs" />
+    <Compile Include="PhoneToolkitSample\Extensions.cs" />
+    <Compile Include="PhoneToolkitSample\HeaderedContentControl.cs" />
+    <Compile Include="PhoneToolkitSample\MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PhoneToolkitSample\Properties\AssemblyInfo.cs" />
+    <Compile Include="PhoneToolkitSample\Samples\AutoCompleteBoxSample.xaml.cs">
+      <DependentUpon>AutoCompleteBoxSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PhoneToolkitSample\Samples\ContextMenuSample.xaml.cs">
+      <DependentUpon>ContextMenuSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PhoneToolkitSample\Samples\CustomMessageBoxSample.xaml.cs">
+      <DependentUpon>CustomMessageBoxSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PhoneToolkitSample\Samples\DateTimeConvertersSample.xaml.cs">
+      <DependentUpon>DateTimeConvertersSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PhoneToolkitSample\Samples\DateTimePickerSample.xaml.cs">
+      <DependentUpon>DateTimePickerSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PhoneToolkitSample\Samples\ExpanderViewSample.xaml.cs">
+      <DependentUpon>ExpanderViewSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PhoneToolkitSample\Samples\FeatheredTransitionsSample1.xaml.cs">
+      <DependentUpon>FeatheredTransitionsSample1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PhoneToolkitSample\Samples\FeatheredTransitionsSample2.xaml.cs">
+      <DependentUpon>FeatheredTransitionsSample2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PhoneToolkitSample\Samples\GestureSample.xaml.cs">
+      <DependentUpon>GestureSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PhoneToolkitSample\Samples\HubTileSample.xaml.cs">
+      <DependentUpon>HubTileSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PhoneToolkitSample\Samples\ListPickerSample.xaml.cs">
+      <DependentUpon>ListPickerSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PhoneToolkitSample\Samples\LockablePivotSample.xaml.cs">
+      <DependentUpon>LockablePivotSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PhoneToolkitSample\Samples\LongListSelectorSample.xaml.cs">
+      <DependentUpon>LongListSelectorSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PhoneToolkitSample\Samples\MultiselectListSample.xaml.cs">
+      <DependentUpon>MultiselectListSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PhoneToolkitSample\Samples\NavigationTransitionSample1.xaml.cs">
+      <DependentUpon>NavigationTransitionSample1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PhoneToolkitSample\Samples\NavigationTransitionSample2.xaml.cs">
+      <DependentUpon>NavigationTransitionSample2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PhoneToolkitSample\Samples\PerformanceProgressBarSample.xaml.cs">
+      <DependentUpon>PerformanceProgressBarSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PhoneToolkitSample\Samples\PersonDetail.xaml.cs">
+      <DependentUpon>PersonDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PhoneToolkitSample\Samples\PhoneTextBoxSample.xaml.cs">
+      <DependentUpon>PhoneTextBoxSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PhoneToolkitSample\Samples\RatingControlSample.xaml.cs">
+      <DependentUpon>RatingControlSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PhoneToolkitSample\Samples\SlideInEffectSample.xaml.cs">
+      <DependentUpon>SlideInEffectSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PhoneToolkitSample\Samples\TiltEffectSample.xaml.cs">
+      <DependentUpon>TiltEffectSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PhoneToolkitSample\Samples\ToggleSwitchSample.xaml.cs">
+      <DependentUpon>ToggleSwitchSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PhoneToolkitSample\Samples\TransitionsSample.xaml.cs">
+      <DependentUpon>TransitionsSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PhoneToolkitSample\Samples\TurnstileFeatherEffectSample1.xaml.cs">
+      <DependentUpon>TurnstileFeatherEffectSample1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PhoneToolkitSample\Samples\TurnstileFeatherEffectSample2.xaml.cs">
+      <DependentUpon>TurnstileFeatherEffectSample2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PhoneToolkitSample\Samples\WrapPanelSample.xaml.cs">
+      <DependentUpon>WrapPanelSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\AssertExtensions.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\AsynchronousAttribute.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\BugAttribute.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Client\Converters\DocViewUriConverter.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Client\Converters\FixTextSizeConverter.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Client\Converters\MethodPassedColorConverter.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Client\Converters\VisibilityConverter.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Client\DataManager.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Client\DocView.xaml.cs">
+      <DependentUpon>DocView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Client\InitViewModel.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Client\IProvideResultReports.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Client\PropertyChangedBase.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Client\Resources\ResourceWrapper.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Client\TagEditor.xaml.cs">
+      <DependentUpon>TagEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Client\TagExpressionEventArgs.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Client\TestAssemblyData.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Client\TestClassData.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Client\TestMethodData.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Client\TestMethodDetails.xaml.cs">
+      <DependentUpon>TestMethodDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Client\TestPage.xaml.cs">
+      <DependentUpon>TestPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Client\TestResultPlainData.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Client\TestRunData.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Client\TimeHelper.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\CustomFrameworkUnitTest.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\ExclusiveAttribute.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Extensions.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\GlobalSuppressions.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Harness\AssemblyManager.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Harness\CallbackWorkItem.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Harness\CompositeWorkItem.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Harness\ConditionalWorkItem.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Harness\DebugOutputProvider.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Harness\DecoratorDictionary.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Harness\FastRunDispatcher.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Harness\GlobalExceptionHandler.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Harness\HarnessExtensions.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Harness\IProvideDynamicTestMethods.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Harness\ITestSettingsLogProvider.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Harness\LazyMethodAssemblyInfo.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Harness\LazyMethodInfo.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Harness\LogDecorator.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Harness\LogMessage.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Harness\LogMessageFactory.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Harness\LogMessageType.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Harness\LogMessageWriter.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Harness\LogProvider.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Harness\MethodContainer.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Harness\MethodInvokeWorkItem.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Harness\ReflectionUtility.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Harness\ResourceUtility.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Harness\RetryTestRunFilter.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Harness\RunDispatcher.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Harness\ScenarioResult.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Harness\SleepWorkItem.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Harness\TagManager.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Harness\TagManager.ExpressionEvaluator.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Harness\TagManager.Tags.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Harness\TagTestRunFilter.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Harness\TestAssemblyCompletedEventArgs.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Harness\TestAssemblyHelper.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Harness\TestAssemblyStartingEventArgs.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Harness\TestClassCompletedEventArgs.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Harness\TestClassHelper.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Harness\TestClassInstanceDictionary.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Harness\TestClassManager.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Harness\TestClassStartingEventArgs.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Harness\TestGranularity.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Harness\TestHarnessCompletedEventArgs.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Harness\TestHarnessState.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Harness\TestMethodCompletedEventArgs.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Harness\TestMethodHelper.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Harness\TestMethodManager.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Harness\TestMethodStartingEventArgs.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Harness\TestOutcome.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Harness\TestPanelManager.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Harness\TestRunFilter.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Harness\TestRunStartingEventArgs.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Harness\TestServiceProvider.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Harness\TestStage.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Harness\TextFailuresLogProvider.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Harness\UnitTestCompositeWorkItem.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Harness\UnitTestHarness.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Harness\UnitTestHarnessEventArgs.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Harness\UnitTestHarnessEvents.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Harness\UnitTestLogDecorator.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Harness\UnitTestLogicFactory.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Harness\UnitTestLogMessageWriter.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Harness\UnitTestMessageConditional.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Harness\UnitTestMethodContainer.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Harness\VisualStudioLogProvider.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Harness\VisualStudioLogProvider.Writer.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Harness\WebBrowserTick.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Harness\WorkItemsManager.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\ITestPage.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Metadata\IAssembly.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Metadata\IExpectedException.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Metadata\IPriority.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Metadata\ITestClass.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Metadata\ITestMethod.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Metadata\ITestProperty.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Metadata\IUnitTestProvider.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Metadata\IWorkItemMetadata.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Metadata\StringEventArgs.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Metadata\UnitTestProviderCapabilities.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Metadata\UnitTestProviders.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Metadata\VisualStudio\ExpectedException.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Metadata\VisualStudio\Priority.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Metadata\VisualStudio\ProviderAttributes.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Metadata\VisualStudio\TestClass.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Metadata\VisualStudio\TestMethod.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Metadata\VisualStudio\TestProperty.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Metadata\VisualStudio\UnitTestContext.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Metadata\VisualStudio\UnitTestFrameworkAssembly.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Metadata\VisualStudio\VsttProvider.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\PresentationTest.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Properties\AssemblyInfo.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Properties\UnitTestMessage.Designer.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Service\EnvironmentProvider.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Service\IsolatedStorageSettingsProvider.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Service\ProviderBase.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Service\ServiceResult.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Service\ServiceType.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Service\SettingsProvider.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Service\SimpleXElement.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Service\TestReportingProvider.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Service\TestServiceFeature.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\TagAttribute.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\UnitTestSettings.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\UnitTestSystem.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\UnitTestSystem.WindowsPhone.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\WorkItem.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\WorkItemExtensions.cs" />
+    <Compile Include="TestFramework\Microsoft.Phone.Toolkit.Testing\WorkItemTest.cs" />
+    <Compile Include="TestFramework\Sample\App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TestFramework\Sample\MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TestFramework\Sample\Properties\AssemblyInfo.cs" />
+    <Compile Include="TestFramework\Sample\UnitTesting\ExceptionInline.cs" />
+    <Compile Include="TestFramework\Sample\UnitTesting\TestPanel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Microsoft.Phone.Controls.Toolkit.Design\Icons\Microsoft.Phone.Controls.AutoCompleteBox.Expression.Large.png" />
+    <Content Include="Microsoft.Phone.Controls.Toolkit.Design\Icons\Microsoft.Phone.Controls.AutoCompleteBox.Expression.Small.png" />
+    <Content Include="Microsoft.Phone.Controls.Toolkit.Design\Icons\Microsoft.Phone.Controls.AutoCompleteBox.VisualStudio.bmp" />
+    <Content Include="Microsoft.Phone.Controls.Toolkit.Design\Icons\Microsoft.Phone.Controls.ContextMenu.Expression.Large.png" />
+    <Content Include="Microsoft.Phone.Controls.Toolkit.Design\Icons\Microsoft.Phone.Controls.ContextMenu.Expression.Small.png" />
+    <Content Include="Microsoft.Phone.Controls.Toolkit.Design\Icons\Microsoft.Phone.Controls.ContextMenu.VisualStudio.bmp" />
+    <Content Include="Microsoft.Phone.Controls.Toolkit.Design\Icons\Microsoft.Phone.Controls.DatePicker.Expression.Large.png" />
+    <Content Include="Microsoft.Phone.Controls.Toolkit.Design\Icons\Microsoft.Phone.Controls.DatePicker.Expression.Small.png" />
+    <Content Include="Microsoft.Phone.Controls.Toolkit.Design\Icons\Microsoft.Phone.Controls.DatePicker.VisualStudio.bmp" />
+    <Content Include="Microsoft.Phone.Controls.Toolkit.Design\Icons\Microsoft.Phone.Controls.ListPicker.Expression.Large.png" />
+    <Content Include="Microsoft.Phone.Controls.Toolkit.Design\Icons\Microsoft.Phone.Controls.ListPicker.Expression.Small.png" />
+    <Content Include="Microsoft.Phone.Controls.Toolkit.Design\Icons\Microsoft.Phone.Controls.ListPicker.VisualStudio.bmp" />
+    <Content Include="Microsoft.Phone.Controls.Toolkit.Design\Icons\Microsoft.Phone.Controls.LongListSelector.Expression.Large.png" />
+    <Content Include="Microsoft.Phone.Controls.Toolkit.Design\Icons\Microsoft.Phone.Controls.LongListSelector.Expression.Small.png" />
+    <Content Include="Microsoft.Phone.Controls.Toolkit.Design\Icons\Microsoft.Phone.Controls.LongListSelector.VisualStudio.bmp" />
+    <Content Include="Microsoft.Phone.Controls.Toolkit.Design\Icons\Microsoft.Phone.Controls.MenuItem.Expression.Large.png" />
+    <Content Include="Microsoft.Phone.Controls.Toolkit.Design\Icons\Microsoft.Phone.Controls.MenuItem.Expression.Small.png" />
+    <Content Include="Microsoft.Phone.Controls.Toolkit.Design\Icons\Microsoft.Phone.Controls.MenuItem.VisualStudio.bmp" />
+    <Content Include="Microsoft.Phone.Controls.Toolkit.Design\Icons\Microsoft.Phone.Controls.Separator.Expression.Large.png" />
+    <Content Include="Microsoft.Phone.Controls.Toolkit.Design\Icons\Microsoft.Phone.Controls.Separator.Expression.Small.png" />
+    <Content Include="Microsoft.Phone.Controls.Toolkit.Design\Icons\Microsoft.Phone.Controls.Separator.VisualStudio.bmp" />
+    <Content Include="Microsoft.Phone.Controls.Toolkit.Design\Icons\Microsoft.Phone.Controls.TimePicker.Expression.Large.png" />
+    <Content Include="Microsoft.Phone.Controls.Toolkit.Design\Icons\Microsoft.Phone.Controls.TimePicker.Expression.Small.png" />
+    <Content Include="Microsoft.Phone.Controls.Toolkit.Design\Icons\Microsoft.Phone.Controls.TimePicker.VisualStudio.bmp" />
+    <Content Include="Microsoft.Phone.Controls.Toolkit.Design\Icons\Microsoft.Phone.Controls.ToggleSwitch.Expression.Large.png" />
+    <Content Include="Microsoft.Phone.Controls.Toolkit.Design\Icons\Microsoft.Phone.Controls.ToggleSwitch.Expression.Small.png" />
+    <Content Include="Microsoft.Phone.Controls.Toolkit.Design\Icons\Microsoft.Phone.Controls.ToggleSwitch.VisualStudio.bmp" />
+    <Content Include="Microsoft.Phone.Controls.Toolkit.Design\Icons\Microsoft.Phone.Controls.WrapPanel.Expression.Large.png" />
+    <Content Include="Microsoft.Phone.Controls.Toolkit.Design\Icons\Microsoft.Phone.Controls.WrapPanel.Expression.Small.png" />
+    <Content Include="Microsoft.Phone.Controls.Toolkit.Design\Icons\Microsoft.Phone.Controls.WrapPanel.VisualStudio.bmp" />
+    <Content Include="Microsoft.Phone.Controls.Toolkit.Design\Microsoft.Phone.Controls.Toolkit.Design.csproj" />
+    <Content Include="Microsoft.Phone.Controls.Toolkit.VisualStudio.Design\Microsoft.Phone.Controls.Toolkit.VisualStudio.Design.csproj" />
+    <Content Include="Microsoft.Phone.Controls.Toolkit\Microsoft.Phone.Controls.Toolkit.csproj" />
+    <Content Include="PhoneToolkit.sln" />
+    <Content Include="PhoneToolkitSample\App.xaml.vb" />
+    <Content Include="PhoneToolkitSample\ApplicationIcon.png" />
+    <Content Include="PhoneToolkitSample\Background.png" />
+    <Content Include="PhoneToolkitSample\Data\AccentColorNameToBrush.vb" />
+    <Content Include="PhoneToolkitSample\Data\AllPeople.vb" />
+    <Content Include="PhoneToolkitSample\Data\ColorExtensions.vb" />
+    <Content Include="PhoneToolkitSample\Data\GroupToBackgroundBrushValueConverter.vb" />
+    <Content Include="PhoneToolkitSample\Data\GroupToBrushValueConverter.vb" />
+    <Content Include="PhoneToolkitSample\Data\GroupToForegroundBrushValueConverter.vb" />
+    <Content Include="PhoneToolkitSample\Data\loremipsum.txt" />
+    <Content Include="PhoneToolkitSample\Data\LoremIpsum.vb" />
+    <Content Include="PhoneToolkitSample\Data\LoremIpsumWebsites.vb" />
+    <Content Include="PhoneToolkitSample\Data\Movie.vb" />
+    <Content Include="PhoneToolkitSample\Data\MoviesByCategory.vb" />
+    <Content Include="PhoneToolkitSample\Data\MoviesInCategory.vb" />
+    <Content Include="PhoneToolkitSample\Data\PeopleByFirstName.vb" />
+    <Content Include="PhoneToolkitSample\Data\PeopleInGroup.vb" />
+    <Content Include="PhoneToolkitSample\Data\Person.vb" />
+    <Content Include="PhoneToolkitSample\Data\RandomPeople.vb" />
+    <Content Include="PhoneToolkitSample\Data\Tuple.vb" />
+    <Content Include="PhoneToolkitSample\Extensions.vb" />
+    <Content Include="PhoneToolkitSample\HeaderedContentControl.vb" />
+    <Content Include="PhoneToolkitSample\Images\Beignets.jpg" />
+    <Content Include="PhoneToolkitSample\Images\Copenhagen.jpg" />
+    <Content Include="PhoneToolkitSample\Images\Dessert.jpg" />
+    <Content Include="PhoneToolkitSample\Images\Fruits.jpg" />
+    <Content Include="PhoneToolkitSample\Images\K++benhavn.jpg" />
+    <Content Include="PhoneToolkitSample\Images\Movie.jpg" />
+    <Content Include="PhoneToolkitSample\Images\Mürren.jpg" />
+    <Content Include="PhoneToolkitSample\Images\Neuschwanstein.jpg" />
+    <Content Include="PhoneToolkitSample\Images\Paris.jpg" />
+    <Content Include="PhoneToolkitSample\Images\Person.jpg" />
+    <Content Include="PhoneToolkitSample\Images\Pretzel.jpg" />
+    <Content Include="PhoneToolkitSample\Images\Search.png" />
+    <Content Include="PhoneToolkitSample\Images\Seattle.jpg" />
+    <Content Include="PhoneToolkitSample\Images\Shrimp.jpg" />
+    <Content Include="PhoneToolkitSample\Images\SteakSandwich.jpg" />
+    <Content Include="PhoneToolkitSample\Images\Venice.jpg" />
+    <Content Include="PhoneToolkitSample\MainPage.xaml.vb" />
+    <Content Include="PhoneToolkitSample\My Project\AppManifest.xml" />
+    <Content Include="PhoneToolkitSample\My Project\AssemblyInfo.vb" />
+    <Content Include="PhoneToolkitSample\My Project\Microsoft.VisualBasic.dll" />
+    <Content Include="PhoneToolkitSample\My Project\WMAppManifest.xml" />
+    <Content Include="PhoneToolkitSample\PhoneToolkitSample.csproj" />
+    <Content Include="PhoneToolkitSample\PhoneToolkitSample.sln" />
+    <Content Include="PhoneToolkitSample\PhoneToolkitSample.vbproj" />
+    <Content Include="PhoneToolkitSample\Properties\AppManifest.xml" />
+    <Content Include="PhoneToolkitSample\Properties\WMAppManifest.xml" />
+    <Content Include="PhoneToolkitSample\Samples\AutoCompleteBoxSample.xaml.vb" />
+    <Content Include="PhoneToolkitSample\Samples\ContextMenuSample.xaml.vb" />
+    <Content Include="PhoneToolkitSample\Samples\DateTimePickerSample.xaml.vb" />
+    <Content Include="PhoneToolkitSample\Samples\GestureSample.xaml.vb" />
+    <Content Include="PhoneToolkitSample\Samples\ListPickerSample.xaml.vb" />
+    <Content Include="PhoneToolkitSample\Samples\LongListSelectorSample.xaml.vb" />
+    <Content Include="PhoneToolkitSample\Samples\NavigationTransitionSample1.xaml.vb" />
+    <Content Include="PhoneToolkitSample\Samples\NavigationTransitionSample2.xaml.vb" />
+    <Content Include="PhoneToolkitSample\Samples\PerformanceProgressBarSample.xaml.vb" />
+    <Content Include="PhoneToolkitSample\Samples\PersonDetail.xaml.vb" />
+    <Content Include="PhoneToolkitSample\Samples\TiltEffectSample.xaml.vb" />
+    <Content Include="PhoneToolkitSample\Samples\ToggleSwitchSample.xaml.vb" />
+    <Content Include="PhoneToolkitSample\Samples\TransitionsSample.xaml.vb" />
+    <Content Include="PhoneToolkitSample\Samples\WrapPanelSample.xaml.vb" />
+    <Content Include="PhoneToolkitSample\SplashScreenImage.jpg" />
+    <Content Include="PhoneToolkitSample\Toolkit.Content\ApplicationBar.Cancel.png" />
+    <Content Include="PhoneToolkitSample\Toolkit.Content\ApplicationBar.Check.png" />
+    <Content Include="PhoneToolkitSample\Toolkit.Content\ApplicationBar.Delete.png" />
+    <Content Include="PhoneToolkitSample\Toolkit.Content\ApplicationBar.Select.png" />
+    <Content Include="TestFramework\Lib\Microsoft.Phone.Controls.Toolkit.dll" />
+    <Content Include="TestFramework\Lib\Microsoft.Phone.Controls.Toolkit.pdb" />
+    <Content Include="TestFramework\Lib\Microsoft.Phone.Controls.Toolkit.XML" />
+    <Content Include="TestFramework\Lib\Microsoft.VisualStudio.QualityTools.UnitTesting.Phone.dll" />
+    <Content Include="TestFramework\Lib\Microsoft.VisualStudio.QualityTools.UnitTesting.Phone.pdb" />
+    <Content Include="TestFramework\Lib\Microsoft.VisualStudio.QualityTools.UnitTesting.Phone.xml" />
+    <Content Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Client\Resources\vsicon.assembly.png" />
+    <Content Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Client\Resources\vsicon.class.png" />
+    <Content Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Client\Resources\vsicon.method.png" />
+    <Content Include="TestFramework\Microsoft.Phone.Toolkit.Testing\CustomDictionary.xml" />
+    <Content Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Microsoft.Phone.Toolkit.Testing.csproj" />
+    <Content Include="TestFramework\Sample\ApplicationIcon.png" />
+    <Content Include="TestFramework\Sample\Background.png" />
+    <Content Include="TestFramework\Sample\Properties\AppManifest.xml" />
+    <Content Include="TestFramework\Sample\Properties\WMAppManifest.xml" />
+    <Content Include="TestFramework\Sample\SplashScreenImage.jpg" />
+    <Content Include="TestFramework\Sample\Toolkit.Content\appbar.feature.email.rest.png" />
+    <Content Include="TestFramework\Sample\Toolkit.Content\appbar.save.rest.png" />
+    <Content Include="TestFramework\Sample\Toolkit.Content\appbar.transport.play.rest.png" />
+    <Content Include="TestFramework\Sample\UnitTestingTests.csproj" />
+    <Content Include="TestFramework\TestFx.sln" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Microsoft.Phone.Controls.Toolkit\DateTimePickers\DatePickerPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Microsoft.Phone.Controls.Toolkit\DateTimePickers\TimePickerPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Microsoft.Phone.Controls.Toolkit\ListPicker\ListPickerPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Microsoft.Phone.Controls.Toolkit\Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Microsoft.Phone.Controls.Toolkit\Transitions\Storyboards\Roll.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Microsoft.Phone.Controls.Toolkit\Transitions\Storyboards\RotateIn180Clockwise.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Microsoft.Phone.Controls.Toolkit\Transitions\Storyboards\RotateIn180CounterClockwise.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Microsoft.Phone.Controls.Toolkit\Transitions\Storyboards\RotateIn90Clockwise.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Microsoft.Phone.Controls.Toolkit\Transitions\Storyboards\RotateIn90CounterClockwise.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Microsoft.Phone.Controls.Toolkit\Transitions\Storyboards\RotateOut180Clockwise.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Microsoft.Phone.Controls.Toolkit\Transitions\Storyboards\RotateOut180CounterClockwise.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Microsoft.Phone.Controls.Toolkit\Transitions\Storyboards\RotateOut90Clockwise.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Microsoft.Phone.Controls.Toolkit\Transitions\Storyboards\RotateOut90CounterClockwise.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Microsoft.Phone.Controls.Toolkit\Transitions\Storyboards\SlideDownFadeIn.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Microsoft.Phone.Controls.Toolkit\Transitions\Storyboards\SlideDownFadeOut.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Microsoft.Phone.Controls.Toolkit\Transitions\Storyboards\SlideLeftFadeIn.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Microsoft.Phone.Controls.Toolkit\Transitions\Storyboards\SlideLeftFadeOut.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Microsoft.Phone.Controls.Toolkit\Transitions\Storyboards\SlideRightFadeIn.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Microsoft.Phone.Controls.Toolkit\Transitions\Storyboards\SlideRightFadeOut.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Microsoft.Phone.Controls.Toolkit\Transitions\Storyboards\SlideUpFadeIn.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Microsoft.Phone.Controls.Toolkit\Transitions\Storyboards\SlideUpFadeOut.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Microsoft.Phone.Controls.Toolkit\Transitions\Storyboards\SwivelBackwardIn.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Microsoft.Phone.Controls.Toolkit\Transitions\Storyboards\SwivelBackwardOut.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Microsoft.Phone.Controls.Toolkit\Transitions\Storyboards\SwivelForwardIn.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Microsoft.Phone.Controls.Toolkit\Transitions\Storyboards\SwivelForwardOut.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Microsoft.Phone.Controls.Toolkit\Transitions\Storyboards\SwivelFullScreenIn.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Microsoft.Phone.Controls.Toolkit\Transitions\Storyboards\SwivelFullScreenOut.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Microsoft.Phone.Controls.Toolkit\Transitions\Storyboards\TurnstileBackwardIn.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Microsoft.Phone.Controls.Toolkit\Transitions\Storyboards\TurnstileBackwardOut.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Microsoft.Phone.Controls.Toolkit\Transitions\Storyboards\TurnstileForwardIn.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Microsoft.Phone.Controls.Toolkit\Transitions\Storyboards\TurnstileForwardOut.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PhoneToolkitSample\App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PhoneToolkitSample\MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PhoneToolkitSample\Samples\AutoCompleteBoxSample.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PhoneToolkitSample\Samples\ContextMenuSample.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PhoneToolkitSample\Samples\CustomMessageBoxSample.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PhoneToolkitSample\Samples\DateTimeConvertersSample.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PhoneToolkitSample\Samples\DateTimePickerSample.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PhoneToolkitSample\Samples\ExpanderViewSample.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PhoneToolkitSample\Samples\FeatheredTransitionsSample1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PhoneToolkitSample\Samples\FeatheredTransitionsSample2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PhoneToolkitSample\Samples\GestureSample.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PhoneToolkitSample\Samples\HubTileSample.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PhoneToolkitSample\Samples\ListPickerSample.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PhoneToolkitSample\Samples\LockablePivotSample.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PhoneToolkitSample\Samples\LongListSelectorSample.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PhoneToolkitSample\Samples\MultiselectListSample.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PhoneToolkitSample\Samples\NavigationTransitionSample1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PhoneToolkitSample\Samples\NavigationTransitionSample2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PhoneToolkitSample\Samples\PerformanceProgressBarSample.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PhoneToolkitSample\Samples\PersonDetail.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PhoneToolkitSample\Samples\PhoneTextBoxSample.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PhoneToolkitSample\Samples\RatingControlSample.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PhoneToolkitSample\Samples\SlideInEffectSample.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PhoneToolkitSample\Samples\TiltEffectSample.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PhoneToolkitSample\Samples\ToggleSwitchSample.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PhoneToolkitSample\Samples\TransitionsSample.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PhoneToolkitSample\Samples\TurnstileFeatherEffectSample1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PhoneToolkitSample\Samples\TurnstileFeatherEffectSample2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PhoneToolkitSample\Samples\WrapPanelSample.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PhoneToolkitSample\Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Client\DocView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Client\Resources\FrameworkResources.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Client\TagEditor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Client\TestMethodDetails.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Client\TestPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="TestFramework\Sample\App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="TestFramework\Sample\MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="TestFramework\Sample\Properties\DesignTimeResources.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Microsoft.Phone.Controls.Toolkit.Design\Properties\Resources.resx" />
+    <EmbeddedResource Include="Microsoft.Phone.Controls.Toolkit\LocalizedResources\ControlResources.cs.resx" />
+    <EmbeddedResource Include="Microsoft.Phone.Controls.Toolkit\LocalizedResources\ControlResources.da.resx" />
+    <EmbeddedResource Include="Microsoft.Phone.Controls.Toolkit\LocalizedResources\ControlResources.de-DE.resx" />
+    <EmbeddedResource Include="Microsoft.Phone.Controls.Toolkit\LocalizedResources\ControlResources.el.resx" />
+    <EmbeddedResource Include="Microsoft.Phone.Controls.Toolkit\LocalizedResources\ControlResources.en-GB.resx" />
+    <EmbeddedResource Include="Microsoft.Phone.Controls.Toolkit\LocalizedResources\ControlResources.es-ES.resx" />
+    <EmbeddedResource Include="Microsoft.Phone.Controls.Toolkit\LocalizedResources\ControlResources.fi.resx" />
+    <EmbeddedResource Include="Microsoft.Phone.Controls.Toolkit\LocalizedResources\ControlResources.fr-FR.resx" />
+    <EmbeddedResource Include="Microsoft.Phone.Controls.Toolkit\LocalizedResources\ControlResources.hu.resx" />
+    <EmbeddedResource Include="Microsoft.Phone.Controls.Toolkit\LocalizedResources\ControlResources.it-IT.resx" />
+    <EmbeddedResource Include="Microsoft.Phone.Controls.Toolkit\LocalizedResources\ControlResources.ja.resx" />
+    <EmbeddedResource Include="Microsoft.Phone.Controls.Toolkit\LocalizedResources\ControlResources.ko.resx" />
+    <EmbeddedResource Include="Microsoft.Phone.Controls.Toolkit\LocalizedResources\ControlResources.nb-NO.resx" />
+    <EmbeddedResource Include="Microsoft.Phone.Controls.Toolkit\LocalizedResources\ControlResources.nl-NL.resx" />
+    <EmbeddedResource Include="Microsoft.Phone.Controls.Toolkit\LocalizedResources\ControlResources.pl.resx" />
+    <EmbeddedResource Include="Microsoft.Phone.Controls.Toolkit\LocalizedResources\ControlResources.pt-BR.resx" />
+    <EmbeddedResource Include="Microsoft.Phone.Controls.Toolkit\LocalizedResources\ControlResources.pt-PT.resx" />
+    <EmbeddedResource Include="Microsoft.Phone.Controls.Toolkit\LocalizedResources\ControlResources.resx" />
+    <EmbeddedResource Include="Microsoft.Phone.Controls.Toolkit\LocalizedResources\ControlResources.ru.resx" />
+    <EmbeddedResource Include="Microsoft.Phone.Controls.Toolkit\LocalizedResources\ControlResources.sv-SE.resx" />
+    <EmbeddedResource Include="Microsoft.Phone.Controls.Toolkit\LocalizedResources\ControlResources.zh-CN.resx" />
+    <EmbeddedResource Include="Microsoft.Phone.Controls.Toolkit\LocalizedResources\ControlResources.zh-TW.resx" />
+    <EmbeddedResource Include="Microsoft.Phone.Controls.Toolkit\Properties\Resources.resx" />
+    <EmbeddedResource Include="TestFramework\Microsoft.Phone.Toolkit.Testing\Properties\UnitTestMessage.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PhoneToolkit.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Microsoft.Phone.Controls.Toolkit\TransitionService\Storyboards\" />
+    <Folder Include="Microsoft.Phone.Controls.Toolkit\TransitionService\Transitions\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <ProjectExtensions />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

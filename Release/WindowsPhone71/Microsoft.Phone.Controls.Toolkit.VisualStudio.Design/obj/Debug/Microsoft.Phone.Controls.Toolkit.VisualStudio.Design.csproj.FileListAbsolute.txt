@@ -1,0 +1,1 @@
+C:\DevTools\Git\windowsPhone\Release\WindowsPhone71\Microsoft.Phone.Controls.Toolkit.VisualStudio.Design\obj\Debug\Microsoft.Phone.Controls.Toolkit.VisualStudio.Design.csprojResolveAssemblyReference.cache

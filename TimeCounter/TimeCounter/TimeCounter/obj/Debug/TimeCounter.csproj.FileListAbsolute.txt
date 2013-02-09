@@ -1,0 +1,6 @@
+C:\DevTools\Git\windowsPhone\TimeCounter\TimeCounter\TimeCounter\Bin\Debug\TimeCounter.dll
+C:\DevTools\Git\windowsPhone\TimeCounter\TimeCounter\TimeCounter\Bin\Debug\TimeCounter.pdb
+C:\DevTools\Git\windowsPhone\TimeCounter\TimeCounter\TimeCounter\obj\Debug\TimerCounterUserControl.g.cs
+C:\DevTools\Git\windowsPhone\TimeCounter\TimeCounter\TimeCounter\obj\Debug\TimeCounter.g.resources
+C:\DevTools\Git\windowsPhone\TimeCounter\TimeCounter\TimeCounter\obj\Debug\TimeCounter.dll
+C:\DevTools\Git\windowsPhone\TimeCounter\TimeCounter\TimeCounter\obj\Debug\TimeCounter.pdb
