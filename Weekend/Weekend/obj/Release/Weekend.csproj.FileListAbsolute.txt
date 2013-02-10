@@ -9,7 +9,6 @@ C:\DevTools\Git\windowsPhone\Weekend\Weekend\Bin\Release\Fonts\erbos_draco_1st_n
 C:\DevTools\Git\windowsPhone\Weekend\Weekend\Bin\Release\Weekend.dll
 C:\DevTools\Git\windowsPhone\Weekend\Weekend\Bin\Release\Weekend.pdb
 C:\DevTools\Git\windowsPhone\Weekend\Weekend\Bin\Release\fr\Weekend.resources.dll
-C:\DevTools\Git\windowsPhone\Weekend\Weekend\Bin\Release\fr-FR\Weekend.resources.dll
 C:\DevTools\Git\windowsPhone\Weekend\Weekend\Bin\Release\AppManifest.xaml
 C:\DevTools\Git\windowsPhone\Weekend\Weekend\Bin\Release\Weekend.xap
 C:\DevTools\Git\windowsPhone\Weekend\Weekend\Bin\Release\BugSense.dll
@@ -72,10 +71,8 @@ C:\DevTools\Git\windowsPhone\Weekend\Weekend\obj\Release\MainPage.g.cs
 C:\DevTools\Git\windowsPhone\Weekend\Weekend\obj\Release\Weekend.g.resources
 C:\DevTools\Git\windowsPhone\Weekend\Weekend\obj\Release\Weekend.Resources.Msg.resources
 C:\DevTools\Git\windowsPhone\Weekend\Weekend\obj\Release\Weekend.Resources.Msg.fr.resources
-C:\DevTools\Git\windowsPhone\Weekend\Weekend\obj\Release\Weekend.Resources.Msg.fr-FR.resources
 C:\DevTools\Git\windowsPhone\Weekend\Weekend\obj\Release\Weekend.csproj.GenerateResource.Cache
 C:\DevTools\Git\windowsPhone\Weekend\Weekend\obj\Release\fr\Weekend.resources.dll
-C:\DevTools\Git\windowsPhone\Weekend\Weekend\obj\Release\fr-FR\Weekend.resources.dll
 C:\DevTools\Git\windowsPhone\Weekend\Weekend\obj\Release\Weekend.dll
 C:\DevTools\Git\windowsPhone\Weekend\Weekend\obj\Release\Weekend.pdb
 C:\DevTools\Git\windowsPhone\Weekend\Weekend\obj\Release\XapCacheFile.xml

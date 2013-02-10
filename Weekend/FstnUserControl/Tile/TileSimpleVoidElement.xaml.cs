@@ -21,8 +21,12 @@ namespace FstnUserControl.Tile
             LayoutRoot.Opacity = 0;
             LayoutRoot.DataContext = this;
             this.Loaded += FormMultiVoidElement_Loaded;
-            ShowSB = this.Resources["ShowSB"] as Storyboard;
-            CloseSB = this.Resources["CloseSB"] as Storyboard;
+            ResourceDictionary SBResources = new ResourceDictionary()
+            {
+                Source = new Uri("/FstnUserControl;component/Resources/TileStoryBoard.xaml", UriKind.Relative)
+            };
+            ShowSB = SBResources["ShowSB"] as Storyboard;
+            CloseSB = SBResources["CloseSB"] as Storyboard;
 
             Storyboard.SetTarget(ShowSB, LayoutRoot);
             Storyboard.SetTarget(CloseSB, LayoutRoot);

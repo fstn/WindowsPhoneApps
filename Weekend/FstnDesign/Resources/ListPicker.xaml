@@ -6,16 +6,25 @@
                      mc:Ignorable="d">
     <DataTemplate x:Key="ListPickerFullModeItemTemplate">
         <TextBlock Text="{Binding}"
+                   HorizontalAlignment="Center"
                    FontSize="{StaticResource PhoneFontSizeExtraLarge}"
-                   FontFamily="{StaticResource PhoneFontFamilySemiLight}"
-                   Margin="0,19,0,19"/>
+                   FontFamily="{StaticResource PhoneFontFamilyNormal}"/>
     </DataTemplate>
-    <Style TargetType="toolkit:ListPicker" x:Key="ListPickerSimpleStyle">
+    <DataTemplate x:Key="HeaderTemplate">
+        <TextBlock Text="{Binding}" Foreground="White"
+                   FontSize="{StaticResource PhoneFontSizeMediumLarge}"
+                   FontFamily="{StaticResource PhoneFontFamilyNormal}"
+                   TextAlignment="Center"            
+                   TextWrapping="Wrap"                   
+                   />
+    </DataTemplate>
+
+    <Style TargetType="toolkit:ListPicker" x:Key="ListPickerSimpleStyle" >
         <Setter Property="Background" Value="Transparent"/>
-        <Setter Property="Foreground" Value="{StaticResource PhoneTextBoxForegroundBrush}"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="Foreground" Value="Blue"/>
         <Setter Property="FontSize" Value="{StaticResource PhoneFontSizeMediumLarge}"/>
         <Setter Property="HorizontalContentAlignment" Value="Center"/>
-        <Setter Property="BorderBrush" Value="Transparent"/>
-       
+        <Setter Property="BorderBrush" Value="Transparent"/>       
     </Style>
 </ResourceDictionary>

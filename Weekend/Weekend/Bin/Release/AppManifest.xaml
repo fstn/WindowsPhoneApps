@@ -14,7 +14,6 @@
     <AssemblyPart x:Name="System.Windows.Interactivity" Source="System.Windows.Interactivity.dll" />
     <AssemblyPart x:Name="Microsoft.Practices.ServiceLocation" Source="Microsoft.Practices.ServiceLocation.dll" />
     <AssemblyPart Source="fr/Weekend.resources.dll" />
-    <AssemblyPart Source="fr-FR/Weekend.resources.dll" />
     <AssemblyPart Source="fr-FR/Microsoft.Phone.Controls.Toolkit.resources.dll" />
     <AssemblyPart Source="fr/System.Windows.Interactivity.resources.dll" />
   </Deployment.Parts>

@@ -12,7 +12,7 @@
         <TemplateType5>
           <BackgroundImageURI IsRelative="true" IsResource="false">images\icon.png</BackgroundImageURI>
           <Count>0</Count>
-          <Title>Is it weekend?</Title>
+          <Title>Weekend?</Title>
         </TemplateType5>
       </PrimaryToken>
     </Tokens>

@@ -118,16 +118,16 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="BePatient" xml:space="preserve">
-    <value>La patience est une vertu qui s’acquiert avec de la patience.</value>
+    <value>NON, il va falloir patienter.... La patience est une vertu qui s’acquiert avec de la patience.</value>
   </data>
   <data name="DayOfWeekend" xml:space="preserve">
     <value>Le WE commence le</value>
   </data>
   <data name="EndOfWeekeTime" xml:space="preserve">
-    <value>Heure de début du WE</value>
+    <value>Le WE commence à</value>
   </data>
   <data name="Enjoy" xml:space="preserve">
-    <value>Il faut profiter du temps. Il ne passe pas deux fois.</value>
+    <value>OUI!!! Il faut profiter du temps. Il ne passe pas deux fois.</value>
   </data>
   <data name="Friday" xml:space="preserve">
     <value>Vendredi</value>

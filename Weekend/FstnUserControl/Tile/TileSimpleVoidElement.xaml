@@ -15,7 +15,6 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="/FstnUserControl;component/Resources/Debug.xaml"/>
-                <ResourceDictionary Source="/FstnUserControl;component/Resources/TileStoryBoard.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </tile:AbstractTile.Resources>

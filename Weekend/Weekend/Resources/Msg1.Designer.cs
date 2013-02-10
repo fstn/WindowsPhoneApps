@@ -61,7 +61,7 @@ namespace Weekend.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to La patience est une vertu qui s’acquiert avec de la patience..
+        ///   Looks up a localized string similar to NO !! coming soon ....
         /// </summary>
         public static string BePatient {
             get {
@@ -79,7 +79,7 @@ namespace Weekend.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Weekend start at.
+        ///   Looks up a localized string similar to Weekend starts at.
         /// </summary>
         public static string EndOfWeekeTime {
             get {
@@ -88,7 +88,7 @@ namespace Weekend.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Il faut profiter du temps. Il ne passe pas deux fois..
+        ///   Looks up a localized string similar to YES !! enjoy ....
         /// </summary>
         public static string Enjoy {
             get {
