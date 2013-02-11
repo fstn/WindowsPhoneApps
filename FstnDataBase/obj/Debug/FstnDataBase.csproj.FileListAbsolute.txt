@@ -1,0 +1,5 @@
+C:\DevTools\Git\windowsPhone\FstnDataBase\Bin\Debug\FstnDataBase.dll
+C:\DevTools\Git\windowsPhone\FstnDataBase\Bin\Debug\FstnDataBase.pdb
+C:\DevTools\Git\windowsPhone\FstnDataBase\obj\Debug\FstnDataBase.csprojResolveAssemblyReference.cache
+C:\DevTools\Git\windowsPhone\FstnDataBase\obj\Debug\FstnDataBase.dll
+C:\DevTools\Git\windowsPhone\FstnDataBase\obj\Debug\FstnDataBase.pdb
