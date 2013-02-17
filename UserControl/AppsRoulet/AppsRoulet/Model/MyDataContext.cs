@@ -17,6 +17,45 @@ namespace AppsRoulet.Model
         {
         }
 
+        public override void SubmitChanges(ConflictMode failureMode)
+        {
+            // Get the entities that are to be inserted / updated / deleted
+            ChangeSet changeSet = GetChangeSet();
+
+            // Get a single list of all the entities in the change set
+            IEnumerable<object> changeSetEntities = changeSet.Deletes;
+            changeSetEntities = changeSetEntities.Union(changeSet.Inserts);
+            changeSetEntities = changeSetEntities.Union(changeSet.Updates);
+
+            // Get a single list of all the enitities that inherit from EntityBase
+            IEnumerable<ChangeEntity> entities =
+                 from entity in changeSetEntities.Cast<EntityBase>()
+                 select new ChangeEntity()
+                 {
+                     ChangeAction =
+                          changeSet.Deletes.Contains(entity) ? ChangeAction.Delete
+                        : changeSet.Inserts.Contains(entity) ? ChangeAction.Insert
+                        : changeSet.Updates.Contains(entity) ? ChangeAction.Update
+                        : ChangeAction.None,
+                     Entity = entity as EntityBase
+                 };
+
+            // "Raise" the OnSaving event for the entities 
+            foreach (ChangeEntity entity in entities)
+            {
+                entity.Entity.OnSaving(entity.ChangeAction);
+            }
+
+            // Save the changes
+            base.SubmitChanges(failureMode);
+
+            // "Raise" the OnSaved event for the entities
+            foreach (ChangeEntity entity in entities)
+            {
+                entity.Entity.OnSaved();
+            }
+        }
+
         public Table<MarketApp> MarketApps
         {
             get
@@ -24,77 +63,111 @@ namespace AppsRoulet.Model
                 return this.GetTable<MarketApp>();
             }
         }
-        public Table<MarketImage> Images
+        public Table<MarketImage> MarketImages
         {
             get
             {
                 return this.GetTable<MarketImage>();
             }
         }
-    }
-
-    [Table]
-    public partial class MarketApp : BindableObject
-    {
-        //http://www.w3.org/2005/Atom
-        [Column()]
-        public String Title { get; set; }
-        [Column()]
-        public DateTime Update { get; set; }
-
-        [Column(
-            IsPrimaryKey = true,
-            IsDbGenerated = true,
-            DbType = "INT NOT NULL Identity",
-            CanBeNull = false,
-            AutoSync = AutoSync.OnInsert)]
-        public int IdGen { get; set; }
-
-        [Column(IsPrimaryKey = false, DbType = "NVARCHAR(50)  NULL")]
-        public String Id;
-
-        //http://schemas.zune.net/catalog/apps/2008/02
-        [Column(IsPrimaryKey = false, DbType = "NVARCHAR(50)  NULL")]
-        public String SortTitle { get; set; }
-        [Column()]
-        public DateTime ReleaseDate { get; set; }
-        [Column()]
-        public String Version { get; set; }
-        [Column()]
-        public double AverageUserRating { get; set; } 
-        [Column()]
-        public int UserRatingCount { get; set; }
-
-        [Column(IsPrimaryKey = false, DbType = "INT NOT NULL")]
-        internal int IdImage { get; set; }
-
-        private EntityRef<MarketImage> _image;
-        [Association(Storage = "_image", ThisKey = "IdImage", OtherKey = "IdGen", IsForeignKey = true)]
-        public MarketImage Image
+        public Table<MarketCat> MarketCategories
         {
-            get { return this._image.Entity; }
-            set
+            get
             {
-                if (this._image.Entity != value)
-                {
-                    this._image.Entity = value;
-                    if (value != null) IdImage = value.IdGen;
-                    OnPropertyChanged("Image");
-                }
+                return this.GetTable<MarketCat>();
+            }
+        }
+        public Table<LinkCategoryToApp> LinkCategoryToApps
+        {
+            get
+            {
+                return this.GetTable<LinkCategoryToApp>();
+            }
+        }
+        public Table<MarketOffer> MarketOffers
+        {
+            get
+            {
+                return this.GetTable<MarketOffer>();
             }
         }
     }
+    
     [Table]
-    public partial class MarketImage : BindableObject
+    public partial class LinkOfferToApp : BindableObject, EntityBase
     {
-        [Column(
-            IsPrimaryKey = true,
-            IsDbGenerated = true,
-            DbType = "INT NOT NULL Identity",
-            CanBeNull = false,
-            AutoSync = AutoSync.OnInsert)]
-        public int IdGen { get; set; }
-        [Column()]
-        public String Id { get; set; }
+        [Column(IsPrimaryKey = true, Name = "MarketApp")]
+        private int marketAppId;
+        private EntityRef<MarketApp> _app = new EntityRef<MarketApp>();
+        [Association(Name = "FK_LinkOfferToApp_MarketApps", IsForeignKey = true,
+               Storage = "_app ", ThisKey = "marketAppId")]
+        public MarketApp MarketApp
+        {
+            get { return _app.Entity; }
+            set { _app.Entity = value; }
+        }
+
+       
+        [Column(IsPrimaryKey = true, Name = "MarketOffer")]
+        private int marketOfferId;
+        private EntityRef<MarketOffer> _offer = new EntityRef<MarketOffer>();
+        [Association(Name = "FK_LinkOfferToApp_MarketOffers", IsForeignKey = true,
+             Storage = "_offer", ThisKey = "marketOfferId")]
+        public MarketOffer MarketOffer
+        {
+            get { return _offer.Entity; }
+            set { _offer.Entity = value; }
+        }
+        public void OnSaving(ChangeAction changeAction) { }
+        public void OnSaved () { }
     }
+
+    [Table]
+    public partial class LinkCategoryToApp : BindableObject, EntityBase
+    {
+        [Column(IsPrimaryKey = true, Name = "MarketApp")]
+        private int marketAppId;
+        private EntityRef<MarketApp> _app4App = new EntityRef<MarketApp>();
+        [Association(Name = "FK_LinkCategoryToApp_MarkeApp", IsForeignKey = true,
+               Storage = "_app4App", ThisKey = "marketAppId")]
+        public MarketApp MarketApp
+        {
+            get { return _app4App.Entity; }
+            set { _app4App.Entity = value; }
+        }
+       
+
+        [Column(IsPrimaryKey = true, Name = "MarketCat")]
+        private int marketCatId;
+        private EntityRef<MarketCat> _cat = new EntityRef<MarketCat>();
+        [Association(Name = "FK_LinkCategoryToApp_MarketCat", IsForeignKey = true,
+             Storage = "_cat", ThisKey = "marketCatId")]
+        public MarketCat MarketCat
+        {
+            get { return _cat.Entity; }
+            set { _cat.Entity = value; }
+        }
+        public void OnSaving(ChangeAction changeAction) { }
+        public void OnSaved (){ }
+   } 
+
+    [Table]
+    public partial class LinkTypesToApp : BindableObject, EntityBase
+    {
+        [Column(IsPrimaryKey = true, Name = "MarketApp")]
+        private int marketAppId;
+        private EntityRef<MarketApp> _app = new EntityRef<MarketApp>();
+        [Association(Name = "FK_LinkTypesToApp_MarketApp", IsForeignKey = true,
+               Storage = "_app", ThisKey = "marketAppId")]
+        public MarketApp MarketApp
+        {
+            get { return _app.Entity; }
+            set { _app.Entity = value; }
+        }
+
+        [Column(IsPrimaryKey = true, Name = "paymentType")]
+        private String PaymentType;
+        public void OnSaving(ChangeAction changeAction) { }
+        public void OnSaved () { }
+    }   
 }

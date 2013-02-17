@@ -1,8 +1,8 @@
-﻿<xapCache source="C:\DevTools\Git\windowsPhone\UserControl\AppsRoulet\AppsRoulet\Bin\Debug\AppsRoulet.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="11/02/2013 22:40:36">
+﻿<xapCache source="C:\DevTools\Git\windowsPhone\UserControl\AppsRoulet\AppsRoulet\Bin\Debug\AppsRoulet.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="16/02/2013 15:31:17">
   <file source="C:\DevTools\Git\windowsPhone\UserControl\AppsRoulet\AppsRoulet\Bin\Debug\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="10/02/2013 09:06:22" />
   <file source="C:\DevTools\Git\windowsPhone\UserControl\AppsRoulet\AppsRoulet\Background.png" archivePath="Background.png" lastWriteTime="10/02/2013 09:06:18" />
   <file source="C:\DevTools\Git\windowsPhone\UserControl\AppsRoulet\AppsRoulet\ApplicationIcon.png" archivePath="ApplicationIcon.png" lastWriteTime="10/02/2013 09:06:18" />
-  <file source="C:\DevTools\Git\windowsPhone\UserControl\AppsRoulet\AppsRoulet\obj\Debug\AppsRoulet.dll" archivePath="AppsRoulet.dll" lastWriteTime="11/02/2013 22:40:35" />
+  <file source="C:\DevTools\Git\windowsPhone\UserControl\AppsRoulet\AppsRoulet\obj\Debug\AppsRoulet.dll" archivePath="AppsRoulet.dll" lastWriteTime="16/02/2013 15:31:17" />
   <file source="C:\DevTools\Git\windowsPhone\FstnAnimation\Bin\Debug\FstnAnimation.dll" archivePath="FstnAnimation.dll" lastWriteTime="09/02/2013 19:15:38" />
   <file source="C:\DevTools\Git\windowsPhone\Weekend\FstnCommon\Bin\Debug\FstnCommon.dll" archivePath="FstnCommon.dll" lastWriteTime="09/02/2013 19:15:33" />
   <file source="C:\DevTools\Git\windowsPhone\FstnDataBase\Bin\Debug\FstnDataBase.dll" archivePath="FstnDataBase.dll" lastWriteTime="11/02/2013 21:17:42" />

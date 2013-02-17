@@ -1,8 +1,8 @@
-﻿<xapCache source="C:\DevTools\Git\windowsPhone\Weekend\Weekend\Bin\Release\Weekend.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="10/02/2013 22:33:33">
+﻿<xapCache source="C:\DevTools\Git\windowsPhone\Weekend\Weekend\Bin\Release\Weekend.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="12/02/2013 14:03:34">
   <file source="C:\DevTools\Git\windowsPhone\Weekend\Weekend\Bin\Release\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="10/02/2013 22:32:55" />
   <file source="C:\DevTools\Git\windowsPhone\Weekend\Weekend\images\icon.png" archivePath="images\icon.png" lastWriteTime="10/02/2013 20:28:18" />
   <file source="C:\DevTools\Git\windowsPhone\Weekend\Weekend\images\icon.png" archivePath="images\icon.png" lastWriteTime="10/02/2013 20:28:18" />
-  <file source="C:\DevTools\Git\windowsPhone\Weekend\Weekend\obj\Release\Weekend.dll" archivePath="Weekend.dll" lastWriteTime="10/02/2013 22:33:33" />
+  <file source="C:\DevTools\Git\windowsPhone\Weekend\Weekend\obj\Release\Weekend.dll" archivePath="Weekend.dll" lastWriteTime="12/02/2013 14:03:33" />
   <file source="C:\DevTools\Git\windowsPhone\Weekend\packages\BugSense.WP7.0.9.9.1\lib\sl3-wp\BugSense.dll" archivePath="BugSense.dll" lastWriteTime="02/02/2013 23:34:16" />
   <file source="C:\DevTools\Git\windowsPhone\Weekend\packages\Coding4Fun.Phone.Controls.1.6.1\lib\sl4-windowsphone71\Coding4Fun.Phone.Controls.dll" archivePath="Coding4Fun.Phone.Controls.dll" lastWriteTime="09/02/2013 18:57:27" />
   <file source="C:\DevTools\Git\windowsPhone\FstnAnimation\Bin\Release\FstnAnimation.dll" archivePath="FstnAnimation.dll" lastWriteTime="09/02/2013 21:34:06" />
@@ -15,7 +15,7 @@
   <file source="C:\DevTools\Git\windowsPhone\Release\WindowsPhone71\Bin\Release\Microsoft.Phone.Controls.Toolkit.dll" archivePath="Microsoft.Phone.Controls.Toolkit.dll" lastWriteTime="09/02/2013 12:50:16" />
   <file source="C:\Program Files (x86)\Microsoft SDKs\Expression\Blend\Windows Phone\v7.1\Libraries\System.Windows.Interactivity.dll" archivePath="System.Windows.Interactivity.dll" lastWriteTime="17/08/2011 02:48:22" />
   <file source="E:\DevTools\C#\Mvvm Light Toolkit\Binaries\WP71\Microsoft.Practices.ServiceLocation.dll" archivePath="Microsoft.Practices.ServiceLocation.dll" lastWriteTime="25/10/2012 02:44:22" />
-  <file source="C:\DevTools\Git\windowsPhone\Weekend\Weekend\obj\Release\fr\Weekend.resources.dll" archivePath="fr\Weekend.resources.dll" lastWriteTime="10/02/2013 22:33:33" />
+  <file source="C:\DevTools\Git\windowsPhone\Weekend\Weekend\obj\Release\fr\Weekend.resources.dll" archivePath="fr\Weekend.resources.dll" lastWriteTime="12/02/2013 14:03:33" />
   <file source="C:\DevTools\Git\windowsPhone\Release\WindowsPhone71\Bin\Release\fr-FR\Microsoft.Phone.Controls.Toolkit.resources.dll" archivePath="fr-FR\Microsoft.Phone.Controls.Toolkit.resources.dll" lastWriteTime="09/02/2013 12:50:16" />
   <file source="C:\Program Files (x86)\Microsoft SDKs\Expression\Blend\Windows Phone\v7.1\Libraries\fr\System.Windows.Interactivity.resources.dll" archivePath="fr\System.Windows.Interactivity.resources.dll" lastWriteTime="17/08/2011 02:48:22" />
   <file source="C:\DevTools\Git\windowsPhone\Weekend\Weekend\images\day.png" archivePath="images\day.png" lastWriteTime="09/02/2013 17:55:31" />

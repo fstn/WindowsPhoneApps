@@ -70,12 +70,20 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Model\ChangeEntity.cs" />
+    <Compile Include="Model\EntityBase.cs" />
     <Compile Include="Model\MarketApp.cs" />
     <Compile Include="Model\MarketCat.cs" />
     <Compile Include="Model\MarketImage.cs" />
     <Compile Include="Model\MarketOffer.cs" />
     <Compile Include="Model\MyDataContext.cs" />
+    <Compile Include="Model\MyDataContextFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="util\BDDLogger.cs" />
+    <Compile Include="util\URIModel.cs" />
+    <Compile Include="util\XMLCatParser.cs" />
+    <Compile Include="util\XMLToBDD.cs" />
+    <Compile Include="util\XMLToBDDBatch.cs" />
     <Compile Include="ViewModels\ItemViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
   </ItemGroup>
@@ -128,6 +136,7 @@
       <Name>FstnUserControl</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
