@@ -1,24 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
+using FstnUserControl.Apps.Model;
 
 namespace MarketRoulet.Util
 {
     public class URIModel
     {
         private String rootUri = "http://marketplaceedgeservice.windowsphone.com";
-        private String versionUri = "v3.2";
-        private String langUri = "en-US";
         private String fstnAppsUri = "http://87.98.221.216:8080/AppsWS-web/rest/apps/";
         private String fstnListOfCatsUri = "http://87.98.221.216:8080/AppsWS-web/rest/cats/";
-        private String randomWithCat = "randomWithCat/";
-        private String fstnRandomPartOfUri= "random/";
-        private String randomBest = "randomBest/";
-        private String apps = "apps/";
         private String imageUri = "http://cdn.marketplaceimages.windowsphone.com/v3.2/en-US/image/";
-        private static URIModel instance;
-
+        private String fstnRandomPartOfUriWithCat = "randomWithCat/";
+        private String fstnRandomPartOfUri= "random/";
+        private String randomBestPartOfUri = "randomBest/";
+        private String versionUri = "v3.2";
+        private String apps = "apps/";
+      
         private URIModel()
         {
 
@@ -45,21 +45,21 @@ namespace MarketRoulet.Util
         }
         public Uri getBaseUri()
         {
-            return new Uri(getRootUri()+versionUri+"/"+langUri+"/");
+            return new Uri(getRootUri()+versionUri+"/"+LangUri+"/");
         }
         public Uri getBaseAppsUri()
         {
-            return new Uri(getRootUri() + versionUri + "/" + langUri + "/"+apps);
+            return new Uri(getRootUri() + versionUri + "/" + LangUri + "/" + apps);
         }
         public Uri getMarketCatsUri()
         {
             return new Uri(getBaseUri()+"appCategories/");
         }
 
-        internal Uri getRandomWithCat(String categorie)
+        internal Uri getRandomWithCat(MarketCat categorie)
         {
             String rand = new Random().Next().ToString();
-            return new Uri(fstnAppsUri + fstnRandomPartOfUri +categorie+"/?"+ rand);
+            return new Uri(fstnAppsUri + fstnRandomPartOfUriWithCat + categorie.Id + "/?" + rand);
         }
         public Uri getFstnListOfCatsUri()
         {
@@ -67,7 +67,11 @@ namespace MarketRoulet.Util
         }
         public Uri getFstnRandomBestApp()
         {
-            return new Uri(fstnAppsUri+randomBest+"?r="+DateTime.Now.ToString() );
+            return new Uri(fstnAppsUri+randomBestPartOfUri+"?r="+DateTime.Now.ToString() );
         }
+
+        public string LangUri {
+            get { return CultureInfo.CurrentCulture.Name;
+        } }
     }
 }

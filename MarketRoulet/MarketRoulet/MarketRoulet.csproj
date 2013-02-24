@@ -48,6 +48,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="GalaSoft.MvvmLight.WP71, Version=4.1.24.17306, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Advertising.Mobile, Version=6.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Advertising.Mobile.UI, Version=6.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Phone" />
     <Reference Include="Microsoft.Phone.Controls, Version=7.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Phone.Controls.Toolkit, Version=7.0.0.0, Culture=neutral, PublicKeyToken=b772ad94eb9ca604, processorArchitecture=MSIL">
@@ -55,6 +57,7 @@
       <HintPath>..\packages\WPtoolkit.4.2012.10.30\lib\sl4-windowsphone71\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Phone.Interop" />
+    <Reference Include="System.Device" />
     <Reference Include="System.Windows" />
     <Reference Include="system" />
     <Reference Include="System.Core" />
@@ -83,6 +86,7 @@
       <DependentUpon>Msg.fr.resx</DependentUpon>
     </Compile>
     <Compile Include="Resources\ResourceWrapper.cs" />
+    <Compile Include="Set.cs" />
     <Compile Include="Util\CatLoader.cs" />
     <Compile Include="Util\URIModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
@@ -116,23 +120,32 @@
     <Content Include="ApplicationIcon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="AppRoulette.png" />
+    <Content Include="AppRouletteB.png" />
     <Content Include="Background.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Image\AppRoulette.png" />
+    <Content Include="Image\dark\appbar.add.png" />
     <Content Include="Image\dark\appbar.cards.heart.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Image\dark\appbar.pin.png" />
     <Content Include="Image\dark\appbar.shuffle.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Image\light\appbar.add.png" />
     <Content Include="Image\light\appbar.cards.heart.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Image\light\appbar.pin.png" />
     <Content Include="Image\light\appbar.shuffle.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="README_FIRST.txt" />
-    <Content Include="SplashScreenImage.jpg" />
+    <Content Include="SplashScreenImage.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Toolkit.Content\ApplicationBar.Cancel.png" />
     <Content Include="Toolkit.Content\ApplicationBar.Check.png" />
     <Content Include="Toolkit.Content\ApplicationBar.Delete.png" />
@@ -154,6 +167,10 @@
     <ProjectReference Include="..\..\FstnUserControl\FstnUserControl.csproj">
       <Project>{C19FEDFB-44B9-4390-8979-1EFD1A902AEB}</Project>
       <Name>FstnUserControl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UpdateMarketRouletTile\UpdateMarketRouletTile.csproj">
+      <Project>{6143F22C-3C60-4E0A-8DFF-4F69DD860F13}</Project>
+      <Name>UpdateMarketRouletTile</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

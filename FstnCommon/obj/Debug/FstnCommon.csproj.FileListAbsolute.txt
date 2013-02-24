@@ -4,5 +4,9 @@ C:\DevTools\Git\windowsPhone\Weekend\FstnCommon\obj\Debug\FstnCommon.dll
 C:\DevTools\Git\windowsPhone\Weekend\FstnCommon\obj\Debug\FstnCommon.pdb
 C:\DevTools\Git\windowsPhone\FstnCommon\Bin\Debug\FstnCommon.dll
 C:\DevTools\Git\windowsPhone\FstnCommon\Bin\Debug\FstnCommon.pdb
+C:\DevTools\Git\windowsPhone\FstnCommon\Bin\Debug\Microsoft.Phone.Controls.dll
+C:\DevTools\Git\windowsPhone\FstnCommon\Bin\Debug\Microsoft.Phone.Controls.Maps.dll
+C:\DevTools\Git\windowsPhone\FstnCommon\Bin\Debug\Microsoft.Phone.Controls.xml
+C:\DevTools\Git\windowsPhone\FstnCommon\Bin\Debug\Microsoft.Phone.Controls.Maps.xml
 C:\DevTools\Git\windowsPhone\FstnCommon\obj\Debug\FstnCommon.dll
 C:\DevTools\Git\windowsPhone\FstnCommon\obj\Debug\FstnCommon.pdb

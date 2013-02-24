@@ -27,7 +27,6 @@ using Microsoft.Phone.Shell;
 
 namespace FstnUserControl
 {
-    public delegate void BackgroundIsMaskAnimationEventHandler();
     public partial class ImageWaiting : UserControl
     {
         #region members

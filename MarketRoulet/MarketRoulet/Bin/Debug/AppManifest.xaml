@@ -6,8 +6,12 @@
     <AssemblyPart x:Name="FstnDesign" Source="FstnDesign.dll" />
     <AssemblyPart x:Name="FstnUserControl" Source="FstnUserControl.dll" />
     <AssemblyPart x:Name="GalaSoft.MvvmLight.WP71" Source="GalaSoft.MvvmLight.WP71.dll" />
+    <AssemblyPart x:Name="Microsoft.Advertising.Mobile" Source="Microsoft.Advertising.Mobile.dll" />
+    <AssemblyPart x:Name="Microsoft.Advertising.Mobile.UI" Source="Microsoft.Advertising.Mobile.UI.dll" />
     <AssemblyPart x:Name="Microsoft.Phone.Controls" Source="Microsoft.Phone.Controls.dll" />
     <AssemblyPart x:Name="Microsoft.Phone.Controls.Toolkit" Source="Microsoft.Phone.Controls.Toolkit.dll" />
+    <AssemblyPart x:Name="UpdateMarketRouletTile" Source="UpdateMarketRouletTile.dll" />
+    <AssemblyPart x:Name="Microsoft.Phone.Controls.Maps" Source="Microsoft.Phone.Controls.Maps.dll" />
     <AssemblyPart Source="fr/MarketRoulet.resources.dll" />
   </Deployment.Parts>
 </Deployment>

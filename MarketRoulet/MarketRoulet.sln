@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FstnDesign", "..\FstnDesign
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FstnCommon", "..\FstnCommon\FstnCommon.csproj", "{0F66CBD7-90F0-4875-90C2-4387E62B6C32}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UpdateMarketRouletTile", "UpdateMarketRouletTile\UpdateMarketRouletTile.csproj", "{6143F22C-3C60-4E0A-8DFF-4F69DD860F13}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{0F66CBD7-90F0-4875-90C2-4387E62B6C32}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0F66CBD7-90F0-4875-90C2-4387E62B6C32}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0F66CBD7-90F0-4875-90C2-4387E62B6C32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6143F22C-3C60-4E0A-8DFF-4F69DD860F13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6143F22C-3C60-4E0A-8DFF-4F69DD860F13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6143F22C-3C60-4E0A-8DFF-4F69DD860F13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6143F22C-3C60-4E0A-8DFF-4F69DD860F13}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

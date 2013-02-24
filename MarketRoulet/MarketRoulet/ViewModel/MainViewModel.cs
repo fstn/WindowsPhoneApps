@@ -22,7 +22,6 @@ using FstnCommon.Parser;
 using FstnUserControl.Apps.Loader;
 namespace MarketRoulet.ViewModel
 {
-    public delegate void ChangedEventHandler(object sender, EventArgs e);
 
     public class MainViewModel : ViewModelBase
     {

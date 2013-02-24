@@ -61,6 +61,15 @@ namespace MarketRoulet.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Pin it!.
+        /// </summary>
+        public static string AddTile {
+            get {
+                return ResourceManager.GetString("AddTile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to App.
         /// </summary>
         public static string AppRandom {
@@ -106,7 +115,7 @@ namespace MarketRoulet.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to MarketRoulet.
+        ///   Looks up a localized string similar to AppsRoulette.
         /// </summary>
         public static string Title {
             get {

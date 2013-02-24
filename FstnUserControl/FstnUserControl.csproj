@@ -81,6 +81,7 @@
     <Compile Include="Form\AbstractForm.cs" />
     <Compile Include="Apps\Model\MarketApp.cs" />
     <Compile Include="Apps\Model\MarketCat.cs" />
+    <Compile Include="FstnUserControlEvent.cs" />
     <Compile Include="Waiting\SecretAnimationControl.cs" />
     <Compile Include="Tile\TileMultiVoidElement.xaml.cs">
       <DependentUpon>TileMultiVoidElement.xaml</DependentUpon>

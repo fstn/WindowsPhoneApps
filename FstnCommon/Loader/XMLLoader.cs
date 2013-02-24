@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Net;
 using System.Text;
@@ -7,10 +8,11 @@ using System.Xml.Linq;
 
 namespace FstnCommon.Loader
 {
-    public class XMLLoader:ILoader
+    public class XMLLoader : ILoader
     {
         public event LoaderLoadedEventHandler Loaded;
         public event LoaderErrorEventHandler Error;
+        private Uri uri;
         public XMLLoader()
         {
         }
@@ -19,6 +21,7 @@ namespace FstnCommon.Loader
         {
             try
             {
+                this.uri = uri;
                 WebClient client = new WebClient();
                 client.DownloadStringCompleted += client_DownloadStringCompleted;
                 client.DownloadStringAsync(uri);
@@ -34,10 +37,21 @@ namespace FstnCommon.Loader
 
         void client_DownloadStringCompleted(object sender, DownloadStringCompletedEventArgs e)
         {
-            XDocument doc = XDocument.Parse(e.Result);
-            if (Loaded != null)
+            try
             {
-                Loaded(this, doc);
+                XDocument doc = XDocument.Parse(e.Result);
+                if (Loaded != null)
+                {
+                    Loaded(this, doc);
+                }
+            }
+            catch (WebException we)
+            {
+                if (Error != null)
+                {
+                    Debugger.Log(1, "error", "can't connect to: " + uri.AbsoluteUri);
+                    Error(this, we);
+                }
             }
         }
     }

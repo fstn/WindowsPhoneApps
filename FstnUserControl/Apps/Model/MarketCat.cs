@@ -9,5 +9,14 @@ namespace FstnUserControl.Apps.Model
     {
         public String Id { get; set; }
         public String Title { get; set; }
+        public MarketCat()
+        {
+
+        }
+        public MarketCat(String Id,String Title)
+        {
+            this.Title = Title;
+            this.Id = Id;
+        }
     }
 }

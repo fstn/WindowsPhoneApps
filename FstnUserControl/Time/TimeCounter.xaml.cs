@@ -8,7 +8,6 @@ using System.Windows.Media.Animation;
 using System.Windows.Media.Effects;
 namespace FstnUserControl
 {
-    public delegate void ChangedEventHandler(object sender, EventArgs e);
     public partial class TimeCounter : UserControl
     {
 

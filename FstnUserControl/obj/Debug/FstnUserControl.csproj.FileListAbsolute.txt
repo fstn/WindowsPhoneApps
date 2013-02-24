@@ -44,6 +44,7 @@ C:\DevTools\Git\windowsPhone\Weekend\FstnUserControl\obj\Debug\Time\TimeCounter.
 C:\DevTools\Git\windowsPhone\Weekend\FstnUserControl\obj\Debug\FstnUserControl.g.resources
 C:\DevTools\Git\windowsPhone\Weekend\FstnUserControl\obj\Debug\FstnUserControl.dll
 C:\DevTools\Git\windowsPhone\Weekend\FstnUserControl\obj\Debug\FstnUserControl.pdb
+C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Debug\Error.png
 C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Debug\Fonts\digital-7.ttf
 C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Debug\FstnUserControl.dll
 C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Debug\FstnUserControl.pdb

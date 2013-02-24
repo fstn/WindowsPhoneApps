@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Xml.Linq;
 using FstnCommon;
 using FstnCommon.Loader;
@@ -21,6 +22,8 @@ namespace FstnUserControl
 {
     public partial class AppsPreview : UserControl
     {
+
+        public event LoaderErrorEventHandler ErrorEvent;
         public AppsPreview()
         {
             InitializeComponent();
@@ -75,21 +78,24 @@ namespace FstnUserControl
             set { previewloader = value; }
         }
 
-        private MarketApp app;
-        public MarketApp App
+        private MarketApp marketApp;
+        public MarketApp MarketApp
         {
-            get { return app; }
-            set { app = value; }
+            get { return marketApp; }
+            set { marketApp = value; }
         }
 
 
         private object tmpObject = null;
+
+        private bool loaded=false;
         #endregion
 
 
 
         public void load()
         {
+            if(!loaded){
             #region listeners
             try
             {
@@ -133,19 +139,24 @@ namespace FstnUserControl
             WaitingAnim.start();
             WaitingAnim.MaskedEvent += WaitingAnim_Masked;
             LoadPreloader();
+            loaded=true;
+            }
         }
 
         void AppsPreview_Error(object sender, object obj)
         {
-            throw new NotImplementedException();
+            if (ErrorEvent != null)
+            {
+                ErrorEvent(this, obj);
+            }
         }
 
-
-        public void Reload(Uri previewUri)
+        public void Reload()
         {
             if (WaitingAnim != null)
             {
-                this.previewUri = previewUri;
+                Random random = new Random(DateTime.Now.Millisecond);
+                this.previewUri = new Uri(previewUri.AbsoluteUri + "&" + random.Next()) ;
                 Double tempWidth = WaitingAnim.Width;
                 Double tempHeigt = WaitingAnim.Height;
                 RootLayout.Children.Remove(WaitingAnim);
@@ -181,8 +192,8 @@ namespace FstnUserControl
 
         void AppsPreview_PreviewCompleted(object sender, object obj)
         {
-            app = (MarketApp)obj;
-            Uri uriToLoad = new Uri(uri.AbsoluteUri + app.Id);
+            marketApp = (MarketApp)obj;
+            Uri uriToLoad = new Uri(uri.AbsoluteUri + marketApp.Id);
             loader.load(uriToLoad);
             
         }
@@ -205,12 +216,13 @@ namespace FstnUserControl
             {
                 try
                 {
-                    app = (MarketApp)tmpObject;
-                    Title.Text = app.Title;
-                    Description.Text = app.Description;
-                    Image.Source = new BitmapImage(new Uri(app.Image));
-                    RatingControl.Value = app.AverageUserRating / 2;
+                    marketApp = (MarketApp)tmpObject;
+                    Title.Text = marketApp.Title;
+                    Description.Text = marketApp.Description;
+                    Image.Source = new BitmapImage(new Uri(marketApp.Image));
+                    RatingControl.Value = marketApp.AverageUserRating / 2;
                     RatingControl.RatingItemCount = 5;
+                    userCount.Text = marketApp.UserRatingCount.ToString();
                     this.Tap += AppsPreview_Tap;
                 }
                 catch (InvalidCastException e)
@@ -239,7 +251,7 @@ namespace FstnUserControl
         void AppsPreview_Tap(object sender, System.Windows.Input.GestureEventArgs e)
         {
             MarketplaceDetailTask market = new MarketplaceDetailTask();
-            market.ContentIdentifier = app.Id;
+            market.ContentIdentifier = marketApp.Id;
             market.Show();
         }
     }

@@ -9,13 +9,14 @@
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
-             Background="Transparent"
-    d:DesignHeight="620" d:DesignWidth="480">
-    <Canvas MinHeight="620" Width="480" Name="RootLayout">
-        <ScrollViewer Height="620">
-            <StackPanel  MinHeight="660" Width="460" Name="ContentLayout">
-                <TextBlock Name="Title" TextAlignment="Center" Height="100" Style="{StaticResource PhoneTextTitle3Style}"></TextBlock>
+    d:DesignHeight="620" d:DesignWidth="480" >
+    <Canvas MinHeight="620" Width="480" Margin="0" Canvas.Top="0" Canvas.Left="0" 
+            Name="RootLayout">
+        <ScrollViewer Height="620" Canvas.Top="0">
+            <StackPanel  MinHeight="660" Width="480" Name="ContentLayout">
+                <TextBlock Name="Title" TextAlignment="Center" Height="100" Style="{StaticResource PhoneTextTitle2Style}"></TextBlock>
                 <Image Name="Image" Height="320"></Image>
+                <StackPanel Orientation="Horizontal" Width="300" HorizontalAlignment="Center">
                 <toolkit:Rating Width="250" Height="50" Background="Transparent"
                                 x:Name="RatingControl"  ShowSelectionHelper="True" >
                     <toolkit:Rating.FilledItemStyle>
@@ -29,9 +30,11 @@
                         </Style>
                     </toolkit:Rating.UnfilledItemStyle>
                 </toolkit:Rating>
+                    <TextBlock Name="userCount" Foreground="{StaticResource PhoneAccentBrush}" FontSize="50" Width="50" TextAlignment="Center"></TextBlock>
+                </StackPanel>
                 <TextBlock Name="Description" TextWrapping="Wrap" ></TextBlock>
             </StackPanel>
         </ScrollViewer>
-        <local:ImageWaiting Name="WaitingAnim" Height="660" Width="460" Background="Transparent"></local:ImageWaiting>
+        <local:ImageWaiting Name="WaitingAnim" Height="660" Width="480" Background="Transparent"></local:ImageWaiting>
         </Canvas>
 </UserControl>
