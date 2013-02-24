@@ -61,6 +61,7 @@
     <Compile Include="Dynamic\MoveEffect.cs" />
     <Compile Include="Dynamic\HideByReduceEffect.cs" />
     <Compile Include="Dynamic\DynamicEffect.cs" />
+    <Compile Include="Dynamic\PerspectiveTransform.cs" />
     <Compile Include="Dynamic\RotateEffect.cs" />
     <Compile Include="Page1.xaml.cs">
       <DependentUpon>Page1.xaml</DependentUpon>
@@ -81,7 +82,7 @@
     <Resource Include="1276118096.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Weekend\FstnCommon\FstnCommon.csproj">
+    <ProjectReference Include="..\FstnCommon\FstnCommon.csproj">
       <Project>{0F66CBD7-90F0-4875-90C2-4387E62B6C32}</Project>
       <Name>FstnCommon</Name>
     </ProjectReference>

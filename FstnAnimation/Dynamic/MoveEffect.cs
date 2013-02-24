@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Windows;
+using System.Windows.Media;
 using System.Windows.Media.Animation;
 
 namespace FstnAnimation.Dynamic
@@ -29,7 +30,7 @@ namespace FstnAnimation.Dynamic
         protected override Storyboard CreateStoryboard(FrameworkElement target)
         {
             Storyboard sb = new Storyboard();
-
+            
             DoubleAnimation animationY = new DoubleAnimation();
             animationY.BeginTime = TimeSpan.FromMilliseconds(0);
             animationY.Duration = TimeSpan.FromMilliseconds(Duration);
@@ -44,10 +45,13 @@ namespace FstnAnimation.Dynamic
             animationX.From=From.X;
             animationX.To = To.X;
             animationX.EasingFunction = EasingFunction;
-            Storyboard.SetTarget(animationX, target);
-            Storyboard.SetTarget(animationY, target);
-            Storyboard.SetTargetProperty(animationX, new PropertyPath("(UIElement.RenderTransform).(CompositeTransform.TranslateX)"));
-            Storyboard.SetTargetProperty(animationY, new PropertyPath("(UIElement.RenderTransform).(CompositeTransform.TranslateY)"));
+            TranslateTransform transform=new TranslateTransform();
+            target.RenderTransform = transform;
+            Storyboard.SetTarget(animationX, transform);
+            Storyboard.SetTarget(animationY, transform);
+            target.CacheMode = new BitmapCache();
+            Storyboard.SetTargetProperty(animationX, new PropertyPath(TranslateTransform.XProperty));
+            Storyboard.SetTargetProperty(animationY, new PropertyPath(TranslateTransform.YProperty));
             sb.Children.Add(animationX);
             sb.Children.Add(animationY);
             return sb;
