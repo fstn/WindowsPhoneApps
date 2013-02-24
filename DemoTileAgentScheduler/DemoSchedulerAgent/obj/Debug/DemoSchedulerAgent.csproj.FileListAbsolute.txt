@@ -1,0 +1,8 @@
+C:\Users\Rod\Documents\Visual Studio 2010\Projects\DemoTileAgentScheduler\DemoSchedulerAgent\Bin\Debug\DemoSchedulerAgent.dll
+C:\Users\Rod\Documents\Visual Studio 2010\Projects\DemoTileAgentScheduler\DemoSchedulerAgent\Bin\Debug\DemoSchedulerAgent.pdb
+C:\Users\Rod\Documents\Visual Studio 2010\Projects\DemoTileAgentScheduler\DemoSchedulerAgent\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Rod\Documents\Visual Studio 2010\Projects\DemoTileAgentScheduler\DemoSchedulerAgent\obj\Debug\DemoSchedulerAgent.dll
+C:\Users\Rod\Documents\Visual Studio 2010\Projects\DemoTileAgentScheduler\DemoSchedulerAgent\obj\Debug\DemoSchedulerAgent.pdb
+C:\DevTools\Git\windowsPhone\DemoTileAgentScheduler\DemoSchedulerAgent\obj\Debug\DemoSchedulerAgent.csprojResolveAssemblyReference.cache
+C:\DevTools\Git\windowsPhone\DemoTileAgentScheduler\DemoSchedulerAgent\obj\Debug\DemoSchedulerAgent.dll
+C:\DevTools\Git\windowsPhone\DemoTileAgentScheduler\DemoSchedulerAgent\obj\Debug\DemoSchedulerAgent.pdb

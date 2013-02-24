@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoTileAgentScheduler", "DemoTileAgentScheduler\DemoTileAgentScheduler.csproj", "{786B0755-9826-47E9-9DC0-A4CF9D89374C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoSchedulerAgent", "DemoSchedulerAgent\DemoSchedulerAgent.csproj", "{9A699B0A-CDC7-48EF-9CB0-CC18AE2BC024}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{786B0755-9826-47E9-9DC0-A4CF9D89374C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{786B0755-9826-47E9-9DC0-A4CF9D89374C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{786B0755-9826-47E9-9DC0-A4CF9D89374C}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{786B0755-9826-47E9-9DC0-A4CF9D89374C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{786B0755-9826-47E9-9DC0-A4CF9D89374C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{786B0755-9826-47E9-9DC0-A4CF9D89374C}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{9A699B0A-CDC7-48EF-9CB0-CC18AE2BC024}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A699B0A-CDC7-48EF-9CB0-CC18AE2BC024}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A699B0A-CDC7-48EF-9CB0-CC18AE2BC024}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A699B0A-CDC7-48EF-9CB0-CC18AE2BC024}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

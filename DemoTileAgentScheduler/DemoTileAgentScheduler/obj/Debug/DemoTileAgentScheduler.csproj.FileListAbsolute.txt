@@ -1,0 +1,15 @@
+C:\Users\Rod\Documents\Visual Studio 2010\Projects\DemoTileAgentScheduler\DemoTileAgentScheduler\Bin\Debug\ApplicationIcon.jpg
+C:\Users\Rod\Documents\Visual Studio 2010\Projects\DemoTileAgentScheduler\DemoTileAgentScheduler\Bin\Debug\Background.jpg
+C:\Users\Rod\Documents\Visual Studio 2010\Projects\DemoTileAgentScheduler\DemoTileAgentScheduler\Bin\Debug\DemoTileAgentScheduler.dll
+C:\Users\Rod\Documents\Visual Studio 2010\Projects\DemoTileAgentScheduler\DemoTileAgentScheduler\Bin\Debug\DemoTileAgentScheduler.pdb
+C:\Users\Rod\Documents\Visual Studio 2010\Projects\DemoTileAgentScheduler\DemoTileAgentScheduler\Bin\Debug\AppManifest.xaml
+C:\Users\Rod\Documents\Visual Studio 2010\Projects\DemoTileAgentScheduler\DemoTileAgentScheduler\Bin\Debug\DemoTileAgentScheduler.xap
+C:\Users\Rod\Documents\Visual Studio 2010\Projects\DemoTileAgentScheduler\DemoTileAgentScheduler\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Rod\Documents\Visual Studio 2010\Projects\DemoTileAgentScheduler\DemoTileAgentScheduler\obj\Debug\App.g.i.cs
+C:\Users\Rod\Documents\Visual Studio 2010\Projects\DemoTileAgentScheduler\DemoTileAgentScheduler\obj\Debug\MainPage.g.i.cs
+C:\Users\Rod\Documents\Visual Studio 2010\Projects\DemoTileAgentScheduler\DemoTileAgentScheduler\obj\Debug\DemoTileAgentScheduler.g.resources
+C:\Users\Rod\Documents\Visual Studio 2010\Projects\DemoTileAgentScheduler\DemoTileAgentScheduler\obj\Debug\DemoTileAgentScheduler.dll
+C:\Users\Rod\Documents\Visual Studio 2010\Projects\DemoTileAgentScheduler\DemoTileAgentScheduler\obj\Debug\DemoTileAgentScheduler.pdb
+C:\Users\Rod\Documents\Visual Studio 2010\Projects\DemoTileAgentScheduler\DemoTileAgentScheduler\obj\Debug\XapCacheFile.xml
+C:\Users\Rod\Documents\Visual Studio 2010\Projects\DemoTileAgentScheduler\DemoTileAgentScheduler\Bin\Debug\DemoSchedulerAgent.dll
+C:\Users\Rod\Documents\Visual Studio 2010\Projects\DemoTileAgentScheduler\DemoTileAgentScheduler\Bin\Debug\DemoSchedulerAgent.pdb
