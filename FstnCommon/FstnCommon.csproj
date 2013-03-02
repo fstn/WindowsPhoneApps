@@ -58,11 +58,19 @@
     <Compile Include="FstnUserControlEvent.cs" />
     <Compile Include="Loader\ILoader.cs" />
     <Compile Include="Loader\XMLLoader.cs" />
+    <Compile Include="Market\Category\MarketCatGenerator.cs" />
+    <Compile Include="Market\Model\MarketApp.cs" />
+    <Compile Include="Market\Model\MarketCat.cs" />
     <Compile Include="MyUserControl.cs" />
     <Compile Include="Parser\IParser.cs" />
     <Compile Include="Parser\XMLParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Session.cs" />
+    <Compile Include="Util\Settings\SettingsKeys.cs" />
+    <Compile Include="Util\Settings\SettingsService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Market\Application\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />

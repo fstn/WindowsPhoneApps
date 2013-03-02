@@ -1,0 +1,71 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="MarketRoulet.Settings"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+             xmlns:local="clr-namespace:FstnUserControl"
+   
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <phone:PhoneApplicationPage.DataContext>
+        <Binding Path="SettingsViewModel" Source="{StaticResource Locator}"/>
+    </phone:PhoneApplicationPage.DataContext>
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Text="{Binding ResourceGetter.Title, 
+                Source={StaticResource LocalizedStrings}}" 
+                       Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock Text="{Binding ResourceGetter.Settings, 
+                Source={StaticResource LocalizedStrings}}"
+                       Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1">
+            <!--ContentPanel - place additional content here-->
+            <TextBlock Text="{Binding ResourceGetter.MinRatingLevel, 
+                Source={StaticResource LocalizedStrings}}" 
+                      TextAlignment="Center" Height="45" Width="480" ></TextBlock>
+            <toolkit:Rating  Background="Transparent"
+                                x:Name="RatingControl"  
+                             ShowSelectionHelper="True"  >
+                <toolkit:Rating.FilledItemStyle>
+                    <Style TargetType="toolkit:RatingItem">
+                        <Setter Property="Background" Value="{StaticResource PhoneAccentColor}" />
+                    </Style>
+                </toolkit:Rating.FilledItemStyle>
+                <toolkit:Rating.UnfilledItemStyle>
+                    <Style TargetType="toolkit:RatingItem">
+                        <Setter Property="Background"  Value="White" />
+                    </Style>
+                </toolkit:Rating.UnfilledItemStyle>
+        </toolkit:Rating>
+            
+            <TextBlock Text="{Binding ResourceGetter.MinCountForRate, Source={StaticResource LocalizedStrings}}" 
+            	ScrollViewer.ManipulationMode="System"
+                       TextAlignment="Center" Height="39" Width="480" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,50,0,0" />
+
+            <toolkit:ListPicker
+                x:Name="ListOfCounts"
+                ItemsSource="{Binding ListOfCounts}" 
+                Margin="133,0,132,0" 
+                BorderBrush="{StaticResource PhoneBackgroundBrush}"/>
+        </StackPanel>
+
+    </Grid>
+
+</phone:PhoneApplicationPage>

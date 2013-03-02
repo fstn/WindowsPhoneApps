@@ -11,6 +11,8 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using FstnCommon.Util;
+using FstnUserControl.Error;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 
@@ -57,6 +59,7 @@ namespace MarketRoulet
                 // and consume battery power when the user is not using the phone.
                 PhoneApplicationService.Current.UserIdleDetectionMode = IdleDetectionMode.Disabled;
             }
+            ErrorService.Instance.WantToNavigate += OnErroNavigate;
 
         }
 
@@ -129,6 +132,14 @@ namespace MarketRoulet
 
             // Ensure we don't initialize again
             phoneApplicationInitialized = true;
+
+
+        }
+
+        void OnErroNavigate(Uri uri)
+        {
+            var rootFrame = (App.Current as App).RootFrame;
+            rootFrame.Navigate(uri);
         }
 
         // Do not add any additional code to this method

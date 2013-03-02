@@ -60,14 +60,19 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Apps\AppsPreview.xaml.cs">
+    <Compile Include="ApplicationBar\ApplicationBarGenerator.cs" />
+    <Compile Include="Market\Application\AppsPreview.xaml.cs">
       <DependentUpon>AppsPreview.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Apps\Loader\MarketAppXMLParserFromMP.cs" />
-    <Compile Include="Apps\Loader\MarketAppXMLParser.cs" />
-    <Compile Include="Apps\Loader\MarketCatXMLParser.cs" />
-    <Compile Include="Apps\URIModel.cs" />
-    <Compile Include="Apps\Loader\XDocument.cs" />
+    <Compile Include="Market\Loader\MarketAppXMLParserFromMP.cs" />
+    <Compile Include="Market\Loader\MarketAppXMLParser.cs" />
+    <Compile Include="Market\Loader\MarketCatXMLParser.cs" />
+    <Compile Include="Error\ErrorDisplayer.xaml.cs">
+      <DependentUpon>ErrorDisplayer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Error\ErrorService.cs" />
+    <Compile Include="Error\ErrorType.cs" />
+    <Compile Include="Error\IErrorDisplayer.cs" />
     <Compile Include="Flip\CoinFlipCounter.xaml.cs">
       <DependentUpon>CoinFlipCounter.xaml</DependentUpon>
     </Compile>
@@ -79,9 +84,17 @@
       <DependentUpon>FormMultiVoidElement.xaml</DependentUpon>
     </Compile>
     <Compile Include="Form\AbstractForm.cs" />
-    <Compile Include="Apps\Model\MarketApp.cs" />
-    <Compile Include="Apps\Model\MarketCat.cs" />
     <Compile Include="FstnUserControlEvent.cs" />
+    <Compile Include="Resources\FstnUserControlMsg.fr.Designer.cs">
+      <DependentUpon>FstnUserControlMsg.fr.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\FstnUserControlMsg.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FstnUserControlMsg.resx</DependentUpon>
+    </Compile>
     <Compile Include="Waiting\SecretAnimationControl.cs" />
     <Compile Include="Tile\TileMultiVoidElement.xaml.cs">
       <DependentUpon>TileMultiVoidElement.xaml</DependentUpon>
@@ -100,7 +113,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Include="Apps\AppsPreview.xaml">
+    <Page Include="Market\Application\AppsPreview.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Error\ErrorDisplayer.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -156,8 +173,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Apps\Parser\" />
     <Folder Include="Image\" />
+    <Folder Include="Market\Parser\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FstnAnimation\FstnAnimation.csproj">
@@ -178,6 +195,16 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Waiting\appbar.question.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\FstnUserControlMsg.fr.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>FstnUserControlMsg.fr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\FstnUserControlMsg.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>FstnUserControlMsg.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />

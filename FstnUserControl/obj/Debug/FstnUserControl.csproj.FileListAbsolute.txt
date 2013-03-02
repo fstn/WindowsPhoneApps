@@ -48,6 +48,7 @@ C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Debug\Error.png
 C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Debug\Fonts\digital-7.ttf
 C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Debug\FstnUserControl.dll
 C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Debug\FstnUserControl.pdb
+C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Debug\fr\FstnUserControl.resources.dll
 C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Debug\FstnAnimation.dll
 C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Debug\FstnCommon.dll
 C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Debug\FstnDesign.dll
@@ -75,7 +76,7 @@ C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Debug\ko\System.Windows.Interac
 C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Debug\zh-Hans\System.Windows.Interactivity.resources.dll
 C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Debug\zh-Hant\System.Windows.Interactivity.resources.dll
 C:\DevTools\Git\windowsPhone\FstnUserControl\obj\Debug\FstnUserControl.csprojResolveAssemblyReference.cache
-C:\DevTools\Git\windowsPhone\FstnUserControl\obj\Debug\Apps\AppsPreview.g.cs
+C:\DevTools\Git\windowsPhone\FstnUserControl\obj\Debug\Error\ErrorDisplayer.g.cs
 C:\DevTools\Git\windowsPhone\FstnUserControl\obj\Debug\Flip\CoinFlipCounter.g.cs
 C:\DevTools\Git\windowsPhone\FstnUserControl\obj\Debug\Flip\CoinFlip.g.cs
 C:\DevTools\Git\windowsPhone\FstnUserControl\obj\Debug\Form\FormMultiVoidElement.g.cs
@@ -84,5 +85,10 @@ C:\DevTools\Git\windowsPhone\FstnUserControl\obj\Debug\Tile\TileSimpleVoidElemen
 C:\DevTools\Git\windowsPhone\FstnUserControl\obj\Debug\Time\TimeCounter.g.cs
 C:\DevTools\Git\windowsPhone\FstnUserControl\obj\Debug\Waiting\ImageWaiting.g.cs
 C:\DevTools\Git\windowsPhone\FstnUserControl\obj\Debug\FstnUserControl.g.resources
+C:\DevTools\Git\windowsPhone\FstnUserControl\obj\Debug\FstnUserControl.Resources.FstnUserControlMsg.resources
+C:\DevTools\Git\windowsPhone\FstnUserControl\obj\Debug\FstnUserControl.Resources.FstnUserControlMsg.fr.resources
+C:\DevTools\Git\windowsPhone\FstnUserControl\obj\Debug\FstnUserControl.csproj.GenerateResource.Cache
+C:\DevTools\Git\windowsPhone\FstnUserControl\obj\Debug\fr\FstnUserControl.resources.dll
 C:\DevTools\Git\windowsPhone\FstnUserControl\obj\Debug\FstnUserControl.dll
 C:\DevTools\Git\windowsPhone\FstnUserControl\obj\Debug\FstnUserControl.pdb
+C:\DevTools\Git\windowsPhone\FstnUserControl\obj\Debug\Market\Application\AppsPreview.g.cs

@@ -123,11 +123,20 @@
   <data name="AppRandom" xml:space="preserve">
     <value>Application</value>
   </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
   <data name="DefaultRandom" xml:space="preserve">
     <value>Tous</value>
   </data>
   <data name="GameRandom" xml:space="preserve">
     <value>Jeux</value>
+  </data>
+  <data name="MinCountForRate" xml:space="preserve">
+    <value>Nombre minimal de notes</value>
+  </data>
+  <data name="MinRatingLevel" xml:space="preserve">
+    <value>Note minimale des applications</value>
   </data>
   <data name="Rate" xml:space="preserve">
     <value>Donner son avis</value>
@@ -135,7 +144,13 @@
   <data name="Reload" xml:space="preserve">
     <value>Une autre!</value>
   </data>
+  <data name="Save" xml:space="preserve">
+    <value>Enregistrer</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Parametres</value>
+  </data>
   <data name="Title" xml:space="preserve">
-    <value>AppsRoulette</value>
+    <value>App Roulette</value>
   </data>
 </root>

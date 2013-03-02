@@ -9,3 +9,5 @@ C:\DevTools\Git\windowsPhone\FstnAnimation\obj\Debug\Page1.g.cs
 C:\DevTools\Git\windowsPhone\FstnAnimation\obj\Debug\FstnAnimation.g.resources
 C:\DevTools\Git\windowsPhone\FstnAnimation\obj\Debug\FstnAnimation.dll
 C:\DevTools\Git\windowsPhone\FstnAnimation\obj\Debug\FstnAnimation.pdb
+C:\DevTools\Git\windowsPhone\FstnAnimation\Bin\Debug\FstnAnimation.dll.CodeAnalysisLog.xml
+C:\DevTools\Git\windowsPhone\FstnAnimation\Bin\Debug\FstnAnimation.dll.lastcodeanalysissucceeded

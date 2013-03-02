@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.IO.IsolatedStorage;
 using System.Linq;
 using System.Text;
-using FstnUserControl.Apps.Model;
 
 namespace UpdateMarketRouletTile
 {
@@ -58,8 +58,14 @@ namespace UpdateMarketRouletTile
 
         internal Uri getRandomWithCat(String categorie)
         {
+            var settings = IsolatedStorageSettings.ApplicationSettings;
+            Double minRateValue = 0;
+            settings.TryGetValue<Double>("minRateValue", out minRateValue);
+
+            int count = 1000;
+            settings.TryGetValue<int>("minCounts", out count);
             String rand = new Random().Next().ToString();
-            return new Uri(fstnAppsUri + fstnRandomPartOfUriWithCat + categorie + "/?" + rand);
+            return new Uri(fstnAppsUri + fstnRandomPartOfUriWithCat + categorie + "/" + minRateValue + "/" + count + "/?" + rand);
         }
         public Uri getFstnListOfCatsUri()
         {

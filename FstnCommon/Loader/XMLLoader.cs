@@ -25,6 +25,7 @@ namespace FstnCommon.Loader
                 WebClient client = new WebClient();
                 client.DownloadStringCompleted += client_DownloadStringCompleted;
                 client.DownloadStringAsync(uri);
+                Debugger.Log(0, "XML", "xml  load " + uri.AbsoluteUri);
             }
             catch (WebException e)
             {

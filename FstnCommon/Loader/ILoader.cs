@@ -7,6 +7,6 @@ namespace FstnCommon.Loader
 {
     public interface ILoader
     {
-         void load(Uri uri);
+        void load(Uri uri);
     }
 }

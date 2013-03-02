@@ -79,6 +79,15 @@ namespace MarketRoulet.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cancel.
+        /// </summary>
+        public static string Cancel {
+            get {
+                return ResourceManager.GetString("Cancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to All.
         /// </summary>
         public static string DefaultRandom {
@@ -93,6 +102,24 @@ namespace MarketRoulet.Resources {
         public static string GameRandom {
             get {
                 return ResourceManager.GetString("GameRandom", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Application min rates.
+        /// </summary>
+        public static string MinCountForRate {
+            get {
+                return ResourceManager.GetString("MinCountForRate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Application min rate level .
+        /// </summary>
+        public static string MinRatingLevel {
+            get {
+                return ResourceManager.GetString("MinRatingLevel", resourceCulture);
             }
         }
         
@@ -115,7 +142,25 @@ namespace MarketRoulet.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to AppsRoulette.
+        ///   Looks up a localized string similar to Save.
+        /// </summary>
+        public static string Save {
+            get {
+                return ResourceManager.GetString("Save", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Settings.
+        /// </summary>
+        public static string Settings {
+            get {
+                return ResourceManager.GetString("Settings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to App Roulette.
         /// </summary>
         public static string Title {
             get {

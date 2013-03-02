@@ -15,8 +15,8 @@ using System.Windows.Media.Animation;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Xml.Linq;
-using FstnUserControl.Apps.Loader;
-using FstnUserControl.Apps.Model;
+using FstnCommon.Market.Model;
+using FstnUserControl.Market.Loader;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Scheduler;
 using Microsoft.Phone.Shell;
@@ -29,6 +29,8 @@ namespace UpdateMarketRouletTile
         private ShellTile currentTile;
         private WebClient wc;
         private List<ShellTile> TilesToFind;
+        private int tilesToUpdate = 0;
+        private int updatedTiles = 0;
         /// <remarks>
         /// ScheduledAgent constructor, initializes the UnhandledException handler
         /// </remarks>
@@ -71,10 +73,11 @@ namespace UpdateMarketRouletTile
             wc = new WebClient();
             wc.DownloadStringCompleted += wc_DownloadStringCompleted;
             /// If application uses both PeriodicTask and ResourceIntensiveTask
-            if (task is ResourceIntensiveTask)
+            if (task is PeriodicTask)
             {
                 // Execute periodic task actions here.
                 TilesToFind = ShellTile.ActiveTiles.Where(x => x.NavigationUri.ToString().Contains("MarketRouletTile")).ToList();
+                tilesToUpdate = TilesToFind.Count;
                 runNewDownload();
             }
             else
@@ -86,16 +89,14 @@ namespace UpdateMarketRouletTile
 
         void runNewDownload()
         {
-            if (TilesToFind.Count > 0)
+            while (TilesToFind.Count > 0)
             {
-                currentTile = TilesToFind.ElementAt(0);
+                Random rand = new Random();
+                int indexEltToUpdate = rand.Next(0, TilesToFind.Count - 1);
+                currentTile = TilesToFind.ElementAt(indexEltToUpdate);
 
                 wc.DownloadStringAsync(AgentURIModel.Instance.getRandomWithCat(GetCategorie(currentTile.NavigationUri.OriginalString)));
-                TilesToFind.RemoveAt(0);
-            }
-            else
-            {
-                 NotifyComplete();
+                TilesToFind.RemoveAt(indexEltToUpdate);
             }
         }
         void wc_DownloadStringCompleted(object sender, DownloadStringCompletedEventArgs e)
@@ -118,6 +119,11 @@ namespace UpdateMarketRouletTile
             if (settings.Contains(currentCat))
                 settings[currentCat] = app.Id;
             settings.Save();
+            updatedTiles++;
+            if (updatedTiles == tilesToUpdate)
+            {
+                NotifyComplete();
+            }
         }
 
          public String GetCategorie(string url) {

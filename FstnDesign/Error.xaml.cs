@@ -15,6 +15,16 @@ namespace FstnDesign
         public Error()
         {
             InitializeComponent();
+
+        }
+        protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+            string error = string.Empty;
+            if (NavigationContext.QueryString.TryGetValue("error", out error))
+            {
+                ErrorText.Text = error;
+            }
         }
     }
 }

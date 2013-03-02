@@ -13,5 +13,6 @@
     <AssemblyPart x:Name="UpdateMarketRouletTile" Source="UpdateMarketRouletTile.dll" />
     <AssemblyPart x:Name="Microsoft.Phone.Controls.Maps" Source="Microsoft.Phone.Controls.Maps.dll" />
     <AssemblyPart Source="fr/MarketRoulet.resources.dll" />
+    <AssemblyPart Source="fr/FstnUserControl.resources.dll" />
   </Deployment.Parts>
 </Deployment>

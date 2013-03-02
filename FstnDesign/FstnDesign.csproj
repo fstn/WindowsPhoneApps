@@ -54,12 +54,13 @@
     <Reference Include="mscorlib.extensions" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ColorManager.cs" />
+    <Compile Include="FstnColor\ColorManager.cs" />
+    <Compile Include="FstnColor\ThemeManager.cs" />
     <Compile Include="Error.xaml.cs">
       <DependentUpon>Error.xaml</DependentUpon>
     </Compile>
-    <Compile Include="HslColor.cs" />
-    <Compile Include="LightBrushConverter.cs" />
+    <Compile Include="FstnColor\HslColor.cs" />
+    <Compile Include="FstnColor\LightBrushConverter.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

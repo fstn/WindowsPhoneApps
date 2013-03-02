@@ -47,7 +47,7 @@ namespace FstnUserControl
         private int StartAnimationTimer { get; set; }
         private int StopAnimationTimer { get; set; }
         private int StartColorTimer { get; set; }
-
+        private SecreteAnimationControl lastEltToRemove;
         //Publish when background is masked 
         public event StopSecreteAnimationEventHandler MaskedEvent;
 
@@ -78,7 +78,7 @@ namespace FstnUserControl
             StopAnimationDuration = 500;
             StartAnimationTimer = 10;
             StopAnimationTimer = 10;
-            StartColorTimer = 50;
+            StartColorTimer = 10;
 
 
             listOfElements = new List<SecreteAnimationControl>();
@@ -102,16 +102,22 @@ namespace FstnUserControl
             RootCanvas.Visibility = Visibility.Visible;
             int YIndice = (int)p.Y;
             int XIndice = (int)p.X;
-            Canvas.SetLeft(elt, XIndice * (secretElementWidth));
-            Canvas.SetTop(elt, YIndice * (secretElementHeight));
+            double left= XIndice * (secretElementWidth);
+                double top= YIndice * (secretElementHeight);
+            Canvas.SetLeft(elt,left);
+            Canvas.SetTop(elt,top);
 
             elt.ForegroundColor = ColorManager.Instance.RandomAccentBrush;
-            MoveEffect me = new MoveEffect(new Point(0, -1.1 * Width), new Point(0, 0), 1, StartAnimationDuration, EasingMode.EaseIn, new CircleEase());
+           // OpacityEffect oe = new OpacityEffect(0, 1, 1, StartAnimationDuration, EasingMode.EaseIn, new CircleEase());
+            MoveEffect me = new MoveEffect(new Point(0, -top), new Point(0, 0), 10, StartAnimationDuration, EasingMode.EaseIn, new CircleEase());
             RotateEffect re = new RotateEffect(-90, 0, 1,StartAnimationDuration, EasingMode.EaseOut, new CircleEase());
+            re.RotationCenter = new Point(0, 0);
             elt.addStartEffect(me);
             elt.addStartEffect(re);
+           // elt.addStartEffect(oe);
             MoveEffect meStop = new MoveEffect( new Point(0, 0),new Point(0, 1.1 * Height), 1, StopAnimationDuration, EasingMode.EaseIn, new CircleEase());
             RotateEffect reStop = new RotateEffect(0, -90, 1,StopAnimationDuration, EasingMode.EaseOut, new CircleEase());
+            reStop.RotationCenter = new Point(0, 0);
             elt.addStopEffect(meStop);
             elt.addStopEffect(reStop);
             elt.load();
@@ -185,12 +191,10 @@ namespace FstnUserControl
 
         public void StartAnimation()
         {
-            if (animStartOfElements.Count > 0)
-            {
-                SecreteAnimationControl elt = animStartOfElements.Dequeue();
-                elt.start();
+            try {
+                 animStartOfElements.Dequeue().start();
             }
-            else
+            catch(InvalidOperationException e)
             {
                 if (MaskedEvent != null)
                 {
@@ -245,12 +249,21 @@ namespace FstnUserControl
             if (animStopOfElements.Count > 0)
             {
                 SecreteAnimationControl elt = animStopOfElements.Dequeue();
+                lastEltToRemove = elt;
                 elt.stop();
             }
             else
             {
+
+                lastEltToRemove.Stopped += lastEltToRemove_Stopped;
                 animTimer.Stop();
             }
+        }
+
+        void lastEltToRemove_Stopped()
+        {
+            this.Visibility = Visibility.Collapsed;
+            lastEltToRemove = null;
         }
 
         internal void Clean()

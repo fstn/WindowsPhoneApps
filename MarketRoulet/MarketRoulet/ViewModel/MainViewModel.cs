@@ -16,10 +16,9 @@ using FstnCommon;
 using System.Net;
 using MarketRoulet.Util;
 using System.Xml.Linq;
-using FstnUserControl.Apps.Model;
 using FstnCommon.Loader;
 using FstnCommon.Parser;
-using FstnUserControl.Apps.Loader;
+using FstnCommon.Market.Model;
 namespace MarketRoulet.ViewModel
 {
 

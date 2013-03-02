@@ -1,10 +1,7 @@
-C:\DevTools\Git\windowsPhone\MarketRoulet\UpdateMarketRouletTile\obj\Debug\UpdateMarketRouletTile.csprojResolveAssemblyReference.cache
-C:\DevTools\Git\windowsPhone\MarketRoulet\UpdateMarketRouletTile\Bin\Debug\UpdateMarketRouletTile.dll
-C:\DevTools\Git\windowsPhone\MarketRoulet\UpdateMarketRouletTile\Bin\Debug\UpdateMarketRouletTile.pdb
-C:\DevTools\Git\windowsPhone\MarketRoulet\UpdateMarketRouletTile\obj\Debug\UpdateMarketRouletTile.dll
-C:\DevTools\Git\windowsPhone\MarketRoulet\UpdateMarketRouletTile\obj\Debug\UpdateMarketRouletTile.pdb
 C:\DevTools\Git\windowsPhone\MarketRoulet\UpdateMarketRouletTile\Bin\Debug\Error.png
 C:\DevTools\Git\windowsPhone\MarketRoulet\UpdateMarketRouletTile\Bin\Debug\Fonts\digital-7.ttf
+C:\DevTools\Git\windowsPhone\MarketRoulet\UpdateMarketRouletTile\Bin\Debug\UpdateMarketRouletTile.dll
+C:\DevTools\Git\windowsPhone\MarketRoulet\UpdateMarketRouletTile\Bin\Debug\UpdateMarketRouletTile.pdb
 C:\DevTools\Git\windowsPhone\MarketRoulet\UpdateMarketRouletTile\Bin\Debug\FstnCommon.dll
 C:\DevTools\Git\windowsPhone\MarketRoulet\UpdateMarketRouletTile\Bin\Debug\FstnUserControl.dll
 C:\DevTools\Git\windowsPhone\MarketRoulet\UpdateMarketRouletTile\Bin\Debug\Microsoft.Phone.Controls.Toolkit.dll
@@ -16,3 +13,7 @@ C:\DevTools\Git\windowsPhone\MarketRoulet\UpdateMarketRouletTile\Bin\Debug\FstnU
 C:\DevTools\Git\windowsPhone\MarketRoulet\UpdateMarketRouletTile\Bin\Debug\FstnAnimation.pdb
 C:\DevTools\Git\windowsPhone\MarketRoulet\UpdateMarketRouletTile\Bin\Debug\FstnDesign.pdb
 C:\DevTools\Git\windowsPhone\MarketRoulet\UpdateMarketRouletTile\Bin\Debug\Microsoft.Phone.Controls.xml
+C:\DevTools\Git\windowsPhone\MarketRoulet\UpdateMarketRouletTile\Bin\Debug\fr\FstnUserControl.resources.dll
+C:\DevTools\Git\windowsPhone\MarketRoulet\UpdateMarketRouletTile\obj\Debug\UpdateMarketRouletTile.csprojResolveAssemblyReference.cache
+C:\DevTools\Git\windowsPhone\MarketRoulet\UpdateMarketRouletTile\obj\Debug\UpdateMarketRouletTile.dll
+C:\DevTools\Git\windowsPhone\MarketRoulet\UpdateMarketRouletTile\obj\Debug\UpdateMarketRouletTile.pdb

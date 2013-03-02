@@ -58,6 +58,7 @@
     <Compile Include="AnimationFactory.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="Dynamic\CollapseEffect.cs" />
+    <Compile Include="Dynamic\OpacityEffect.cs" />
     <Compile Include="Dynamic\MoveEffect.cs" />
     <Compile Include="Dynamic\HideByReduceEffect.cs" />
     <Compile Include="Dynamic\DynamicEffect.cs" />

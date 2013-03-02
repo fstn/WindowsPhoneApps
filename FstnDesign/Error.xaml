@@ -24,10 +24,17 @@
         <StackPanel Grid.Row="0" Margin="12,17,0,28"/>
 
         <!--ContentPanel - place additional content here-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <Image Margin="88,211,89,280" Source="/Error.png" Stretch="Fill"/>
-
-        </Grid>
+        <StackPanel>
+            <Image  Source="/Error.png" Height="200" Width="250" Stretch="Fill"/>
+            <TextBlock 
+                Margin="50"
+            	TextWrapping="Wrap"
+            	Width="380"
+            	Height="300"
+                Style="{StaticResource PhoneTextTitle2Style}"
+                TextAlignment="Center"
+            	x:Name="ErrorText" />
+        </StackPanel>
     </Grid>
 
 </phone:PhoneApplicationPage>

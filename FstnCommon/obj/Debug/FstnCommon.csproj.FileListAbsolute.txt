@@ -10,3 +10,5 @@ C:\DevTools\Git\windowsPhone\FstnCommon\Bin\Debug\Microsoft.Phone.Controls.xml
 C:\DevTools\Git\windowsPhone\FstnCommon\Bin\Debug\Microsoft.Phone.Controls.Maps.xml
 C:\DevTools\Git\windowsPhone\FstnCommon\obj\Debug\FstnCommon.dll
 C:\DevTools\Git\windowsPhone\FstnCommon\obj\Debug\FstnCommon.pdb
+C:\DevTools\Git\windowsPhone\FstnCommon\Bin\Debug\FstnCommon.dll.CodeAnalysisLog.xml
+C:\DevTools\Git\windowsPhone\FstnCommon\Bin\Debug\FstnCommon.dll.lastcodeanalysissucceeded

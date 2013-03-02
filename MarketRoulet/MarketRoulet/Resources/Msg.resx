@@ -123,11 +123,20 @@
   <data name="AppRandom" xml:space="preserve">
     <value>App</value>
   </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
   <data name="DefaultRandom" xml:space="preserve">
     <value>All</value>
   </data>
   <data name="GameRandom" xml:space="preserve">
     <value>Game</value>
+  </data>
+  <data name="MinCountForRate" xml:space="preserve">
+    <value>Application min rates</value>
+  </data>
+  <data name="MinRatingLevel" xml:space="preserve">
+    <value>Application min rate level </value>
   </data>
   <data name="Rate" xml:space="preserve">
     <value>Rate</value>
@@ -135,7 +144,13 @@
   <data name="Reload" xml:space="preserve">
     <value>Give me one more!</value>
   </data>
+  <data name="Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
   <data name="Title" xml:space="preserve">
-    <value>AppsRoulette</value>
+    <value>App Roulette</value>
   </data>
 </root>

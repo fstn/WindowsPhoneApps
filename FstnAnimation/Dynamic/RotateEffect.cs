@@ -17,6 +17,7 @@ namespace FstnAnimation.Dynamic
         public int Duration { get; set; }
         public EasingMode Mode { get; set; }
         public EasingFunctionBase EasingFunction { get; set; }
+        public Point RotationCenter { get; set; }
         public RotateEffect(double from, double to, double speed, EasingMode mode, EasingFunctionBase easingFunction)
         {
             this.From = from;
@@ -59,6 +60,12 @@ namespace FstnAnimation.Dynamic
                 target.Projection = projection;
                 animation.EasingFunction = EasingFunction;
                 Storyboard.SetTarget(animation, projection);
+                if(RotationCenter!=null){
+                    projection.CenterOfRotationX=RotationCenter.X;
+                    projection.CenterOfRotationY=RotationCenter.Y;
+                }
+
+
                 Storyboard.SetTargetProperty(animation, new PropertyPath(PlaneProjection.RotationYProperty));
 
                 result.Children.Add(animation);
