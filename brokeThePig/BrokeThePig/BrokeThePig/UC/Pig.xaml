@@ -1,0 +1,174 @@
+﻿<UserControl x:Class="BrokeThePig.UC.Pig"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:pig="clr-namespace:BrokeThePig.UC"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             FontFamily="{StaticResource PhoneFontFamilyNormal}"
+             FontSize="{StaticResource PhoneFontSizeNormal}"
+             Foreground="{StaticResource PhoneForegroundBrush}"
+             d:DesignHeight="660" d:DesignWidth="480">
+    <UserControl.Resources>
+        <Storyboard x:Name="explode">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)" Storyboard.TargetName="Calque_1b">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="10.462"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="Calque_1b">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="242"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="Calque_1b">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="310"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)" Storyboard.TargetName="Calque_2b">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="-17.379"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="Calque_2b">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="233"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="Calque_2b">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="-255"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)" Storyboard.TargetName="Shape_1b_copy">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="-35.39"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="Shape_1b_copy">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="-385"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="Shape_1b_copy">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="132"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </UserControl.Resources>
+    <Canvas Margin="0,0,0,10" Grid.RowSpan="2" x:Name="RootLayout">
+
+       
+        <Canvas 
+            Visibility="Visible" HorizontalAlignment="Left" 
+            Height="600"
+            VerticalAlignment="Top"
+            Width="480" >
+
+            <Canvas x:Name="Gold_coin" Height="178" Width="218" Canvas.Left="149" Canvas.Top="130" >
+                <Image x:Name="Layer_2" Height="46" Canvas.Left="0" Source="../Images/Coins/Layer 2.png" Canvas.Top="135" Width="243"/>
+                <Image x:Name="coin5" Height="49" Canvas.Left="10" Source="../Images/Coins/coin5.png" Canvas.Top="124" Width="196"/>
+                <Image x:Name="coin4" Height="49" Canvas.Left="3"  Source="../Images/Coins/coin4.png" Canvas.Top="104" Width="196"/>
+                <Image x:Name="coin3" Height="48" Canvas.Left="16" Source="../Images/Coins/coin3.png" Canvas.Top="83" Width="196"/>
+                <Image x:Name="coin2" Height="48" Canvas.Left="8"  Source="../Images/Coins/coin2.png" Canvas.Top="62" Width="195"/>
+                <Image x:Name="coin1" Height="48" Canvas.Left="19" Source="../Images/Coins/coin1.png" Canvas.Top="40" Width="195"/>
+                <Image x:Name="coin" Height="49" Canvas.Left="5"   Source="../Images/Coins/coin.png" Canvas.Top="18" Width="196"/>
+                <Image x:Name="Group_2" Height="49" Canvas.Left="25" Source="../Images/Coins/Group 2.png" Canvas.Top="0" Width="195"/>
+
+            </Canvas>
+            <Canvas x:Name="Body_before" Visibility="Visible" 
+                    Height="376" 
+                    Canvas.Left="96"
+                    Canvas.Top="5" Width="320">
+                <pig:GraphicComponent  EndNumber="900" 
+                                       CurrentNumber="{Binding CurrentNumber,Mode=TwoWay}">
+                    <Canvas x:Name="Right_feet" Background="Red">
+                        <Image x:Name="Shape_4_copy_2" Height="67" 
+                               Canvas.Left="188" 
+                               Source="/BrokeThePig;component/Images/Pig/Shape 4 copy 2.png" Canvas.Top="309" Width="94"/>
+                        <Image x:Name="Shape_5_copy_2" Height="21" Canvas.Left="186" 
+                               Source="/BrokeThePig;component/Images/Pig/Shape 5 copy 2.png" Canvas.Top="355" Width="47"/>
+                    </Canvas>
+                </pig:GraphicComponent>
+                <pig:GraphicComponent  EndNumber="300"  
+                                       CurrentNumber="{Binding CurrentNumber,Mode=TwoWay}">
+                    <Canvas x:Name="Left_feet">
+                        <Image x:Name="Shape_4_copy_3" Height="67" Canvas.Left="37" Source="/BrokeThePig;component/Images/Pig/Shape 4 copy 3.png" Canvas.Top="309" Width="95"/>
+                        <Image x:Name="Shape_5_copy_3" Height="21" Canvas.Left="86" Source="/BrokeThePig;component/Images/Pig/Shape 5 copy 3.png" Canvas.Top="355" Width="47"/>
+                    </Canvas>
+
+                </pig:GraphicComponent>
+                <pig:GraphicComponent  EndNumber="-1000" 
+                                       
+                                       CurrentNumber="{Binding CurrentNumber,Mode=TwoWay}">
+                    <Canvas x:Name="Body">
+                        <Image x:Name="Shape_1_copy" Height="294" Canvas.Left="0" Source="/BrokeThePig;component/Images/Pig/Shape 1 copy.png" Canvas.Top="69" Width="320" />
+                        <Image x:Name="Shape_1_copy_2" Height="171" Canvas.Left="37" Source="/BrokeThePig;component/Images/Pig/Shape 1 copy 2.png" Canvas.Top="75" Width="246"/>
+                    </Canvas>
+
+                </pig:GraphicComponent>
+               
+                <pig:GraphicComponent  EndNumber="600"  
+                                       CurrentNumber="{Binding CurrentNumber,Mode=TwoWay}">
+
+                    <Canvas x:Name="Nose" Visibility="Visible" >
+                        <Image  Height="95" Canvas.Left="101" Source="/BrokeThePig;component/Images/Pig/Shape 8 copy.png" Canvas.Top="186" Width="120"/>
+                        <Image x:Name="Shape_7_copy_2" Height="26" Canvas.Left="177" Source="/BrokeThePig;component/Images/Pig/Shape 7 copy 2.png" Canvas.Top="216" Width="17"/>
+                        <Image x:Name="Shape_7_copy_3" Height="26" Canvas.Left="131" Source="/BrokeThePig;component/Images/Pig/Shape 7 copy 3.png" Canvas.Top="216" Width="17"/>
+                    </Canvas>
+
+                </pig:GraphicComponent>
+                <pig:GraphicComponent  EndNumber="800"  
+                                       CurrentNumber="{Binding CurrentNumber,Mode=TwoWay}">
+                    <Image x:Name="Right_eye"                       
+                           Height="34"  Canvas.Left="190" Source="/BrokeThePig;component/Images/Pig/Shape 6 copy 2.png" Canvas.Top="143" Width="27"/>
+                </pig:GraphicComponent>
+                <pig:GraphicComponent  EndNumber="700"  
+                                       CurrentNumber="{Binding CurrentNumber,Mode=TwoWay}">
+                    <Image x:Name="Left_eye" 
+                           Height="34" Canvas.Left="100" Source="/BrokeThePig;component/Images/Pig/Shape 6 copy 3.png" Canvas.Top="143" Width="28"/>
+
+
+                </pig:GraphicComponent>
+                <pig:GraphicComponent  EndNumber="500"  
+                                       CurrentNumber="{Binding CurrentNumber,Mode=TwoWay}">
+                    <Canvas x:Name="Left_ear">
+                        <Image x:Name="Shape_2_copy" Height="61" Canvas.Left="36" Source="/BrokeThePig;component/Images/Pig/Shape 2 copy.png" Canvas.Top="58" Width="71"/>
+                        <Image x:Name="Shape_2_copy_2" Height="45" Canvas.Left="46" Source="/BrokeThePig;component/Images/Pig/Shape 2 copy 2.png" Canvas.Top="67" Width="52"/>
+                    </Canvas>
+
+                </pig:GraphicComponent>
+                <pig:GraphicComponent  EndNumber="100"  
+                                       CurrentNumber="{Binding CurrentNumber,Mode=TwoWay}">
+                    <Canvas x:Name="Right_ear">
+                        <Image x:Name="Shape_3_copy" Height="62" Canvas.Left="227" Source="/BrokeThePig;component/Images/Pig/Shape 3 copy.png" Canvas.Top="65" Width="66"/>
+                        <Image x:Name="Shape_3_copy_2" Height="50" Canvas.Left="233" Source="/BrokeThePig;component/Images/Pig/Shape 3 copy 2.png" Canvas.Top="72" Width="54"/>
+                    </Canvas>
+                </pig:GraphicComponent>
+            </Canvas>
+        </Canvas>
+
+        <Canvas>
+            <Image  x:Name="CrackImg" Height="317" Canvas.Left="17" Source="/BrokeThePig;component/Images/BrokenPig/Crack.png" Canvas.Top="86" Width="448" RenderTransformOrigin="0.5,0.5"/>
+            <Canvas.Clip>
+                <EllipseGeometry x:Name="CrackMask" RadiusX="00" RadiusY="500"></EllipseGeometry>
+            </Canvas.Clip>
+        </Canvas>
+        <Canvas  x:Name="Body_broke" 
+                 Visibility="Collapsed"
+                 HorizontalAlignment="Left" Height="600" UseLayoutRounding="False" VerticalAlignment="Top" Width="480" Canvas.Top="-82">
+           
+            <Canvas x:Name="EndExplode" Height="317" Canvas.Left="15" Canvas.Top="155" Width="448">
+                <Image x:Name="Shape_1b_copy" Height="317" Canvas.Left="0" Source="/BrokeThePig;component/Images/BrokenPig/Shape 1b copy.png" Canvas.Top="0" Width="448" RenderTransformOrigin="0.5,0.5">
+                    <Image.RenderTransform>
+                        <CompositeTransform/>
+                    </Image.RenderTransform>
+                </Image>
+                <Image x:Name="Calque_1b" Height="190" Canvas.Left="203" Source="/BrokeThePig;component/Images/BrokenPig/Calque 1b.png" Canvas.Top="104" Width="198" RenderTransformOrigin="0.5,0.5">
+                    <Image.RenderTransform>
+                        <CompositeTransform/>
+                    </Image.RenderTransform>
+                </Image>
+                <Image x:Name="Calque_2b" Height="206" Canvas.Left="81" Source="/BrokeThePig;component/Images/BrokenPig/Calque 2b.png" Canvas.Top="88" Width="149" RenderTransformOrigin="0.5,0.5">
+                    <Image.RenderTransform>
+                        <CompositeTransform/>
+                    </Image.RenderTransform>
+                </Image>
+            </Canvas>
+        </Canvas>
+
+    </Canvas>
+</UserControl>

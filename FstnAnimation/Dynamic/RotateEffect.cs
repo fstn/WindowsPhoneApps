@@ -18,6 +18,7 @@ namespace FstnAnimation.Dynamic
         public EasingMode Mode { get; set; }
         public EasingFunctionBase EasingFunction { get; set; }
         public Point RotationCenter { get; set; }
+        public DependencyProperty RotationAxe { get; set; }
         public RotateEffect(double from, double to, double speed, EasingMode mode, EasingFunctionBase easingFunction)
         {
             this.From = from;
@@ -65,8 +66,11 @@ namespace FstnAnimation.Dynamic
                     projection.CenterOfRotationY=RotationCenter.Y;
                 }
 
-
-                Storyboard.SetTargetProperty(animation, new PropertyPath(PlaneProjection.RotationYProperty));
+                if (RotationAxe == null)
+                {
+                    RotationAxe = PlaneProjection.RotationYProperty;
+                }
+                Storyboard.SetTargetProperty(animation, new PropertyPath(RotationAxe));
 
                 result.Children.Add(animation);
             }

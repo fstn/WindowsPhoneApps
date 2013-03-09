@@ -56,5 +56,6 @@ namespace FstnAnimation.Dynamic
             sb.Children.Add(animationY);
             return sb;
         }
+
     }
 }

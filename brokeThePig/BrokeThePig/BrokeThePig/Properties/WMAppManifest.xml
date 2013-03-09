@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Deployment xmlns="http://schemas.microsoft.com/windowsphone/2009/deployment" AppPlatformVersion="7.1">
+  <App xmlns="" ProductID="{05b4ee40-1f8a-4c48-a802-8f393dad5afc}" Title="BrokeThePig" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="BrokeThePig author" Description="Sample description" Publisher="BrokeThePig">
+    <IconPath IsRelative="true" IsResource="false">DirtyPigIcon.png</IconPath>
+    <Capabilities>
+    </Capabilities>
+    <Tasks>
+      <DefaultTask Name="_default" NavigationPage="MainPage.xaml" />
+    </Tasks>
+    <Tokens>
+      <PrimaryToken TokenID="BrokeThePigToken" TaskName="_default">
+        <TemplateType5>
+          <BackgroundImageURI IsRelative="true" IsResource="false">DirtyPigIcon.png</BackgroundImageURI>
+          <Count>0</Count>
+          <Title>BrokeThePig</Title>
+        </TemplateType5>
+      </PrimaryToken>
+    </Tokens>
+  </App>
+</Deployment>

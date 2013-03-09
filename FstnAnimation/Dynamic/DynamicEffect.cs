@@ -10,7 +10,7 @@ namespace FstnAnimation.Dynamic
 {
     public abstract class DynamicEffect
     {
-        FrameworkElement target;
+        protected FrameworkElement target;
         Storyboard storyboard;
 
         public DynamicEffect()
@@ -38,9 +38,9 @@ namespace FstnAnimation.Dynamic
         }
         protected virtual void OnCompleted(object sender, EventArgs e)
         {
-            Remove();
             if (Completed != null)
-                Completed(sender, e);
+                Completed(target, null);
+            Remove();
         }
 
         public virtual void Start(FrameworkElement target)

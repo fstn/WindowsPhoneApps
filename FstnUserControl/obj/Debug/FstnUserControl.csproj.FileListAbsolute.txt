@@ -76,6 +76,7 @@ C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Debug\ko\System.Windows.Interac
 C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Debug\zh-Hans\System.Windows.Interactivity.resources.dll
 C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Debug\zh-Hant\System.Windows.Interactivity.resources.dll
 C:\DevTools\Git\windowsPhone\FstnUserControl\obj\Debug\FstnUserControl.csprojResolveAssemblyReference.cache
+C:\DevTools\Git\windowsPhone\FstnUserControl\obj\Debug\Market\Application\AppsPreview.g.cs
 C:\DevTools\Git\windowsPhone\FstnUserControl\obj\Debug\Error\ErrorDisplayer.g.cs
 C:\DevTools\Git\windowsPhone\FstnUserControl\obj\Debug\Flip\CoinFlipCounter.g.cs
 C:\DevTools\Git\windowsPhone\FstnUserControl\obj\Debug\Flip\CoinFlip.g.cs
@@ -91,4 +92,3 @@ C:\DevTools\Git\windowsPhone\FstnUserControl\obj\Debug\FstnUserControl.csproj.Ge
 C:\DevTools\Git\windowsPhone\FstnUserControl\obj\Debug\fr\FstnUserControl.resources.dll
 C:\DevTools\Git\windowsPhone\FstnUserControl\obj\Debug\FstnUserControl.dll
 C:\DevTools\Git\windowsPhone\FstnUserControl\obj\Debug\FstnUserControl.pdb
-C:\DevTools\Git\windowsPhone\FstnUserControl\obj\Debug\Market\Application\AppsPreview.g.cs

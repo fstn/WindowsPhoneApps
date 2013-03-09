@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F8D5735D-19FC-4AF3-B5C0-2F361525AF66}</ProjectGuid>
+    <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BrokeThePig</RootNamespace>
+    <AssemblyName>BrokeThePig</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <TargetFrameworkProfile>WindowsPhone71</TargetFrameworkProfile>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>$supported_culture$
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>BrokeThePig.xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>BrokeThePig.App</SilverlightAppEntry>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <ExpressionBlendVersion>5.0.30924.0</ExpressionBlendVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Advertising.Mobile, Version=6.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Advertising.Mobile.UI, Version=6.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Expression.Drawing, Version=3.8.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Phone" />
+    <Reference Include="Microsoft.Phone.Controls, Version=7.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Phone.Interop" />
+    <Reference Include="Microsoft.Xna.Framework" />
+    <Reference Include="mscorlib.Extensions" />
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Windows.Interactivity, Version=3.8.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Source\AI\AI.cs" />
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UC\Weapons\SimpleWeapon.cs" />
+    <Compile Include="UC\BrokeThePigWeapon.cs" />
+    <Compile Include="UC\GraphicComponent.cs" />
+    <Compile Include="UC\Pig.xaml.cs">
+      <DependentUpon>Pig.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UC\PointNumber.cs" />
+    <Compile Include="UC\SoundController.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+    <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UC\Pig.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\AppManifest.xml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\WMAppManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ApplicationIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Background.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DirtyPigIcon.png" />
+    <Content Include="Images\Coins\coin.png" />
+    <Content Include="Images\Coins\coin1.png" />
+    <Content Include="Images\Coins\coin2.png" />
+    <Content Include="Images\Coins\coin3.png" />
+    <Content Include="Images\Coins\coin4.png" />
+    <Content Include="Images\Coins\coin5.png" />
+    <Content Include="Images\Coins\Group 2.png" />
+    <Content Include="Images\Coins\Layer 2.png" />
+    <Content Include="Images\Weapons\bomb.png" />
+    <Content Include="Images\Weapons\feather.png" />
+    <Content Include="Images\Weapons\laserGun.png" />
+    <Content Include="Images\Weapons\hammer.png" />
+    <Content Include="Images\Weapons\lightning.png" />
+    <Content Include="Images\Weapons\lightSaber.png" />
+    <Content Include="Images\Weapons\rope.png" />
+    <Content Include="Images\Weapons\scissors.png" />
+    <Content Include="Sounds\bombSelection.wav" />
+    <Content Include="Sounds\bombShoot.wav" />
+    <Content Include="Sounds\ropeShoot.wav" />
+    <Content Include="Sounds\electricSelection.wav" />
+    <Content Include="Sounds\electricShoot.wav" />
+    <Content Include="Sounds\hammerSelection.wav" />
+    <Content Include="Sounds\hammerShoot.wav" />
+    <Content Include="Sounds\laserGunSelection.wav" />
+    <Content Include="Sounds\laserGunShoot.wav" />
+    <Content Include="Sounds\laughSelection.wav" />
+    <Content Include="Sounds\laughShoot.wav" />
+    <Content Include="Sounds\lightSaberSelection.wav" />
+    <Content Include="Sounds\lightSaberShoot.wav" />
+    <Content Include="Sounds\pig1.wav" />
+    <Content Include="Sounds\ropeSelection.wav" />
+    <Content Include="Sounds\scissorsSelection.wav" />
+    <Content Include="Sounds\scissorsShoot.wav" />
+    <Content Include="Sounds\tap1.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\tap10.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\tap9.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\tap8.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\tap7.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\tap6.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\tap5.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\tap4.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\tap3.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\tap2.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\win.wav" />
+    <Content Include="SplashScreenImage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\BrokenPig\Crack.png" />
+    <Resource Include="Images\BrokenPig\Calque 1b.png" />
+    <Resource Include="Images\BrokenPig\Calque 2b.png" />
+    <Resource Include="Images\BrokenPig\Shape 1b copy.png" />
+    <Resource Include="Images\Pig\Shape 1 copy 2.png" />
+    <Resource Include="Images\Pig\Shape 1 copy.png" />
+    <Resource Include="Images\Pig\Shape 2 copy 2.png" />
+    <Resource Include="Images\Pig\Shape 2 copy.png" />
+    <Resource Include="Images\Pig\Shape 3 copy 2.png" />
+    <Resource Include="Images\Pig\Shape 3 copy.png" />
+    <Resource Include="Images\Pig\Shape 4 copy 2.png" />
+    <Resource Include="Images\Pig\Shape 4 copy 3.png" />
+    <Resource Include="Images\Pig\Shape 5 copy 2.png" />
+    <Resource Include="Images\Pig\Shape 5 copy 3.png" />
+    <Resource Include="Images\Pig\Shape 6 copy 2.png" />
+    <Resource Include="Images\Pig\Shape 6 copy 3.png" />
+    <Resource Include="Images\Pig\Shape 7 copy 2.png" />
+    <Resource Include="Images\Pig\Shape 7 copy 3.png" />
+    <Resource Include="Images\Pig\Shape 8 copy.png" />
+    <Resource Include="Images\Pig\Shape 9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\FstnAnimation\FstnAnimation.csproj">
+      <Project>{51B5F01C-0996-4E5E-A3EA-3E3A80ACCFCB}</Project>
+      <Name>FstnAnimation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\FstnCommon\FstnCommon.csproj">
+      <Project>{0F66CBD7-90F0-4875-90C2-4387E62B6C32}</Project>
+      <Name>FstnCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\FstnDesign\FstnDesign.csproj">
+      <Project>{78719FCA-BD86-45D2-811A-6DDB34646EE3}</Project>
+      <Name>FstnDesign</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\FstnUserControl\FstnUserControl.csproj">
+      <Project>{C19FEDFB-44B9-4390-8979-1EFD1A902AEB}</Project>
+      <Name>FstnUserControl</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions />
+</Project>
