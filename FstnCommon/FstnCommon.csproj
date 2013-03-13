@@ -66,6 +66,8 @@
     <Compile Include="Parser\XMLParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Session.cs" />
+    <Compile Include="Util\MathUtil.cs" />
+    <Compile Include="Util\Settings\CryptedSettingsService.cs" />
     <Compile Include="Util\Settings\SettingsKeys.cs" />
     <Compile Include="Util\Settings\SettingsService.cs" />
   </ItemGroup>

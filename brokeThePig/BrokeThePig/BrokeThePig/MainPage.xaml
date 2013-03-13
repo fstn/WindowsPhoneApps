@@ -6,96 +6,115 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:localUC="clr-namespace:BrokeThePig.UC"
-     xmlns:localUCWeapons="clr-namespace:BrokeThePig.UC.Weapons"
+    xmlns:localUCWeapons="clr-namespace:BrokeThePig.UC.Weapons"
+    xmlns:es="clr-namespace:Microsoft.Expression.Shapes;assembly=Microsoft.Expression.Drawing"
     mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="800"
     x:Class="BrokeThePig.MainPage"
-    FontFamily="{StaticResource PhoneFontFamilyNormal}"
-    FontSize="{StaticResource PhoneFontSizeNormal}"
-    Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
     shell:SystemTray.IsVisible="True">
-    <phone:PhoneApplicationPage.Resources>
-
-    </phone:PhoneApplicationPage.Resources>
+    <phone:PhoneApplicationPage.FontFamily>
+        <StaticResource ResourceKey="PhoneFontFamilyNormal"/>
+    </phone:PhoneApplicationPage.FontFamily>
+    <phone:PhoneApplicationPage.FontSize>
+        <StaticResource ResourceKey="PhoneFontSizeNormal"/>
+    </phone:PhoneApplicationPage.FontSize>
+    <phone:PhoneApplicationPage.Foreground>
+        <StaticResource ResourceKey="PhoneForegroundBrush"/>
+    </phone:PhoneApplicationPage.Foreground>
 
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
         <Grid.RowDefinitions>
-            <RowDefinition Height="150"/>
+            <RowDefinition Height="200"/>
             <RowDefinition Height="400"/>
             <RowDefinition Height="130"/>
         </Grid.RowDefinitions>
 
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,9,0,40">
-            <TextBlock x:Name="ApplicationTitle" Text="MY APPLICATION" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock x:Name="ApplicationTitle" Text="Broke The Pig" Style="{StaticResource PhoneTextTitle2Style}"/>
             <StackPanel Orientation="Horizontal">
-                <TextBlock x:Name="Counter" Style="{StaticResource PhoneTextTitle1Style}"/>
-                <TextBlock x:Name="AmountOfMoney" Style="{StaticResource PhoneTextTitle1Style}"/>
+                <TextBlock x:Name="Counter"                            
+                           Text="{Binding GameAI.CurrentNumber.Number,Mode=TwoWay}"
+                           Style="{StaticResource PhoneTextTitle1Style}"/>
+                <TextBlock x:Name="AmountOfMoney" 
+                           Text="{Binding GameAI.CurrentMoney,Mode=TwoWay}"
+                           Style="{StaticResource PhoneTextTitle1Style}"/>
 
             </StackPanel>
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
-        <Grid x:Name="ContentPanel" Grid.Row="0" Margin="12,0,12,0"/>
-        <Canvas x:Name="PigLayout" Grid.Row="1">
-            <localUC:Pig x:Name="Pig" Grid.Row="1" />
-        </Canvas>
+        <Grid x:Name="ContentPanel" Grid.Row="0" Margin="24,-40,0,40">
+            <Button Content="Button" HorizontalAlignment="Left" Margin="179,33,0,0" VerticalAlignment="Top" Tap="Button_Tap_1"/>
+        </Grid>
         <ScrollViewer Grid.Row="2"
                       ScrollViewer.HorizontalScrollBarVisibility="Auto" 
-                      ScrollViewer.VerticalScrollBarVisibility="Disabled"
+                      ScrollViewer.VerticalScrollBarVisibility="Disabled" Margin="0,0,0,-38"
                       >
             <StackPanel Orientation="Horizontal">
-                <localUCWeapons:SimpleWeapon Width="128" Height="128" 
+                <localUCWeapons:SimpleWeapon Width="128" Height="158" 
                                              ShootSound="Sounds/laughShoot.wav"
-                                              SelectionSound="Sounds/laughSelection.wav"
+                                             SelectionSound="Sounds/laughSelection.wav"
+                                             MoneyNeeded="0"
                                              Damage="1">
                     <Image Source="Images/Weapons/feather.png"/>
                 </localUCWeapons:SimpleWeapon>
-                <localUCWeapons:SimpleWeapon Width="128" Height="128"
+                <localUCWeapons:SimpleWeapon Width="128"  Height="158" 
                                              ShootSound="Sounds/hammerShoot.wav"
-                                              SelectionSound="Sounds/hammerSelection.wav"
+                                             SelectionSound="Sounds/hammerSelection.wav"
+                                             MoneyNeeded="10"
                                              Damage="2">
                     <Image Source="Images/Weapons/hammer.png"/>
                 </localUCWeapons:SimpleWeapon>
-                <localUCWeapons:SimpleWeapon Width="128" Height="128"
+                <localUCWeapons:SimpleWeapon Width="128"  Height="158" 
                                              ShootSound="Sounds/electricShoot.wav"
-                                              SelectionSound="Sounds/electricSelection.wav"
+                                             SelectionSound="Sounds/electricSelection.wav"
+                                             MoneyNeeded="10"
                                              Damage="5">
                     <Image Source="Images/Weapons/lightning.png"/>
                 </localUCWeapons:SimpleWeapon>
-                <localUCWeapons:SimpleWeapon Width="128" Height="128"
+                <localUCWeapons:SimpleWeapon Width="128"  Height="158" 
                                              ShootSound="Sounds/lightSaberShoot.wav"
-                                              SelectionSound="Sounds/lightSaberSelection.wav"
-                                             Damage="10">
+                                             SelectionSound="Sounds/lightSaberSelection.wav"
+                                             MoneyNeeded="0"
+                                             Damage="100">
                     <Image Source="Images/Weapons/lightSaber.png"/>
                 </localUCWeapons:SimpleWeapon>
-                <localUCWeapons:SimpleWeapon Width="128" Height="128"
+                <localUCWeapons:SimpleWeapon Width="128"  Height="158" 
                                              ShootSound="Sounds/ropeShoot.wav"
-                                              SelectionSound="Sounds/ropeSelection.wav"
-                                             Damage="10">
+                                             SelectionSound="Sounds/ropeSelection.wav"
+                                             MoneyNeeded="0"
+                                             Damage="100">
                     <Image Source="Images/Weapons/rope.png"/>
                 </localUCWeapons:SimpleWeapon>
-                <localUCWeapons:SimpleWeapon Width="128" Height="128"
+                <localUCWeapons:SimpleWeapon Width="128"  Height="158" 
                                              ShootSound="Sounds/scissorsShoot.wav"
-                                              SelectionSound="Sounds/scissorsSelection.wav"
-                                             Damage="10">
+                                             SelectionSound="Sounds/scissorsSelection.wav"
+                                             MoneyNeeded="0"
+                                             Damage="100">
                     <Image Source="Images/Weapons/scissors.png"/>
                 </localUCWeapons:SimpleWeapon>
-                <localUCWeapons:SimpleWeapon Width="128" Height="128"
+                <localUCWeapons:SimpleWeapon Width="128"  Height="158" 
                                              ShootSound="Sounds/laserGunShoot.wav"
-                                              SelectionSound="Sounds/laserGunSelection.wav"
+                                             SelectionSound="Sounds/laserGunSelection.wav"
+                                             MoneyNeeded="1000"
                                              Damage="40">
                     <Image Source="Images/Weapons/laserGun.png"/>
                 </localUCWeapons:SimpleWeapon>
-                <localUCWeapons:SimpleWeapon Width="128" Height="128"
+                <localUCWeapons:SimpleWeapon Width="128"  Height="158" 
                                              ShootSound="Sounds/bombShoot.wav"
-                                              SelectionSound="Sounds/bombSelection.wav"
+                                             SelectionSound="Sounds/bombSelection.wav"
+                                             MoneyNeeded="10000"
                                              Damage="100">
                     <Image Source="Images/Weapons/bomb.png"/>
                 </localUCWeapons:SimpleWeapon>
             </StackPanel>
         </ScrollViewer>
 
+        <Canvas x:Name="PigLayout" Grid.Row="1">
+
+            <localUC:Pig Visibility="Collapsed" x:Name="Pig" Grid.Row="1" Canvas.Left="53" Height="369" Width="374" Canvas.Top="10" />
+        </Canvas>
     </Grid>
 </phone:PhoneApplicationPage>

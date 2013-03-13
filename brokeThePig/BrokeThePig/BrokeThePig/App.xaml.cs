@@ -11,6 +11,8 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using BrokeThePig.Source.AI;
+using FstnCommon.Util.Settings;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 
@@ -58,24 +60,54 @@ namespace BrokeThePig
         // This code will not execute when the application is reactivated
         private void Application_Launching(object sender, LaunchingEventArgs e)
         {
+            try
+            {
+                int count = Convert.ToInt16(CryptedSettingsService.Instance.Value(SettingsKeys.CurrentCount));
+                if (count != 0)
+                    AI.Instance.CurrentNumber.Number = count;
+                AI.Instance.CurrentNumber.LevelNumber = Convert.ToInt16(CryptedSettingsService.Instance.Value(SettingsKeys.CurrentLevel));
+                AI.Instance.CurrentMoney = Convert.ToInt16(CryptedSettingsService.Instance.Value(SettingsKeys.CurrentMoney));
+            }
+            catch (Exception e1)
+            {
+                Debugger.Log(0, "", "can't open setings");
+            }
+            finally
+            {
+                if (AI.Instance.CurrentNumber.LevelNumber > AI.Instance.Levels.Count)
+                {
+                    AI.Instance.CurrentNumber.LevelNumber = 0;
+                }
+            }
         }
 
         // Code to execute when the application is activated (brought to foreground)
         // This code will not execute when the application is first launched
         private void Application_Activated(object sender, ActivatedEventArgs e)
         {
+            int count = Convert.ToInt16(CryptedSettingsService.Instance.Value(SettingsKeys.CurrentCount));
+            if (count != 0)
+                AI.Instance.CurrentNumber.Number = count;
+            AI.Instance.CurrentNumber.LevelNumber = Convert.ToInt16(CryptedSettingsService.Instance.Value(SettingsKeys.CurrentLevel));
+            AI.Instance.CurrentMoney = Convert.ToInt16(CryptedSettingsService.Instance.Value(SettingsKeys.CurrentMoney));
         }
 
         // Code to execute when the application is deactivated (sent to background)
         // This code will not execute when the application is closing
         private void Application_Deactivated(object sender, DeactivatedEventArgs e)
         {
+            CryptedSettingsService.Instance.Save(SettingsKeys.CurrentCount, AI.Instance.CurrentNumber.Number);
+            CryptedSettingsService.Instance.Save(SettingsKeys.CurrentLevel, AI.Instance.CurrentNumber.LevelNumber);
+            CryptedSettingsService.Instance.Save(SettingsKeys.CurrentMoney, AI.Instance.CurrentMoney);
         }
 
         // Code to execute when the application is closing (eg, user hit Back)
         // This code will not execute when the application is deactivated
         private void Application_Closing(object sender, ClosingEventArgs e)
         {
+            CryptedSettingsService.Instance.Save(SettingsKeys.CurrentCount, AI.Instance.CurrentNumber.Number);
+            CryptedSettingsService.Instance.Save(SettingsKeys.CurrentLevel, AI.Instance.CurrentNumber.LevelNumber);
+            CryptedSettingsService.Instance.Save(SettingsKeys.CurrentMoney, AI.Instance.CurrentMoney);
         }
 
         // Code to execute if a navigation fails
@@ -83,9 +115,9 @@ namespace BrokeThePig
         {
             if (System.Diagnostics.Debugger.IsAttached)
             {
+                Debugger.Log(3, "warning", e.Exception.ToString());
                 // A navigation has failed; break into the debugger
                 System.Diagnostics.Debugger.Break();
-                Debugger.Log(3, "warning", e.Exception.ToString());
             }
         }
 
@@ -94,9 +126,9 @@ namespace BrokeThePig
         {
             if (System.Diagnostics.Debugger.IsAttached)
             {
+                Debugger.Log(3, "warning", e.ExceptionObject.ToString());
                 // An unhandled exception has occurred; break into the debugger
                 System.Diagnostics.Debugger.Break();
-                Debugger.Log(3, "warning", e.ExceptionObject.ToString());
             }
         }
 

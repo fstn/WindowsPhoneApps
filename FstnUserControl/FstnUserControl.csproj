@@ -61,6 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationBar\ApplicationBarGenerator.cs" />
+    <Compile Include="ImageSprite\StaticSprite.cs" />
     <Compile Include="Market\Application\AppsPreview.xaml.cs">
       <DependentUpon>AppsPreview.xaml</DependentUpon>
     </Compile>
@@ -94,6 +95,9 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>FstnUserControlMsg.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Waiting\ExplodeEffect.xaml.cs">
+      <DependentUpon>ExplodeEffect.xaml</DependentUpon>
     </Compile>
     <Compile Include="Waiting\SecretAnimationControl.cs" />
     <Compile Include="Tile\TileMultiVoidElement.xaml.cs">
@@ -145,6 +149,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Waiting\ExplodeEffect.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Waiting\ImageWaiting.xaml">
       <Generator>MSBuild:MarkupCompilePass1</Generator>
       <SubType>Designer</SubType>
@@ -173,7 +181,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Image\" />
     <Folder Include="Market\Parser\" />
   </ItemGroup>
   <ItemGroup>

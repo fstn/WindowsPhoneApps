@@ -4,11 +4,13 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:pig="clr-namespace:BrokeThePig.UC"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:fstnUC="clr-namespace:FstnUserControl;assembly=FstnUserControl"
+            xmlns:fstnUCImage="clr-namespace:FstnUserControl.ImageSprite;assembly=FstnUserControl"
              mc:Ignorable="d"
              FontFamily="{StaticResource PhoneFontFamilyNormal}"
              FontSize="{StaticResource PhoneFontSizeNormal}"
              Foreground="{StaticResource PhoneForegroundBrush}"
-             d:DesignHeight="660" d:DesignWidth="480">
+             d:DesignHeight="380" d:DesignWidth="380">
     <UserControl.Resources>
         <Storyboard x:Name="explode">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)" Storyboard.TargetName="Calque_1b">
@@ -51,101 +53,106 @@
     </UserControl.Resources>
     <Canvas Margin="0,0,0,10" Grid.RowSpan="2" x:Name="RootLayout">
 
+        <Image x:Name="Gift"  Height="289" Width="314" Canvas.Left="35" Canvas.Top="40"
+       />
        
         <Canvas 
             Visibility="Visible" HorizontalAlignment="Left" 
-            Height="600"
+            Height="360"
             VerticalAlignment="Top"
-            Width="480" >
-
-            <Canvas x:Name="Gold_coin" Height="178" Width="218" Canvas.Left="149" Canvas.Top="130" >
-                <Image x:Name="Layer_2" Height="46" Canvas.Left="0" Source="../Images/Coins/Layer 2.png" Canvas.Top="135" Width="243"/>
-                <Image x:Name="coin5" Height="49" Canvas.Left="10" Source="../Images/Coins/coin5.png" Canvas.Top="124" Width="196"/>
-                <Image x:Name="coin4" Height="49" Canvas.Left="3"  Source="../Images/Coins/coin4.png" Canvas.Top="104" Width="196"/>
-                <Image x:Name="coin3" Height="48" Canvas.Left="16" Source="../Images/Coins/coin3.png" Canvas.Top="83" Width="196"/>
-                <Image x:Name="coin2" Height="48" Canvas.Left="8"  Source="../Images/Coins/coin2.png" Canvas.Top="62" Width="195"/>
-                <Image x:Name="coin1" Height="48" Canvas.Left="19" Source="../Images/Coins/coin1.png" Canvas.Top="40" Width="195"/>
-                <Image x:Name="coin" Height="49" Canvas.Left="5"   Source="../Images/Coins/coin.png" Canvas.Top="18" Width="196"/>
-                <Image x:Name="Group_2" Height="49" Canvas.Left="25" Source="../Images/Coins/Group 2.png" Canvas.Top="0" Width="195"/>
-
-            </Canvas>
+            Width="370" Canvas.Left="10" Canvas.Top="10" >
+        
+          
+            <fstnUC:ExplodeEffect x:Name="ExplodeEffect" PixelColor="F781D8"  Height="178" Width="180" Canvas.Left="96" Canvas.Top="93"></fstnUC:ExplodeEffect>
+            <Canvas x:Name="Glossy_Piggy_Bank_Brokel" Clip="M0,0L480,0 480,600 0,600z" HorizontalAlignment="Left" Height="381" UseLayoutRounding="False" VerticalAlignment="Top" Width="387" Grid.RowSpan="3" Canvas.Left="-13.5" Canvas.Top="-73"/>
             <Canvas x:Name="Body_before" Visibility="Visible" 
-                    Height="376" 
-                    Canvas.Left="96"
-                    Canvas.Top="5" Width="320">
-                <pig:GraphicComponent  EndNumber="900" 
-                                       CurrentNumber="{Binding CurrentNumber,Mode=TwoWay}">
+                    Height="310" 
+                    Canvas.Left="24" Width="320" Canvas.Top="-39">
+                <pig:GraphicComponent  EndNumber="0.9"  > 
                     <Canvas x:Name="Right_feet" Background="Red">
                         <Image x:Name="Shape_4_copy_2" Height="67" 
                                Canvas.Left="188" 
-                               Source="/BrokeThePig;component/Images/Pig/Shape 4 copy 2.png" Canvas.Top="309" Width="94"/>
+                               Source="/BrokeThePig;component/Images/Pig/RightFeet.png" Canvas.Top="309" Width="94" RenderTransformOrigin="0.5,0.5">
+                            <Image.RenderTransform>
+                                <CompositeTransform Rotation="-2.793"/>
+                            </Image.RenderTransform>
+                        </Image>
                         <Image x:Name="Shape_5_copy_2" Height="21" Canvas.Left="186" 
-                               Source="/BrokeThePig;component/Images/Pig/Shape 5 copy 2.png" Canvas.Top="355" Width="47"/>
+                               Source="/BrokeThePig;component/Images/Pig/RightFeetSh.png" Canvas.Top="355" Width="47"/>
                     </Canvas>
                 </pig:GraphicComponent>
-                <pig:GraphicComponent  EndNumber="300"  
-                                       CurrentNumber="{Binding CurrentNumber,Mode=TwoWay}">
+                <pig:GraphicComponent  EndNumber="300"   > 
                     <Canvas x:Name="Left_feet">
-                        <Image x:Name="Shape_4_copy_3" Height="67" Canvas.Left="37" Source="/BrokeThePig;component/Images/Pig/Shape 4 copy 3.png" Canvas.Top="309" Width="95"/>
+                        <Image x:Name="Shape_4_copy_3" Height="67" Canvas.Left="37" Source="/BrokeThePig;component/Images/Pig/Shape 4 copy 3.png" Canvas.Top="309" Width="95" RenderTransformOrigin="0.5,0.5">
+                            <Image.RenderTransform>
+                                <CompositeTransform Rotation="2.397"/>
+                            </Image.RenderTransform>
+                        </Image>
                         <Image x:Name="Shape_5_copy_3" Height="21" Canvas.Left="86" Source="/BrokeThePig;component/Images/Pig/Shape 5 copy 3.png" Canvas.Top="355" Width="47"/>
                     </Canvas>
 
                 </pig:GraphicComponent>
-                <pig:GraphicComponent  EndNumber="-1000" 
-                                       
-                                       CurrentNumber="{Binding CurrentNumber,Mode=TwoWay}">
-                    <Canvas x:Name="Body">
-                        <Image x:Name="Shape_1_copy" Height="294" Canvas.Left="0" Source="/BrokeThePig;component/Images/Pig/Shape 1 copy.png" Canvas.Top="69" Width="320" />
-                        <Image x:Name="Shape_1_copy_2" Height="171" Canvas.Left="37" Source="/BrokeThePig;component/Images/Pig/Shape 1 copy 2.png" Canvas.Top="75" Width="246"/>
-                    </Canvas>
 
+                <pig:GraphicComponent  EndNumber="0"  >
+                        <fstnUCImage:StaticSprite Length="8" ContentWidth="328" ContentHeight="300" Height="309" Width="324" Canvas.Left="-4" Canvas.Top="64" >
+                            <Image Height="300" Stretch="Fill"
+                                   Source="/BrokeThePig;component/Images/Pig/Body/body.png"
+                                  Width="2624" d:IsLocked="True" />
+                        </fstnUCImage:StaticSprite>
+                        <Image x:Name="Shape_1_copy_2" Height="196" Canvas.Left="37" Source="/BrokeThePig;component/Images/Pig/Shape 1 copy 2.png" Canvas.Top="54" Width="246"/>
                 </pig:GraphicComponent>
-               
-                <pig:GraphicComponent  EndNumber="600"  
-                                       CurrentNumber="{Binding CurrentNumber,Mode=TwoWay}">
 
-                    <Canvas x:Name="Nose" Visibility="Visible" >
-                        <Image  Height="95" Canvas.Left="101" Source="/BrokeThePig;component/Images/Pig/Shape 8 copy.png" Canvas.Top="186" Width="120"/>
-                        <Image x:Name="Shape_7_copy_2" Height="26" Canvas.Left="177" Source="/BrokeThePig;component/Images/Pig/Shape 7 copy 2.png" Canvas.Top="216" Width="17"/>
-                        <Image x:Name="Shape_7_copy_3" Height="26" Canvas.Left="131" Source="/BrokeThePig;component/Images/Pig/Shape 7 copy 3.png" Canvas.Top="216" Width="17"/>
-                    </Canvas>
-
+                <pig:GraphicComponent  EndNumber="0.6"  >
+                    <pig:GCClassicPart>
+                        <Canvas x:Name="Nose" Visibility="Visible" >
+                            <Image  Height="95" Canvas.Left="101" Source="/BrokeThePig;component/Images/Pig/Shape 8 copy.png" Canvas.Top="186" Width="120"/>
+                            <Image x:Name="Shape_7_copy_2" Height="26" Canvas.Left="177" Source="/BrokeThePig;component/Images/Pig/Shape 7 copy 2.png" Canvas.Top="216" Width="17"/>
+                            <Image x:Name="Shape_7_copy_3" Height="26" Canvas.Left="131" Source="/BrokeThePig;component/Images/Pig/Shape 7 copy 3.png" Canvas.Top="216" Width="17"/>
+                        </Canvas>
+                    </pig:GCClassicPart>
+                    <pig:GCFightPart>
+                        <Image x:Name="Shape_8b_copyfight" Height="80" Canvas.Left="101" Source="/BrokeThePig;component/Images/FightPig/Shape 8 copy.png" Canvas.Top="191" Width="114"/>
+                    </pig:GCFightPart>
                 </pig:GraphicComponent>
-                <pig:GraphicComponent  EndNumber="800"  
-                                       CurrentNumber="{Binding CurrentNumber,Mode=TwoWay}">
-                    <Image x:Name="Right_eye"                       
-                           Height="34"  Canvas.Left="190" Source="/BrokeThePig;component/Images/Pig/Shape 6 copy 2.png" Canvas.Top="143" Width="27"/>
+                <pig:GraphicComponent  EndNumber="0.8"  >
+                    <pig:GCClassicPart>
+                        <Image x:Name="Right_eye"                       
+                               Height="34"  Canvas.Left="190" Source="/BrokeThePig;component/Images/Pig/Shape 6 copy 2.png" Canvas.Top="143" Width="27"/>
+                    </pig:GCClassicPart>
+                    <pig:GCFightPart>
+                        <Image x:Name="RIghtEye" Height="43" Canvas.Left="179"              Source="/BrokeThePig;component/Images/FightPig/RIghtEye.png" Canvas.Top="137" Width="44" RenderTransformOrigin="0.497,0.434"/>
+                    </pig:GCFightPart>
                 </pig:GraphicComponent>
-                <pig:GraphicComponent  EndNumber="700"  
-                                       CurrentNumber="{Binding CurrentNumber,Mode=TwoWay}">
-                    <Image x:Name="Left_eye" 
-                           Height="34" Canvas.Left="100" Source="/BrokeThePig;component/Images/Pig/Shape 6 copy 3.png" Canvas.Top="143" Width="28"/>
+                <pig:GraphicComponent  EndNumber="0.1"   >
 
-
+                    <pig:GCClassicPart>
+                        <Image x:Name="Left_eye" 
+                               Height="34" Canvas.Left="100" Source="/BrokeThePig;component/Images/Pig/Shape 6 copy 3.png" Canvas.Top="143" Width="28"/>
+                    </pig:GCClassicPart>
+                    <pig:GCFightPart>
+                        <Image x:Name="leftEye" Height="41" Canvas.Left="92"                Source="/BrokeThePig;component/Images/FightPig/leftEye.png" Canvas.Top="140" Width="42"/>
+                    </pig:GCFightPart>
                 </pig:GraphicComponent>
-                <pig:GraphicComponent  EndNumber="500"  
-                                       CurrentNumber="{Binding CurrentNumber,Mode=TwoWay}">
-                    <Canvas x:Name="Left_ear">
+                <pig:GraphicComponent  EndNumber="0.5"  >
+                    <pig:GCClassicPart>
                         <Image x:Name="Shape_2_copy" Height="61" Canvas.Left="36" Source="/BrokeThePig;component/Images/Pig/Shape 2 copy.png" Canvas.Top="58" Width="71"/>
                         <Image x:Name="Shape_2_copy_2" Height="45" Canvas.Left="46" Source="/BrokeThePig;component/Images/Pig/Shape 2 copy 2.png" Canvas.Top="67" Width="52"/>
-                    </Canvas>
-
+                    </pig:GCClassicPart>
+                    <pig:GCFightPart>
+                        <Image x:Name="Shape_2b_copyfight" Height="48" Canvas.Left="36"  Source="/BrokeThePig;component/Images/FightPig/Shape 2 copy.png" Canvas.Top="71" Width="70"/>
+                    </pig:GCFightPart>
                 </pig:GraphicComponent>
-                <pig:GraphicComponent  EndNumber="100"  
-                                       CurrentNumber="{Binding CurrentNumber,Mode=TwoWay}">
-                    <Canvas x:Name="Right_ear">
+                
+                <pig:GraphicComponent  EndNumber="0.05"  >
+                    <pig:GCClassicPart  x:Name="Right_ear">
                         <Image x:Name="Shape_3_copy" Height="62" Canvas.Left="227" Source="/BrokeThePig;component/Images/Pig/Shape 3 copy.png" Canvas.Top="65" Width="66"/>
                         <Image x:Name="Shape_3_copy_2" Height="50" Canvas.Left="233" Source="/BrokeThePig;component/Images/Pig/Shape 3 copy 2.png" Canvas.Top="72" Width="54"/>
-                    </Canvas>
+                    </pig:GCClassicPart>
+                    <pig:GCFightPart>
+                        <Image x:Name="Shape_3b_copyfight" Height="60" Canvas.Left="227" Source="/BrokeThePig;component/Images/FightPig/Shape 3 copy.png" Canvas.Top="67" Width="67"/>
+                    </pig:GCFightPart>
                 </pig:GraphicComponent>
             </Canvas>
-        </Canvas>
-
-        <Canvas>
-            <Image  x:Name="CrackImg" Height="317" Canvas.Left="17" Source="/BrokeThePig;component/Images/BrokenPig/Crack.png" Canvas.Top="86" Width="448" RenderTransformOrigin="0.5,0.5"/>
-            <Canvas.Clip>
-                <EllipseGeometry x:Name="CrackMask" RadiusX="00" RadiusY="500"></EllipseGeometry>
-            </Canvas.Clip>
         </Canvas>
         <Canvas  x:Name="Body_broke" 
                  Visibility="Collapsed"
@@ -168,7 +175,8 @@
                     </Image.RenderTransform>
                 </Image>
             </Canvas>
+           
         </Canvas>
-
+       
     </Canvas>
 </UserControl>

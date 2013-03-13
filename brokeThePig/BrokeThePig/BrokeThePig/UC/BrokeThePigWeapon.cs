@@ -6,15 +6,19 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 using BrokeThePig.Source.AI;
+using Microsoft.Devices;
 
 namespace BrokeThePig.UC
 {
     public delegate void SelectedEventHandler(BrokeThePigWeapon SelectedWeapon);
-    public abstract class BrokeThePigWeapon:Canvas
+    public delegate void FigutEventHandler();
+    public abstract class BrokeThePigWeapon : StackPanel
     {
 
-        public event SelectedEventHandler Selected;
+        public event SelectedEventHandler SelectedEvent;
+        public event FigutEventHandler FightEvent;
         private SoundController sc;
+        private Boolean enabled=false;
 
         #region dependency property
         public String ShootSound
@@ -37,8 +41,6 @@ namespace BrokeThePig.UC
             set { SetValue(SelectionSoundProperty, value); }
         }
 
-
-
         public int Damage
         {
             get { return (int)GetValue(DamageProperty); }
@@ -49,33 +51,76 @@ namespace BrokeThePig.UC
         public static readonly DependencyProperty DamageProperty =
             DependencyProperty.Register("Damage", typeof(int), typeof(BrokeThePigWeapon), new PropertyMetadata(0));
 
+        // Using a DependencyProperty as the backing store for ShootSound.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty MoneyNeededProperty =
+            DependencyProperty.Register("MoneyNeeded", typeof(int), typeof(BrokeThePigWeapon), new PropertyMetadata(0));
 
-        #endregion
-        public virtual int Fight(int Number)
+        public int MoneyNeeded
         {
+            get { return (int)GetValue(MoneyNeededProperty); }
+            set { SetValue(MoneyNeededProperty, value); }
+        }
+        #endregion
+      
+        public virtual void Fight()
+        {
+            if (FightEvent != null)
+            {
+                FightEvent();
+            }
             if (ShootSound != "")
                 sc.PlaySound(ShootSound);
-            return Number - Damage;
         }
+
         public BrokeThePigWeapon()
         {
-            this.Tap+=BrokeThePigWeapon_Tap;
+            this.Tap += BrokeThePigWeapon_Tap;
+            this.Loaded += BrokeThePigWeapon_Loaded;
             AI.Instance.AddWeapon(this);
             sc = new SoundController();
+            AI.Instance.LevelEnded += Instance_LevelEnded;           
+            
+        }
+
+        void BrokeThePigWeapon_Loaded(object sender, RoutedEventArgs e)
+        {
+            this.Background = new SolidColorBrush(Colors.Red);
+            TextBlock amount = new TextBlock();
+            amount.Text = MoneyNeeded + "$";
+            amount.TextAlignment = TextAlignment.Center;
+            this.Children.Add(amount);
+            if (AI.Instance.CurrentMoney >= MoneyNeeded)
+            {
+                Enable();
+            }
+        }
+
+        void Instance_LevelEnded()
+        {
+            if (AI.Instance.CurrentMoney >= MoneyNeeded)
+            {
+                Enable();
+            }
+        }
+
+        void Enable()
+        {
+            this.enabled = true;
+            this.Background = new SolidColorBrush(Colors.Transparent);
         }
 
         private void BrokeThePigWeapon_Tap(object sender, System.Windows.Input.GestureEventArgs e)
         {
-            if (Selected != null)
+            if (enabled)
             {
-                Selected(this);
+                if (SelectedEvent != null)
+                {
+                    SelectedEvent(this);
+                }
+                Select();
             }
-            Select();
         }
 
-        public virtual void Enable()
-        {
-        }
         public virtual void Disable()
         {
         }

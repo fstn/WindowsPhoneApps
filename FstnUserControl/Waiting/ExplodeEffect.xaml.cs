@@ -36,6 +36,12 @@ namespace FstnUserControl
             InitializeComponent();
             Pixels = new List<UIElement>();
             this.Loaded += ExplodeEffect_Loaded;
+            this.Unloaded += ExplodeEffect_Unloaded;
+        }
+
+        void ExplodeEffect_Unloaded(object sender, RoutedEventArgs e)
+        {
+            ExplosionEffect.Children.Clear();
         }
 
         void ExplodeEffect_Loaded(object sender, RoutedEventArgs e)
@@ -44,12 +50,6 @@ namespace FstnUserControl
 
         public void Show()
         {
-            /*
-        <Path x:Name="Fragment3" Data="M21.6068,83.1675 L30.6524,75.1268 L47.7388,80.1521 L45.7287,90.203 L53.7692,99.2488 L47.5553,108.653 L29.2748,84.531 L5.50998,82.6952 L35.6778,103.269 L10.6873,78.5386 z" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="34.357" Margin="118.234,140.75,0,0" Stretch="Fill" Stroke="Black" UseLayoutRounding="False" VerticalAlignment="Top" Width="49.016"/>
-        <Path x:Name="Fragment4" Data="M21.6068,83.1675 L30.6524,75.1268 L29.6476,88.1927 L45.7287,90.203 L36.6831,101.259 L47.5553,108.653 L30.6529,96.2333 L5.50998,82.6952 L35.6778,103.269 L10.6873,78.5386 z" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="34.357" Margin="118.234,140.75,0,0" Stretch="Fill" Stroke="Black" UseLayoutRounding="False" VerticalAlignment="Top" Width="42.833"/>
-        <Path x:Name="Fragment1" Data="M21.6068,83.1675 L30.6524,75.1268 L58.7951,84.1725 L47.7393,97.2384 L36.6831,101.259 L47.5553,108.653 L60.8053,85.1775 L5.50998,82.6952 L35.6778,103.269 L10.6873,78.5386 z" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="34.357" Margin="118.234,140.75,0,0" Stretch="Fill" Stroke="Black" UseLayoutRounding="False" VerticalAlignment="Top" Width="56.016"/>
-        <Path x:Name="Fragment2" Data="M21.6068,83.1675 L37.6882,93.2181 L47.7388,80.1521 L45.7287,90.203 L43.7185,105.279 L47.5553,108.653 L15.5767,104.274 L5.50998,82.6952 L35.6778,103.269 L10.6873,78.5386 z" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="30.962" Margin="118.234,144.145,0,0" Stretch="Fill" Stroke="Black" UseLayoutRounding="False" VerticalAlignment="Top" Width="43.016"/>
-            */
 
             Color pixClr = new Color();
             pixClr.A = 255;

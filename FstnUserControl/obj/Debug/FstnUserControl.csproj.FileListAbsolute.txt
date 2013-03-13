@@ -84,6 +84,7 @@ C:\DevTools\Git\windowsPhone\FstnUserControl\obj\Debug\Form\FormMultiVoidElement
 C:\DevTools\Git\windowsPhone\FstnUserControl\obj\Debug\Tile\TileMultiVoidElement.g.cs
 C:\DevTools\Git\windowsPhone\FstnUserControl\obj\Debug\Tile\TileSimpleVoidElement.g.cs
 C:\DevTools\Git\windowsPhone\FstnUserControl\obj\Debug\Time\TimeCounter.g.cs
+C:\DevTools\Git\windowsPhone\FstnUserControl\obj\Debug\Waiting\ExplodeEffect.g.cs
 C:\DevTools\Git\windowsPhone\FstnUserControl\obj\Debug\Waiting\ImageWaiting.g.cs
 C:\DevTools\Git\windowsPhone\FstnUserControl\obj\Debug\FstnUserControl.g.resources
 C:\DevTools\Git\windowsPhone\FstnUserControl\obj\Debug\FstnUserControl.Resources.FstnUserControlMsg.resources

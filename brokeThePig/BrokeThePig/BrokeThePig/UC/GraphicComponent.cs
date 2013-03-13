@@ -5,63 +5,35 @@ using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media.Animation;
+using System.Windows.Threading;
 using BrokeThePig.Source.AI;
 using BrokeThePig.UC.Weapons;
 using FstnAnimation.Dynamic;
+using FstnCommon.Util;
+using FstnUserControl.ImageSprite;
+using Microsoft.Devices;
 using Microsoft.Xna.Framework.Audio;
 
 namespace BrokeThePig.UC
 {
-    public delegate void OnTapEventHandler(PointNumber newNumber);
+    public delegate void OnTapEventHandler();
     public class GraphicComponent:Canvas
     {
+        private GCClassicPart ClassicPart;
+        private GCFightPart FightPart;
         public event OnTapEventHandler OnTap;
         private Boolean ended = false;
-
-        public PointNumber CurrentNumber
+        private DispatcherTimer dt;
+     
+        public Double EndNumber
         {
-            get { return (PointNumber)GetValue(CurrentNumberProperty); }
-            set { SetValue(CurrentNumberProperty, value); }
-        }
-
-        // Using a DependencyProperty as the backing store for CurrentNumber.  This enables animation, styling, binding, etc...
-        public static readonly DependencyProperty CurrentNumberProperty =
-            DependencyProperty.Register("CurrentNumber", typeof(PointNumber), typeof(GraphicComponent), new PropertyMetadata(new PointNumber(0)));
-
-        public int Inc
-        {
-            get { return (int)GetValue(IncProperty); }
-            set { SetValue(IncProperty, value); }
-        }
-
-        // Using a DependencyProperty as the backing store for Inc.  This enables animation, styling, binding, etc...
-        public static readonly DependencyProperty IncProperty =
-            DependencyProperty.Register("Inc", typeof(int), typeof(GraphicComponent), new PropertyMetadata(0));
-
-
-
-
-        public int StartNumber
-        {
-            get { return (int)GetValue(StartNumberProperty); }
-            set { SetValue(StartNumberProperty, value); }
-        }
-
-        // Using a DependencyProperty as the backing store for StartNumber.  This enables animation, styling, binding, etc...
-        public static readonly DependencyProperty StartNumberProperty =
-            DependencyProperty.Register("StartNumber", typeof(int), typeof(GraphicComponent), new PropertyMetadata(0));
-
-
-
-        public int EndNumber
-        {
-            get { return (int)GetValue(EndNumberProperty); }
+            get { return (Double)GetValue(EndNumberProperty); }
             set { SetValue(EndNumberProperty, value); }
         }
 
         // Using a DependencyProperty as the backing store for EndNumber.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty EndNumberProperty =
-            DependencyProperty.Register("EndNumber", typeof(int), typeof(GraphicComponent), new PropertyMetadata(0));
+            DependencyProperty.Register("EndNumber", typeof(Double), typeof(GraphicComponent), new PropertyMetadata(0.0));
 
         private SoundController sc;
 
@@ -69,19 +41,38 @@ namespace BrokeThePig.UC
         {
             sc = new SoundController();
             this.Tap += GraphicPart_Tap;
-                
+            AI.Instance.CurrentNumber.ValueChanged += Update;
+            this.Loaded += GraphicComponent_Loaded;
+            dt = new DispatcherTimer();
+            dt.Tick += dt_Tick;
+        }
+
+
+        void GraphicComponent_Loaded(object sender, RoutedEventArgs e)
+        {
+            foreach (UIElement element in Children)
+            {
+                GCFightPart fightPart = element as GCFightPart;
+                if (fightPart != null)
+                    FightPart = fightPart;
+
+                GCClassicPart classicPart = element as GCClassicPart;
+                if (classicPart != null)
+                    ClassicPart = classicPart;
+            }
         }
 
         void GraphicPart_Tap(object sender, System.Windows.Input.GestureEventArgs e)
         {
-            CurrentNumber.FightNumber(AI.Instance.CurrentWeapon);
+          
+            AI.Instance.Fight();
             MoveEffect me = new MoveEffect();
             me.From = new Point(0, 0);
             me.To = new Point(0, 1);
             me.Duration = 120;
             me.Mode = EasingMode.EaseIn;
             me.EasingFunction = new CircleEase();
-            me.Start((FrameworkElement)this.Children.FirstOrDefault());
+            me.Start((FrameworkElement)this);
             me.Completed += me_Completed;
            
         }
@@ -94,21 +85,44 @@ namespace BrokeThePig.UC
                 me.Duration = 120;
                 me.Mode = EasingMode.EaseIn;
                 me.EasingFunction = new CircleEase();
-                me.Start((FrameworkElement)this.Children.FirstOrDefault());
+                me.Start((FrameworkElement)this);
                 if (OnTap != null)
                 {
-                    OnTap(CurrentNumber);
+                    OnTap();
                 }
-           
-            
         }
-        public void Update(int Number)
+
+        void dt_Tick(object sender, EventArgs e)
         {
-            CurrentNumber.Number = Number;
+            ClassicPart.Visibility = Visibility.Visible;
+            FightPart.Visibility = Visibility.Collapsed;
+            dt.Stop();
+        }
+        public void Update()
+        {
             if (!ended)
             {
-                if (CurrentNumber.Number <= EndNumber)
+                if (ClassicPart != null && FightPart != null)
                 {
+                    ClassicPart.Visibility = Visibility.Collapsed;
+                    FightPart.Visibility = Visibility.Visible;
+                    dt.Stop();
+                    dt.Interval = TimeSpan.FromMilliseconds(200);
+                    dt.Start();
+                }
+                StaticSprite sprite;
+                foreach (UIElement elt in this.Children)
+                {
+                    if ((sprite = elt as StaticSprite) != null)
+                    {
+                        float n = MathUtil.Norm(AI.Instance.CurrentNumber.Number, AI.Instance.CurrentLevel.NumberOfTapToDo, 0);
+                        int Number = (int)MathUtil.Lerp(0, sprite.Length-1, n);
+                        sprite.MoveTo(Number);
+                    }
+                }
+                if (AI.Instance.CurrentNumber.Number <= EndNumber * AI.Instance.CurrentLevel.NumberOfTapToDo)
+                {
+
                     ended = true;
                     MoveEffect me = new MoveEffect();
 

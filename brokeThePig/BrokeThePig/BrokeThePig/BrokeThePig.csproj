@@ -73,6 +73,10 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Source\Level.cs" />
+    <Compile Include="UC\GCSprite.cs" />
+    <Compile Include="UC\GCClassicPart.cs" />
+    <Compile Include="UC\GCFightPart.cs" />
     <Compile Include="UC\Weapons\SimpleWeapon.cs" />
     <Compile Include="UC\BrokeThePigWeapon.cs" />
     <Compile Include="UC\GraphicComponent.cs" />
@@ -110,14 +114,10 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="DirtyPigIcon.png" />
-    <Content Include="Images\Coins\coin.png" />
-    <Content Include="Images\Coins\coin1.png" />
-    <Content Include="Images\Coins\coin2.png" />
-    <Content Include="Images\Coins\coin3.png" />
-    <Content Include="Images\Coins\coin4.png" />
-    <Content Include="Images\Coins\coin5.png" />
-    <Content Include="Images\Coins\Group 2.png" />
-    <Content Include="Images\Coins\Layer 2.png" />
+    <Resource Include="Images\Gift\dollar.png" />
+    <Resource Include="Images\Gift\euro.png" />
+    <Resource Include="Images\Gift\gift.png" />
+    <Resource Include="Images\Gift\pound.png" />
     <Content Include="Images\Weapons\bomb.png" />
     <Content Include="Images\Weapons\feather.png" />
     <Content Include="Images\Weapons\laserGun.png" />
@@ -177,19 +177,30 @@
     <Content Include="SplashScreenImage.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Images\FightPig\leftEye.png" />
+    <Resource Include="Images\FightPig\RIghtEye.png" />
+    <Resource Include="Images\FightPig\Shape 1 copy 2.png" />
+    <Resource Include="Images\FightPig\Shape 1 copy.png" />
+    <Resource Include="Images\FightPig\Shape 2 copy.png" />
+    <Resource Include="Images\FightPig\Shape 3 copy.png" />
+    <Resource Include="Images\FightPig\Shape 4 copy 2.png" />
+    <Resource Include="Images\FightPig\Shape 4 copy 3.png" />
+    <Resource Include="Images\FightPig\Shape 5 copy 2.png" />
+    <Resource Include="Images\FightPig\Shape 5 copy 3.png" />
+    <Resource Include="Images\FightPig\Shape 8 copy.png" />
     <Resource Include="Images\BrokenPig\Crack.png" />
     <Resource Include="Images\BrokenPig\Calque 1b.png" />
     <Resource Include="Images\BrokenPig\Calque 2b.png" />
     <Resource Include="Images\BrokenPig\Shape 1b copy.png" />
+    <Resource Include="Images\Pig\Body\body.png" />
     <Resource Include="Images\Pig\Shape 1 copy 2.png" />
-    <Resource Include="Images\Pig\Shape 1 copy.png" />
     <Resource Include="Images\Pig\Shape 2 copy 2.png" />
     <Resource Include="Images\Pig\Shape 2 copy.png" />
     <Resource Include="Images\Pig\Shape 3 copy 2.png" />
     <Resource Include="Images\Pig\Shape 3 copy.png" />
-    <Resource Include="Images\Pig\Shape 4 copy 2.png" />
+    <Resource Include="Images\Pig\RightFeet.png" />
     <Resource Include="Images\Pig\Shape 4 copy 3.png" />
-    <Resource Include="Images\Pig\Shape 5 copy 2.png" />
+    <Resource Include="Images\Pig\RightFeetSh.png" />
     <Resource Include="Images\Pig\Shape 5 copy 3.png" />
     <Resource Include="Images\Pig\Shape 6 copy 2.png" />
     <Resource Include="Images\Pig\Shape 6 copy 3.png" />
@@ -216,6 +227,7 @@
       <Name>FstnUserControl</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
