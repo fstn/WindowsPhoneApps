@@ -41,156 +41,161 @@
             <RowDefinition Height="146*"/>
             <RowDefinition Height="35*"/>
         </Grid.RowDefinitions>
-        <Grid x:Name="ContentPanel" Margin="10,20,10,0" Grid.RowSpan="3">
-            <controls:Pivot HorizontalAlignment="Left" Height="797" VerticalAlignment="Top" Width="480" Margin="-10,-56,0,-65" 
-                            SelectedIndex="{Binding SelectedPivot,Mode=TwoWay}" SelectionChanged="Pivot_SelectionChanged_1"
-                            x:Name="Pivot" 
-                            >
-                <!-- Response Item-->
-                <controls:PivotItem Header="{Binding ResourceGetter.Response, Source={StaticResource LocalizedStrings}}">
-                    <StackPanel Width="457" >
-                        <userControl:CoinFlipCounter x:Name="coinFlip" RenderTransformOrigin="0.5,0.5" Canvas.Left="71" Canvas.Top="38" Height="331" Width="331" Margin="0,50,0,90"  >
-                        </userControl:CoinFlipCounter>
-                        <cc:ChatBubble ChatBubbleDirection="LowerRight" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
-                            <Grid>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="50"/>
-                                </Grid.RowDefinitions>
+        <Image x:Name="Background" HorizontalAlignment="Left" Height="800" Margin="0,-32,0,0" Grid.RowSpan="3" VerticalAlignment="Top" Width="480" />
 
-                                <TextBlock x:Name="resultText" 
-                                           Text="{Binding ResourceGetter.Enjoy, Source={StaticResource LocalizedStrings}}" 
-                                           Style="{StaticResource PhoneTextLargeStyle}"
-                                           Foreground="White"
-                                           Visibility="Visible" TextWrapping="Wrap" Width="400"/>
-                            </Grid>
-                        </cc:ChatBubble>
+
+        <Grid x:Name="ContentPanel" Margin="0,0,0,0" Grid.RowSpan="3">
+            <controls:Pivot HorizontalAlignment="Left" Height="799" VerticalAlignment="Top" Width="490"  
+                            SelectedIndex="{Binding SelectedPivot,Mode=TwoWay}" SelectionChanged="Pivot_SelectionChanged_1"
+                            x:Name="Pivot" Margin="-10,-31,0,0" 
+                            >
+
+                <!-- Response Item-->
+                <controls:PivotItem Header="{Binding ResourceGetter.Response, Source={StaticResource LocalizedStrings}}" >
+
+                        <StackPanel Width="457" >
+                            <userControl:CoinFlipCounter x:Name="coinFlip" RenderTransformOrigin="0.5,0.5" Canvas.Left="71" Canvas.Top="38" Height="300" Width="331" Margin="0,50,0,90"  >
+                            </userControl:CoinFlipCounter>
+                            <cc:ChatBubble ChatBubbleDirection="LowerRight" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0" >
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="50"/>
+                                    </Grid.RowDefinitions>
+
+                                    <TextBlock x:Name="resultText" 
+                                               Text="{Binding ResourceGetter.Enjoy, Source={StaticResource LocalizedStrings}}" 
+                                               Style="{StaticResource PhoneTextNormalStyle}"
+                                               Foreground="White"
+                                               Visibility="Visible" TextWrapping="Wrap" Width="400"/>
+                                </Grid>
+                            </cc:ChatBubble>
                     </StackPanel>
                 </controls:PivotItem>
                 
-                <!-- Settings Item-->
-                <controls:PivotItem x:Name="SettingsPI" Header="{Binding ResourceGetter.Settings, Source={StaticResource LocalizedStrings}}" Margin="10,-106,-432,-7" RenderTransformOrigin="0.806,0.861">
+                    <!-- Settings Item-->
+                    <controls:PivotItem x:Name="SettingsPI" Header="{Binding ResourceGetter.Settings, Source={StaticResource LocalizedStrings}}" Margin="10,-106,-432,-7" RenderTransformOrigin="0.806,0.861">
 
-                    <StackPanel Height="750">
-                        <StackPanel Height="110"></StackPanel>
-                        <StackPanel Height="678" Margin="15,15,15,15">
+                        <StackPanel Height="750">
+                            <StackPanel Height="100"></StackPanel>
+                            <StackPanel Height="678" Margin="15,0,15,0">
                             
-                            <!---EndOfWeekDay-->
-                            <StackPanel Orientation="Horizontal">
+                                <!---EndOfWeekDay-->
+                                <StackPanel Orientation="Horizontal">
                                 
-                                <tile:TileSimpleVoidElement x:Name="daysOfweekT"  View="MainPage"
-                                                            Margin="5,5,5,5" 
-                                                            VerticalContentAlignment="Center"
-                                                            Width="200" Height="200" 
-                                                            Background="{Binding LightAccent, Source={StaticResource ColorManager}}" Tap="daysOfweekT_Tap" >
-                                    <tile:TileSimpleVoidElement.Element>
-                                        <Image Source="/images/day.png"></Image>
-                                    </tile:TileSimpleVoidElement.Element>
-                                </tile:TileSimpleVoidElement>
-                                <tile:TileSimpleVoidElement x:Name="daysOfweekCT"  View="MainPage"
-                                                            Margin="5,5,5,5" Width="200" 
-                                                            Foreground="White"
-                                                            VerticalContentAlignment="Center"
-                                                            Background="{StaticResource PhoneAccentBrush}" Tap="daysOfweekT_Tap"
-                                                            >
-                                    <tile:TileSimpleVoidElement.Element>
-                                    <toolkit:ListPicker  x:Name="daysOfweek" 
-                                                            Foreground="White"
-                                                            HeaderTemplate="{StaticResource HeaderTemplate}"
-                                                            Header="{Binding ResourceGetter.DayOfWeekend, Source={StaticResource LocalizedStrings}}"
-                                                            FullModeItemTemplate="{StaticResource ListPickerFullModeItemTemplate}"
-                                                            Style="{StaticResource ListPickerSimpleStyle}"
-                                                            HorizontalAlignment="Center"
-                                                            VerticalContentAlignment="Center"
-                                                            ItemsSource="{Binding MainViewModel.ListDay, Source={StaticResource Locator}}" Margin="10,10,10,10"
-                                                            SelectedItem="{Binding MainViewModel.EndOfWeekDay, Mode=TwoWay, Source={StaticResource Locator}}"  >
-                                        <toolkit:ListPicker.ItemTemplate>
-                                            <DataTemplate >
-                                                <TextBlock Text="{Binding}" HorizontalAlignment="Center"
-                                                            Foreground="White"
-                                                            Style="{StaticResource PhoneTextLargeStyle}"  Margin="0,0,0,0"/>
-                                            </DataTemplate>
-                                        </toolkit:ListPicker.ItemTemplate>
-                                    </toolkit:ListPicker>
-                                </tile:TileSimpleVoidElement.Element>
-                            </tile:TileSimpleVoidElement>
-                            </StackPanel>
-                            <!-- End of week time-->
-                            <StackPanel Orientation="Horizontal">
+                                    <tile:TileSimpleVoidElement x:Name="daysOfweekT"  View="MainPage"
+                                                                Margin="5,5,5,5" 
+                                                                VerticalContentAlignment="Center"
+                                                                Width="200" Height="200" 
+                                                                Background="{Binding LightAccent, Source={StaticResource ColorManager}}" Tap="daysOfweekT_Tap" >
+                                        <tile:TileSimpleVoidElement.Element>
+                                            <Image Source="/images/day.png"></Image>
+                                        </tile:TileSimpleVoidElement.Element>
+                                    </tile:TileSimpleVoidElement>
+                                    <tile:TileSimpleVoidElement x:Name="daysOfweekCT"  View="MainPage"
+                                                                Margin="5,5,5,5" Width="200" 
+                                                                Foreground="White"
+                                                                VerticalContentAlignment="Center"
+                                                                Background="{StaticResource PhoneAccentBrush}" Tap="daysOfweekT_Tap"
+                                                                >
+                                        <tile:TileSimpleVoidElement.Element>
+                                            <toolkit:ListPicker  x:Name="daysOfweek" 
+                                                                 Foreground="White"
+                                                                 HeaderTemplate="{StaticResource HeaderTemplate}"
+                                                                 Header="{Binding ResourceGetter.DayOfWeekend, Source={StaticResource LocalizedStrings}}"
+                                                                 FullModeItemTemplate="{StaticResource ListPickerFullModeItemTemplate}"
+                                                                 Style="{StaticResource ListPickerSimpleStyle}"
+                                                                 HorizontalAlignment="Center"
+                                                                 VerticalContentAlignment="Center"
+                                                                 ItemsSource="{Binding MainViewModel.ListDay, Source={StaticResource Locator}}" Margin="10,10,10,10"
+                                                                 SelectedItem="{Binding MainViewModel.EndOfWeekDay, Mode=TwoWay, Source={StaticResource Locator}}"  >
+                                                <toolkit:ListPicker.ItemTemplate>
+                                                    <DataTemplate >
+                                                        <TextBlock Text="{Binding}" HorizontalAlignment="Center"
+                                                                   Foreground="White"
+                                                                   Style="{StaticResource PhoneTextLargeStyle}"  Margin="0,0,0,0"/>
+                                                    </DataTemplate>
+                                                </toolkit:ListPicker.ItemTemplate>
+                                            </toolkit:ListPicker>
+                                        </tile:TileSimpleVoidElement.Element>
+                                    </tile:TileSimpleVoidElement>
+                                </StackPanel>
+                                <!-- End of week time-->
+                                <StackPanel Orientation="Horizontal">
 
-                                <tile:TileSimpleVoidElement x:Name="endOfWeekCT"  View="MainPage"
-                                                            Foreground="White"
-                                                            VerticalContentAlignment="Center"
-                                                            Margin="5,5,5,5" Width="200" Background="{StaticResource PhoneAccentBrush}" Tap="endOfWeekT_Tap">
-                                    <tile:TileSimpleVoidElement.Element>
-                                        <toolkit:TimePicker x:Name="endOfWeek"  
-                                                            Foreground="White" 
-                                                            Margin="0,10"
-                                                            VerticalContentAlignment="Center"
-                                                            HeaderTemplate="{StaticResource HeaderTemplate}"
-                                                            Header="{Binding ResourceGetter.EndOfWeekeTime, Source={StaticResource LocalizedStrings}}"
-                                                            FontSize="{StaticResource PhoneFontSizeExtraLarge}"
-                                                            Background="Transparent"
-                                                            Value="{Binding MainViewModel.EndOfWeekTime, 
-                                                            Source={StaticResource Locator}
-                                                            ,Mode=TwoWay}"
-                                                            HorizontalContentAlignment="Center"
-                                                            HorizontalAlignment="Center" 
-                                                            VerticalAlignment="Center"                                                            
-                                                            >
-                                        </toolkit:TimePicker>
-                                    </tile:TileSimpleVoidElement.Element>
-                                </tile:TileSimpleVoidElement>
-                                <tile:TileSimpleVoidElement x:Name="endOfWeekT"  View="MainPage"
-                                                            Margin="5,5,5,5" Width="200" Height="200"
+                                    <tile:TileSimpleVoidElement x:Name="endOfWeekCT"  View="MainPage"
+                                                                Foreground="White"
+                                                                VerticalContentAlignment="Center"
+                                                                Margin="5,5,5,5" Width="200" Background="{StaticResource PhoneAccentBrush}" Tap="endOfWeekT_Tap">
+                                        <tile:TileSimpleVoidElement.Element>
+                                            <toolkit:TimePicker x:Name="endOfWeek"  
+                                                                Foreground="White" 
+                                                                Margin="0,10"
+                                                                VerticalContentAlignment="Center"
+                                                                HeaderTemplate="{StaticResource HeaderTemplate}"
+                                                                Header="{Binding ResourceGetter.EndOfWeekeTime, Source={StaticResource LocalizedStrings}}"
+                                                                FontSize="{StaticResource PhoneFontSizeExtraLarge}"
+                                                                Background="Transparent"
+                                                                Value="{Binding MainViewModel.EndOfWeekTime, 
+                                                                Source={StaticResource Locator}
+                                                                ,Mode=TwoWay}"
+                                                                HorizontalContentAlignment="Center"
+                                                                HorizontalAlignment="Center" 
+                                                                VerticalAlignment="Center"                                                            
+                                                                >
+                                            </toolkit:TimePicker>
+                                        </tile:TileSimpleVoidElement.Element>
+                                    </tile:TileSimpleVoidElement>
+                                    <tile:TileSimpleVoidElement x:Name="endOfWeekT"  View="MainPage"
+                                                                Margin="5,5,5,5" Width="200" Height="200"
                                                            
-                                                            VerticalContentAlignment="Center"
-                                                            Background="{Binding LightAccent, Source={StaticResource ColorManager}}" Tap="endOfWeekT_Tap" >
-                                    <tile:TileSimpleVoidElement.Element>
-                                        <Image Source="/images/time.png"></Image>
-                                    </tile:TileSimpleVoidElement.Element>
-                                </tile:TileSimpleVoidElement>
-                            </StackPanel>
-                            <!-- Duration-->
-                            <StackPanel Orientation="Horizontal">
-                                <tile:TileSimpleVoidElement x:Name="weekendDurationT"  View="MainPage"
+                                                                VerticalContentAlignment="Center"
+                                                                Background="{Binding LightAccent, Source={StaticResource ColorManager}}" Tap="endOfWeekT_Tap" >
+                                        <tile:TileSimpleVoidElement.Element>
+                                            <Image Source="/images/time.png"></Image>
+                                        </tile:TileSimpleVoidElement.Element>
+                                    </tile:TileSimpleVoidElement>
+                                </StackPanel>
+                                <!-- Duration-->
+                                <StackPanel Orientation="Horizontal">
+                                    <tile:TileSimpleVoidElement x:Name="weekendDurationT"  View="MainPage"
                                                             
-                                                            VerticalContentAlignment="Center"
-                                                            Margin="5,5,5,5" Width="200"
-                                                            Background="{Binding LightAccent, Source={StaticResource ColorManager}}" Tap="weekendDurationT_Tap" >
-                                    <tile:TileSimpleVoidElement.Element>
-                                        <Image Source="/images/duration.png"></Image>
-                                    </tile:TileSimpleVoidElement.Element>
-                                </tile:TileSimpleVoidElement>
-                                <tile:TileSimpleVoidElement x:Name="weekendDurationCT"  View="MainPage"
-                                                            Foreground="White"
-                                                            VerticalContentAlignment="Center"
-                                                            Margin="5,5,5,5"  Width="200" Background="{StaticResource PhoneAccentBrush}" Tap="weekendDurationT_Tap">
-                                    <tile:TileSimpleVoidElement.Element>
-                                        <toolkit:ListPicker  x:Name="weekendDuration"
-                                                             HeaderTemplate="{StaticResource HeaderTemplate}"
-                                                             Header="{Binding ResourceGetter.WeekendDuration, Source={StaticResource LocalizedStrings}}"
+                                                                VerticalContentAlignment="Center"
+                                                                Margin="5,5,5,5" Width="200"
+                                                                Background="{Binding LightAccent, Source={StaticResource ColorManager}}" Tap="weekendDurationT_Tap" >
+                                        <tile:TileSimpleVoidElement.Element>
+                                            <Image Source="/images/duration.png"></Image>
+                                        </tile:TileSimpleVoidElement.Element>
+                                    </tile:TileSimpleVoidElement>
+                                    <tile:TileSimpleVoidElement x:Name="weekendDurationCT"  View="MainPage"
+                                                                Foreground="White"
+                                                                VerticalContentAlignment="Center"
+                                                                Margin="5,5,5,5"  Width="200" Background="{StaticResource PhoneAccentBrush}" Tap="weekendDurationT_Tap">
+                                        <tile:TileSimpleVoidElement.Element>
+                                            <toolkit:ListPicker  x:Name="weekendDuration"
+                                                                 HeaderTemplate="{StaticResource HeaderTemplate}"
+                                                                 Header="{Binding ResourceGetter.WeekendDuration, Source={StaticResource LocalizedStrings}}"
                                                           
-                                                             FullModeItemTemplate="{StaticResource ListPickerFullModeItemTemplate}"
-                                                             Style="{StaticResource ListPickerSimpleStyle}"
-                                                             ItemsSource="{Binding MainViewModel.ListDayNumber, Source={StaticResource Locator}}" Margin="10,10,10,10"
-                                                             SelectedItem="{Binding MainViewModel.WeekendDuration, Mode=TwoWay, Source={StaticResource Locator}}"  >
-                                            <toolkit:ListPicker.ItemTemplate >
-                                                <DataTemplate >
-                                                    <TextBlock Text="{Binding}" TextAlignment="Center" Foreground="White" Style="{StaticResource PhoneTextLargeStyle}" />
-                                                </DataTemplate>                                              
-                                            </toolkit:ListPicker.ItemTemplate>
-                                        </toolkit:ListPicker>
-                                    </tile:TileSimpleVoidElement.Element>
-                                </tile:TileSimpleVoidElement>                               
-                            </StackPanel>
+                                                                 FullModeItemTemplate="{StaticResource ListPickerFullModeItemTemplate}"
+                                                                 Style="{StaticResource ListPickerSimpleStyle}"
+                                                                 ItemsSource="{Binding MainViewModel.ListDayNumber, Source={StaticResource Locator}}" Margin="10,10,10,10"
+                                                                 SelectedItem="{Binding MainViewModel.WeekendDuration, Mode=TwoWay, Source={StaticResource Locator}}"  >
+                                                <toolkit:ListPicker.ItemTemplate >
+                                                    <DataTemplate >
+                                                        <TextBlock Text="{Binding}" TextAlignment="Center" Foreground="White" Style="{StaticResource PhoneTextLargeStyle}" />
+                                                    </DataTemplate>                                              
+                                                </toolkit:ListPicker.ItemTemplate>
+                                            </toolkit:ListPicker>
+                                        </tile:TileSimpleVoidElement.Element>
+                                    </tile:TileSimpleVoidElement>                               
+                                </StackPanel>
                          
+                            </StackPanel>
                         </StackPanel>
-                    </StackPanel>
-                </controls:PivotItem>
-            </controls:Pivot>
+                    </controls:PivotItem>
+                </controls:Pivot>
+            </Grid>
+            <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28"/>
         </Grid>
-        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28"/>
-    </Grid>
 
-</phone:PhoneApplicationPage>
+    </phone:PhoneApplicationPage>

@@ -18,6 +18,7 @@ namespace FstnUserControl
     {
         public event CompletedEventHandler Completed;
 
+        private int NumberOfRotation = 0;
         private Queue<FrameworkElement> q;
         private RotateEffect effect;
         public static readonly DependencyProperty Image1SourceProperty;
@@ -32,7 +33,9 @@ namespace FstnUserControl
         
         public CoinFlipCounter()
         {
-            InitializeComponent(); this.Loaded += CoinFlipCounter_Loaded;
+            this.Visibility = Visibility.Collapsed;
+            InitializeComponent(); 
+            this.Loaded += CoinFlipCounter_Loaded;
 
         }
 
@@ -82,21 +85,46 @@ namespace FstnUserControl
         private void finalResponseImg_Loaded(object sender, EventArgs e)
         {
         }
+
+        public void Start()
+        {
+            if (ended)
+            {
+                NumberOfRotation=0;
+                this.Visibility = Visibility.Visible;
+                ended = false;
+                nonFinalCanvas.Visibility = Visibility.Visible;
+                finalCanvas.Visibility = Visibility.Collapsed;
+                EasingFunctionBase easing = new SineEase();
+                effect = new RotateEffect(-90, 90, 100, EasingMode.EaseInOut, easing);
+                effect.RotationCenter = new Point(0.5, 0.5);
+                effect.Duration = 500;
+                effect.Completed += effect_Completed;
+                q = new Queue<FrameworkElement>();
+                if (Toss)
+                {
+                    effect.Start(nonFinalCanvas);
+                    q.Enqueue(finalCanvas);
+                    q.Enqueue(nonFinalCanvas);
+                }
+                else
+                {
+                    effect.Start(finalCanvas);
+                    q.Enqueue(nonFinalCanvas);
+                    q.Enqueue(finalCanvas);
+                }
+            }
+        }
         public void effect_Completed(object sender, EventArgs e)
         {
             FrameworkElement first = q.Dequeue();
             FrameworkElement second = q.Dequeue();
-            effect.Speed = effect.Speed-0.5;
+            effect.Duration += effect.Duration/4;
             first.Visibility = Visibility.Visible;
             second.Visibility = Visibility.Collapsed;
-            if (effect.Speed > 0.25)
+            if (effect.Duration > 2000 && NumberOfRotation %2==0)
             {
-                q.Enqueue(second);
-                q.Enqueue(first);
-            }
-            else
-            {
-                effect.Speed = 0.4;
+                effect.Duration += 2000;
                 effect.To = 0;
                 effect.Completed -= effect_Completed;
                 ended = true;
@@ -106,36 +134,18 @@ namespace FstnUserControl
                     Completed(this, null);
                 }
             }
+            else
+            {
+                q.Enqueue(second);
+                q.Enqueue(first);
+            }
+            NumberOfRotation++;
            /* if(effect.Speed <1){
                 cote.Visibility = Visibility.Visible;
                 collapseEffect.Start(cote);
             }*/
             effect.Start(first);
         }
-        public void Start()
-        {
-            if (ended)
-            {
-                ended = false;
-                nonFinalCanvas.Visibility = Visibility.Visible;
-                finalCanvas.Visibility = Visibility.Collapsed;
-                EasingFunctionBase easing = new SineEase();
-                effect = new RotateEffect(-90, 90, 5,EasingMode.EaseInOut,easing);
-                effect.Completed += effect_Completed;
-                q = new Queue<FrameworkElement>();
-                if (Toss)
-                {
-                    effect.Start(finalCanvas);
-                    q.Enqueue(nonFinalCanvas);
-                    q.Enqueue(finalCanvas);
-                }
-                else
-                {
-                    effect.Start(nonFinalCanvas);
-                    q.Enqueue(finalCanvas);
-                    q.Enqueue(nonFinalCanvas);
-                }
-            }
-        }
+     
     }
 }

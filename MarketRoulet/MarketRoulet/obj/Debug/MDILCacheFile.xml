@@ -1,21 +1,22 @@
-﻿<xapCache source="C:\DevTools\Git\windowsPhone\MarketRoulet\MarketRoulet\Bin\Debug\MarketRoulet.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="02/03/2013 12:29:11">
+﻿<xapCache source="C:\DevTools\Git\windowsPhone\MarketRoulet\MarketRoulet\Bin\Debug\MarketRoulet.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="15/03/2013 19:42:47">
   <file source="C:\DevTools\Git\windowsPhone\MarketRoulet\MarketRoulet\Bin\Debug\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="02/03/2013 10:14:57" />
   <file source="C:\DevTools\Git\windowsPhone\MarketRoulet\MarketRoulet\Image\App Roulette Tile.png" archivePath="Image\App Roulette Tile.png" lastWriteTime="02/03/2013 10:10:02" />
   <file source="C:\DevTools\Git\windowsPhone\MarketRoulet\MarketRoulet\Image\App Roulette.png" archivePath="Image\App Roulette.png" lastWriteTime="02/03/2013 10:00:15" />
-  <file source="C:\DevTools\Git\windowsPhone\MarketRoulet\MarketRoulet\obj\Debug\MarketRoulet.dll" archivePath="MarketRoulet.dll" lastWriteTime="02/03/2013 12:29:11" />
-  <file source="C:\DevTools\Git\windowsPhone\FstnAnimation\Bin\Debug\FstnAnimation.dll" archivePath="FstnAnimation.dll" lastWriteTime="02/03/2013 12:11:43" />
-  <file source="C:\DevTools\Git\windowsPhone\FstnCommon\Bin\Debug\FstnCommon.dll" archivePath="FstnCommon.dll" lastWriteTime="02/03/2013 12:11:38" />
-  <file source="C:\DevTools\Git\windowsPhone\FstnDesign\Bin\Debug\FstnDesign.dll" archivePath="FstnDesign.dll" lastWriteTime="02/03/2013 12:11:38" />
-  <file source="C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Debug\FstnUserControl.dll" archivePath="FstnUserControl.dll" lastWriteTime="02/03/2013 12:11:47" />
+  <file source="C:\DevTools\Git\windowsPhone\MarketRoulet\MarketRoulet\obj\Debug\MarketRoulet.dll" archivePath="MarketRoulet.dll" lastWriteTime="15/03/2013 19:42:46" />
+  <file source="C:\DevTools\Git\windowsPhone\FstnAnimation\Bin\Debug\FstnAnimation.dll" archivePath="FstnAnimation.dll" lastWriteTime="15/03/2013 17:15:11" />
+  <file source="C:\DevTools\Git\windowsPhone\FstnCommon\Bin\Debug\FstnCommon.dll" archivePath="FstnCommon.dll" lastWriteTime="15/03/2013 17:15:10" />
+  <file source="C:\DevTools\Git\windowsPhone\FstnDesign\Bin\Debug\FstnDesign.dll" archivePath="FstnDesign.dll" lastWriteTime="14/03/2013 22:58:07" />
+  <file source="C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Debug\FstnUserControl.dll" archivePath="FstnUserControl.dll" lastWriteTime="15/03/2013 17:15:12" />
   <file source="E:\DevTools\C#\Mvvm Light Toolkit\Binaries\WP71\GalaSoft.MvvmLight.WP71.dll" archivePath="GalaSoft.MvvmLight.WP71.dll" lastWriteTime="28/10/2012 10:36:54" />
   <file source="C:\Program Files (x86)\Microsoft SDKs\Advertising for Phone\Libraries\v7.1\Microsoft.Advertising.Mobile.dll" archivePath="Microsoft.Advertising.Mobile.dll" lastWriteTime="20/07/2012 08:57:18" />
   <file source="C:\Program Files (x86)\Microsoft SDKs\Advertising for Phone\Libraries\v7.1\Microsoft.Advertising.Mobile.UI.dll" archivePath="Microsoft.Advertising.Mobile.UI.dll" lastWriteTime="20/07/2012 08:57:18" />
   <file source="C:\Program Files (x86)\Microsoft SDKs\Windows Phone\v7.1\Libraries\Silverlight\Microsoft.Phone.Controls.dll" archivePath="Microsoft.Phone.Controls.dll" lastWriteTime="06/07/2012 02:40:16" />
   <file source="C:\DevTools\Git\windowsPhone\MarketRoulet\packages\WPtoolkit.4.2012.10.30\lib\sl4-windowsphone71\Microsoft.Phone.Controls.Toolkit.dll" archivePath="Microsoft.Phone.Controls.Toolkit.dll" lastWriteTime="21/02/2013 10:42:29" />
-  <file source="C:\DevTools\Git\windowsPhone\MarketRoulet\UpdateMarketRouletTile\Bin\Debug\UpdateMarketRouletTile.dll" archivePath="UpdateMarketRouletTile.dll" lastWriteTime="02/03/2013 12:21:36" />
+  <file source="C:\DevTools\Git\windowsPhone\MarketRoulet\UpdateMarketRouletTile\Bin\Debug\UpdateMarketRouletTile.dll" archivePath="UpdateMarketRouletTile.dll" lastWriteTime="15/03/2013 19:14:11" />
   <file source="C:\Program Files (x86)\Microsoft SDKs\Windows Phone\v7.1\Libraries\Silverlight\Microsoft.Phone.Controls.Maps.dll" archivePath="Microsoft.Phone.Controls.Maps.dll" lastWriteTime="06/07/2012 02:40:16" />
-  <file source="C:\DevTools\Git\windowsPhone\MarketRoulet\MarketRoulet\obj\Debug\fr\MarketRoulet.resources.dll" archivePath="fr\MarketRoulet.resources.dll" lastWriteTime="02/03/2013 12:29:11" />
-  <file source="C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Debug\fr\FstnUserControl.resources.dll" archivePath="fr\FstnUserControl.resources.dll" lastWriteTime="02/03/2013 12:11:47" />
+  <file source="C:\DevTools\Git\windowsPhone\MarketRoulet\MarketRoulet\obj\Debug\fr\MarketRoulet.resources.dll" archivePath="fr\MarketRoulet.resources.dll" lastWriteTime="15/03/2013 19:42:46" />
+  <file source="C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Debug\fr\FstnUserControl.resources.dll" archivePath="fr\FstnUserControl.resources.dll" lastWriteTime="15/03/2013 17:15:12" />
+  <file source="C:\DevTools\Git\windowsPhone\MarketRoulet\MarketRoulet\Image\Background.png" archivePath="Image\Background.png" lastWriteTime="15/03/2013 19:42:35" />
   <file source="C:\DevTools\Git\windowsPhone\MarketRoulet\MarketRoulet\Image\dark\appbar.add.png" archivePath="Image\dark\appbar.add.png" lastWriteTime="24/02/2013 17:10:43" />
   <file source="C:\DevTools\Git\windowsPhone\MarketRoulet\MarketRoulet\Image\dark\appbar.cancel.png" archivePath="Image\dark\appbar.cancel.png" lastWriteTime="27/02/2013 19:36:07" />
   <file source="C:\DevTools\Git\windowsPhone\MarketRoulet\MarketRoulet\Image\dark\appbar.cards.heart.png" archivePath="Image\dark\appbar.cards.heart.png" lastWriteTime="23/02/2013 13:41:21" />

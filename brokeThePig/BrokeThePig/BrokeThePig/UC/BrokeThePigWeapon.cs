@@ -84,9 +84,10 @@ namespace BrokeThePig.UC
 
         void BrokeThePigWeapon_Loaded(object sender, RoutedEventArgs e)
         {
-            this.Background = new SolidColorBrush(Colors.Red);
+            this.Opacity = 0.2;
             TextBlock amount = new TextBlock();
             amount.Text = MoneyNeeded + "$";
+            amount.Foreground = new SolidColorBrush(Color.FromArgb(255, 253, 208, 23));
             amount.TextAlignment = TextAlignment.Center;
             this.Children.Add(amount);
             if (AI.Instance.CurrentMoney >= MoneyNeeded)
@@ -106,7 +107,7 @@ namespace BrokeThePig.UC
         void Enable()
         {
             this.enabled = true;
-            this.Background = new SolidColorBrush(Colors.Transparent);
+            this.Opacity = 1;
         }
 
         private void BrokeThePigWeapon_Tap(object sender, System.Windows.Input.GestureEventArgs e)

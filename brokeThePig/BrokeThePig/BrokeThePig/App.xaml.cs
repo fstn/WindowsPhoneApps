@@ -78,6 +78,7 @@ namespace BrokeThePig
                 {
                     AI.Instance.CurrentNumber.LevelNumber = 0;
                 }
+                AI.Instance.CurrentMoney = 100000;
             }
         }
 
@@ -90,6 +91,7 @@ namespace BrokeThePig
                 AI.Instance.CurrentNumber.Number = count;
             AI.Instance.CurrentNumber.LevelNumber = Convert.ToInt16(CryptedSettingsService.Instance.Value(SettingsKeys.CurrentLevel));
             AI.Instance.CurrentMoney = Convert.ToInt16(CryptedSettingsService.Instance.Value(SettingsKeys.CurrentMoney));
+            
         }
 
         // Code to execute when the application is deactivated (sent to background)

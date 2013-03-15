@@ -5,6 +5,7 @@
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:advertising ="clr-namespace:Microsoft.Advertising.Mobile.UI;assembly=Microsoft.Advertising.Mobile.UI"
     xmlns:localUC="clr-namespace:BrokeThePig.UC"
     xmlns:localUCWeapons="clr-namespace:BrokeThePig.UC.Weapons"
     xmlns:es="clr-namespace:Microsoft.Expression.Shapes;assembly=Microsoft.Expression.Drawing"
@@ -23,36 +24,62 @@
     </phone:PhoneApplicationPage.Foreground>
 
     <!--LayoutRoot is the root grid where all page content is placed-->
-    <Grid x:Name="LayoutRoot" Background="Transparent">
+    <Grid  x:Name="LayoutRoot" Background="Transparent" Margin="0,-32,0,0">
         <Grid.RowDefinitions>
-            <RowDefinition Height="200"/>
-            <RowDefinition Height="400"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="140"/>
+            <RowDefinition Height="320"/>
             <RowDefinition Height="130"/>
         </Grid.RowDefinitions>
+        <Image Source="/Image3.png" Stretch="Fill" Canvas.Top="-144" Margin="-25,5,-95,-50" Grid.RowSpan="3" Grid.Row="1"/>
 
-        <!--TitlePanel contains the name of the application and page title-->
-        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,9,0,40">
-            <TextBlock x:Name="ApplicationTitle" Text="Broke The Pig" Style="{StaticResource PhoneTextTitle2Style}"/>
-            <StackPanel Orientation="Horizontal">
-                <TextBlock x:Name="Counter"                            
-                           Text="{Binding GameAI.CurrentNumber.Number,Mode=TwoWay}"
-                           Style="{StaticResource PhoneTextTitle1Style}"/>
-                <TextBlock x:Name="AmountOfMoney" 
-                           Text="{Binding GameAI.CurrentMoney,Mode=TwoWay}"
-                           Style="{StaticResource PhoneTextTitle1Style}"/>
-
-            </StackPanel>
+        <StackPanel Grid.Row="0">
+            <Border Background="Transparent">
+                <advertising:AdControl Name="AdControl" Height="80"  Width="480"  BorderThickness="0" 
+                                       Background="Transparent"                                  
+                                       AdUnitId="117661" ApplicationId="02c2cb4f-982f-43cf-963b-777d1f7ceabf" />
+            </Border>
         </StackPanel>
-
-        <!--ContentPanel - place additional content here-->
-        <Grid x:Name="ContentPanel" Grid.Row="0" Margin="24,-40,0,40">
-            <Button Content="Button" HorizontalAlignment="Left" Margin="179,33,0,0" VerticalAlignment="Top" Tap="Button_Tap_1"/>
-        </Grid>
-        <ScrollViewer Grid.Row="2"
-                      ScrollViewer.HorizontalScrollBarVisibility="Auto" 
-                      ScrollViewer.VerticalScrollBarVisibility="Disabled" Margin="0,0,0,-38"
-                      >
+        <Canvas x:Name="ContentLayout"/>
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel x:Name="TitlePanel" Grid.Row="1">
+            <TextBlock x:Name="ApplicationTitle" Text="Broke The Pig" Height="40" Margin="5"
+                       Style="{StaticResource PhoneTextTitle2Style}" 
+                       FontFamily="/BrokeThePig;component/Fonts/killcrazybb_reg.ttf#KillCrazy BB" FontSize="46"/>
             <StackPanel Orientation="Horizontal">
+                <TextBlock x:Name="Counter" FontSize="70"  
+                           VerticalAlignment="Center"
+                           Text="{Binding GameAI.CurrentNumber.Number,Mode=TwoWay}"
+                           Style="{StaticResource PhoneTextTitle2Style}" Width="243" Height="93" 
+                           FontFamily="/BrokeThePig;component/Fonts/digital-7.ttf#Digital-7"                      
+                           />
+                <TextBlock x:Name="AmountOfMoney" 
+                           Style="{StaticResource PhoneTextTitle2Style}"
+                           FontSize="40"
+                           Foreground="Gold"
+                           VerticalAlignment="Center"
+                           Width="194" TextAlignment="Right" Height="86">
+                    
+                    <Run Text="{Binding GameAI.CurrentMoney, Mode=TwoWay}" />   
+                    <Run Text="$" />
+                </TextBlock>
+            </StackPanel>
+
+            <StackPanel.Background>
+                <SolidColorBrush Color="#000000" Opacity="0.5"/>
+            </StackPanel.Background>
+        </StackPanel>
+        <!--ContentPanel - place additional content here-->
+
+        <ScrollViewer Grid.Row="3"
+                      
+                      ScrollViewer.HorizontalScrollBarVisibility="Auto" 
+                      ScrollViewer.VerticalScrollBarVisibility="Disabled" Margin="0,12,0,-50"
+                      >
+            <ScrollViewer.Background>
+                <SolidColorBrush Color="#000000" Opacity="0.5"/>
+            </ScrollViewer.Background>
+            <StackPanel Orientation="Horizontal" >
                 <localUCWeapons:SimpleWeapon Width="128" Height="158" 
                                              ShootSound="Sounds/laughShoot.wav"
                                              SelectionSound="Sounds/laughSelection.wav"
@@ -84,14 +111,14 @@
                 <localUCWeapons:SimpleWeapon Width="128"  Height="158" 
                                              ShootSound="Sounds/ropeShoot.wav"
                                              SelectionSound="Sounds/ropeSelection.wav"
-                                             MoneyNeeded="0"
+                                             MoneyNeeded="10"
                                              Damage="100">
                     <Image Source="Images/Weapons/rope.png"/>
                 </localUCWeapons:SimpleWeapon>
                 <localUCWeapons:SimpleWeapon Width="128"  Height="158" 
                                              ShootSound="Sounds/scissorsShoot.wav"
                                              SelectionSound="Sounds/scissorsSelection.wav"
-                                             MoneyNeeded="0"
+                                             MoneyNeeded="100"
                                              Damage="100">
                     <Image Source="Images/Weapons/scissors.png"/>
                 </localUCWeapons:SimpleWeapon>
@@ -112,9 +139,8 @@
             </StackPanel>
         </ScrollViewer>
 
-        <Canvas x:Name="PigLayout" Grid.Row="1">
-
-            <localUC:Pig Visibility="Collapsed" x:Name="Pig" Grid.Row="1" Canvas.Left="53" Height="369" Width="374" Canvas.Top="10" />
+        <Canvas x:Name="PigLayout" Grid.Row="2">
+            <localUC:Pig Visibility="Collapsed" x:Name="Pig" Grid.Row="1" Canvas.Left="57" Height="366" Width="371" Canvas.Top="-15" />
         </Canvas>
     </Grid>
 </phone:PhoneApplicationPage>

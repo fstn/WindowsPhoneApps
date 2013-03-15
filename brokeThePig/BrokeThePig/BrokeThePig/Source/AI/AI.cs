@@ -10,6 +10,8 @@ namespace BrokeThePig.Source.AI
 {
     public delegate void LevelEndedEventHandler();
     public delegate void GameEndEventHandler();
+    public delegate void FightEventHandler();
+
     public class AI : INotifyPropertyChanged
     {
 
@@ -40,6 +42,7 @@ namespace BrokeThePig.Source.AI
 
         public event LevelEndedEventHandler LevelEnded;
         public event GameEndEventHandler GameEnd;
+        public event FightEventHandler OnFight;
         public int CurrentMoney { get; set; }
         public List<BrokeThePigWeapon> Weapons { get; set; }
         public PointNumber CurrentNumber { get; set; }
@@ -106,6 +109,10 @@ namespace BrokeThePig.Source.AI
 
         public void Fight()
         {
+            if (OnFight != null)
+            {
+                OnFight();
+            }
             if (CurrentWeapon != null)
             CurrentWeapon.Fight();
         }

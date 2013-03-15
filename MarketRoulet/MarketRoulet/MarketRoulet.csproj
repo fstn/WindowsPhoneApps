@@ -127,6 +127,7 @@
   <ItemGroup>
     <Content Include="Image\App Roulette Tile.png" />
     <Content Include="Image\App Roulette.png" />
+    <Content Include="Image\Background.png" />
     <Content Include="Image\dark\appbar.add.png" />
     <Content Include="Image\dark\appbar.cancel.png" />
     <Content Include="Image\dark\appbar.cards.heart.png">

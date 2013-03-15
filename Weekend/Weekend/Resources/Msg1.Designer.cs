@@ -106,6 +106,15 @@ namespace Weekend.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Enable lock notification.
+        /// </summary>
+        public static string Lock {
+            get {
+                return ResourceManager.GetString("Lock", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Monday.
         /// </summary>
         public static string Monday {
@@ -151,6 +160,15 @@ namespace Weekend.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Partager.
+        /// </summary>
+        public static string Share {
+            get {
+                return ResourceManager.GetString("Share", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Sunday.
         /// </summary>
         public static string Sunday {
@@ -174,6 +192,15 @@ namespace Weekend.Resources {
         public static string Title {
             get {
                 return ResourceManager.GetString("Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Time to weekend: .
+        /// </summary>
+        public static string ToWeekend {
+            get {
+                return ResourceManager.GetString("ToWeekend", resourceCulture);
             }
         }
         

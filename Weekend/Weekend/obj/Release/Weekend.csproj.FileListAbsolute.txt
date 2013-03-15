@@ -1,3 +1,4 @@
+C:\DevTools\Git\windowsPhone\Weekend\Weekend\Bin\Release\Error.png
 C:\DevTools\Git\windowsPhone\Weekend\Weekend\Bin\Release\ApplicationIcon.png
 C:\DevTools\Git\windowsPhone\Weekend\Weekend\Bin\Release\Background.png
 C:\DevTools\Git\windowsPhone\Weekend\Weekend\Bin\Release\images\chrono.png
@@ -10,7 +11,7 @@ C:\DevTools\Git\windowsPhone\Weekend\Weekend\Bin\Release\Weekend.dll
 C:\DevTools\Git\windowsPhone\Weekend\Weekend\Bin\Release\Weekend.pdb
 C:\DevTools\Git\windowsPhone\Weekend\Weekend\Bin\Release\fr\Weekend.resources.dll
 C:\DevTools\Git\windowsPhone\Weekend\Weekend\Bin\Release\AppManifest.xaml
-C:\DevTools\Git\windowsPhone\Weekend\Weekend\Bin\Release\Weekend.xap
+C:\DevTools\Git\windowsPhone\Weekend\Weekend\Bin\Release\Weekend_Release_AnyCPU.xap
 C:\DevTools\Git\windowsPhone\Weekend\Weekend\Bin\Release\BugSense.dll
 C:\DevTools\Git\windowsPhone\Weekend\Weekend\Bin\Release\Coding4Fun.Phone.Controls.dll
 C:\DevTools\Git\windowsPhone\Weekend\Weekend\Bin\Release\FstnAnimation.dll
@@ -29,11 +30,11 @@ C:\DevTools\Git\windowsPhone\Weekend\Weekend\Bin\Release\FstnDesign.pdb
 C:\DevTools\Git\windowsPhone\Weekend\Weekend\Bin\Release\FstnUserControl.pdb
 C:\DevTools\Git\windowsPhone\Weekend\Weekend\Bin\Release\GalaSoft.MvvmLight.Extras.WP71.xml
 C:\DevTools\Git\windowsPhone\Weekend\Weekend\Bin\Release\GalaSoft.MvvmLight.WP71.xml
-C:\DevTools\Git\windowsPhone\Weekend\Weekend\Bin\Release\Microsoft.Phone.Controls.xml
 C:\DevTools\Git\windowsPhone\Weekend\Weekend\Bin\Release\Microsoft.Phone.Controls.Toolkit.pdb
 C:\DevTools\Git\windowsPhone\Weekend\Weekend\Bin\Release\Microsoft.Phone.Controls.Toolkit.xml
 C:\DevTools\Git\windowsPhone\Weekend\Weekend\Bin\Release\System.Windows.Interactivity.xml
 C:\DevTools\Git\windowsPhone\Weekend\Weekend\Bin\Release\Microsoft.Practices.ServiceLocation.xml
+C:\DevTools\Git\windowsPhone\Weekend\Weekend\Bin\Release\fr\FstnUserControl.resources.dll
 C:\DevTools\Git\windowsPhone\Weekend\Weekend\Bin\Release\cs\Microsoft.Phone.Controls.Toolkit.resources.dll
 C:\DevTools\Git\windowsPhone\Weekend\Weekend\Bin\Release\da\Microsoft.Phone.Controls.Toolkit.resources.dll
 C:\DevTools\Git\windowsPhone\Weekend\Weekend\Bin\Release\de-DE\Microsoft.Phone.Controls.Toolkit.resources.dll

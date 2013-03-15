@@ -15,7 +15,6 @@ C:\DevTools\Git\windowsPhone\brokeThePig\BrokeThePig\BrokeThePig\Bin\Debug\Sound
 C:\DevTools\Git\windowsPhone\brokeThePig\BrokeThePig\BrokeThePig\Bin\Debug\BrokeThePig.dll
 C:\DevTools\Git\windowsPhone\brokeThePig\BrokeThePig\BrokeThePig\Bin\Debug\BrokeThePig.pdb
 C:\DevTools\Git\windowsPhone\brokeThePig\BrokeThePig\BrokeThePig\Bin\Debug\AppManifest.xaml
-C:\DevTools\Git\windowsPhone\brokeThePig\BrokeThePig\BrokeThePig\Bin\Debug\BrokeThePig.xap
 C:\DevTools\Git\windowsPhone\brokeThePig\BrokeThePig\BrokeThePig\Bin\Debug\FstnAnimation.dll
 C:\DevTools\Git\windowsPhone\brokeThePig\BrokeThePig\BrokeThePig\Bin\Debug\FstnCommon.dll
 C:\DevTools\Git\windowsPhone\brokeThePig\BrokeThePig\BrokeThePig\Bin\Debug\FstnDesign.dll
@@ -34,9 +33,7 @@ C:\DevTools\Git\windowsPhone\brokeThePig\BrokeThePig\BrokeThePig\Bin\Debug\FstnU
 C:\DevTools\Git\windowsPhone\brokeThePig\BrokeThePig\BrokeThePig\Bin\Debug\Microsoft.Advertising.Mobile.xml
 C:\DevTools\Git\windowsPhone\brokeThePig\BrokeThePig\BrokeThePig\Bin\Debug\Microsoft.Advertising.Mobile.UI.xml
 C:\DevTools\Git\windowsPhone\brokeThePig\BrokeThePig\BrokeThePig\Bin\Debug\Microsoft.Expression.Drawing.xml
-C:\DevTools\Git\windowsPhone\brokeThePig\BrokeThePig\BrokeThePig\Bin\Debug\Microsoft.Phone.Controls.xml
 C:\DevTools\Git\windowsPhone\brokeThePig\BrokeThePig\BrokeThePig\Bin\Debug\System.Windows.Interactivity.xml
-C:\DevTools\Git\windowsPhone\brokeThePig\BrokeThePig\BrokeThePig\Bin\Debug\Microsoft.Phone.Controls.Maps.xml
 C:\DevTools\Git\windowsPhone\brokeThePig\BrokeThePig\BrokeThePig\Bin\Debug\fr\FstnUserControl.resources.dll
 C:\DevTools\Git\windowsPhone\brokeThePig\BrokeThePig\BrokeThePig\Bin\Debug\cs-CZ\Microsoft.Advertising.Mobile.resources.dll
 C:\DevTools\Git\windowsPhone\brokeThePig\BrokeThePig\BrokeThePig\Bin\Debug\da-DK\Microsoft.Advertising.Mobile.resources.dll
@@ -70,9 +67,13 @@ C:\DevTools\Git\windowsPhone\brokeThePig\BrokeThePig\BrokeThePig\Bin\Debug\zh-Ha
 C:\DevTools\Git\windowsPhone\brokeThePig\BrokeThePig\BrokeThePig\Bin\Debug\zh-Hant\System.Windows.Interactivity.resources.dll
 C:\DevTools\Git\windowsPhone\brokeThePig\BrokeThePig\BrokeThePig\obj\Debug\BrokeThePig.csprojResolveAssemblyReference.cache
 C:\DevTools\Git\windowsPhone\brokeThePig\BrokeThePig\BrokeThePig\obj\Debug\App.g.cs
+C:\DevTools\Git\windowsPhone\brokeThePig\BrokeThePig\BrokeThePig\obj\Debug\Congratulation.g.cs
 C:\DevTools\Git\windowsPhone\brokeThePig\BrokeThePig\BrokeThePig\obj\Debug\MainPage.g.cs
 C:\DevTools\Git\windowsPhone\brokeThePig\BrokeThePig\BrokeThePig\obj\Debug\UC\Pig.g.cs
 C:\DevTools\Git\windowsPhone\brokeThePig\BrokeThePig\BrokeThePig\obj\Debug\BrokeThePig.g.resources
 C:\DevTools\Git\windowsPhone\brokeThePig\BrokeThePig\BrokeThePig\obj\Debug\BrokeThePig.dll
 C:\DevTools\Git\windowsPhone\brokeThePig\BrokeThePig\BrokeThePig\obj\Debug\BrokeThePig.pdb
 C:\DevTools\Git\windowsPhone\brokeThePig\BrokeThePig\BrokeThePig\obj\Debug\XapCacheFile.xml
+C:\DevTools\Git\windowsPhone\brokeThePig\BrokeThePig\BrokeThePig\obj\Debug\BrokeThePig.Resources.Msg.resources
+C:\DevTools\Git\windowsPhone\brokeThePig\BrokeThePig\BrokeThePig\obj\Debug\BrokeThePig.csproj.GenerateResource.Cache
+C:\DevTools\Git\windowsPhone\brokeThePig\BrokeThePig\BrokeThePig\Bin\Debug\BrokeThePig_Debug_AnyCPU.xap

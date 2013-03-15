@@ -2,3 +2,12 @@ C:\DevTools\Git\windowsPhone\Weekend\FstnCommon\Bin\Release\FstnCommon.dll
 C:\DevTools\Git\windowsPhone\Weekend\FstnCommon\Bin\Release\FstnCommon.pdb
 C:\DevTools\Git\windowsPhone\Weekend\FstnCommon\obj\Release\FstnCommon.dll
 C:\DevTools\Git\windowsPhone\Weekend\FstnCommon\obj\Release\FstnCommon.pdb
+C:\DevTools\Git\windowsPhone\FstnCommon\Bin\Release\FstnCommon.dll
+C:\DevTools\Git\windowsPhone\FstnCommon\Bin\Release\FstnCommon.pdb
+C:\DevTools\Git\windowsPhone\FstnCommon\Bin\Release\Microsoft.Phone.Controls.dll
+C:\DevTools\Git\windowsPhone\FstnCommon\Bin\Release\Microsoft.Phone.Controls.Maps.dll
+C:\DevTools\Git\windowsPhone\FstnCommon\Bin\Release\Microsoft.Phone.Controls.xml
+C:\DevTools\Git\windowsPhone\FstnCommon\Bin\Release\Microsoft.Phone.Controls.Maps.xml
+C:\DevTools\Git\windowsPhone\FstnCommon\obj\Release\FstnCommon.csprojResolveAssemblyReference.cache
+C:\DevTools\Git\windowsPhone\FstnCommon\obj\Release\FstnCommon.dll
+C:\DevTools\Git\windowsPhone\FstnCommon\obj\Release\FstnCommon.pdb
