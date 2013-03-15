@@ -1,0 +1,35 @@
+﻿<Application 
+    x:Class="Weekend.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"       
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:vms="clr-namespace:Weekend.ViewModel"
+    xmlns:ress="clr-namespace:Weekend.Resources"
+    xmlns:local="clr-namespace:Weekend"
+    xmlns:fstnControl="clr-namespace:FstnUserControl;assembly=FstnUserControl"
+    xmlns:common="clr-namespace:FstnCommon;assembly=FstnCommon"
+    >
+
+    <!--Application Resources-->
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/FstnUserControl;component/Resources/Debug.xaml"/>
+                <ResourceDictionary Source="/FstnUserControl;component/Resources/TileStoryBoard.xaml"/>
+                <ResourceDictionary Source="/FstnDesign;component/Resources/ListPicker.xaml"/>
+                <ResourceDictionary Source="/FstnDesign;component/Resources/Converter.xaml"/>
+                <ResourceDictionary Source="/Weekend;component/Resources/Localized.xaml"/>
+                <ResourceDictionary Source="/Weekend;component/Resources/Locator.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+
+    <Application.ApplicationLifetimeObjects>
+        <!--Required object that handles lifetime events for the application-->
+        <shell:PhoneApplicationService 
+            Launching="Application_Launching" Closing="Application_Closing" 
+            Activated="Application_Activated" Deactivated="Application_Deactivated"/>
+    </Application.ApplicationLifetimeObjects>
+
+</Application>
