@@ -24,6 +24,7 @@ namespace FstnUserControl
     public partial class AppsPreview : UserControl
     {
         public UrlGetterDelegate UrlGetter { get; set; }
+        public event CompletedEventHandler CompletedEvent;
         public event LoaderErrorEventHandler ErrorEvent;
         public AppsPreview()
         {
@@ -34,6 +35,20 @@ namespace FstnUserControl
 
         #region membres
 
+        public FrameworkElement DisplayPart
+        {
+            get
+            {
+                return ContentLayout;
+            }
+        }
+        public Canvas ImageDisplayPart
+        {
+            get
+            {
+                return TileData;
+            }
+        }
         private Uri uri;
 
         public Uri URI
@@ -88,14 +103,14 @@ namespace FstnUserControl
 
         private object tmpObject = null;
 
-        private bool loaded=false;
+        public bool IsLoaded=false;
         #endregion
-
 
 
         public void load()
         {
-            if(!loaded){
+            if (!IsLoaded)
+            {
             #region listeners
             try
             {
@@ -140,7 +155,7 @@ namespace FstnUserControl
             WaitingAnim.start();
             WaitingAnim.MaskedEvent += WaitingAnim_Masked;
             LoadPreloader();
-            loaded=true;
+            IsLoaded = true;
             }
         }
 
@@ -194,7 +209,6 @@ namespace FstnUserControl
             LoadAppFromObj();
         }
 
-
         void AppsPreview_PreviewLoaded(object sender, object obj) { previewParser.parse((XDocument)obj); }
 
         void AppsPreview_PreviewCompleted(object sender, object obj)
@@ -238,6 +252,7 @@ namespace FstnUserControl
                     RatingControl.Value = marketApp.AverageUserRating / 2;
                     RatingControl.RatingItemCount = 5;
                     this.Tap += AppsPreview_Tap;
+                    
                 }
                 catch (InvalidCastException e)
                 {
@@ -254,12 +269,20 @@ namespace FstnUserControl
         {
             //remove animation
             WaitingAnim.LaunchStopAnimation();
+            if (CompletedEvent != null)
+            {
+                CompletedEvent(this, null);
+            }
         }
 
         void Image_Loaded(object sender, RoutedEventArgs e)
         {
             //remove animation
             WaitingAnim.LaunchStopAnimation();
+            if (CompletedEvent != null)
+            {
+                CompletedEvent(this, null);
+            }
         }
 
         void AppsPreview_Tap(object sender, System.Windows.Input.GestureEventArgs e)
@@ -270,5 +293,7 @@ namespace FstnUserControl
         }
 
         public MarketCat Category { get; set; }
+
+        public object Completed { get; set; }
     }
 }

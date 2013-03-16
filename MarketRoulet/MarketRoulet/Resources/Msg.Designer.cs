@@ -160,6 +160,15 @@ namespace MarketRoulet.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Share.
+        /// </summary>
+        public static string Share {
+            get {
+                return ResourceManager.GetString("Share", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to App Roulette.
         /// </summary>
         public static string Title {

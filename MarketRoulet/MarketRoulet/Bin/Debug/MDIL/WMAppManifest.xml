@@ -1,10 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Deployment xmlns="http://schemas.microsoft.com/windowsphone/2009/deployment" AppPlatformVersion="7.1">
-  <App xmlns="" ProductID="{425b6c69-faa3-4bd5-9bb7-0be7b160ac92}" Title="App Roulette" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="Stephen ZAMBAUX" Description="You want to have a random app? just open it!" Publisher="App Roulette" BitsPerPixel="32">
+<Deployment xmlns="http://schemas.microsoft.com/windowsphone/2012/deployment" AppPlatformVersion="8.0">
+  <DefaultLanguage xmlns="" code="en-US" />
+  <Languages xmlns="">
+    <Language code="fr" />
+  </Languages>
+  <App xmlns="" ProductID="{973f3c74-10cf-4703-92bc-dfa081e658bd}" Title="App Roulette" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="Stephen ZAMBAUX" Description="You want to have a random app? just open it!" Publisher="App Roulette" BitsPerPixel="32" PublisherID="{1bb9fb3f-6086-49f5-bad9-ad76072adc3b}">
     <IconPath IsRelative="true" IsResource="false">Image\App Roulette.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_NETWORKING" />
-      <Capability Name="ID_CAP_MEDIALIB" />
       <Capability Name="ID_CAP_WEBBROWSERCOMPONENT" />
       <Capability Name="ID_CAP_SENSORS" />
       <Capability Name="ID_CAP_APPOINTMENTS" />
@@ -17,6 +20,9 @@
       <Capability Name="ID_CAP_MICROPHONE" />
       <Capability Name="ID_CAP_PHONEDIALER" />
       <Capability Name="ID_CAP_PUSH_NOTIFICATION" />
+      <Capability Name="ID_CAP_MEDIALIB_AUDIO" />
+      <Capability Name="ID_CAP_MEDIALIB_PHOTO" />
+      <Capability Name="ID_CAP_MEDIALIB_PLAYBACK" />
     </Capabilities>
     <Tasks>
       <DefaultTask Name="_default" NavigationPage="MainPage.xaml" />
@@ -26,14 +32,29 @@
     </Tasks>
     <Tokens>
       <PrimaryToken TokenID="MarketRouletToken" TaskName="_default">
-        <TemplateType5>
-          <BackgroundImageURI IsRelative="true" IsResource="false">Image\App Roulette Tile.png</BackgroundImageURI>
+        <TemplateCycle>
+          <SmallImageURI IsRelative="true" IsResource="false">Image\App Roulette Tile.png</SmallImageURI>
+          <Title></Title>
+          <Photo01ImageURI IsRelative="true" IsResource="false">Image\App Roulette Large Tile.png</Photo01ImageURI>
+          <Photo02ImageURI IsRelative="true" IsResource="false"></Photo02ImageURI>
+          <Photo03ImageURI IsRelative="true" IsResource="false"></Photo03ImageURI>
+          <Photo04ImageURI IsRelative="true" IsResource="false"></Photo04ImageURI>
+          <Photo05ImageURI IsRelative="true" IsResource="false"></Photo05ImageURI>
+          <Photo06ImageURI IsRelative="true" IsResource="false"></Photo06ImageURI>
+          <Photo07ImageURI IsRelative="true" IsResource="false"></Photo07ImageURI>
+          <Photo08ImageURI IsRelative="true" IsResource="false"></Photo08ImageURI>
+          <Photo09ImageURI IsRelative="true" IsResource="false"></Photo09ImageURI>
           <Count>0</Count>
-          <Title>
-          </Title>
-        </TemplateType5>
+          <HasLarge>True</HasLarge>
+          <DeviceLockImageURI IsRelative="true" IsResource="false"></DeviceLockImageURI>
+        </TemplateCycle>
       </PrimaryToken>
     </Tokens>
+    <ScreenResolutions>
+      <ScreenResolution Name="ID_RESOLUTION_WVGA" />
+      <ScreenResolution Name="ID_RESOLUTION_WXGA" />
+      <ScreenResolution Name="ID_RESOLUTION_HD720P" />
+    </ScreenResolutions>
   </App>
 </Deployment>
-<!-- WPSDK Version 7.1.8773.0 -->
+<!-- WPSDK Version 8.0.9900 -->

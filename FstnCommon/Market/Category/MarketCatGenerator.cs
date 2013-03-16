@@ -39,12 +39,12 @@ namespace FstnCommon.Market.Category
             Categories = new List<MarketCat>();
             Categories.Add(new MarketCat("windowsphone.Best", "Top"));
             Categories.Add(new MarketCat("windowsphone.Games", "Games"));
-            Categories.Add(new MarketCat("windowsphone.MusicAndVideo", "Music Video"));
-            Categories.Add(new MarketCat("windowsphone.NewsAndWeather", "News"));
-            Categories.Add(new MarketCat("windowsphone.Photo", "Photo"));
             Categories.Add(new MarketCat("windowsphone.Social", "Social"));
             Categories.Add(new MarketCat("windowsphone.Sports", "Sports"));
             Categories.Add(new MarketCat("windowsphone.ToolsAndProductivity", "Tools"));
+            Categories.Add(new MarketCat("windowsphone.NewsAndWeather", "News"));
+            Categories.Add(new MarketCat("windowsphone.MusicAndVideo", "Music Video"));
+            Categories.Add(new MarketCat("windowsphone.Photo", "Photo"));
         }
 
         

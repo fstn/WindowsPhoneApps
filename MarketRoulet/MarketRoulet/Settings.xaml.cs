@@ -29,7 +29,7 @@ namespace MarketRoulet
         void Settings_Loaded(object sender, RoutedEventArgs e)
         {
             Double minRateValue = SettingsService.Instance.Value<Double>(SettingsKeys.MinRateValue);
-            RatingControl.Value = minRateValue;
+            RatingControl.Value = minRateValue/2;
             int minCounts = SettingsService.Instance.Value<int>(SettingsKeys.MinCounts);
             if(minCounts>0 && minCounts<int.MaxValue)
                 ListOfCounts.SelectedItem = minCounts;

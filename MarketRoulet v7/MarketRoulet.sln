@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarketRoulet", "MarketRoulet\MarketRoulet.csproj", "{425B6C69-FAA3-4BD5-9BB7-0BE7B160AC92}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FstnAnimation", "..\FstnAnimation\FstnAnimation.csproj", "{51B5F01C-0996-4E5E-A3EA-3E3A80ACCFCB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FstnUserControl", "..\FstnUserControl\FstnUserControl.csproj", "{C19FEDFB-44B9-4390-8979-1EFD1A902AEB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FstnDesign", "..\FstnDesign\FstnDesign.csproj", "{78719FCA-BD86-45D2-811A-6DDB34646EE3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FstnCommon", "..\FstnCommon\FstnCommon.csproj", "{0F66CBD7-90F0-4875-90C2-4387E62B6C32}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UpdateMarketRouletTile", "UpdateMarketRouletTile\UpdateMarketRouletTile.csproj", "{6143F22C-3C60-4E0A-8DFF-4F69DD860F13}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{425B6C69-FAA3-4BD5-9BB7-0BE7B160AC92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{425B6C69-FAA3-4BD5-9BB7-0BE7B160AC92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{425B6C69-FAA3-4BD5-9BB7-0BE7B160AC92}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{425B6C69-FAA3-4BD5-9BB7-0BE7B160AC92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{425B6C69-FAA3-4BD5-9BB7-0BE7B160AC92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{425B6C69-FAA3-4BD5-9BB7-0BE7B160AC92}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{51B5F01C-0996-4E5E-A3EA-3E3A80ACCFCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51B5F01C-0996-4E5E-A3EA-3E3A80ACCFCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51B5F01C-0996-4E5E-A3EA-3E3A80ACCFCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51B5F01C-0996-4E5E-A3EA-3E3A80ACCFCB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C19FEDFB-44B9-4390-8979-1EFD1A902AEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C19FEDFB-44B9-4390-8979-1EFD1A902AEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C19FEDFB-44B9-4390-8979-1EFD1A902AEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C19FEDFB-44B9-4390-8979-1EFD1A902AEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78719FCA-BD86-45D2-811A-6DDB34646EE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78719FCA-BD86-45D2-811A-6DDB34646EE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78719FCA-BD86-45D2-811A-6DDB34646EE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78719FCA-BD86-45D2-811A-6DDB34646EE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F66CBD7-90F0-4875-90C2-4387E62B6C32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F66CBD7-90F0-4875-90C2-4387E62B6C32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F66CBD7-90F0-4875-90C2-4387E62B6C32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F66CBD7-90F0-4875-90C2-4387E62B6C32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6143F22C-3C60-4E0A-8DFF-4F69DD860F13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6143F22C-3C60-4E0A-8DFF-4F69DD860F13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6143F22C-3C60-4E0A-8DFF-4F69DD860F13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6143F22C-3C60-4E0A-8DFF-4F69DD860F13}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

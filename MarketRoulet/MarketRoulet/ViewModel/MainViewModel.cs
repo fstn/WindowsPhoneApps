@@ -37,33 +37,9 @@ namespace MarketRoulet.ViewModel
         }
         
         public MainViewModel()
-        {
-            
-            
-           /* LoadDefaultRandomApp();
-            LoadRandomApp();
-            LoadRandomGame();*/
-                    
+        {                    
         }
         /*
-        private void LoadRandomApp(object sender, DownloadStringCompletedEventArgs e)
-        {
-            String atom = "{http://www.w3.org/2005/Atom}";
-            String defaultXmlns = "{http://schemas.zune.net/catalog/apps/2008/02}";
-            XDocument doc = XDocument.Parse(e.Result);
-           RandomApp = LoadEntityFromXml(doc);
-           OnPropertyChanged("RandomApp");
-                          }
-
-        private void LoadRandomGame(object sender, DownloadStringCompletedEventArgs e)
-        {
-            String atom = "{http://www.w3.org/2005/Atom}";
-            String defaultXmlns = "{http://schemas.zune.net/catalog/apps/2008/02}";
-            XDocument doc = XDocument.Parse(e.Result);
-            RandomGame = LoadEntityFromXml(doc);
-            OnPropertyChanged("RandomGame");
-        }
-        */
         private void LoadDefaultRandomApp(object sender, DownloadStringCompletedEventArgs e)
         {
             String atom = "{http://www.w3.org/2005/Atom}";
@@ -90,29 +66,7 @@ namespace MarketRoulet.ViewModel
             retour.Image = URIModel.Instance.getImageUriString() + retour.Image;
             return retour;
         }
+        */
 
-
-
-/*
-        internal void LoadRandom()
-        {
-            WebClient client = new WebClient();
-            client.DownloadStringCompleted += LoadDefaultRandomApp;
-            client.DownloadStringAsync(URIModel.Instance.getRandomAllURI());        
-        }
-
-        internal void LoadRandomApp()
-        {
-            WebClient client = new WebClient();
-            client.DownloadStringCompleted += LoadRandomApp;
-            client.DownloadStringAsync(URIModel.Instance.getRandomAppURI());        
-        }
-
-        internal void LoadRandomGame()
-        {
-            WebClient client = new WebClient();
-            client.DownloadStringCompleted += LoadRandomGame;
-            client.DownloadStringAsync(URIModel.getInstance().getRandomGameURI());        
-        }*/
     }
 }

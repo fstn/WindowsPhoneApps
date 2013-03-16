@@ -9,6 +9,7 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
+using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using FstnCommon.Loader;
 using FstnCommon.Market.Category;
@@ -28,12 +29,14 @@ using Microsoft.Phone.Controls;
 using Microsoft.Phone.Scheduler;
 using Microsoft.Phone.Shell;
 using Microsoft.Phone.Tasks;
+using Microsoft.Xna.Framework.Media.PhoneExtensions;
 
 namespace MarketRoulet
 {
     public partial class MainPage : PhoneApplicationPage
     {
         private String theme;
+        private Queue<AppsPreview> appsPreviewToLoad;
         private Dictionary<int, AppsPreview> listOfPreviews;
         private Dictionary<int, MarketCat> listOfCats;
 
@@ -45,6 +48,10 @@ namespace MarketRoulet
             ContentLayout.ManipulationCompleted += ContentLayout_ManipulationCompleted;
 
             theme = ThemeManager.Instance.Theme;
+            if (theme == "light")
+                Background.Source = new BitmapImage(new Uri("Image/" + theme + "/Background.png", UriKind.Relative));
+            else
+                Background.Source = new BitmapImage(new Uri("Image/" + theme + "/Background.png", UriKind.Relative));
 
             //set place where message error will be print
             ErrorService.Instance.ErrorDisplayer = (IErrorDisplayer)ErrorDisplayer;
@@ -63,7 +70,7 @@ namespace MarketRoulet
             if (listOfPreviews[currentTab] != null)
             {
                 AppsPreview currentPreview = listOfPreviews[currentTab];
-                currentPreview.load();
+                //currentPreview.load();
             }
         }
 
@@ -71,6 +78,7 @@ namespace MarketRoulet
         {
             listOfCats = new Dictionary<int, MarketCat>();
             listOfPreviews = new Dictionary<int, AppsPreview>();
+            appsPreviewToLoad = new Queue<AppsPreview>();
             // listOfUri = new Dictionary<int, Uri>();
             int i = 0;
             foreach (MarketCat category in MarketCatGenerator.Instance.Categories)
@@ -81,7 +89,9 @@ namespace MarketRoulet
 
             for (i = 0; i < listOfCats.Count; i++)
             {
-                listOfPreviews.Add(i, CreateAppsPreview(listOfCats[i]));
+                AppsPreview appsP=CreateAppsPreview(listOfCats[i]);
+                listOfPreviews.Add(i, appsP);
+                appsPreviewToLoad.Enqueue(appsP);
                 PivotItem pItem = new PivotItem();
                 pItem.Margin = new Thickness(0);
                 pItem.Padding = new Thickness(0);
@@ -89,7 +99,8 @@ namespace MarketRoulet
                 pItem.Header = listOfCats[i].Title;
                 ContentLayout.Items.Add(pItem);
             }
-            listOfPreviews[0].load();
+            AppsPreview appP = appsPreviewToLoad.Dequeue();
+           appP.load();
         }
 
         private AppsPreview CreateAppsPreview(MarketCat Cat)
@@ -109,7 +120,17 @@ namespace MarketRoulet
             RandomAppsPreview.Parser = parser;
             RandomAppsPreview.UrlGetter = URIModel.Instance.getRandomWithCat;
             RandomAppsPreview.ErrorEvent += RandomAppsPreview_ErrorEvent;
+            RandomAppsPreview.CompletedEvent += RandomAppsPreview_Loaded;
             return RandomAppsPreview;
+        }
+
+        void RandomAppsPreview_Loaded(object sender, EventArgs e)
+        {
+            if(appsPreviewToLoad.Count>0)
+            {
+                AppsPreview appP = appsPreviewToLoad.Dequeue();
+                appP.load();
+            }
         }
         void RandomAppsPreview_ErrorEvent(object sender, object obj)
         {
@@ -117,50 +138,57 @@ namespace MarketRoulet
         }
         private void BuildApplicationBar()
         {
-
             ApplicationBar = new ApplicationBar();
             ApplicationBar.BackgroundColor = (Color)App.Current.Resources["PhoneAccentColor"];
             ApplicationBarGenerator.Instance.CreateDouble(ApplicationBar, "/image/" + theme + "/appbar.cards.heart.png", Msg.Rate, AskToRate);
-            ApplicationBarGenerator.Instance.CreateDouble(ApplicationBar, "/image/" + theme + "/appbar.pin.png", Msg.AddTile, AskToAddTile);
             ApplicationBarGenerator.Instance.CreateDouble(ApplicationBar, "/image/" + theme + "/appbar.settings.png", Msg.Settings, AskToSettings);
             ApplicationBarGenerator.Instance.CreateDouble(ApplicationBar, "/image/" + theme + "/appbar.shuffle.png", Msg.Reload, AskToReload);
+            ApplicationBarGenerator.Instance.CreateDouble(ApplicationBar, "/image/" + theme + "/appbar.share.png", Msg.Share, AskToShare);
+        }
+
+        private void AskToShare(object sender, EventArgs e)
+        {
+            int currentTab = ContentLayout.SelectedIndex;
+            if (listOfPreviews[currentTab] != null && listOfPreviews[currentTab].IsLoaded==true)
+            {
+                try
+                {
+                    ShareMediaTask task = new ShareMediaTask();
+                    task.FilePath = ScreenShot.Take(listOfPreviews[currentTab].DisplayPart).GetPath();
+                    task.Show();
+                }catch(Exception ex){
+                    Debugger.Log(0,"" ,ex.Message);
+                }
+
+            }
         }
 
         private void AskToSettings(object sender, EventArgs e)
         {
             NavigationService.Navigate(new Uri("/Settings.xaml", UriKind.Relative));
         }
-
-        private void AskToAddTile(object sender, EventArgs e)
+        private ShellTileData CreateCycleTileData()
         {
-            int currentTab = ContentLayout.SelectedIndex;
-            if (listOfPreviews[currentTab] != null)
+            var i = 0;
+            List<String> imageNames = new List<string>();
+            foreach (AppsPreview prev in listOfPreviews.Values)
             {
-                AppsPreview currentPreview = listOfPreviews[currentTab];
-                MarketApp currentApp = currentPreview.MarketApp;
-
-                StandardTileData data = new StandardTileData();
-                data.Title = Msg.Title;
-
-                if (currentApp != null)
+                if (prev.MarketApp != null)
                 {
-                    data.BackgroundImage = new Uri(currentApp.Image, UriKind.Absolute);
+                    var name=ScreenShot.TakeInIsolatedSotrage(prev.ImageDisplayPart,"image"+i+".jpg");
+                    imageNames.Add(name);
+                    i++;
                 }
-                data.BackTitle = Msg.Title;
-                data.BackBackgroundImage = new Uri(currentApp.Image, UriKind.Absolute);
-                data.BackContent = currentApp.Title;
-                List<ShellTile> TilesToFind = ShellTile.ActiveTiles.Where(x => x.NavigationUri.ToString().Contains("categorie=" + listOfCats[currentTab].Id)).ToList();
-                foreach (ShellTile tile in TilesToFind)
-                {
-                    tile.Delete();
-                }
-
-                ShellTile.Create(new Uri("/MainPage.xaml?MarketRouletTile=1&categorie=" + listOfCats[currentTab].Id + "&applicationId=" + currentApp.Id, UriKind.Relative), data);
-
-                SettingsService.Instance.Save(listOfCats[currentTab].Id, listOfPreviews[currentTab].MarketApp.Id);
             }
+
+            CycleTileData cycleTileData = new CycleTileData();
+            cycleTileData.Title = "";
+            cycleTileData.Count = i;
+            cycleTileData.SmallBackgroundImage = new Uri("/Image/App Roulette.png", UriKind.Relative);
+            cycleTileData.CycleImages = imageNames.Select(
+            imageName => new Uri(imageName, UriKind.Absolute));
+            return cycleTileData;
         }
-        
         private void AskToRate(object sender, EventArgs e)
         {
             MarketplaceReviewTask marketplaceReviewTask = new MarketplaceReviewTask();
@@ -197,17 +225,18 @@ namespace MarketRoulet
 
 
         private void RunPeriodicJob()
-        {  //start background agent 
-            PeriodicTask periodicTask = new PeriodicTask("PeriodicAgent");
-            periodicTask.Description = "My live tile periodic task";
-            // If the agent is already registered with the system,
-            if (ScheduledActionService.Find(periodicTask.Name) != null)
+        {
+            Uri tileUri = new Uri(string.Concat("/MainPage.xaml?", "tile=cycle"), UriKind.Relative);
+            ShellTileData tileData = this.CreateCycleTileData();
+            ShellTile tile = ShellTile.ActiveTiles.First();
+            if (tile.NavigationUri != null)
             {
-                ScheduledActionService.Remove("PeriodicAgent");
+                tile.Update(tileData);
             }
-            //only can be called when application is running in foreground
-            ScheduledActionService.Add(periodicTask);
-            // ScheduledActionService.LaunchForTest(periodicTask.Name, TimeSpan.FromSeconds(10));
+            else
+            {
+                ShellTile.Create(tileUri, tileData, true);
+            }
         }
 
     }

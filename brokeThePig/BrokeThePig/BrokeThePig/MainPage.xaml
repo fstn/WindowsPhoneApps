@@ -37,7 +37,7 @@
             <Border Background="Transparent">
                 <advertising:AdControl Name="AdControl" Height="80"  Width="480"  BorderThickness="0" 
                                        Background="Transparent"                                  
-                                       AdUnitId="117661" ApplicationId="02c2cb4f-982f-43cf-963b-777d1f7ceabf" />
+                                       AdUnitId="117661" ApplicationId="0a60be04-4a8d-424b-a202-c9aa2aa7d98e" />
             </Border>
         </StackPanel>
         <Canvas x:Name="ContentLayout"/>
@@ -97,42 +97,42 @@
                 <localUCWeapons:SimpleWeapon Width="128"  Height="158" 
                                              ShootSound="Sounds/electricShoot.wav"
                                              SelectionSound="Sounds/electricSelection.wav"
-                                             MoneyNeeded="10"
+                                             MoneyNeeded="100"
                                              Damage="5">
                     <Image Source="Images/Weapons/lightning.png"/>
                 </localUCWeapons:SimpleWeapon>
                 <localUCWeapons:SimpleWeapon Width="128"  Height="158" 
                                              ShootSound="Sounds/lightSaberShoot.wav"
                                              SelectionSound="Sounds/lightSaberSelection.wav"
-                                             MoneyNeeded="0"
+                                             MoneyNeeded="100"
                                              Damage="100">
                     <Image Source="Images/Weapons/lightSaber.png"/>
                 </localUCWeapons:SimpleWeapon>
                 <localUCWeapons:SimpleWeapon Width="128"  Height="158" 
                                              ShootSound="Sounds/ropeShoot.wav"
                                              SelectionSound="Sounds/ropeSelection.wav"
-                                             MoneyNeeded="10"
+                                             MoneyNeeded="100"
                                              Damage="100">
                     <Image Source="Images/Weapons/rope.png"/>
                 </localUCWeapons:SimpleWeapon>
                 <localUCWeapons:SimpleWeapon Width="128"  Height="158" 
                                              ShootSound="Sounds/scissorsShoot.wav"
                                              SelectionSound="Sounds/scissorsSelection.wav"
-                                             MoneyNeeded="100"
+                                             MoneyNeeded="1000"
                                              Damage="100">
                     <Image Source="Images/Weapons/scissors.png"/>
                 </localUCWeapons:SimpleWeapon>
                 <localUCWeapons:SimpleWeapon Width="128"  Height="158" 
                                              ShootSound="Sounds/laserGunShoot.wav"
                                              SelectionSound="Sounds/laserGunSelection.wav"
-                                             MoneyNeeded="1000"
+                                             MoneyNeeded="10000"
                                              Damage="40">
                     <Image Source="Images/Weapons/laserGun.png"/>
                 </localUCWeapons:SimpleWeapon>
                 <localUCWeapons:SimpleWeapon Width="128"  Height="158" 
                                              ShootSound="Sounds/bombShoot.wav"
                                              SelectionSound="Sounds/bombSelection.wav"
-                                             MoneyNeeded="10000"
+                                             MoneyNeeded="100000"
                                              Damage="100">
                     <Image Source="Images/Weapons/bomb.png"/>
                 </localUCWeapons:SimpleWeapon>

@@ -44,6 +44,9 @@
     <Reference Include="Microsoft.Phone" />
     <Reference Include="Microsoft.Phone.Controls, Version=7.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Phone.Controls.Maps, Version=7.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Phone.Controls.Toolkit">
+      <HintPath>..\Photo+You\packages\WPtoolkit.4.2012.10.30\lib\sl4-windowsphone71\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Xna.Framework" />
     <Reference Include="System.Windows" />
     <Reference Include="system" />
@@ -67,14 +70,26 @@
     <Compile Include="Parser\XMLParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Session.cs" />
+    <Compile Include="Util\ImageUtils.cs" />
     <Compile Include="Util\MathUtil.cs" />
     <Compile Include="Util\ScreenShot.cs" />
     <Compile Include="Util\Settings\CryptedSettingsService.cs" />
     <Compile Include="Util\Settings\SettingsKeys.cs" />
     <Compile Include="Util\Settings\SettingsService.cs" />
+    <Compile Include="Util\SoundController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Market\Application\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="README_FIRST.txt" />
+    <Content Include="Toolkit.Content\ApplicationBar.Cancel.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Check.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Delete.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />

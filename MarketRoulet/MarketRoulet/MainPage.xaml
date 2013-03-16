@@ -7,8 +7,8 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-   xmlns:fstn="clr-namespace:FstnUserControl;assembly=FstnUserControl"
-     xmlns:fstnError="clr-namespace:FstnUserControl.Error;assembly=FstnUserControl"
+    xmlns:fstn="clr-namespace:FstnUserControl;assembly=FstnUserControl"
+    xmlns:fstnError="clr-namespace:FstnUserControl.Error;assembly=FstnUserControl"
    
     xmlns:advertising ="clr-namespace:Microsoft.Advertising.Mobile.UI;assembly=Microsoft.Advertising.Mobile.UI"
     xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls" 
@@ -21,47 +21,40 @@
     <phone:PhoneApplicationPage.DataContext>
         <Binding Path="MainViewModel" Source="{StaticResource Locator}"/>
     </phone:PhoneApplicationPage.DataContext>
-
-    <Image Height="800" Width="480" Source="/Image/Background.png"/>
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Canvas>
-        
+
+        <Image x:Name="Background" Height="800" Width="480" Source="/Image/Background.png"/>
+
         <Image Height="800" Width="480" Source="/Image/Background.png"/>
-    <Grid x:Name="LayoutRoot" Background="Transparent" Width="480" Height="768">
-        <Grid.RowDefinitions>
-            <!--<RowDefinition Height="80"/>-->
-            <RowDefinition Height="80"/>
-            <RowDefinition Height="auto"/>
-        </Grid.RowDefinitions>
-        <StackPanel Grid.Row="0">
-            <Border Background="Transparent">
-            <advertising:AdControl Name="AdControl" Height="80"  Width="480"  BorderThickness="0" 
-                Background="Transparent"                                  
-        		AdUnitId="117661" ApplicationId="02c2cb4f-982f-43cf-963b-777d1f7ceabf" />
-            </Border>
-        </StackPanel>
-        <Canvas Grid.Row="2">
+        <Grid x:Name="LayoutRoot" Background="Transparent" Width="480" Height="768">
+            <Grid.RowDefinitions>
+                <!--<RowDefinition Height="80"/>-->
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0">
+                <Border Background="Transparent">
+                    <advertising:AdControl Name="AdControl" Height="80"  Width="480"  BorderThickness="0" 
+                                           Background="Transparent"                                  
+                                           AdUnitId="122715" ApplicationId="bb3a59c9-aa14-4357-9294-1587bf026451" />
+                </Border>
+            </StackPanel>
+            <Canvas Grid.Row="2">
                 <Rectangle Fill="{StaticResource PhoneAccentBrush}"  Width="480" Height="80"/>
-        <controls:Pivot Name="ContentLayout"                         
-                         Padding="0" 
-                        Canvas.Top="10"
-                        Width="480" Height="662">          
-            <controls:Pivot.HeaderTemplate>
-                <DataTemplate>
-                    <Grid MinWidth="300" Height="60" Margin="0">  
-                        <TextBlock Text="{Binding}" Margin="-20" FontSize="50" Style="{StaticResource PhoneTextTitle2Style}"></TextBlock>    
-                    </Grid>
-                </DataTemplate>
-            </controls:Pivot.HeaderTemplate>
-        </controls:Pivot>
-        </Canvas>
-        <!--TitlePanel contains the name of the application and page title-->
-        <!--<StackPanel x:Name="TitlePanel" Visibility="Collapsed" Grid.Row="1" Background="{StaticResource PhoneAccentBrush}" >
-            <TextBlock x:Name="MarketCatTitle" 
-                       
-                       Style="{StaticResource PhoneTextTitle2Style}" 
-                       Text="{Binding ResourceGetter.Title, Source={StaticResource LocalizedStrings}}" />
-        </StackPanel>-->
+                <controls:Pivot Name="ContentLayout"                         
+                                Padding="0" 
+                                Canvas.Top="10"
+                                Width="480" Height="662">
+                    <controls:Pivot.HeaderTemplate>
+                        <DataTemplate>
+                            <Grid MinWidth="300" Height="60" Margin="0">
+                                <TextBlock Text="{Binding}" Margin="-20" FontSize="50" Style="{StaticResource PhoneTextTitle2Style}"></TextBlock>
+                            </Grid>
+                        </DataTemplate>
+                    </controls:Pivot.HeaderTemplate>
+                </controls:Pivot>
+            </Canvas>
         </Grid>
         <fstnError:ErrorDisplayer Name="ErrorDisplayer" Visibility="Collapsed"/>
     </Canvas>

@@ -102,21 +102,21 @@ namespace FstnUserControl
             RootCanvas.Visibility = Visibility.Visible;
             int YIndice = (int)p.Y;
             int XIndice = (int)p.X;
-            double left= XIndice * (secretElementWidth);
-                double top= YIndice * (secretElementHeight);
-            Canvas.SetLeft(elt,left);
-            Canvas.SetTop(elt,top);
+            double left = XIndice * (secretElementWidth);
+            double top = YIndice * (secretElementHeight);
+            Canvas.SetLeft(elt, left);
+            Canvas.SetTop(elt, top);
 
             elt.ForegroundColor = ColorManager.Instance.RandomAccentBrush;
-           // OpacityEffect oe = new OpacityEffect(0, 1, 1, StartAnimationDuration, EasingMode.EaseIn, new CircleEase());
+            // OpacityEffect oe = new OpacityEffect(0, 1, 1, StartAnimationDuration, EasingMode.EaseIn, new CircleEase());
             MoveEffect me = new MoveEffect(new Point(0, -top), new Point(0, 0), 10, StartAnimationDuration, EasingMode.EaseIn, new CircleEase());
-            RotateEffect re = new RotateEffect(-90, 0, 1,StartAnimationDuration, EasingMode.EaseOut, new CircleEase());
+            RotateEffect re = new RotateEffect(-90, 0, 1, StartAnimationDuration, EasingMode.EaseOut, new CircleEase());
             re.RotationCenter = new Point(0, 0);
             elt.addStartEffect(me);
             elt.addStartEffect(re);
-           // elt.addStartEffect(oe);
-            MoveEffect meStop = new MoveEffect( new Point(0, 0),new Point(0, 1.1 * Height), 1, StopAnimationDuration, EasingMode.EaseIn, new CircleEase());
-            RotateEffect reStop = new RotateEffect(0, -90, 1,StopAnimationDuration, EasingMode.EaseOut, new CircleEase());
+            // elt.addStartEffect(oe);
+            MoveEffect meStop = new MoveEffect(new Point(0, 0), new Point(0, 1.1 * Height), 1, StopAnimationDuration, EasingMode.EaseIn, new CircleEase());
+            RotateEffect reStop = new RotateEffect(0, -90, 1, StopAnimationDuration, EasingMode.EaseOut, new CircleEase());
             reStop.RotationCenter = new Point(0, 0);
             elt.addStopEffect(meStop);
             elt.addStopEffect(reStop);
@@ -191,10 +191,11 @@ namespace FstnUserControl
 
         public void StartAnimation()
         {
-            try {
-                 animStartOfElements.Dequeue().start();
+            if (animStartOfElements.Count() > 0)
+            {
+                animStartOfElements.Dequeue().start();
             }
-            catch(InvalidOperationException e)
+            else
             {
                 if (MaskedEvent != null)
                 {
@@ -231,11 +232,13 @@ namespace FstnUserControl
 
         public void LaunchStopAnimation()
         {
+
             Masked = false;
             stopped = true;
             if (started == false)
             {
-                animTimer.Stop();
+                if (animTimer != null)
+                    animTimer.Stop();
                 animTimer = new DispatcherTimer();
                 animTimer.Interval = new TimeSpan(0, 0, 0, 0, StopAnimationTimer);
                 animTimer.Tick += stop_Tick;
@@ -246,7 +249,7 @@ namespace FstnUserControl
 
         public void StopAnimation()
         {
-            if (animStopOfElements.Count > 0)
+            if (animStopOfElements != null && animStopOfElements.Count > 0)
             {
                 SecreteAnimationControl elt = animStopOfElements.Dequeue();
                 lastEltToRemove = elt;
@@ -254,9 +257,10 @@ namespace FstnUserControl
             }
             else
             {
-
-                lastEltToRemove.Stopped += lastEltToRemove_Stopped;
-                animTimer.Stop();
+                if (lastEltToRemove != null)
+                    lastEltToRemove.Stopped += lastEltToRemove_Stopped;
+                if (animTimer != null)
+                    animTimer.Stop();
             }
         }
 
@@ -268,7 +272,10 @@ namespace FstnUserControl
 
         internal void Clean()
         {
-            animTimer.Stop();
+            if (animTimer != null)
+            {
+                animTimer.Stop();
+            }
             animTimer = null;
             listOfElements = null;
             animStartOfElements = null;

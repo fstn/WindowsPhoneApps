@@ -62,10 +62,10 @@ namespace BrokeThePig.Source.AI
             Weapons = new List<BrokeThePigWeapon>();
 
             Levels = new Dictionary<int, Level>();
-            Levels.Add(0, new Level(100, 100, "../Images/Gift/dollar.png"));
-            Levels.Add(1, new Level(1000, 1000, "../Images/Gift/euro.png"));
-            Levels.Add(2, new Level(10000, 1000, "../Images/Gift/pound.png"));
-            Levels.Add(3, new Level(100000, 1000, "../Images/Gift/gift.png"));
+            Levels.Add(0, new Level(1000, 10, "../Images/Gift/dollar.png"));
+            Levels.Add(1, new Level(10000, 100, "../Images/Gift/euro.png"));
+            Levels.Add(2, new Level(100000, 1000, "../Images/Gift/pound.png"));
+            Levels.Add(3, new Level(1000000, 10000, "../Images/Gift/gift.png"));
 
 
             CurrentNumber = new PointNumber(0);

@@ -65,7 +65,6 @@ C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Debug\GalaSoft.MvvmLight.Extras
 C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Debug\GalaSoft.MvvmLight.WP71.xml
 C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Debug\System.Windows.Interactivity.xml
 C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Debug\Microsoft.Practices.ServiceLocation.xml
-C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Debug\Microsoft.Phone.Controls.xml
 C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Debug\de\System.Windows.Interactivity.resources.dll
 C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Debug\en\System.Windows.Interactivity.resources.dll
 C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Debug\es\System.Windows.Interactivity.resources.dll

@@ -13,7 +13,6 @@ using Microsoft.Phone.Shell;
 
 namespace FstnUserControl
 {
-    public delegate void CompletedEventHandler(object sender, EventArgs e);
     public partial class CoinFlipCounter : UserControl
     {
         public event CompletedEventHandler Completed;

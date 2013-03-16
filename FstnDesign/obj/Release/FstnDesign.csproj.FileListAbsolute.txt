@@ -12,7 +12,6 @@ C:\DevTools\Git\windowsPhone\FstnDesign\Bin\Release\FstnDesign.dll
 C:\DevTools\Git\windowsPhone\FstnDesign\Bin\Release\FstnDesign.pdb
 C:\DevTools\Git\windowsPhone\FstnDesign\Bin\Release\Microsoft.Phone.Controls.dll
 C:\DevTools\Git\windowsPhone\FstnDesign\Bin\Release\Microsoft.Phone.Controls.xml
-C:\DevTools\Git\windowsPhone\FstnDesign\obj\Release\FstnDesign.csprojResolveAssemblyReference.cache
 C:\DevTools\Git\windowsPhone\FstnDesign\obj\Release\Error.g.cs
 C:\DevTools\Git\windowsPhone\FstnDesign\obj\Release\FstnDesign.g.resources
 C:\DevTools\Git\windowsPhone\FstnDesign\obj\Release\FstnDesign.dll

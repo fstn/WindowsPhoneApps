@@ -5,6 +5,7 @@ using System.IO.IsolatedStorage;
 using System.Linq;
 using System.Text;
 using FstnCommon.Market.Model;
+using FstnCommon.Util.Settings;
 
 namespace MarketRoulet.Util
 {
@@ -15,11 +16,11 @@ namespace MarketRoulet.Util
         private String fstnListOfCatsUri = "http://87.98.221.216:8080/AppsWS-web/rest/cats/";
         private String imageUri = "http://cdn.marketplaceimages.windowsphone.com/v3.2/en-US/image/";
         private String fstnRandomPartOfUriWithCat = "randomWithCat/";
-        private String fstnRandomPartOfUri= "random/";
+        private String fstnRandomPartOfUri = "random/";
         private String randomBestPartOfUri = "randomBest/";
         private String versionUri = "v3.2";
         private String apps = "apps/";
-      
+
         private URIModel()
         {
 
@@ -29,7 +30,8 @@ namespace MarketRoulet.Util
         {
             Instance = new URIModel();
         }
-        public String getFstnURL(){
+        public String getFstnURL()
+        {
             return fstnAppsUri;
         }
         public Uri getImageUri()
@@ -38,15 +40,15 @@ namespace MarketRoulet.Util
         }
         public String getImageUriString()
         {
-            return  imageUri;
+            return imageUri;
         }
         public Uri getRootUri()
         {
-            return new Uri(rootUri+"/");
+            return new Uri(rootUri + "/");
         }
         public Uri getBaseUri()
         {
-            return new Uri(getRootUri()+versionUri+"/"+LangUri+"/");
+            return new Uri(getRootUri() + versionUri + "/" + LangUri + "/");
         }
         public Uri getBaseAppsUri()
         {
@@ -54,7 +56,7 @@ namespace MarketRoulet.Util
         }
         public Uri getMarketCatsUri()
         {
-            return new Uri(getBaseUri()+"appCategories/");
+            return new Uri(getBaseUri() + "appCategories/");
         }
 
         internal Uri getRandomWithCat(MarketCat categorie)
@@ -64,27 +66,26 @@ namespace MarketRoulet.Util
 
         internal Uri getRandomWithCat(string categoryId)
         {
-            var settings = IsolatedStorageSettings.ApplicationSettings;
-            Double minRateValue = 0;
-            settings.TryGetValue<Double>("minRateValue", out minRateValue);
-
-            int count = 1000;
-            settings.TryGetValue<int>("minCounts", out count);
+            Double minRateValue = SettingsService.Instance.Value<Double>("minRateValue");
+            int count = SettingsService.Instance.Value<int>("minCount"); ;
             String rand = new Random().Next().ToString();
             return new Uri(fstnAppsUri + fstnRandomPartOfUriWithCat + categoryId + "/" + minRateValue + "/" + count + "/?" + rand);
         }
         public Uri getFstnListOfCatsUri()
         {
-            return new Uri(fstnListOfCatsUri );
+            return new Uri(fstnListOfCatsUri);
         }
         public Uri getFstnRandomBestApp()
         {
-            return new Uri(fstnAppsUri+randomBestPartOfUri+"?r="+DateTime.Now.ToString() );
+            return new Uri(fstnAppsUri + randomBestPartOfUri + "?r=" + DateTime.Now.ToString());
         }
 
-        public string LangUri {
-            get { return CultureInfo.CurrentCulture.Name;
-        } 
+        public string LangUri
+        {
+            get
+            {
+                return CultureInfo.CurrentCulture.Name;
+            }
         }
 
     }
