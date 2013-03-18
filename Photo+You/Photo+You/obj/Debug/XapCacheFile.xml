@@ -1,13 +1,22 @@
-﻿<xapCache source="C:\DevTools\Git\windowsPhone\Photo+You\Photo+You\Bin\Debug\Photo_You_Debug_AnyCPU.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="16/03/2013 23:02:01">
-  <file source="C:\DevTools\Git\windowsPhone\Photo+You\Photo+You\obj\Debug\Photo+You.dll" archivePath="Photo+You.dll" lastWriteTime="16/03/2013 23:02:01" />
+﻿<xapCache source="C:\DevTools\Git\windowsPhone\Photo+You\Photo+You\Bin\Debug\Photo_You_Debug_AnyCPU.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="18/03/2013 19:18:39">
+  <file source="C:\DevTools\Git\windowsPhone\Photo+You\Photo+You\obj\Debug\Photo+You.dll" archivePath="Photo+You.dll" lastWriteTime="18/03/2013 19:18:38" />
   <file source="C:\DevTools\Git\windowsPhone\Photo+You\Photo+You\Assets\AlignmentGrid.png" archivePath="Assets\AlignmentGrid.png" lastWriteTime="16/03/2013 17:46:48" />
   <file source="C:\DevTools\Git\windowsPhone\Photo+You\Photo+You\Assets\Audio\bip.wav" archivePath="Assets\Audio\bip.wav" lastWriteTime="16/03/2013 22:37:32" />
   <file source="C:\DevTools\Git\windowsPhone\Photo+You\Photo+You\Assets\Audio\focus.wav" archivePath="Assets\Audio\focus.wav" lastWriteTime="16/03/2013 22:58:50" />
   <file source="C:\DevTools\Git\windowsPhone\Photo+You\Photo+You\Assets\Audio\shoot.wav" archivePath="Assets\Audio\shoot.wav" lastWriteTime="16/03/2013 22:56:52" />
+  <file source="C:\DevTools\Git\windowsPhone\Photo+You\Photo+You\Assets\Images\back.png" archivePath="Assets\Images\back.png" lastWriteTime="17/03/2013 13:44:48" />
+  <file source="C:\DevTools\Git\windowsPhone\Photo+You\Photo+You\Assets\Images\dark\appbar.back.png" archivePath="Assets\Images\dark\appbar.back.png" lastWriteTime="17/03/2013 22:52:35" />
+  <file source="C:\DevTools\Git\windowsPhone\Photo+You\Photo+You\Assets\Images\dark\appbar.save.png" archivePath="Assets\Images\dark\appbar.save.png" lastWriteTime="17/03/2013 11:58:51" />
+  <file source="C:\DevTools\Git\windowsPhone\Photo+You\Photo+You\Assets\Images\dark\appbar.share.png" archivePath="Assets\Images\dark\appbar.share.png" lastWriteTime="17/03/2013 11:58:43" />
+  <file source="C:\DevTools\Git\windowsPhone\Photo+You\Photo+You\Assets\Images\front.png" archivePath="Assets\Images\front.png" lastWriteTime="17/03/2013 13:45:34" />
+  <file source="C:\DevTools\Git\windowsPhone\Photo+You\Photo+You\Assets\Images\light\appbar.back.png" archivePath="Assets\Images\light\appbar.back.png" lastWriteTime="17/03/2013 22:52:16" />
+  <file source="C:\DevTools\Git\windowsPhone\Photo+You\Photo+You\Assets\Images\light\appbar.save.png" archivePath="Assets\Images\light\appbar.save.png" lastWriteTime="17/03/2013 11:59:00" />
+  <file source="C:\DevTools\Git\windowsPhone\Photo+You\Photo+You\Assets\Images\light\appbar.share.png" archivePath="Assets\Images\light\appbar.share.png" lastWriteTime="17/03/2013 11:58:29" />
   <file source="C:\DevTools\Git\windowsPhone\Photo+You\Photo+You\Assets\Tiles\FlipCycleTileLarge.png" archivePath="Assets\Tiles\FlipCycleTileLarge.png" lastWriteTime="16/03/2013 17:46:48" />
   <file source="C:\DevTools\Git\windowsPhone\Photo+You\Photo+You\Assets\Tiles\FlipCycleTileSmall.png" archivePath="Assets\Tiles\FlipCycleTileSmall.png" lastWriteTime="16/03/2013 17:46:48" />
   <file source="C:\DevTools\Git\windowsPhone\Photo+You\Photo+You\Assets\Tiles\IconicTileMediumLarge.png" archivePath="Assets\Tiles\IconicTileMediumLarge.png" lastWriteTime="16/03/2013 17:46:48" />
   <file source="C:\DevTools\Git\windowsPhone\Photo+You\Photo+You\Assets\Tiles\IconicTileSmall.png" archivePath="Assets\Tiles\IconicTileSmall.png" lastWriteTime="16/03/2013 17:46:48" />
+  <file source="C:\DevTools\Git\windowsPhone\Photo+You\Photo+You\Image1.png" archivePath="Image1.png" lastWriteTime="17/03/2013 13:44:11" />
   <file source="C:\DevTools\Git\windowsPhone\Photo+You\Photo+You\Bin\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="16/03/2013 20:53:21" />
   <file source="C:\DevTools\Git\windowsPhone\Photo+You\Photo+You\Bin\Debug\Fonts\digital-7.ttf" archivePath="Fonts\digital-7.ttf" lastWriteTime="03/02/2013 18:41:39" />
   <file source="C:\DevTools\Git\windowsPhone\Photo+You\Photo+You\Bin\Debug\Error.png" archivePath="Error.png" lastWriteTime="24/02/2013 12:11:42" />
@@ -17,10 +26,10 @@
   <file source="C:\Program Files (x86)\Microsoft SDKs\Windows Phone\v8.0\ExtensionSDKs\MSAdvertising\6.1\References\CommonConfiguration\neutral\Microsoft.Advertising.Mobile.UI.dll" archivePath="Microsoft.Advertising.Mobile.UI.dll" lastWriteTime="10/09/2012 10:43:36" />
   <file source="C:\Program Files (x86)\Microsoft SDKs\Windows Phone\v8.0\ExtensionSDKs\MSAdvertising\6.1\References\CommonConfiguration\neutral\Microsoft.Advertising.Mobile.UI.xml" archivePath="Microsoft.Advertising.Mobile.UI.xml" lastWriteTime="20/07/2012 08:57:18" />
   <file source="C:\Program Files (x86)\Microsoft SDKs\Windows Phone\v8.0\ExtensionSDKs\MSAdvertising\6.1\References\CommonConfiguration\neutral\Microsoft.Advertising.Mobile.xml" archivePath="Microsoft.Advertising.Mobile.xml" lastWriteTime="20/07/2012 08:57:18" />
-  <file source="C:\DevTools\Git\windowsPhone\FstnAnimation\Bin\Debug\FstnAnimation.dll" archivePath="FstnAnimation.dll" lastWriteTime="16/03/2013 22:31:49" />
+  <file source="C:\DevTools\Git\windowsPhone\FstnAnimation\Bin\Debug\FstnAnimation.dll" archivePath="FstnAnimation.dll" lastWriteTime="17/03/2013 23:46:30" />
   <file source="C:\DevTools\Git\windowsPhone\FstnCommon\Bin\Debug\FstnCommon.dll" archivePath="FstnCommon.dll" lastWriteTime="16/03/2013 22:31:48" />
   <file source="C:\DevTools\Git\windowsPhone\FstnDesign\Bin\Debug\FstnDesign.dll" archivePath="FstnDesign.dll" lastWriteTime="16/03/2013 16:50:38" />
-  <file source="C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Debug\FstnUserControl.dll" archivePath="FstnUserControl.dll" lastWriteTime="16/03/2013 22:59:28" />
+  <file source="C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Debug\FstnUserControl.dll" archivePath="FstnUserControl.dll" lastWriteTime="18/03/2013 19:17:11" />
   <file source="C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Debug\Microsoft.Phone.Controls.Toolkit.dll" archivePath="Microsoft.Phone.Controls.Toolkit.dll" lastWriteTime="21/02/2013 10:42:29" />
   <file source="C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Debug\Microsoft.Phone.Controls.dll" archivePath="Microsoft.Phone.Controls.dll" lastWriteTime="26/09/2012 15:30:38" />
   <file source="E:\DevTools\C#\Mvvm Light Toolkit\Binaries\WP71\GalaSoft.MvvmLight.Extras.WP71.dll" archivePath="GalaSoft.MvvmLight.Extras.WP71.dll" lastWriteTime="28/10/2012 10:36:54" />

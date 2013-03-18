@@ -34,3 +34,4 @@ C:\DevTools\Git\windowsPhone\Photo+You\Photo+You\Bin\Debug\Microsoft.Advertising
 C:\DevTools\Git\windowsPhone\Photo+You\Photo+You\Bin\Debug\Microsoft.Advertising.Mobile.UI.dll
 C:\DevTools\Git\windowsPhone\Photo+You\Photo+You\Bin\Debug\Microsoft.Advertising.Mobile.UI.xml
 C:\DevTools\Git\windowsPhone\Photo+You\Photo+You\Bin\Debug\Microsoft.Advertising.Mobile.xml
+C:\DevTools\Git\windowsPhone\Photo+You\Photo+You\obj\Debug\Photo_You.Resources.Msg.resources

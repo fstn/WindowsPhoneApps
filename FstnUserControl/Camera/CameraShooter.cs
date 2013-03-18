@@ -12,6 +12,8 @@ using FstnCommon.Util;
 using Microsoft.Devices;
 using System.IO;
 using System.Windows.Threading;
+using Microsoft.Phone.Controls;
+using System.Windows.Data;
 
 
 
@@ -23,88 +25,149 @@ namespace FstnUserControl.Camera
         public event CaptureEventHandler Captured;
         public PhotoCamera Camera { get; set; }
         private VideoBrush brush;
+        private CompositeTransform videoBrushTransform { get; set; }
         private CameraType type;
         private DispatcherTimer dt;
         private TextBlock decountText;
         private int decountNumber = 3;
         private SoundController sc;
+        private Size resolution;
+        private bool busy = false;
+        private PageOrientation orientation;
+        private Binding HeightBinding;
+        private Binding WidthBinding;
+        private double initWidth;
+        public double InitWidth
+        {
+            get
+            {
+                return initWidth;
+            }
+            set
+            {
+                initWidth = value;
+                Width = value;
+            }
+        }
+
+        private double initHeight;
+        public double InitHeight
+        {
+            get
+            {
+                return initHeight;
+            }
+            set
+            {
+                initHeight = value;
+                Height = value;
+            }
+        }
+        public PageOrientation Orientation
+        {
+            set
+            {
+                orientation = value;
+                UpdateOrientation();
+            }
+        }
         public CameraShooter(CameraType type)
         {
             if (PhotoCamera.IsCameraTypeSupported(type) == true)
             {
                 this.type = type;
-                this.Width = 480;
-                this.Height = 240;
-                dt = new DispatcherTimer();
-                dt.Interval = TimeSpan.FromSeconds(1);
-                dt.Tick += dt_Tick;
+                InitDT();
                 decountText = new TextBlock();
-                decountText.FontSize = 100;
+                decountText.Text = "";
+                decountText.FontSize = 300;
                 decountText.TextAlignment = TextAlignment.Center;
                 decountText.VerticalAlignment = VerticalAlignment.Center;
                 this.Children.Add(decountText);
                 sc = new SoundController();
+
+                brush = new VideoBrush();
+                videoBrushTransform = new CompositeTransform();
+                videoBrushTransform.CenterX = .5;
+                videoBrushTransform.CenterY = .5;
+
+                brush.RelativeTransform = videoBrushTransform;
+
+                HeightBinding = new Binding();
+                HeightBinding.Source = this;
+                HeightBinding.Path = new PropertyPath("Height");
+
+                WidthBinding = new Binding();
+                WidthBinding.Source = this;
+                WidthBinding.Path = new PropertyPath("Width");
+
+                this.Background = brush;
             }
         }
+
+        private void InitDT()
+        {
+            dt = new DispatcherTimer();
+            dt.Interval = TimeSpan.FromSeconds(0.8);
+            dt.Tick += (s, e) =>
+            {
+                sc.PlaySound("Assets/Audio/bip.wav");
+                if (decountNumber > 0)
+                {
+                    if (decountNumber > 2)
+                        decountText.Foreground = new SolidColorBrush(Colors.Green);
+                    else if (decountNumber > 1)
+                        decountText.Foreground = new SolidColorBrush(Colors.Orange);
+                    else
+                        decountText.Foreground = new SolidColorBrush(Colors.Red);
+
+                    decountText.Text = decountNumber.ToString();
+                }
+                else
+                {
+                    //Camera.Initialized += ShootAfterInit;
+                    Focus();
+                    dt.Stop();
+                    decountText.Text = "";
+                    decountNumber = 3;
+                }
+                decountNumber--;
+            };
+        }
+
         public void StartAndShoot()
         {
-            decountText.Height = Height;
+            decountText.SetBinding(TextBlock.HeightProperty, HeightBinding);
+            decountText.SetBinding(TextBlock.WidthProperty, WidthBinding);
             decountText.Width = Width;
             decountText.Text = decountNumber.ToString();
             dt.Start();
             Start();
         }
 
-
-        void dt_Tick(object sender, EventArgs e)
-        {
-
-            sc.PlaySound("Assets/Audio/bip.wav");
-            if (decountNumber > 0)
-            {
-                if (decountNumber > 2)
-                    decountText.Foreground = new SolidColorBrush(Colors.Green);
-                else if (decountNumber > 1)
-                    decountText.Foreground = new SolidColorBrush(Colors.Orange);
-                else
-                    decountText.Foreground = new SolidColorBrush(Colors.Red);
-
-                decountText.Text = decountNumber.ToString();
-            }
-            else
-            {
-            //Camera.Initialized += ShootAfterInit;
-                Capture();
-                dt.Stop();
-                decountText.Text = "";
-                decountNumber = 3;
-            }
-            decountNumber--;
-        }
-        public async void Start()
+        public void Start()
         {
             Camera = new PhotoCamera(type);
             Camera.Initialized += cam_Initialized;
             Camera.AutoFocusCompleted += AutoFocusCompleted;
             Camera.CaptureCompleted += CaptureCompleted;
-            Camera.CaptureImageAvailable +=
-                new EventHandler<Microsoft.Devices.ContentReadyEventArgs>
-                    (CaptureImageAvailable);
-            brush = new VideoBrush();
-            this.Background = brush;
+            Camera.CaptureImageAvailable += CaptureImageAvailable;
             brush.SetSource(Camera);
         }
+
         public void Stop()
         {
-            Camera.Initialized -= cam_Initialized;
-            Camera.AutoFocusCompleted -= AutoFocusCompleted;
-            Camera.CaptureCompleted -= CaptureCompleted;
-            Camera.Dispose();
-            Camera = null;
-            brush.SetSource((MediaElement)null);
-            brush = null;
+            if (dt != null)
+                dt.Stop();
+            if (Camera != null)
+            {
+                Camera.Initialized -= cam_Initialized;
+                Camera.AutoFocusCompleted -= AutoFocusCompleted;
+                Camera.CaptureCompleted -= CaptureCompleted;
+                Camera.CaptureImageAvailable -= CaptureImageAvailable;
+                Camera.Dispose();
+                Camera = null;
+            }
         }
-
 
         public void ListenTap()
         {
@@ -113,6 +176,8 @@ namespace FstnUserControl.Camera
 
         private void cam_Initialized(object sender, CameraOperationCompletedEventArgs e)
         {
+            resolution = Camera.AvailableResolutions.Last();
+            Camera.Resolution = resolution;
             if (Initialized != null)
             {
                 Initialized(this, null);
@@ -121,21 +186,54 @@ namespace FstnUserControl.Camera
 
         public void Capture()
         {
-            sc.PlaySound("Assets/Audio/shoot.wav");
-            Camera.CaptureImage();
+            try
+            {
+                Camera.CaptureImage();
+                sc.PlaySound("Assets/Audio/shoot.wav");
+            }
+            catch (InvalidOperationException ioe)
+            {
+                Camera.Initialized += (s, e) =>
+                {
+                    Capture();
+                };
+                Capture();
+            }
         }
+
         public void Focus()
         {
-            Camera.Focus();
+            if (!busy)
+            {
+                busy = true;
+                if (Camera.IsFocusSupported)
+                    Camera.Focus();
+                else
+                    AutoFocusCompleted(null, null);
+            }
         }
         private void Focus(object sender, System.Windows.Input.GestureEventArgs e)
         {
-            sc.PlaySound("Assets/Audio/focus.wav");
-            Point pt = e.GetPosition((UIElement)sender);
-            float X = MathUtil.Norm((float)pt.X, (float)0, (float)this.Width);
-            float Y = MathUtil.Norm((float)pt.Y, (float)0, (float)this.Height);
-            Debugger.Log(0, "", X + " " + Y);
-            Camera.FocusAtPoint(X, Y);
+            if (Camera.IsFocusAtPointSupported)
+            {
+                try
+                {
+                    sc.PlaySound("Assets/Audio/focus.wav");
+                    Point pt = e.GetPosition((UIElement)sender);
+                    float X = MathUtil.Norm((float)pt.X, (float)0, (float)this.Width);
+                    float Y = MathUtil.Norm((float)pt.Y, (float)0, (float)this.Height);
+                    Debugger.Log(0, "", X + " " + Y);
+                    Camera.FocusAtPoint(X, Y);
+                }
+                catch (ArgumentException ae)
+                {
+                    Focus();
+                }
+            }
+            else
+            {
+                Focus();
+            }
         }
         private void CaptureImageAvailable(object sender, ContentReadyEventArgs e)
         {
@@ -144,6 +242,7 @@ namespace FstnUserControl.Camera
 
         void ThreadSafeImageCapture(ContentReadyEventArgs e)
         {
+            busy = false;
             BitmapImage image = new BitmapImage();
             image.SetSource(e.ImageStream);
             ImageBrush still = new ImageBrush();
@@ -163,5 +262,59 @@ namespace FstnUserControl.Camera
             Capture();
         }
 
+        public void UpdateOrientation()
+        {
+            switch (orientation)
+            {
+                case PageOrientation.Landscape:
+                case PageOrientation.LandscapeLeft:
+                    videoBrushTransform.Rotation = 0;
+                    WidthToLandscape();
+                    break;
+                case PageOrientation.LandscapeRight:
+                    videoBrushTransform.Rotation = 180;
+                    WidthToLandscape();
+                    break;
+                case PageOrientation.Portrait:
+                case PageOrientation.PortraitUp:
+                    if (type == CameraType.FrontFacing)
+                    {
+                        videoBrushTransform.Rotation = -90;
+                        WidthToPortrait();
+                    }
+                    else
+                    {
+                        videoBrushTransform.Rotation = 90;
+                        WidthToPortrait();
+                    }
+                    break;
+                case PageOrientation.PortraitDown:
+                    videoBrushTransform.Rotation = 270;
+                    WidthToPortrait();
+                    break;
+            }
+        }
+
+        private void WidthToLandscape()
+        {
+            //Debugger.Log(0, "", "actual to " + ActualWidth + "x" + ActualHeight);
+            Width = InitWidth;
+            Height = 0.75 * Width;
+            //Debugger.Log(0, "", "resize to " + Width + "x" + Height+"\n");
+        }
+
+        private void WidthToPortrait()
+        {
+            // Debugger.Log(0, "", "init to " + InitWidth + "x" + InitHeight);
+            //Debugger.Log(0, "", "actual to " + ActualWidth + "x" + ActualHeight);
+            Height = InitWidth;
+            Width = 0.75 * Height;
+            // Debugger.Log(0, "", "resize to " + Width + "x" + Height + "\n");
+        }
+
+        public void StopListenTap()
+        {
+            this.Tap -= Focus;
+        }
     }
 }

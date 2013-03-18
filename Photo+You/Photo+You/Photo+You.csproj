@@ -103,6 +103,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AppResources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Resources\Msg.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Msg.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -128,6 +133,14 @@
     <Content Include="Assets\Audio\bip.wav" />
     <Content Include="Assets\Audio\focus.wav" />
     <Content Include="Assets\Audio\shoot.wav" />
+    <Content Include="Assets\Images\back.png" />
+    <Content Include="Assets\Images\dark\appbar.back.png" />
+    <Content Include="Assets\Images\dark\appbar.save.png" />
+    <Content Include="Assets\Images\dark\appbar.share.png" />
+    <Content Include="Assets\Images\front.png" />
+    <Content Include="Assets\Images\light\appbar.back.png" />
+    <Content Include="Assets\Images\light\appbar.save.png" />
+    <Content Include="Assets\Images\light\appbar.share.png" />
     <Content Include="Assets\Tiles\FlipCycleTileLarge.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -143,11 +156,16 @@
     <Content Include="Assets\Tiles\IconicTileSmall.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Image1.png" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\AppResources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Msg.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Msg.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

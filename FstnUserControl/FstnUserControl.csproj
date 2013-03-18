@@ -103,6 +103,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationBar\ApplicationBarGenerator.cs" />
+    <Compile Include="Camera\CameraImageDisplayer.cs" />
     <Compile Include="Camera\CameraShooter.cs" />
     <Compile Include="ImageSprite\StaticSprite.cs" />
     <Compile Include="Market\Application\AppsPreview.xaml.cs">

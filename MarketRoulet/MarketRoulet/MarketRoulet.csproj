@@ -16,6 +16,9 @@
     </SilverlightVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
+
+
+
     <TargetFrameworkIdentifier>WindowsPhone</TargetFrameworkIdentifier>
     <SilverlightApplication>true</SilverlightApplication>
     <SupportedCultures>fr</SupportedCultures>

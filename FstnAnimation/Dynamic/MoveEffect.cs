@@ -45,8 +45,19 @@ namespace FstnAnimation.Dynamic
             animationX.From=From.X;
             animationX.To = To.X;
             animationX.EasingFunction = EasingFunction;
-            TranslateTransform transform=new TranslateTransform();
-            target.RenderTransform = transform;
+            Transform transform = new TranslateTransform();
+            if (target.RenderTransform == null)
+            {
+                target.RenderTransform = transform;
+            }
+            else
+            {
+                TransformGroup tg = new TransformGroup();
+                tg.Children.Add(target.RenderTransform);
+                tg.Children.Add(transform);
+                target.RenderTransform = tg;
+            }
+
             Storyboard.SetTarget(animationX, transform);
             Storyboard.SetTarget(animationY, transform);
             target.CacheMode = new BitmapCache();
