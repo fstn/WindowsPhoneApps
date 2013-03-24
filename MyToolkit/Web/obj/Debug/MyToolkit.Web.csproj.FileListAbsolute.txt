@@ -1,0 +1,5 @@
+C:\DevTools\Git\windowsPhone\MyToolkit\Web\Bin\Debug\Web\MyToolkit.dll
+C:\DevTools\Git\windowsPhone\MyToolkit\Web\Bin\Debug\Web\MyToolkit.pdb
+C:\DevTools\Git\windowsPhone\MyToolkit\Web\obj\Debug\MyToolkit.Web.csprojResolveAssemblyReference.cache
+C:\DevTools\Git\windowsPhone\MyToolkit\Web\obj\Debug\MyToolkit.dll
+C:\DevTools\Git\windowsPhone\MyToolkit\Web\obj\Debug\MyToolkit.pdb

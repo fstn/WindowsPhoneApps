@@ -54,7 +54,10 @@ C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Debug\FstnCommon.dll
 C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Debug\FstnDesign.dll
 C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Debug\GalaSoft.MvvmLight.Extras.WP71.dll
 C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Debug\GalaSoft.MvvmLight.WP71.dll
+C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Debug\Microsoft.Expression.Drawing.dll
 C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Debug\Microsoft.Phone.Controls.Toolkit.dll
+C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Debug\MyToolkit.dll
+C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Debug\MyToolkit.Extended.dll
 C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Debug\System.Windows.Interactivity.dll
 C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Debug\Microsoft.Practices.ServiceLocation.dll
 C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Debug\Microsoft.Phone.Controls.dll
@@ -63,8 +66,14 @@ C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Debug\FstnCommon.pdb
 C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Debug\FstnDesign.pdb
 C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Debug\GalaSoft.MvvmLight.Extras.WP71.xml
 C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Debug\GalaSoft.MvvmLight.WP71.xml
+C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Debug\MyToolkit.pdb
+C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Debug\MyToolkit.Extended.pdb
 C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Debug\System.Windows.Interactivity.xml
 C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Debug\de\MyToolkit.resources.dll
+C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Debug\fr\MyToolkit.resources.dll
+C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Debug\de\MyToolkit.Extended.resources.dll
+C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Debug\fr\MyToolkit.Extended.resources.dll
 C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Debug\de\System.Windows.Interactivity.resources.dll
 C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Debug\en\System.Windows.Interactivity.resources.dll
 C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Debug\es\System.Windows.Interactivity.resources.dll
@@ -83,6 +92,7 @@ C:\DevTools\Git\windowsPhone\FstnUserControl\obj\Debug\Form\FormMultiVoidElement
 C:\DevTools\Git\windowsPhone\FstnUserControl\obj\Debug\Tile\TileMultiVoidElement.g.cs
 C:\DevTools\Git\windowsPhone\FstnUserControl\obj\Debug\Tile\TileSimpleVoidElement.g.cs
 C:\DevTools\Git\windowsPhone\FstnUserControl\obj\Debug\Time\TimeCounter.g.cs
+C:\DevTools\Git\windowsPhone\FstnUserControl\obj\Debug\Video\YoutubeVideo.g.cs
 C:\DevTools\Git\windowsPhone\FstnUserControl\obj\Debug\Waiting\ExplodeEffect.g.cs
 C:\DevTools\Git\windowsPhone\FstnUserControl\obj\Debug\Waiting\ImageWaiting.g.cs
 C:\DevTools\Git\windowsPhone\FstnUserControl\obj\Debug\FstnUserControl.g.resources

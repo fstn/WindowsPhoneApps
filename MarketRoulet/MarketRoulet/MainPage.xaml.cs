@@ -60,7 +60,6 @@ namespace MarketRoulet
         {
             BuildApplicationBar();
             LoadXML();
-            RunPeriodicJob();
         }
 
         //load pivot content when it is enable
@@ -89,7 +88,7 @@ namespace MarketRoulet
 
             for (i = 0; i < listOfCats.Count; i++)
             {
-                AppsPreview appsP=CreateAppsPreview(listOfCats[i]);
+                AppsPreview appsP = CreateAppsPreview(listOfCats[i]);
                 listOfPreviews.Add(i, appsP);
                 appsPreviewToLoad.Enqueue(appsP);
                 PivotItem pItem = new PivotItem();
@@ -100,7 +99,7 @@ namespace MarketRoulet
                 ContentLayout.Items.Add(pItem);
             }
             AppsPreview appP = appsPreviewToLoad.Dequeue();
-           appP.load();
+            appP.load();
         }
 
         private AppsPreview CreateAppsPreview(MarketCat Cat)
@@ -126,10 +125,15 @@ namespace MarketRoulet
 
         void RandomAppsPreview_Loaded(object sender, EventArgs e)
         {
-            if(appsPreviewToLoad.Count>0)
+            if (appsPreviewToLoad.Count > 0)
             {
                 AppsPreview appP = appsPreviewToLoad.Dequeue();
                 appP.load();
+                RunPeriodicJob();
+            }
+            else
+            {
+                RunPeriodicJob();
             }
         }
         void RandomAppsPreview_ErrorEvent(object sender, object obj)
@@ -149,15 +153,17 @@ namespace MarketRoulet
         private void AskToShare(object sender, EventArgs e)
         {
             int currentTab = ContentLayout.SelectedIndex;
-            if (listOfPreviews[currentTab] != null && listOfPreviews[currentTab].IsLoaded==true)
+            if (listOfPreviews[currentTab] != null && listOfPreviews[currentTab].IsLoaded == true)
             {
                 try
                 {
                     ShareMediaTask task = new ShareMediaTask();
                     task.FilePath = ScreenShot.Take(listOfPreviews[currentTab].DisplayPart).GetPath();
                     task.Show();
-                }catch(Exception ex){
-                    Debugger.Log(0,"" ,ex.Message);
+                }
+                catch (Exception ex)
+                {
+                    Debugger.Log(0, "", ex.Message);
                 }
 
             }
@@ -167,28 +173,7 @@ namespace MarketRoulet
         {
             NavigationService.Navigate(new Uri("/Settings.xaml", UriKind.Relative));
         }
-        private ShellTileData CreateCycleTileData()
-        {
-            var i = 0;
-            List<String> imageNames = new List<string>();
-            foreach (AppsPreview prev in listOfPreviews.Values)
-            {
-                if (prev.MarketApp != null)
-                {
-                    var name=ScreenShot.TakeInIsolatedSotrage(prev.ImageDisplayPart,"image"+i+".jpg");
-                    imageNames.Add(name);
-                    i++;
-                }
-            }
 
-            CycleTileData cycleTileData = new CycleTileData();
-            cycleTileData.Title = "";
-            cycleTileData.Count = i;
-            cycleTileData.SmallBackgroundImage = new Uri("/Image/App Roulette.png", UriKind.Relative);
-            cycleTileData.CycleImages = imageNames.Select(
-            imageName => new Uri(imageName, UriKind.Absolute));
-            return cycleTileData;
-        }
         private void AskToRate(object sender, EventArgs e)
         {
             MarketplaceReviewTask marketplaceReviewTask = new MarketplaceReviewTask();
@@ -227,17 +212,33 @@ namespace MarketRoulet
         private void RunPeriodicJob()
         {
             Uri tileUri = new Uri(string.Concat("/MainPage.xaml?", "tile=cycle"), UriKind.Relative);
-            ShellTileData tileData = this.CreateCycleTileData();
-            ShellTile tile = ShellTile.ActiveTiles.First();
-            if (tile.NavigationUri != null)
+            var i = 0;
+            List<String> imageNames = new List<string>();
+            foreach (AppsPreview prev in listOfPreviews.Values)
             {
-                tile.Update(tileData);
+                if (prev.MarketApp != null)
+                {
+                    var name = ScreenShot.TakeInIsolatedSotrage(prev.ImageDisplayPart, "image" + i + ".jpg");
+                    if (name != null)
+                    {
+                        imageNames.Add(name);
+                        i++;
+                    }
+                }
             }
-            else
-            {
-                ShellTile.Create(tileUri, tileData, true);
-            }
-        }
 
+            CycleTileData cycleTileData = new CycleTileData();
+            cycleTileData.Title = "";
+            cycleTileData.Count = i;
+            cycleTileData.SmallBackgroundImage = new Uri("/Image/App Roulette.png", UriKind.Relative);
+            
+            cycleTileData.CycleImages = imageNames.Select(
+            imageName => new Uri(imageName, UriKind.Absolute));
+            ShellTile tile = ShellTile.ActiveTiles.First();
+             if (tile!= null)
+             {
+                 tile.Update(cycleTileData);
+             }
+        }
     }
 }

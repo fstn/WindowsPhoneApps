@@ -46,7 +46,10 @@ C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Release\FstnCommon.dll
 C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Release\FstnDesign.dll
 C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Release\GalaSoft.MvvmLight.Extras.WP71.dll
 C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Release\GalaSoft.MvvmLight.WP71.dll
+C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Release\Microsoft.Expression.Drawing.dll
 C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Release\Microsoft.Phone.Controls.Toolkit.dll
+C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Release\MyToolkit.dll
+C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Release\MyToolkit.Extended.dll
 C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Release\System.Windows.Interactivity.dll
 C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Release\Microsoft.Practices.ServiceLocation.dll
 C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Release\Microsoft.Phone.Controls.dll
@@ -55,9 +58,14 @@ C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Release\FstnCommon.pdb
 C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Release\FstnDesign.pdb
 C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Release\GalaSoft.MvvmLight.Extras.WP71.xml
 C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Release\GalaSoft.MvvmLight.WP71.xml
+C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Release\MyToolkit.pdb
+C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Release\MyToolkit.Extended.pdb
 C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Release\System.Windows.Interactivity.xml
 C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Release\Microsoft.Practices.ServiceLocation.xml
-C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Release\Microsoft.Phone.Controls.xml
+C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Release\de\MyToolkit.resources.dll
+C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Release\fr\MyToolkit.resources.dll
+C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Release\de\MyToolkit.Extended.resources.dll
+C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Release\fr\MyToolkit.Extended.resources.dll
 C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Release\de\System.Windows.Interactivity.resources.dll
 C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Release\en\System.Windows.Interactivity.resources.dll
 C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Release\es\System.Windows.Interactivity.resources.dll
@@ -76,6 +84,7 @@ C:\DevTools\Git\windowsPhone\FstnUserControl\obj\Release\Form\FormMultiVoidEleme
 C:\DevTools\Git\windowsPhone\FstnUserControl\obj\Release\Tile\TileMultiVoidElement.g.cs
 C:\DevTools\Git\windowsPhone\FstnUserControl\obj\Release\Tile\TileSimpleVoidElement.g.cs
 C:\DevTools\Git\windowsPhone\FstnUserControl\obj\Release\Time\TimeCounter.g.cs
+C:\DevTools\Git\windowsPhone\FstnUserControl\obj\Release\Video\YoutubeVideo.g.cs
 C:\DevTools\Git\windowsPhone\FstnUserControl\obj\Release\Waiting\ExplodeEffect.g.cs
 C:\DevTools\Git\windowsPhone\FstnUserControl\obj\Release\Waiting\ImageWaiting.g.cs
 C:\DevTools\Git\windowsPhone\FstnUserControl\obj\Release\FstnUserControl.g.resources

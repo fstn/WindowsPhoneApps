@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="FstnUserControl.Error.ErrorDisplayer"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    d:DesignHeight="480" d:DesignWidth="480">
+    <Canvas>
+        <Rectangle  Width="480" Height="768" 
+                    Fill="{StaticResource PhoneAccentBrush}"
+                    Opacity="0.5"
+                    ></Rectangle>
+        <TextBlock Name="ErrorText" Width="470" Height="443" 
+                   TextAlignment="Center"
+                   Style="{StaticResource PhoneTextTitle1Style}"
+                   TextWrapping="Wrap"
+                   HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Text="Error" Canvas.Top="239" Margin="0"/>
+    </Canvas>
+</UserControl>

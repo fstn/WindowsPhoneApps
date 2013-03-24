@@ -1,0 +1,14 @@
+C:\DevTools\Git\windowsPhone\MyToolkit\WinRT\bin\Debug\WinRT.MachineLearning\MyToolkit.MachineLearning.WinRT.dll
+C:\DevTools\Git\windowsPhone\MyToolkit\WinRT\bin\Debug\WinRT.MachineLearning\MyToolkit.MachineLearning.WinRT.pdb
+C:\DevTools\Git\windowsPhone\MyToolkit\WinRT\bin\Debug\WinRT.MachineLearning\MyToolkit.MachineLearning.WinRT.pri
+C:\DevTools\Git\windowsPhone\MyToolkit\WinRT\bin\Debug\WinRT.MachineLearning\MyToolkit.dll
+C:\DevTools\Git\windowsPhone\MyToolkit\WinRT\bin\Debug\WinRT.MachineLearning\MyToolkit.pdb
+C:\DevTools\Git\windowsPhone\MyToolkit\WinRT\bin\Debug\WinRT.MachineLearning\MyToolkit.pri
+C:\DevTools\Git\windowsPhone\MyToolkit\WinRT\obj\Debug\MyToolkit.MachineLearning.WinRT.csprojResolveAssemblyReference.cache
+C:\DevTools\Git\windowsPhone\MyToolkit\WinRT\obj\Debug\MyToolkit.MachineLearning.WinRT.dll
+C:\DevTools\Git\windowsPhone\MyToolkit\WinRT\obj\Debug\MyToolkit.MachineLearning.WinRT.pdb
+C:\DevTools\Git\windowsPhone\MyToolkit\WinRT\obj\Debug\priconfig.xml
+C:\DevTools\Git\windowsPhone\MyToolkit\WinRT\obj\Debug\layout.resfiles
+C:\DevTools\Git\windowsPhone\MyToolkit\WinRT\obj\Debug\resources.resfiles
+C:\DevTools\Git\windowsPhone\MyToolkit\WinRT\obj\Debug\pri.resfiles
+C:\DevTools\Git\windowsPhone\MyToolkit\WinRT\obj\Debug\LanguageQualifiers.txt

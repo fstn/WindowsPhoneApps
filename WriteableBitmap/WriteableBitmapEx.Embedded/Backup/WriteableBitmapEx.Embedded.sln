@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WriteableBitmapEx.Embedded", "WriteableBitmapEx.Embedded\WriteableBitmapEx.Embedded.csproj", "{6412F83A-F5F3-4ECA-AF38-4BDF0C4AEE8E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WriteableBitmapEx.Embedded.PerformanceSample", "WriteableBitmapExCompactPerformanceSample\WriteableBitmapEx.Embedded.PerformanceSample.csproj", "{8C21CC18-E7CD-47EB-894C-3B14ED369948}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{30AA4912-0916-40D4-AB45-790A98E8C1A1}"
+	ProjectSection(SolutionItems) = preProject
+		License.txt = License.txt
+		Readme.txt = Readme.txt
+		wbx_logo.png = wbx_logo.png
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/TFS03
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = WriteableBitmapEx.Embedded\\WriteableBitmapEx.Embedded.csproj
+		SccProjectName1 = WriteableBitmapEx.Embedded
+		SccLocalPath1 = WriteableBitmapEx.Embedded
+		SccProjectUniqueName2 = WriteableBitmapExCompactPerformanceSample\\WriteableBitmapEx.Embedded.PerformanceSample.csproj
+		SccProjectName2 = WriteableBitmapExCompactPerformanceSample
+		SccLocalPath2 = WriteableBitmapExCompactPerformanceSample
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6412F83A-F5F3-4ECA-AF38-4BDF0C4AEE8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6412F83A-F5F3-4ECA-AF38-4BDF0C4AEE8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6412F83A-F5F3-4ECA-AF38-4BDF0C4AEE8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6412F83A-F5F3-4ECA-AF38-4BDF0C4AEE8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C21CC18-E7CD-47EB-894C-3B14ED369948}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C21CC18-E7CD-47EB-894C-3B14ED369948}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C21CC18-E7CD-47EB-894C-3B14ED369948}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{8C21CC18-E7CD-47EB-894C-3B14ED369948}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C21CC18-E7CD-47EB-894C-3B14ED369948}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C21CC18-E7CD-47EB-894C-3B14ED369948}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

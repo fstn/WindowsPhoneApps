@@ -95,9 +95,16 @@
   <ItemGroup>
     <Reference Include="GalaSoft.MvvmLight.Extras.WP71, Version=4.1.24.17306, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="GalaSoft.MvvmLight.WP71, Version=4.1.24.17306, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Expression.Drawing" />
     <Reference Include="Microsoft.Phone.Controls.Toolkit, Version=7.0.0.0, Culture=neutral, PublicKeyToken=b772ad94eb9ca604, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\MarketRoulet\packages\WPtoolkit.4.2012.10.30\lib\sl4-windowsphone71\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="MyToolkit">
+      <HintPath>..\MyToolkit\Phone\Bin\Debug\WP7.Extended\MyToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="MyToolkit.Extended">
+      <HintPath>..\MyToolkit\Phone\Bin\Debug\WP7.Extended\MyToolkit.Extended.dll</HintPath>
     </Reference>
     <Reference Include="System.Windows.Interactivity, Version=3.8.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
   </ItemGroup>
@@ -105,6 +112,7 @@
     <Compile Include="ApplicationBar\ApplicationBarGenerator.cs" />
     <Compile Include="Camera\CameraImageDisplayer.cs" />
     <Compile Include="Camera\CameraShooter.cs" />
+    <Compile Include="Camera\OrientedCameraImage.cs" />
     <Compile Include="ImageSprite\StaticSprite.cs" />
     <Compile Include="Market\Application\AppsPreview.xaml.cs">
       <DependentUpon>AppsPreview.xaml</DependentUpon>
@@ -129,7 +137,6 @@
       <DependentUpon>FormMultiVoidElement.xaml</DependentUpon>
     </Compile>
     <Compile Include="Form\AbstractForm.cs" />
-    <Compile Include="FstnUserControlEvent.cs" />
     <Compile Include="Resources\FstnUserControlMsg.fr.Designer.cs">
       <DependentUpon>FstnUserControlMsg.fr.resx</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -139,6 +146,10 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>FstnUserControlMsg.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Util\ScreenShot.cs" />
+    <Compile Include="Video\YoutubeVideo.xaml.cs">
+      <DependentUpon>YoutubeVideo.xaml</DependentUpon>
     </Compile>
     <Compile Include="Waiting\ExplodeEffect.xaml.cs">
       <DependentUpon>ExplodeEffect.xaml</DependentUpon>
@@ -159,6 +170,17 @@
     <Compile Include="Waiting\ImageWaiting.xaml.cs">
       <DependentUpon>ImageWaiting.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WriteableBitmap\BitmapContext.cs" />
+    <Compile Include="WriteableBitmap\BitmapFactory.cs" />
+    <Compile Include="WriteableBitmap\WriteableBitmapBaseExtensions.cs" />
+    <Compile Include="WriteableBitmap\WriteableBitmapBlitExtensions.cs" />
+    <Compile Include="WriteableBitmap\WriteableBitmapContextExtensions.cs" />
+    <Compile Include="WriteableBitmap\WriteableBitmapConvertExtensions.cs" />
+    <Compile Include="WriteableBitmap\WriteableBitmapFillExtensions.cs" />
+    <Compile Include="WriteableBitmap\WriteableBitmapFilterExtensions.cs" />
+    <Compile Include="WriteableBitmap\WriteableBitmapShapeExtensions.cs" />
+    <Compile Include="WriteableBitmap\WriteableBitmapSplineExtensions.cs" />
+    <Compile Include="WriteableBitmap\WriteableBitmapTransformationExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="Market\Application\AppsPreview.xaml">
@@ -190,6 +212,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Time\TimeCounter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Video\YoutubeVideo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -229,6 +255,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Market\Parser\" />
+    <Folder Include="Shape\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FstnAnimation\FstnAnimation.csproj">

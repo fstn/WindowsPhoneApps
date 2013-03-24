@@ -1,0 +1,16 @@
+﻿<Deployment xmlns="http://schemas.microsoft.com/client/2007/deployment" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" EntryPointAssembly="YesOrNo" EntryPointType="YesOrNo.App" RuntimeVersion="4.7.50308.0">
+  <Deployment.Parts>
+    <AssemblyPart x:Name="YesOrNo" Source="YesOrNo.dll" />
+    <AssemblyPart x:Name="Microsoft.Advertising.Mobile" Source="Microsoft.Advertising.Mobile.dll" />
+    <AssemblyPart x:Name="Microsoft.Advertising.Mobile.UI" Source="Microsoft.Advertising.Mobile.UI.dll" />
+    <AssemblyPart x:Name="FstnAnimation" Source="FstnAnimation.dll" />
+    <AssemblyPart x:Name="FstnCommon" Source="FstnCommon.dll" />
+    <AssemblyPart x:Name="FstnDesign" Source="FstnDesign.dll" />
+    <AssemblyPart x:Name="FstnUserControl" Source="FstnUserControl.dll" />
+    <AssemblyPart x:Name="Microsoft.Expression.Drawing" Source="Microsoft.Expression.Drawing.dll" />
+    <AssemblyPart x:Name="Microsoft.Phone.Controls" Source="Microsoft.Phone.Controls.dll" />
+    <AssemblyPart x:Name="MyToolkit" Source="MyToolkit.dll" />
+    <AssemblyPart x:Name="MyToolkit.Extended" Source="MyToolkit.Extended.dll" />
+    <AssemblyPart x:Name="Microsoft.Phone.Controls.Toolkit" Source="Microsoft.Phone.Controls.Toolkit.dll" />
+  </Deployment.Parts>
+</Deployment>

@@ -1,0 +1,15 @@
+C:\DevTools\Git\windowsPhone\MyToolkit\Phone\Bin\Debug\WP7\MyToolkit.dll
+C:\DevTools\Git\windowsPhone\MyToolkit\Phone\Bin\Debug\WP7\MyToolkit.pdb
+C:\DevTools\Git\windowsPhone\MyToolkit\Phone\Bin\Debug\WP7\de\MyToolkit.resources.dll
+C:\DevTools\Git\windowsPhone\MyToolkit\Phone\Bin\Debug\WP7\fr\MyToolkit.resources.dll
+C:\DevTools\Git\windowsPhone\MyToolkit\Phone\Bin\Debug\WP7\Microsoft.Phone.Controls.dll
+C:\DevTools\Git\windowsPhone\MyToolkit\Phone\Bin\Debug\WP7\Microsoft.Phone.Controls.xml
+C:\DevTools\Git\windowsPhone\MyToolkit\Phone\obj\Debug\MyToolkit.WP7.csprojResolveAssemblyReference.cache
+C:\DevTools\Git\windowsPhone\MyToolkit\Phone\obj\Debug\MyToolkit.Resources.Strings.resources
+C:\DevTools\Git\windowsPhone\MyToolkit\Phone\obj\Debug\MyToolkit.Resources.Strings.de.resources
+C:\DevTools\Git\windowsPhone\MyToolkit\Phone\obj\Debug\MyToolkit.Resources.Strings.fr.resources
+C:\DevTools\Git\windowsPhone\MyToolkit\Phone\obj\Debug\MyToolkit.WP7.csproj.GenerateResource.Cache
+C:\DevTools\Git\windowsPhone\MyToolkit\Phone\obj\Debug\de\MyToolkit.resources.dll
+C:\DevTools\Git\windowsPhone\MyToolkit\Phone\obj\Debug\fr\MyToolkit.resources.dll
+C:\DevTools\Git\windowsPhone\MyToolkit\Phone\obj\Debug\MyToolkit.dll
+C:\DevTools\Git\windowsPhone\MyToolkit\Phone\obj\Debug\MyToolkit.pdb

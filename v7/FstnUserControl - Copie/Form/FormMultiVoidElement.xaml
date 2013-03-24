@@ -1,0 +1,35 @@
+﻿<form:AbstractForm x:Name="userControl" x:Class="FstnUserControl.FormMultiVoidElement"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:FstnCommon;assembly=FstnCommon"
+    xmlns:form="clr-namespace:FstnUserControl.Form"
+    xmlns:my="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"     
+             d:DesignWidth="460" Height="160">
+
+    <ResourceDictionary>
+        <ResourceDictionary.MergedDictionaries>
+            <ResourceDictionary Source="/FstnUserControl;component/Resources/Debug.xaml"/>
+            <ResourceDictionary Source="/FstnUserControl;component/Resources/TileStoryBoard.xaml"/>
+        </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+    <form:AbstractForm.Projection>
+		<PlaneProjection/>
+    </form:AbstractForm.Projection>
+    <StackPanel x:Name="LayoutRoot" 
+    Background="{StaticResource PhoneAccentBrush}" RenderTransformOrigin="-0.011,0.489"    >
+    	<StackPanel.RenderTransform>
+    		<CompositeTransform/>
+    	</StackPanel.RenderTransform>
+    	<StackPanel.Projection>
+    		<PlaneProjection/>
+    	</StackPanel.Projection>          
+            <TextBlock x:Name="Label" Height="60"  TextAlignment="Center"/>
+        <StackPanel x:Name="SecondLine" Margin="0,0,0,0" Height="100" Width="460" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+    </StackPanel>
+</form:AbstractForm>

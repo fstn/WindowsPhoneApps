@@ -38,13 +38,13 @@
                    
                 <TextBlock Name="Description" TextWrapping="Wrap" ></TextBlock>
 
-                <Canvas x:Name="TileData" Visibility="Collapsed">
-                    <Image Source="{Binding Source, ElementName=Title}" Height="336" Width="336"/>
+                <Canvas x:Name="TileData" Visibility="Visible">
+                    <Image Source="{Binding Source, ElementName=Image}" Height="336" Width="336"/>
                     <Rectangle Fill="Black" Height="50" Stroke="Black" Opacity="0.5" Canvas.Left="0"  Canvas.Top="280" Width="336"/>
                     <TextBlock Text="{Binding Text, ElementName=Title}" TextAlignment="Center" Foreground="White" Height="50" Canvas.Left="0"  Canvas.Top="280" Width="336"/>
                 </Canvas>
             </StackPanel>
         </ScrollViewer>
         <local:ImageWaiting Name="WaitingAnim" Height="560" Width="480" Background="Transparent"></local:ImageWaiting>
-      </Canvas>
+    </Canvas>
 </UserControl>

@@ -16,8 +16,16 @@ Processing file: C:\DevTools\Git\windowsPhone\Photo+You\Photo+You\Bin\Debug\MDIL
 File C:\DevTools\Git\windowsPhone\Photo+You\Photo+You\Bin\Debug\MDIL\Microsoft.Advertising.Mobile.dll is not in the compile filter. Skipping.
 Processing file: C:\DevTools\Git\windowsPhone\Photo+You\Photo+You\Bin\Debug\MDIL\Microsoft.Advertising.Mobile.UI.dll
 File C:\DevTools\Git\windowsPhone\Photo+You\Photo+You\Bin\Debug\MDIL\Microsoft.Advertising.Mobile.UI.dll is not in the compile filter. Skipping.
+Processing file: C:\DevTools\Git\windowsPhone\Photo+You\Photo+You\Bin\Debug\MDIL\Microsoft.Expression.Controls.dll
+File C:\DevTools\Git\windowsPhone\Photo+You\Photo+You\Bin\Debug\MDIL\Microsoft.Expression.Controls.dll is not in the compile filter. Skipping.
+Processing file: C:\DevTools\Git\windowsPhone\Photo+You\Photo+You\Bin\Debug\MDIL\Microsoft.Expression.Drawing.dll
+File C:\DevTools\Git\windowsPhone\Photo+You\Photo+You\Bin\Debug\MDIL\Microsoft.Expression.Drawing.dll is not in the compile filter. Skipping.
+Processing file: C:\DevTools\Git\windowsPhone\Photo+You\Photo+You\Bin\Debug\MDIL\Microsoft.Expression.Interactions.dll
+File C:\DevTools\Git\windowsPhone\Photo+You\Photo+You\Bin\Debug\MDIL\Microsoft.Expression.Interactions.dll is not in the compile filter. Skipping.
 Processing file: C:\DevTools\Git\windowsPhone\Photo+You\Photo+You\Bin\Debug\MDIL\Microsoft.Phone.Controls.dll
 File C:\DevTools\Git\windowsPhone\Photo+You\Photo+You\Bin\Debug\MDIL\Microsoft.Phone.Controls.dll is not in the compile filter. Skipping.
+Processing file: C:\DevTools\Git\windowsPhone\Photo+You\Photo+You\Bin\Debug\MDIL\Microsoft.Phone.Controls.Maps.dll
+File C:\DevTools\Git\windowsPhone\Photo+You\Photo+You\Bin\Debug\MDIL\Microsoft.Phone.Controls.Maps.dll is not in the compile filter. Skipping.
 Processing file: C:\DevTools\Git\windowsPhone\Photo+You\Photo+You\Bin\Debug\MDIL\Microsoft.Phone.Controls.Toolkit.dll
 File C:\DevTools\Git\windowsPhone\Photo+You\Photo+You\Bin\Debug\MDIL\Microsoft.Phone.Controls.Toolkit.dll is not in the compile filter. Skipping.
 Processing file: C:\DevTools\Git\windowsPhone\Photo+You\Photo+You\Bin\Debug\MDIL\Microsoft.Practices.ServiceLocation.dll

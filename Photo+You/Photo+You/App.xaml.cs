@@ -4,6 +4,8 @@ using System.Resources;
 using System.Windows;
 using System.Windows.Markup;
 using System.Windows.Navigation;
+using FstnCommon;
+using FstnCommon.Util;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using Photo_You.Resources;
@@ -67,18 +69,26 @@ namespace Photo_You
         // This code will not execute when the application is first launched
         private void Application_Activated(object sender, ActivatedEventArgs e)
         {
+            AppManager.Instance.Activate();
+            try
+            {
+              //  RootFrame.Navigate(new Uri("/MainPage.xaml?" + RandomService.Instance.getRand(), UriKind.Relative));
+            }
+            catch (InvalidOperationException ex) { }
         }
 
         // Code to execute when the application is deactivated (sent to background)
         // This code will not execute when the application is closing
         private void Application_Deactivated(object sender, DeactivatedEventArgs e)
         {
+            AppManager.Instance.Deactivate();
         }
 
         // Code to execute when the application is closing (eg, user hit Back)
         // This code will not execute when the application is deactivated
         private void Application_Closing(object sender, ClosingEventArgs e)
         {
+            AppManager.Instance.Close();
         }
 
         // Code to execute if a navigation fails
