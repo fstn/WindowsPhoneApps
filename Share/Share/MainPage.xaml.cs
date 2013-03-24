@@ -21,7 +21,6 @@ namespace Share
     public partial class MainPage : PhoneApplicationPage
     {
         private SpeechSynthesizer ss;
-        private ProgressIndicator indicator;
         // Constructor
         public MainPage()
         {
@@ -31,12 +30,6 @@ namespace Share
 
         void MainPage_Loaded(object sender, RoutedEventArgs e)
         {
-            indicator = new ProgressIndicator
-            {
-                IsVisible = true,
-                IsIndeterminate = true
-            };
-            SystemTray.SetProgressIndicator(this, indicator);
             MicButton.Tap += MicButton_Tap;
             ss = new SpeechSynthesizer();
         }
