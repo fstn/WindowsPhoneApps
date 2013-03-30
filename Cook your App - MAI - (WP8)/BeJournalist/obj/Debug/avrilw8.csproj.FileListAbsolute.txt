@@ -1,0 +1,63 @@
+C:\Users\a-gucarl\Desktop\avrilw8 (1)\avrilw8\Bin\Debug\Assets\ApplicationIcon.png
+C:\Users\a-gucarl\Desktop\avrilw8 (1)\avrilw8\Bin\Debug\Assets\Tiles\FlipCycleTileLarge.png
+C:\Users\a-gucarl\Desktop\avrilw8 (1)\avrilw8\Bin\Debug\Assets\Tiles\FlipCycleTileMedium.png
+C:\Users\a-gucarl\Desktop\avrilw8 (1)\avrilw8\Bin\Debug\Assets\Tiles\FlipCycleTileSmall.png
+C:\Users\a-gucarl\Desktop\avrilw8 (1)\avrilw8\Bin\Debug\Assets\Tiles\IconicTileMediumLarge.png
+C:\Users\a-gucarl\Desktop\avrilw8 (1)\avrilw8\Bin\Debug\Assets\Tiles\IconicTileSmall.png
+C:\Users\a-gucarl\Desktop\avrilw8 (1)\avrilw8\Bin\Debug\avrilw8.dll
+C:\Users\a-gucarl\Desktop\avrilw8 (1)\avrilw8\Bin\Debug\avrilw8.pdb
+C:\Users\a-gucarl\Desktop\avrilw8 (1)\avrilw8\Bin\Debug\AppManifest.xaml
+C:\Users\a-gucarl\Desktop\avrilw8 (1)\avrilw8\Bin\Debug\avrilw8_Debug_AnyCPU.xap
+C:\Users\a-gucarl\Desktop\avrilw8 (1)\avrilw8\Bin\Debug\Microsoft.Azure.Zumo.WindowsPhone8.Managed.dll
+C:\Users\a-gucarl\Desktop\avrilw8 (1)\avrilw8\Bin\Debug\Newtonsoft.Json.dll
+C:\Users\a-gucarl\Desktop\avrilw8 (1)\avrilw8\obj\Debug\App.g.cs
+C:\Users\a-gucarl\Desktop\avrilw8 (1)\avrilw8\obj\Debug\MainPage.g.cs
+C:\Users\a-gucarl\Desktop\avrilw8 (1)\avrilw8\obj\Debug\avrilw8.g.resources
+C:\Users\a-gucarl\Desktop\avrilw8 (1)\avrilw8\obj\Debug\avrilw8.Resources.AppResources.resources
+C:\Users\a-gucarl\Desktop\avrilw8 (1)\avrilw8\obj\Debug\avrilw8.csproj.GenerateResource.Cache
+C:\Users\a-gucarl\Desktop\avrilw8 (1)\avrilw8\obj\Debug\avrilw8.dll
+C:\Users\a-gucarl\Desktop\avrilw8 (1)\avrilw8\obj\Debug\avrilw8.pdb
+C:\Users\a-gucarl\Desktop\avrilw8 (1)\avrilw8\obj\Debug\XapCacheFile.xml
+C:\Users\a-gucarl\Desktop\avrilw8 (1)\avrilw8\obj\Debug\Admin.g.cs
+C:\Users\a-gucarl\Desktop\avrilwp8\avrilw8\Bin\Debug\Assets\ApplicationIcon.png
+C:\Users\a-gucarl\Desktop\avrilwp8\avrilw8\Bin\Debug\Assets\Tiles\FlipCycleTileLarge.png
+C:\Users\a-gucarl\Desktop\avrilwp8\avrilw8\Bin\Debug\Assets\Tiles\FlipCycleTileMedium.png
+C:\Users\a-gucarl\Desktop\avrilwp8\avrilw8\Bin\Debug\Assets\Tiles\FlipCycleTileSmall.png
+C:\Users\a-gucarl\Desktop\avrilwp8\avrilw8\Bin\Debug\Assets\Tiles\IconicTileMediumLarge.png
+C:\Users\a-gucarl\Desktop\avrilwp8\avrilw8\Bin\Debug\Assets\Tiles\IconicTileSmall.png
+C:\Users\a-gucarl\Desktop\avrilwp8\avrilw8\Bin\Debug\avrilw8.dll
+C:\Users\a-gucarl\Desktop\avrilwp8\avrilw8\Bin\Debug\avrilw8.pdb
+C:\Users\a-gucarl\Desktop\avrilwp8\avrilw8\Bin\Debug\AppManifest.xaml
+C:\Users\a-gucarl\Desktop\avrilwp8\avrilw8\Bin\Debug\avrilw8_Debug_AnyCPU.xap
+C:\Users\a-gucarl\Desktop\avrilwp8\avrilw8\Bin\Debug\Microsoft.Azure.Zumo.WindowsPhone8.Managed.dll
+C:\Users\a-gucarl\Desktop\avrilwp8\avrilw8\Bin\Debug\Newtonsoft.Json.dll
+C:\Users\a-gucarl\Desktop\avrilwp8\avrilw8\obj\Debug\App.g.cs
+C:\Users\a-gucarl\Desktop\avrilwp8\avrilw8\obj\Debug\Admin.g.cs
+C:\Users\a-gucarl\Desktop\avrilwp8\avrilw8\obj\Debug\MainPage.g.cs
+C:\Users\a-gucarl\Desktop\avrilwp8\avrilw8\obj\Debug\avrilw8.g.resources
+C:\Users\a-gucarl\Desktop\avrilwp8\avrilw8\obj\Debug\avrilw8.Resources.AppResources.resources
+C:\Users\a-gucarl\Desktop\avrilwp8\avrilw8\obj\Debug\avrilw8.csproj.GenerateResource.Cache
+C:\Users\a-gucarl\Desktop\avrilwp8\avrilw8\obj\Debug\avrilw8.dll
+C:\Users\a-gucarl\Desktop\avrilwp8\avrilw8\obj\Debug\avrilw8.pdb
+C:\Users\a-gucarl\Desktop\avrilwp8\avrilw8\obj\Debug\XapCacheFile.xml
+C:\Users\a-gucarl\Desktop\mai-WP8 - RG2013\avrilw8\Bin\Debug\Assets\ApplicationIcon.png
+C:\Users\a-gucarl\Desktop\mai-WP8 - RG2013\avrilw8\Bin\Debug\Assets\Tiles\FlipCycleTileLarge.png
+C:\Users\a-gucarl\Desktop\mai-WP8 - RG2013\avrilw8\Bin\Debug\Assets\Tiles\FlipCycleTileMedium.png
+C:\Users\a-gucarl\Desktop\mai-WP8 - RG2013\avrilw8\Bin\Debug\Assets\Tiles\FlipCycleTileSmall.png
+C:\Users\a-gucarl\Desktop\mai-WP8 - RG2013\avrilw8\Bin\Debug\Assets\Tiles\IconicTileMediumLarge.png
+C:\Users\a-gucarl\Desktop\mai-WP8 - RG2013\avrilw8\Bin\Debug\Assets\Tiles\IconicTileSmall.png
+C:\Users\a-gucarl\Desktop\mai-WP8 - RG2013\avrilw8\Bin\Debug\avrilw8.dll
+C:\Users\a-gucarl\Desktop\mai-WP8 - RG2013\avrilw8\Bin\Debug\avrilw8.pdb
+C:\Users\a-gucarl\Desktop\mai-WP8 - RG2013\avrilw8\Bin\Debug\AppManifest.xaml
+C:\Users\a-gucarl\Desktop\mai-WP8 - RG2013\avrilw8\Bin\Debug\avrilw8_Debug_AnyCPU.xap
+C:\Users\a-gucarl\Desktop\mai-WP8 - RG2013\avrilw8\Bin\Debug\Microsoft.Azure.Zumo.WindowsPhone8.Managed.dll
+C:\Users\a-gucarl\Desktop\mai-WP8 - RG2013\avrilw8\Bin\Debug\Newtonsoft.Json.dll
+C:\Users\a-gucarl\Desktop\mai-WP8 - RG2013\avrilw8\obj\Debug\App.g.cs
+C:\Users\a-gucarl\Desktop\mai-WP8 - RG2013\avrilw8\obj\Debug\Admin.g.cs
+C:\Users\a-gucarl\Desktop\mai-WP8 - RG2013\avrilw8\obj\Debug\MainPage.g.cs
+C:\Users\a-gucarl\Desktop\mai-WP8 - RG2013\avrilw8\obj\Debug\avrilw8.g.resources
+C:\Users\a-gucarl\Desktop\mai-WP8 - RG2013\avrilw8\obj\Debug\avrilw8.Resources.AppResources.resources
+C:\Users\a-gucarl\Desktop\mai-WP8 - RG2013\avrilw8\obj\Debug\avrilw8.csproj.GenerateResource.Cache
+C:\Users\a-gucarl\Desktop\mai-WP8 - RG2013\avrilw8\obj\Debug\avrilw8.dll
+C:\Users\a-gucarl\Desktop\mai-WP8 - RG2013\avrilw8\obj\Debug\avrilw8.pdb
+C:\Users\a-gucarl\Desktop\mai-WP8 - RG2013\avrilw8\obj\Debug\XapCacheFile.xml

@@ -1,0 +1,44 @@
+﻿<toolkit:PhoneApplicationPage
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:es="clr-namespace:Microsoft.Expression.Shapes;assembly=Microsoft.Expression.Drawing"
+    xmlns:edc="clr-namespace:Microsoft.Expression.Controls;assembly=Microsoft.Expression.Drawing"   
+    xmlns:maps="clr-namespace:Microsoft.Phone.Maps.Controls;assembly=Microsoft.Phone.Maps"
+    xmlns:fstnUCVideo="clr-namespace:FstnUserControl.Video;assembly=FstnUserControl"
+    x:Class="Settings.MainPage"
+    mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="480"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    shell:SystemTray.IsVisible="true">
+    <phone:PhoneApplicationPage.Resources>
+    </phone:PhoneApplicationPage.Resources>
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <shell:SystemTray.ProgressIndicator>
+        <shell:ProgressIndicator IsIndeterminate="True" 
+                                 IsVisible="False" 
+                                 Text="Chargement" />
+    </shell:SystemTray.ProgressIndicator>
+    <Grid  x:Name="LayoutRoot"   Margin="0">
+        <Grid.Background>
+            <ImageBrush Stretch="Fill" ImageSource="/Assets/Images/Background.png" />
+         </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="600"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Canvas Grid.Row="0" x:Name="MicButton" VerticalAlignment="Center">
+            <Rectangle Height="188" Canvas.Left="138" Stroke="Black" Canvas.Top="0" Width="193" StrokeThickness="10">
+                <Rectangle.Fill>
+                    <SolidColorBrush Color="White" Opacity="0.5"></SolidColorBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Image HorizontalAlignment="Left" Height="122" VerticalAlignment="Top" Width="122" Source="/Assets/Images/Mic.png" Canvas.Left="174" Canvas.Top="36"/>
+        </Canvas>
+    </Grid>
+</toolkit:PhoneApplicationPage>

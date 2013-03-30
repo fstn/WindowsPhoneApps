@@ -1,0 +1,87 @@
+﻿<xapCache source="C:\DevTools\Git\windowsPhone\GiveMeSomething\GiveMeSomething\Bin\Release\GiveMeSomething_Release_AnyCPU.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="29/03/2013 08:09:33">
+  <file source="C:\DevTools\Git\windowsPhone\GiveMeSomething\GiveMeSomething\obj\Release\GiveMeSomething.dll" archivePath="GiveMeSomething.dll" lastWriteTime="29/03/2013 08:09:32" />
+  <file source="C:\DevTools\Git\windowsPhone\GiveMeSomething\GiveMeSomething\obj\Release\fr\GiveMeSomething.resources.dll" archivePath="fr\GiveMeSomething.resources.dll" lastWriteTime="29/03/2013 08:09:32" />
+  <file source="C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Release\fr\FstnUserControl.resources.dll" archivePath="fr\FstnUserControl.resources.dll" lastWriteTime="29/03/2013 08:09:31" />
+  <file source="C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Release\fr\MyToolkit.Extended.resources.dll" archivePath="fr\MyToolkit.Extended.resources.dll" lastWriteTime="24/03/2013 07:54:47" />
+  <file source="C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Release\fr\MyToolkit.resources.dll" archivePath="fr\MyToolkit.resources.dll" lastWriteTime="24/03/2013 07:54:46" />
+  <file source="C:\DevTools\Git\windowsPhone\GiveMeSomething\GiveMeSomething\FlipCycleTileMedium.png" archivePath="FlipCycleTileMedium.png" lastWriteTime="24/03/2013 19:13:38" />
+  <file source="C:\DevTools\Git\windowsPhone\GiveMeSomething\GiveMeSomething\FlipCycleTileSmall.png" archivePath="FlipCycleTileSmall.png" lastWriteTime="24/03/2013 19:13:52" />
+  <file source="C:\DevTools\Git\windowsPhone\GiveMeSomething\GiveMeSomething\Image\App Roulette Large Tile.png" archivePath="Image\App Roulette Large Tile.png" lastWriteTime="25/03/2013 13:53:06" />
+  <file source="C:\DevTools\Git\windowsPhone\GiveMeSomething\GiveMeSomething\Image\App Roulette Tile.png" archivePath="Image\App Roulette Tile.png" lastWriteTime="25/03/2013 13:53:16" />
+  <file source="C:\DevTools\Git\windowsPhone\GiveMeSomething\GiveMeSomething\Image\App Roulette.png" archivePath="Image\App Roulette.png" lastWriteTime="25/03/2013 13:52:58" />
+  <file source="C:\DevTools\Git\windowsPhone\GiveMeSomething\GiveMeSomething\Image\dark\appbar.microphone.png" archivePath="Image\dark\appbar.microphone.png" lastWriteTime="25/03/2013 13:46:51" />
+  <file source="C:\DevTools\Git\windowsPhone\GiveMeSomething\GiveMeSomething\Image\dark\Background.png" archivePath="Image\dark\Background.png" lastWriteTime="15/03/2013 19:42:35" />
+  <file source="C:\DevTools\Git\windowsPhone\GiveMeSomething\GiveMeSomething\Image\dark\appbar.add.png" archivePath="Image\dark\appbar.add.png" lastWriteTime="24/02/2013 17:10:43" />
+  <file source="C:\DevTools\Git\windowsPhone\GiveMeSomething\GiveMeSomething\Image\dark\appbar.cancel.png" archivePath="Image\dark\appbar.cancel.png" lastWriteTime="27/02/2013 19:36:07" />
+  <file source="C:\DevTools\Git\windowsPhone\GiveMeSomething\GiveMeSomething\Image\dark\appbar.cards.heart.png" archivePath="Image\dark\appbar.cards.heart.png" lastWriteTime="23/02/2013 13:41:21" />
+  <file source="C:\DevTools\Git\windowsPhone\GiveMeSomething\GiveMeSomething\Image\dark\appbar.pin.png" archivePath="Image\dark\appbar.pin.png" lastWriteTime="24/02/2013 17:31:01" />
+  <file source="C:\DevTools\Git\windowsPhone\GiveMeSomething\GiveMeSomething\Image\dark\appbar.save.png" archivePath="Image\dark\appbar.save.png" lastWriteTime="27/02/2013 19:36:14" />
+  <file source="C:\DevTools\Git\windowsPhone\GiveMeSomething\GiveMeSomething\Image\dark\appbar.settings.png" archivePath="Image\dark\appbar.settings.png" lastWriteTime="27/02/2013 19:13:50" />
+  <file source="C:\DevTools\Git\windowsPhone\GiveMeSomething\GiveMeSomething\Image\dark\appbar.share.png" archivePath="Image\dark\appbar.share.png" lastWriteTime="16/03/2013 10:09:20" />
+  <file source="C:\DevTools\Git\windowsPhone\GiveMeSomething\GiveMeSomething\Image\dark\appbar.shuffle.png" archivePath="Image\dark\appbar.shuffle.png" lastWriteTime="23/02/2013 13:41:32" />
+  <file source="C:\DevTools\Git\windowsPhone\GiveMeSomething\GiveMeSomething\Image\light\appbar.add.png" archivePath="Image\light\appbar.add.png" lastWriteTime="24/02/2013 17:10:36" />
+  <file source="C:\DevTools\Git\windowsPhone\GiveMeSomething\GiveMeSomething\Image\light\appbar.cancel.png" archivePath="Image\light\appbar.cancel.png" lastWriteTime="27/02/2013 19:36:30" />
+  <file source="C:\DevTools\Git\windowsPhone\GiveMeSomething\GiveMeSomething\Image\light\appbar.cards.heart.png" archivePath="Image\light\appbar.cards.heart.png" lastWriteTime="23/02/2013 13:38:47" />
+  <file source="C:\DevTools\Git\windowsPhone\GiveMeSomething\GiveMeSomething\Image\light\appbar.microphone.png" archivePath="Image\light\appbar.microphone.png" lastWriteTime="25/03/2013 13:46:22" />
+  <file source="C:\DevTools\Git\windowsPhone\GiveMeSomething\GiveMeSomething\Image\light\appbar.pin.png" archivePath="Image\light\appbar.pin.png" lastWriteTime="24/02/2013 17:30:44" />
+  <file source="C:\DevTools\Git\windowsPhone\GiveMeSomething\GiveMeSomething\Image\light\appbar.save.png" archivePath="Image\light\appbar.save.png" lastWriteTime="27/02/2013 19:36:24" />
+  <file source="C:\DevTools\Git\windowsPhone\GiveMeSomething\GiveMeSomething\Image\light\appbar.settings.png" archivePath="Image\light\appbar.settings.png" lastWriteTime="27/02/2013 19:13:38" />
+  <file source="C:\DevTools\Git\windowsPhone\GiveMeSomething\GiveMeSomething\Image\light\appbar.share.png" archivePath="Image\light\appbar.share.png" lastWriteTime="16/03/2013 10:09:31" />
+  <file source="C:\DevTools\Git\windowsPhone\GiveMeSomething\GiveMeSomething\Image\light\appbar.shuffle.png" archivePath="Image\light\appbar.shuffle.png" lastWriteTime="23/02/2013 13:39:09" />
+  <file source="C:\DevTools\Git\windowsPhone\GiveMeSomething\GiveMeSomething\Image\light\Background.png" archivePath="Image\light\Background.png" lastWriteTime="15/03/2013 22:04:45" />
+  <file source="C:\DevTools\Git\windowsPhone\GiveMeSomething\GiveMeSomething\Image\SplashScreenImage.jpg" archivePath="Image\SplashScreenImage.jpg" lastWriteTime="25/02/2013 20:12:53" />
+  <file source="C:\DevTools\Git\windowsPhone\GiveMeSomething\GiveMeSomething\Toolkit.Content\ApplicationBar.Cancel.png" archivePath="Toolkit.Content\ApplicationBar.Cancel.png" lastWriteTime="21/02/2013 10:42:30" />
+  <file source="C:\DevTools\Git\windowsPhone\GiveMeSomething\GiveMeSomething\Toolkit.Content\ApplicationBar.Check.png" archivePath="Toolkit.Content\ApplicationBar.Check.png" lastWriteTime="21/02/2013 10:42:30" />
+  <file source="C:\DevTools\Git\windowsPhone\GiveMeSomething\GiveMeSomething\Toolkit.Content\ApplicationBar.Delete.png" archivePath="Toolkit.Content\ApplicationBar.Delete.png" lastWriteTime="21/02/2013 10:42:30" />
+  <file source="C:\DevTools\Git\windowsPhone\GiveMeSomething\GiveMeSomething\Toolkit.Content\ApplicationBar.Select.png" archivePath="Toolkit.Content\ApplicationBar.Select.png" lastWriteTime="21/02/2013 10:42:29" />
+  <file source="C:\DevTools\Git\windowsPhone\GiveMeSomething\GiveMeSomething\Bin\Release\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="25/03/2013 20:38:00" />
+  <file source="C:\DevTools\Git\windowsPhone\GiveMeSomething\GiveMeSomething\Bin\Release\Fonts\digital-7.ttf" archivePath="Fonts\digital-7.ttf" lastWriteTime="03/02/2013 18:41:39" />
+  <file source="C:\DevTools\Git\windowsPhone\GiveMeSomething\GiveMeSomething\Bin\Release\Error.png" archivePath="Error.png" lastWriteTime="24/02/2013 12:11:42" />
+  <file source="C:\DevTools\Git\windowsPhone\FstnAnimation\Bin\Release\FstnAnimation.dll" archivePath="FstnAnimation.dll" lastWriteTime="29/03/2013 08:06:13" />
+  <file source="C:\DevTools\Git\windowsPhone\FstnCommon\Bin\Release\FstnCommon.dll" archivePath="FstnCommon.dll" lastWriteTime="29/03/2013 08:06:13" />
+  <file source="C:\DevTools\Git\windowsPhone\FstnDesign\Bin\Release\FstnDesign.dll" archivePath="FstnDesign.dll" lastWriteTime="28/03/2013 22:57:01" />
+  <file source="C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Release\FstnUserControl.dll" archivePath="FstnUserControl.dll" lastWriteTime="29/03/2013 08:09:31" />
+  <file source="E:\DevTools\C#\Mvvm Light Toolkit\Binaries\WP71\GalaSoft.MvvmLight.WP71.dll" archivePath="GalaSoft.MvvmLight.WP71.dll" lastWriteTime="28/10/2012 10:36:54" />
+  <file source="C:\Program Files (x86)\Microsoft SDKs\Advertising for Phone\Libraries\v7.1\Microsoft.Advertising.Mobile.dll" archivePath="Microsoft.Advertising.Mobile.dll" lastWriteTime="20/07/2012 08:57:18" />
+  <file source="C:\Program Files (x86)\Microsoft SDKs\Advertising for Phone\Libraries\v7.1\Microsoft.Advertising.Mobile.UI.dll" archivePath="Microsoft.Advertising.Mobile.UI.dll" lastWriteTime="20/07/2012 08:57:18" />
+  <file source="C:\Program Files (x86)\Microsoft SDKs\Windows Phone\v8.0\Libraries\Microsoft.Phone.Controls.dll" archivePath="Microsoft.Phone.Controls.dll" lastWriteTime="26/09/2012 15:30:38" />
+  <file source="C:\DevTools\Git\windowsPhone\GiveMeSomething\packages\WPtoolkit.4.2012.10.30\lib\sl4-windowsphone71\Microsoft.Phone.Controls.Toolkit.dll" archivePath="Microsoft.Phone.Controls.Toolkit.dll" lastWriteTime="21/02/2013 10:42:29" />
+  <file source="C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Release\MyToolkit.Extended.dll" archivePath="MyToolkit.Extended.dll" lastWriteTime="24/03/2013 07:54:47" />
+  <file source="C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Release\MyToolkit.dll" archivePath="MyToolkit.dll" lastWriteTime="24/03/2013 07:54:46" />
+  <file source="C:\Program Files (x86)\Microsoft SDKs\Windows Phone\v8.0\Libraries\Microsoft.Phone.Controls.Maps.dll" archivePath="Microsoft.Phone.Controls.Maps.dll" lastWriteTime="26/09/2012 15:30:38" />
+  <file source="E:\DevTools\C#\Mvvm Light Toolkit\Binaries\WP71\GalaSoft.MvvmLight.WP71.xml" archivePath="GalaSoft.MvvmLight.WP71.xml" lastWriteTime="28/10/2012 10:36:54" />
+  <file source="C:\Program Files (x86)\Microsoft SDKs\Advertising for Phone\Libraries\v7.1\Microsoft.Advertising.Mobile.xml" archivePath="Microsoft.Advertising.Mobile.xml" lastWriteTime="20/07/2012 08:57:18" />
+  <file source="C:\Program Files (x86)\Microsoft SDKs\Advertising for Phone\Libraries\v7.1\Microsoft.Advertising.Mobile.UI.xml" archivePath="Microsoft.Advertising.Mobile.UI.xml" lastWriteTime="20/07/2012 08:57:18" />
+  <file source="E:\DevTools\C#\project\number picker\libs\Microsoft.Phone.Controls.Toolkit.dll" archivePath="Microsoft.Phone.Controls.Toolkit.dll" lastWriteTime="02/11/2010 15:36:16" />
+  <file source="C:\DevTools\Git\windowsPhone\Photo+You\packages\WPtoolkit.4.2012.10.30\lib\sl4-windowsphone71\Microsoft.Phone.Controls.Toolkit.dll" archivePath="Microsoft.Phone.Controls.Toolkit.dll" lastWriteTime="16/03/2013 18:57:27" />
+  <file source="C:\DevTools\Git\windowsPhone\FstnCommon\README_FIRST.txt" archivePath="README_FIRST.txt" lastWriteTime="16/03/2013 18:57:27" />
+  <file source="C:\DevTools\Git\windowsPhone\FstnCommon\Toolkit.Content\ApplicationBar.Cancel.png" archivePath="Toolkit.Content\ApplicationBar.Cancel.png" lastWriteTime="16/03/2013 18:57:27" />
+  <file source="C:\DevTools\Git\windowsPhone\FstnCommon\Toolkit.Content\ApplicationBar.Check.png" archivePath="Toolkit.Content\ApplicationBar.Check.png" lastWriteTime="16/03/2013 18:57:27" />
+  <file source="C:\DevTools\Git\windowsPhone\FstnCommon\Toolkit.Content\ApplicationBar.Delete.png" archivePath="Toolkit.Content\ApplicationBar.Delete.png" lastWriteTime="16/03/2013 18:57:27" />
+  <file source="C:\DevTools\Git\windowsPhone\FstnCommon\Toolkit.Content\ApplicationBar.Select.png" archivePath="Toolkit.Content\ApplicationBar.Select.png" lastWriteTime="16/03/2013 18:57:27" />
+  <file source="C:\Program Files (x86)\Microsoft SDKs\Expression\Blend\Windows Phone\v8.0\Libraries\Microsoft.Expression.Controls.dll" archivePath="Microsoft.Expression.Controls.dll" lastWriteTime="25/09/2012 02:41:02" />
+  <file source="C:\Program Files (x86)\Microsoft SDKs\Expression\Blend\Windows Phone\v8.0\Libraries\Microsoft.Expression.Drawing.dll" archivePath="Microsoft.Expression.Drawing.dll" lastWriteTime="25/09/2012 02:41:02" />
+  <file source="C:\Program Files (x86)\Microsoft SDKs\Expression\Blend\Windows Phone\v8.0\Libraries\Microsoft.Expression.Interactions.dll" archivePath="Microsoft.Expression.Interactions.dll" lastWriteTime="25/09/2012 02:41:02" />
+  <file source="C:\DevTools\Git\windowsPhone\FstnDesign\Bin\Release\Microsoft.Phone.Controls.Toolkit.dll" archivePath="Microsoft.Phone.Controls.Toolkit.dll" lastWriteTime="08/02/2013 18:26:52" />
+  <file source="C:\Program Files (x86)\Microsoft SDKs\Expression\Blend\Windows Phone\v8.0\Libraries\System.Windows.Interactivity.dll" archivePath="System.Windows.Interactivity.dll" lastWriteTime="25/09/2012 02:41:02" />
+  <file source="C:\DevTools\Git\windowsPhone\FstnDesign\README_FIRST.txt" archivePath="README_FIRST.txt" lastWriteTime="09/02/2013 10:00:20" />
+  <file source="C:\DevTools\Git\windowsPhone\FstnDesign\Toolkit.Content\ApplicationBar.Cancel.png" archivePath="Toolkit.Content\ApplicationBar.Cancel.png" lastWriteTime="09/02/2013 10:00:20" />
+  <file source="C:\DevTools\Git\windowsPhone\FstnDesign\Toolkit.Content\ApplicationBar.Check.png" archivePath="Toolkit.Content\ApplicationBar.Check.png" lastWriteTime="09/02/2013 10:00:20" />
+  <file source="C:\DevTools\Git\windowsPhone\FstnDesign\Toolkit.Content\ApplicationBar.Delete.png" archivePath="Toolkit.Content\ApplicationBar.Delete.png" lastWriteTime="09/02/2013 10:00:20" />
+  <file source="C:\DevTools\Git\windowsPhone\FstnDesign\Toolkit.Content\ApplicationBar.Select.png" archivePath="Toolkit.Content\ApplicationBar.Select.png" lastWriteTime="09/02/2013 10:00:20" />
+  <file source="E:\DevTools\C#\Mvvm Light Toolkit\Binaries\WP71\GalaSoft.MvvmLight.Extras.WP71.dll" archivePath="GalaSoft.MvvmLight.Extras.WP71.dll" lastWriteTime="28/10/2012 10:36:54" />
+  <file source="C:\Program Files (x86)\Microsoft SDKs\Expression\Blend\Windows Phone\v7.1\Libraries\System.Windows.Interactivity.dll" archivePath="System.Windows.Interactivity.dll" lastWriteTime="17/08/2011 02:48:22" />
+  <file source="E:\DevTools\C#\Mvvm Light Toolkit\Binaries\WP71\Microsoft.Practices.ServiceLocation.dll" archivePath="Microsoft.Practices.ServiceLocation.dll" lastWriteTime="25/10/2012 02:44:22" />
+  <file source="E:\DevTools\C#\Mvvm Light Toolkit\Binaries\WP71\GalaSoft.MvvmLight.Extras.WP71.xml" archivePath="GalaSoft.MvvmLight.Extras.WP71.xml" lastWriteTime="28/10/2012 10:36:54" />
+  <file source="C:\Program Files (x86)\Microsoft SDKs\Expression\Blend\Windows Phone\v7.1\Libraries\System.Windows.Interactivity.xml" archivePath="System.Windows.Interactivity.xml" lastWriteTime="17/08/2011 02:30:36" />
+  <file source="E:\DevTools\C#\Mvvm Light Toolkit\Binaries\WP71\Microsoft.Practices.ServiceLocation.xml" archivePath="Microsoft.Practices.ServiceLocation.xml" lastWriteTime="25/10/2012 02:44:22" />
+  <file source="C:\DevTools\Git\windowsPhone\FstnUserControl\Assets\Audio\bip.wav" archivePath="Assets\Audio\bip.wav" lastWriteTime="16/03/2013 22:30:17" />
+  <file source="C:\DevTools\Git\windowsPhone\FstnUserControl\Assets\Audio\focus.wav" archivePath="Assets\Audio\focus.wav" lastWriteTime="16/03/2013 22:58:58" />
+  <file source="C:\DevTools\Git\windowsPhone\FstnUserControl\Assets\Audio\shoot.wav" archivePath="Assets\Audio\shoot.wav" lastWriteTime="16/03/2013 22:59:01" />
+  <file source="C:\DevTools\Git\windowsPhone\FstnUserControl\Toolkit.Content\ApplicationBar.Cancel.png" archivePath="Toolkit.Content\ApplicationBar.Cancel.png" lastWriteTime="08/02/2013 18:26:52" />
+  <file source="C:\DevTools\Git\windowsPhone\FstnUserControl\Toolkit.Content\ApplicationBar.Check.png" archivePath="Toolkit.Content\ApplicationBar.Check.png" lastWriteTime="08/02/2013 18:26:52" />
+  <file source="C:\DevTools\Git\windowsPhone\FstnUserControl\Toolkit.Content\ApplicationBar.Delete.png" archivePath="Toolkit.Content\ApplicationBar.Delete.png" lastWriteTime="08/02/2013 18:26:52" />
+  <file source="C:\DevTools\Git\windowsPhone\FstnUserControl\Toolkit.Content\ApplicationBar.Select.png" archivePath="Toolkit.Content\ApplicationBar.Select.png" lastWriteTime="08/02/2013 18:26:52" />
+  <file source="C:\DevTools\Git\windowsPhone\GiveMeSomething\GiveMeSomething\Bin\Release\Properties\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="25/03/2013 20:38:00" />
+  <file source="C:\DevTools\Git\windowsPhone\GiveMeSomething\GiveMeSomething\Image\AppRoulette.png" archivePath="Image\AppRoulette.png" lastWriteTime="24/03/2013 21:47:00" />
+</xapCache>
