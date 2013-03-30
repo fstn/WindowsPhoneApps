@@ -79,6 +79,24 @@ namespace Photo_You.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Can&apos;t share, please take a pics first.
+        /// </summary>
+        public static string CANTSHARE {
+            get {
+                return ResourceManager.GetString("CANTSHARE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Flash.
+        /// </summary>
+        public static string Flash {
+            get {
+                return ResourceManager.GetString("Flash", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Image saved.
         /// </summary>
         public static string ImageSaved {

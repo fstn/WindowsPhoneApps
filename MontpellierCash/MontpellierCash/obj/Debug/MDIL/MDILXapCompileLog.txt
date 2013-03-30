@@ -40,6 +40,10 @@ MDIL image C:\DevTools\Git\windowsPhone\MontpellierCash\MontpellierCash\obj\Debu
 File C:\DevTools\Git\windowsPhone\MontpellierCash\MontpellierCash\Bin\Debug\MDIL\MontpellierCash.dll output C:\DevTools\Git\windowsPhone\MontpellierCash\MontpellierCash\obj\Debug\MDIL\MontpellierCash.dll
 Processing file: C:\DevTools\Git\windowsPhone\MontpellierCash\MontpellierCash\Bin\Debug\MDIL\MontpellierFeux.dll
 File C:\DevTools\Git\windowsPhone\MontpellierCash\MontpellierCash\Bin\Debug\MDIL\MontpellierFeux.dll is not in the compile filter. Skipping.
+Processing file: C:\DevTools\Git\windowsPhone\MontpellierCash\MontpellierCash\Bin\Debug\MDIL\MyToolkit.dll
+File C:\DevTools\Git\windowsPhone\MontpellierCash\MontpellierCash\Bin\Debug\MDIL\MyToolkit.dll is not in the compile filter. Skipping.
+Processing file: C:\DevTools\Git\windowsPhone\MontpellierCash\MontpellierCash\Bin\Debug\MDIL\MyToolkit.Extended.dll
+File C:\DevTools\Git\windowsPhone\MontpellierCash\MontpellierCash\Bin\Debug\MDIL\MyToolkit.Extended.dll is not in the compile filter. Skipping.
 Processing file: C:\DevTools\Git\windowsPhone\MontpellierCash\MontpellierCash\Bin\Debug\MDIL\System.Windows.Interactivity.dll
 File C:\DevTools\Git\windowsPhone\MontpellierCash\MontpellierCash\Bin\Debug\MDIL\System.Windows.Interactivity.dll is not in the compile filter. Skipping.
 Processing file: C:\DevTools\Git\windowsPhone\MontpellierCash\MontpellierCash\Bin\Debug\MDIL\TweetMaps.dll

@@ -56,3 +56,11 @@ C:\DevTools\Git\windowsPhone\MarketRoulet\MarketRoulet\obj\Release\fr\MarketRoul
 C:\DevTools\Git\windowsPhone\MarketRoulet\MarketRoulet\obj\Release\MarketRoulet.dll
 C:\DevTools\Git\windowsPhone\MarketRoulet\MarketRoulet\obj\Release\MarketRoulet.pdb
 C:\DevTools\Git\windowsPhone\MarketRoulet\MarketRoulet\obj\Release\XapCacheFile.xml
+C:\DevTools\Git\windowsPhone\MarketRoulet\MarketRoulet\Bin\Release\MyToolkit.Extended.dll
+C:\DevTools\Git\windowsPhone\MarketRoulet\MarketRoulet\Bin\Release\MyToolkit.dll
+C:\DevTools\Git\windowsPhone\MarketRoulet\MarketRoulet\Bin\Release\MyToolkit.Extended.pdb
+C:\DevTools\Git\windowsPhone\MarketRoulet\MarketRoulet\Bin\Release\MyToolkit.pdb
+C:\DevTools\Git\windowsPhone\MarketRoulet\MarketRoulet\Bin\Release\de\MyToolkit.Extended.resources.dll
+C:\DevTools\Git\windowsPhone\MarketRoulet\MarketRoulet\Bin\Release\fr\MyToolkit.Extended.resources.dll
+C:\DevTools\Git\windowsPhone\MarketRoulet\MarketRoulet\Bin\Release\de\MyToolkit.resources.dll
+C:\DevTools\Git\windowsPhone\MarketRoulet\MarketRoulet\Bin\Release\fr\MyToolkit.resources.dll

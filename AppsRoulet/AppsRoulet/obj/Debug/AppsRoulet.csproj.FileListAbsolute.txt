@@ -26,3 +26,9 @@ C:\DevTools\Git\windowsPhone\UserControl\AppsRoulet\AppsRoulet\Bin\Debug\FstnCom
 C:\DevTools\Git\windowsPhone\UserControl\AppsRoulet\AppsRoulet\Bin\Debug\FstnDesign.pdb
 C:\DevTools\Git\windowsPhone\UserControl\AppsRoulet\AppsRoulet\Bin\Debug\FstnUserControl.pdb
 C:\DevTools\Git\windowsPhone\UserControl\AppsRoulet\AppsRoulet\Bin\Debug\Microsoft.Phone.Controls.Toolkit.pdb
+C:\DevTools\Git\windowsPhone\AppsRoulet\AppsRoulet\obj\Debug\AppsRoulet.csprojResolveAssemblyReference.cache
+C:\DevTools\Git\windowsPhone\AppsRoulet\AppsRoulet\obj\Debug\App.g.cs
+C:\DevTools\Git\windowsPhone\AppsRoulet\AppsRoulet\obj\Debug\MainPage.g.cs
+C:\DevTools\Git\windowsPhone\AppsRoulet\AppsRoulet\obj\Debug\AppsRoulet.g.resources
+C:\DevTools\Git\windowsPhone\AppsRoulet\AppsRoulet\obj\Debug\AppsRoulet.dll
+C:\DevTools\Git\windowsPhone\AppsRoulet\AppsRoulet\obj\Debug\AppsRoulet.pdb

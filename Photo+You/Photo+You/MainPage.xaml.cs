@@ -51,7 +51,7 @@ namespace Photo_You
                 IsIndeterminate = true
             };
             SystemTray.SetProgressIndicator(this, indicator);
-            CameraButtons.ShutterKeyPressed += CameraButtons_ShutterKeyPressed;             
+            CameraButtons.ShutterKeyPressed += CameraButtons_ShutterKeyPressed;
         }
 
 
@@ -95,6 +95,11 @@ namespace Photo_You
                 RootLayout.IsLocked = false;
                 RootLayout.SelectedIndex = 0;
                 RootLayout.IsLocked = true;
+                e.Cancel = true;
+            }
+
+            if ((primaryShooter != null && primaryShooter.CameraIsInitialized == false) && (secondShooter != null && secondShooter.CameraIsInitialized == false))
+            {
                 e.Cancel = true;
             }
         }
@@ -217,6 +222,10 @@ namespace Photo_You
                     task.Show();
                 }
             }
+            else
+            {
+                MessageBox.Show(Msg.CANTSHARE);
+            }
         }
 
         private void AskToSave(object sender, EventArgs e)
@@ -321,10 +330,10 @@ namespace Photo_You
             var theme = ThemeManager.Instance.Theme;
             ApplicationBar = new ApplicationBar();
             ApplicationBar.IsMenuEnabled = false;
-            ApplicationBarGenerator.Instance.CreateDouble(ApplicationBar, "/Assets/Images/" + theme + "/appbar.share.png", Msg.Share, AskToShare);
+            ApplicationBarGenerator.Instance.CreateDouble(ApplicationBar, "/Assets/Images/" + theme + "/appbar.camera.flash.png", Msg.Flash, AskToFlash);
+ ApplicationBarGenerator.Instance.CreateDouble(ApplicationBar, "/Assets/Images/" + theme + "/appbar.share.png", Msg.Share, AskToShare);
             ApplicationBarGenerator.Instance.CreateDouble(ApplicationBar, "/Assets/Images/" + theme + "/appbar.save.png", Msg.Save, AskToSave);
             ApplicationBarGenerator.Instance.CreateDouble(ApplicationBar, "/Assets/Images/" + theme + "/appbar.camera.png", Msg.Back, AskToBack);
-            ApplicationBarGenerator.Instance.CreateDouble(ApplicationBar, "/Assets/Images/" + theme + "/appbar.camera.flash.png", Msg.Back, AskToFlash);
         }
 
         private void AskToFlash(object sender, EventArgs e)
@@ -382,6 +391,16 @@ namespace Photo_You
                 {
                     primaryShooter.Focus();
                 }
+                else
+                {
+                     try
+                {
+                    NavigationService.Navigate(new Uri("/MainPage.xaml?t=" + RandomService.Instance.getRand(), UriKind.Relative));
+                }
+                catch (InvalidOperationException ex)
+                {
+                }
+                }
             }
         }
 
@@ -392,6 +411,16 @@ namespace Photo_You
                 primaryShooter.Focus();
             }
         }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            if (RootLayout.SelectedIndex != 0 || (primaryShooter!=null && primaryShooter.Camera==null) || (secondShooter!=null && secondShooter.Camera==null))
+            {
+                NavigationService.Navigate(new Uri("/MainPage.xaml?t=" + RandomService.Instance.getRand(), UriKind.Relative));                
+            }
+        }
+
+       
 
         void Clean(object sender, RoutedEventArgs e)
         {

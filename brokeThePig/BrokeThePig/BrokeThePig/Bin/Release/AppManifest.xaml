@@ -11,5 +11,7 @@
     <AssemblyPart x:Name="Microsoft.Phone.Controls" Source="Microsoft.Phone.Controls.dll" />
     <AssemblyPart x:Name="System.Windows.Interactivity" Source="System.Windows.Interactivity.dll" />
     <AssemblyPart x:Name="Microsoft.Phone.Controls.Toolkit" Source="Microsoft.Phone.Controls.Toolkit.dll" />
+    <AssemblyPart x:Name="MyToolkit.Extended" Source="MyToolkit.Extended.dll" />
+    <AssemblyPart x:Name="MyToolkit" Source="MyToolkit.dll" />
   </Deployment.Parts>
 </Deployment>

@@ -1,13 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Net;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Media;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using FstnCommon.Util;
 using FstnDesign.FstnColor;
 using FstnUserControl.ApplicationBar;
@@ -17,14 +11,7 @@ using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using Microsoft.Phone.Tasks;
 using HeartCam.Resources;
-using Windows.Phone.Media.Capture;
 using Microsoft.Xna.Framework.Media.PhoneExtensions;
-using FstnUserControl.Error;
-using FstnUserControl;
-using Microsoft.Expression.Shapes;
-using System.Windows.Media.Imaging;
-using System.IO;
-using Microsoft.Xna.Framework.Media;
 
 namespace HeartCam
 {
@@ -107,21 +94,34 @@ namespace HeartCam
             var theme = ThemeManager.Instance.Theme;
             ApplicationBar = new ApplicationBar();
             ApplicationBar.IsMenuEnabled = false;
-            ApplicationBarGenerator.Instance.CreateDouble(ApplicationBar, "/Assets/Images/" + theme + "/appbar.arrow.left.right.png", Msg.Share, AskToSwitch);
-            ApplicationBarGenerator.Instance.CreateDouble(ApplicationBar, "/Assets/Images/" + theme + "/appbar.share.png", Msg.Save, AskToShare);
+            ApplicationBarGenerator.Instance.CreateDouble(ApplicationBar, "/Assets/Images/" + theme + "/appbar.camera.flash.png", Msg.Flash, AskToFlash);
+            ApplicationBarGenerator.Instance.CreateDouble(ApplicationBar, "/Assets/Images/" + theme + "/appbar.share.png", Msg.Share, AskToShare);
             ApplicationBarGenerator.Instance.CreateDouble(ApplicationBar, "/Assets/Images/" + theme + "/appbar.camera.png", Msg.Back, AskToBack);
-            ApplicationBarGenerator.Instance.CreateDouble(ApplicationBar, "/Assets/Images/" + theme + "/appbar.camera.flash.png", Msg.Back, AskToFlash);
+            ApplicationBarGenerator.Instance.CreateDouble(ApplicationBar, "/Assets/Images/" + theme + "/appbar.arrow.left.right.png", Msg.Switch, AskToSwitch);
         }
 
         private void AskToSwitch(object sender, EventArgs e)
         {
-            if (primaryShooter != null)
+            try
             {
-                if (primaryShooter.Camera.CameraType == (CameraType.Primary))
-                    LoadShooter(CameraType.FrontFacing);
-                else
-                    LoadShooter(CameraType.Primary);
+                if (primaryShooter != null)
+                {
+                    CameraType type = primaryShooter.Camera.CameraType;
 
+                    primaryCapture.Children.Remove(primaryShooter);
+                    primaryShooter.Captured -= primaryShooter_Captured;
+                    primaryShooter.Initialized -= primaryShooter_Initialized;
+                    primaryShooter.Stop();
+                    if (type == (CameraType.Primary))
+                        LoadShooter(CameraType.FrontFacing);
+                    else
+                        LoadShooter(CameraType.Primary);
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Sorry can change of cam");
             }
         }
 
@@ -165,9 +165,16 @@ namespace HeartCam
 
         private void AskToShare(object sender, EventArgs e)
         {
-            ShareMediaTask task = new ShareMediaTask();
-            task.FilePath = ScreenShot.Take(exportCanvas).GetPath();
-            task.Show();
+            try
+            {
+                ShareMediaTask task = new ShareMediaTask();
+                task.FilePath = ScreenShot.Take(exportCanvas).GetPath();
+                task.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Sorry but we can't share at the moment");
+            }
         }
 
         private void AskToBack(object sender, EventArgs e)

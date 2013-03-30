@@ -35,8 +35,8 @@ C:\DevTools\Git\windowsPhone\FstnDesign\Bin\Debug\ko\System.Windows.Interactivit
 C:\DevTools\Git\windowsPhone\FstnDesign\Bin\Debug\ru\System.Windows.Interactivity.resources.dll
 C:\DevTools\Git\windowsPhone\FstnDesign\Bin\Debug\zh-Hans\System.Windows.Interactivity.resources.dll
 C:\DevTools\Git\windowsPhone\FstnDesign\Bin\Debug\zh-Hant\System.Windows.Interactivity.resources.dll
+C:\DevTools\Git\windowsPhone\FstnDesign\obj\Debug\FstnDesign.csprojResolveAssemblyReference.cache
 C:\DevTools\Git\windowsPhone\FstnDesign\obj\Debug\Error.g.cs
 C:\DevTools\Git\windowsPhone\FstnDesign\obj\Debug\FstnDesign.g.resources
 C:\DevTools\Git\windowsPhone\FstnDesign\obj\Debug\FstnDesign.dll
 C:\DevTools\Git\windowsPhone\FstnDesign\obj\Debug\FstnDesign.pdb
-C:\DevTools\Git\windowsPhone\FstnDesign\obj\Debug\FstnDesign.csprojResolveAssemblyReference.cache

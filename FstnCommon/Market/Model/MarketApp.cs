@@ -22,6 +22,7 @@ namespace FstnCommon.Market.Model
         public String Description { get; set; }
         public String DownloadLink { get; set; }
 
+
         public static MarketApp Empty { get { return new MarketApp(); } }
         public MarketApp()
         { 

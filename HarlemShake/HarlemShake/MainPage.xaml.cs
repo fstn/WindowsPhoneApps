@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Net;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Media;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using FstnCommon.Util;
 using FstnDesign.FstnColor;
 using FstnUserControl.ApplicationBar;
@@ -17,22 +13,11 @@ using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using Microsoft.Phone.Tasks;
 using HarlemShake.Resources;
-using Windows.Phone.Media.Capture;
 using Microsoft.Xna.Framework.Media.PhoneExtensions;
-using FstnUserControl.Error;
-using FstnUserControl;
-using Microsoft.Expression.Shapes;
-using System.Windows.Media.Imaging;
-using System.IO;
-using Microsoft.Xna.Framework.Media;
-using Microsoft.Phone.Maps.Controls;
-using System.Runtime.Serialization.Json;
 using System.Xml.Linq;
-using System.Text.RegularExpressions;
-using System.Device.Location;
-using System.Globalization;
 using FstnUserControl.Video;
 using ShakeGestures;
+using System.Windows.Navigation;
 
 namespace HarlemShake
 {
@@ -51,26 +36,30 @@ namespace HarlemShake
 
         void MainPage_Loaded(object sender, RoutedEventArgs e)
         {
-            indicator = new ProgressIndicator
+            try
             {
-                IsVisible = true,
-                IsIndeterminate = true
-            };
-            SystemTray.SetProgressIndicator(this, indicator);
-            CameraButtons.ShutterKeyPressed += CameraButtons_ShutterKeyPressed;
-            LoadShooter(CameraType.FrontFacing);
+                indicator = new ProgressIndicator
+                {
+                    IsVisible = true,
+                    IsIndeterminate = true
+                };
+                SystemTray.SetProgressIndicator(this, indicator);
+                CameraButtons.ShutterKeyPressed += CameraButtons_ShutterKeyPressed;
+                LoadShooter(CameraType.FrontFacing);
 
-            var wc = new WebClient();
-            wc.DownloadStringCompleted += DownloadStringCompleted;
-            var searchUri = string.Format(
-              "http://gdata.youtube.com/feeds/api/videos?q={0}&format=6",
-              HttpUtility.UrlEncode("harlem shake"));
-            wc.DownloadStringAsync(new Uri(searchUri));
-
-            shake = ShakeGesturesHelper.Instance;
-            shake.ShakeGesture += shake_ShakeGesture;
-            RootLayout.SelectionChanged += RootLayout_SelectionChanged;
-
+                var wc = new WebClient();
+                wc.DownloadStringCompleted += DownloadStringCompleted;
+                var searchUri = string.Format(
+                  "http://gdata.youtube.com/feeds/api/videos?q={0}&format=6",
+                  HttpUtility.UrlEncode("harlem shake"));
+                wc.DownloadStringAsync(new Uri(searchUri));
+                shake = ShakeGesturesHelper.Instance;
+                shake.ShakeGesture += shake_ShakeGesture;
+                RootLayout.SelectionChanged += RootLayout_SelectionChanged;
+            }
+            catch (Exception ex)
+            {
+            }
         }
 
         void RootLayout_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -98,6 +87,11 @@ namespace HarlemShake
             if (RootLayout.SelectedIndex > 0)
             {
                 RootLayout.SelectedIndex = 0;
+                e.Cancel = true;
+            }
+
+            if ((primaryShooter != null && primaryShooter.CameraIsInitialized == false))
+            {
                 e.Cancel = true;
             }
         }
@@ -132,10 +126,6 @@ namespace HarlemShake
             OrientedCameraImage OrientedImage = (OrientedCameraImage)e;
             displayImage.Source = OrientedImage.Image;
             displayImage.RenderTransformOrigin = new Point(0.5, 0.5);
-            displayImage.RenderTransform = new ScaleTransform()
-            {
-                ScaleY = -1
-            };
             ScreenShot.Save(exportCanvas);
             displayImage.Visibility = Visibility.Visible;
         }
@@ -221,26 +211,34 @@ namespace HarlemShake
 
         void DownloadStringCompleted(object sender, DownloadStringCompletedEventArgs e)
         {
-            var atomns = XNamespace.Get("http://www.w3.org/2005/Atom");
-            var medians = XNamespace.Get("http://search.yahoo.com/mrss/");
-            var xml = XElement.Parse(e.Result);
-            if (xml != null)
+
+            try
             {
-                var videos = (
-                  from entry in xml.Descendants(atomns.GetName("entry"))
-                  select new YoutubeVideo
-                  {
-                      VideoId = entry.Element(atomns.GetName("id")).Value,
-                      VideoImageUrl = (
-                        from thumbnail in entry.Descendants(medians.GetName("thumbnail"))
-                        where thumbnail.Attribute("height").Value == "360"
-                        select thumbnail.Attribute("url").Value).FirstOrDefault(),
-                      VideoUrl = (
-                      from player in entry.Descendants(medians.GetName("player"))
-                      select player.Attribute("url").Value).FirstOrDefault(),
-                      Title = entry.Element(atomns.GetName("title")).Value
-                  }).ToArray();
-                ResultsList.ItemsSource = videos;
+                var atomns = XNamespace.Get("http://www.w3.org/2005/Atom");
+                var medians = XNamespace.Get("http://search.yahoo.com/mrss/");
+                var xml = XElement.Parse(e.Result);
+                if (xml != null)
+                {
+                    var videos = (
+                      from entry in xml.Descendants(atomns.GetName("entry"))
+                      select new YoutubeVideo
+                      {
+                          VideoId = entry.Element(atomns.GetName("id")).Value,
+                          VideoImageUrl = (
+                            from thumbnail in entry.Descendants(medians.GetName("thumbnail"))
+                            where thumbnail.Attribute("height").Value == "360"
+                            select thumbnail.Attribute("url").Value).FirstOrDefault(),
+                          VideoUrl = (
+                          from player in entry.Descendants(medians.GetName("player"))
+                          select player.Attribute("url").Value).FirstOrDefault(),
+                          Title = entry.Element(atomns.GetName("title")).Value
+                      }).ToArray();
+                    ResultsList.ItemsSource = videos;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Networking problems, please check your connection");
             }
         }
         private void InitAppBar()
@@ -254,6 +252,13 @@ namespace HarlemShake
 
         }
 
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            if (RootLayout.SelectedIndex != 0 || (primaryShooter != null && primaryShooter.Camera == null))
+            {
+                NavigationService.Navigate(new Uri("/MainPage.xaml?t=" + RandomService.Instance.getRand(), UriKind.Relative));
+            }
+        }
     }
     public class YouTubeVideo
     {

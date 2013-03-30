@@ -78,7 +78,6 @@ namespace BrokeThePig
                 {
                     AI.Instance.CurrentNumber.LevelNumber = 0;
                 }
-                AI.Instance.CurrentMoney = 100000;
             }
         }
 
@@ -86,11 +85,17 @@ namespace BrokeThePig
         // This code will not execute when the application is first launched
         private void Application_Activated(object sender, ActivatedEventArgs e)
         {
-            int count = Convert.ToInt16(CryptedSettingsService.Instance.Value(SettingsKeys.CurrentCount));
-            if (count != 0)
-                AI.Instance.CurrentNumber.Number = count;
-            AI.Instance.CurrentNumber.LevelNumber = Convert.ToInt16(CryptedSettingsService.Instance.Value(SettingsKeys.CurrentLevel));
-            AI.Instance.CurrentMoney = Convert.ToInt16(CryptedSettingsService.Instance.Value(SettingsKeys.CurrentMoney));
+            try
+            {
+                int count = Convert.ToInt16(CryptedSettingsService.Instance.Value(SettingsKeys.CurrentCount));
+                if (count != 0)
+                    AI.Instance.CurrentNumber.Number = count;
+                AI.Instance.CurrentNumber.LevelNumber = Convert.ToInt16(CryptedSettingsService.Instance.Value(SettingsKeys.CurrentLevel));
+                AI.Instance.CurrentMoney = Convert.ToInt16(CryptedSettingsService.Instance.Value(SettingsKeys.CurrentMoney));
+            }
+            catch (OverflowException ex)
+            {
+            }
             
         }
 
@@ -126,6 +131,10 @@ namespace BrokeThePig
         // Code to execute on Unhandled Exceptions
         private void Application_UnhandledException(object sender, ApplicationUnhandledExceptionEventArgs e)
         {
+            //TODO temporaire , ne pas oublier d'enlever
+            MessageBox.Show(e.ExceptionObject.ToString() + " " + e.ExceptionObject.Message);
+            
+            
             if (System.Diagnostics.Debugger.IsAttached)
             {
                 Debugger.Log(3, "warning", e.ExceptionObject.ToString());

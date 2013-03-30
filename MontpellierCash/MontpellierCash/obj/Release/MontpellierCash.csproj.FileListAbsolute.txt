@@ -36,3 +36,11 @@ C:\DevTools\Git\windowsPhone\MontpellierCash\MontpellierCash\obj\Release\Montpel
 C:\DevTools\Git\windowsPhone\MontpellierCash\MontpellierCash\obj\Release\MontpellierCash.dll
 C:\DevTools\Git\windowsPhone\MontpellierCash\MontpellierCash\obj\Release\MontpellierCash.pdb
 C:\DevTools\Git\windowsPhone\MontpellierCash\MontpellierCash\obj\Release\XapCacheFile.xml
+C:\DevTools\Git\windowsPhone\MontpellierCash\MontpellierCash\Bin\Release\MyToolkit.Extended.dll
+C:\DevTools\Git\windowsPhone\MontpellierCash\MontpellierCash\Bin\Release\MyToolkit.dll
+C:\DevTools\Git\windowsPhone\MontpellierCash\MontpellierCash\Bin\Release\MyToolkit.Extended.pdb
+C:\DevTools\Git\windowsPhone\MontpellierCash\MontpellierCash\Bin\Release\MyToolkit.pdb
+C:\DevTools\Git\windowsPhone\MontpellierCash\MontpellierCash\Bin\Release\de\MyToolkit.Extended.resources.dll
+C:\DevTools\Git\windowsPhone\MontpellierCash\MontpellierCash\Bin\Release\fr\MyToolkit.Extended.resources.dll
+C:\DevTools\Git\windowsPhone\MontpellierCash\MontpellierCash\Bin\Release\de\MyToolkit.resources.dll
+C:\DevTools\Git\windowsPhone\MontpellierCash\MontpellierCash\Bin\Release\fr\MyToolkit.resources.dll

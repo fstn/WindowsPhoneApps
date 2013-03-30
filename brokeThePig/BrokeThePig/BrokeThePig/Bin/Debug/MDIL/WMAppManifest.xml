@@ -1,6 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2012/deployment" AppPlatformVersion="8.0">
-  <DefaultLanguage xmlns="" code="" />
+  <DefaultLanguage xmlns="" code="en" />
+  <Languages xmlns="">
+    <Language code="en" />
+  </Languages>
   <App xmlns="" ProductID="{2521abde-6976-46d1-8b23-a271f78468f4}" Title="BrokeThePig" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="BrokeThePig author" Description="Sample description" Publisher="BrokeThePig" PublisherID="{fe58bd8e-edd4-4416-8dce-fcd77db941b0}">
     <IconPath IsRelative="true" IsResource="false">DirtyPigIcon.png</IconPath>
     <Capabilities>
@@ -22,7 +25,7 @@
           <BackContent></BackContent>
           <BackBackgroundImageURI></BackBackgroundImageURI>
           <BackTitle></BackTitle>
-          <LargeBackgroundImageURI IsRelative="true" IsResource="false"></LargeBackgroundImageURI>
+          <LargeBackgroundImageURI IsRelative="true" IsResource="false">DirtyPigIcon.png</LargeBackgroundImageURI>
           <LargeBackContent />
           <LargeBackBackgroundImageURI IsRelative="true" IsResource="false"></LargeBackBackgroundImageURI>
           <DeviceLockImageURI IsResource="false" IsRelative="true">DirtyPigIcon.png</DeviceLockImageURI>

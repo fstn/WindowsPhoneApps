@@ -1,7 +1,9 @@
-﻿<xapCache source="C:\DevTools\Git\windowsPhone\MontpellierCash\MontpellierCash\Bin\Release\MontpellierCash_AnyCPU.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="23/03/2013 17:42:45">
-  <file source="C:\DevTools\Git\windowsPhone\MontpellierCash\MontpellierCash\obj\Release\MontpellierCash.dll" archivePath="MontpellierCash.dll" lastWriteTime="23/03/2013 17:42:44" />
+﻿<xapCache source="C:\DevTools\Git\windowsPhone\MontpellierCash\MontpellierCash\Bin\Release\MontpellierCash_AnyCPU.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="28/03/2013 08:25:05">
+  <file source="C:\DevTools\Git\windowsPhone\MontpellierCash\MontpellierCash\obj\Release\MontpellierCash.dll" archivePath="MontpellierCash.dll" lastWriteTime="28/03/2013 08:25:04" />
   <file source="C:\DevTools\Git\windowsPhone\MontpellierCash\MontpellierCash\Assets\Images\Background2.png" archivePath="Assets\Images\Background2.png" lastWriteTime="23/03/2013 16:54:02" />
+  <file source="C:\DevTools\Git\windowsPhone\MontpellierCash\MontpellierCash\Assets\Images\dark\appbar.settings.png" archivePath="Assets\Images\dark\appbar.settings.png" lastWriteTime="28/03/2013 08:12:32" />
   <file source="C:\DevTools\Git\windowsPhone\MontpellierCash\MontpellierCash\Assets\Images\euro.png" archivePath="Assets\Images\euro.png" lastWriteTime="23/03/2013 16:52:06" />
+  <file source="C:\DevTools\Git\windowsPhone\MontpellierCash\MontpellierCash\Assets\Images\light\appbar.settings.png" archivePath="Assets\Images\light\appbar.settings.png" lastWriteTime="28/03/2013 08:12:13" />
   <file source="C:\DevTools\Git\windowsPhone\MontpellierCash\MontpellierCash\Assets\Images\me.png" archivePath="Assets\Images\me.png" lastWriteTime="23/03/2013 16:37:59" />
   <file source="C:\DevTools\Git\windowsPhone\MontpellierCash\MontpellierCash\Data\CashMachines.csv" archivePath="Data\CashMachines.csv" lastWriteTime="23/03/2013 16:21:12" />
   <file source="C:\DevTools\Git\windowsPhone\MontpellierCash\MontpellierCash\Assets\AlignmentGrid.png" archivePath="Assets\AlignmentGrid.png" lastWriteTime="16/03/2013 17:46:48" />
@@ -24,7 +26,7 @@
   <file source="C:\DevTools\Git\windowsPhone\MontpellierCash\MontpellierCash\Assets\Tiles\FlipCycleTileLarge.png" archivePath="Assets\Tiles\FlipCycleTileLarge.png" lastWriteTime="23/03/2013 15:25:24" />
   <file source="C:\DevTools\Git\windowsPhone\MontpellierCash\MontpellierCash\Assets\Images\Background.png" archivePath="Assets\Images\Background.png" lastWriteTime="23/03/2013 15:45:38" />
   <file source="C:\DevTools\Git\windowsPhone\MontpellierCash\MontpellierCash\Data\Feux.xml" archivePath="Data\Feux.xml" lastWriteTime="23/03/2013 12:07:02" />
-  <file source="C:\DevTools\Git\windowsPhone\MontpellierCash\MontpellierCash\Bin\Release\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="23/03/2013 17:29:18" />
+  <file source="C:\DevTools\Git\windowsPhone\MontpellierCash\MontpellierCash\Bin\Release\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="28/03/2013 08:17:48" />
   <file source="C:\DevTools\Git\windowsPhone\MontpellierCash\MontpellierCash\Bin\Release\Fonts\digital-7.ttf" archivePath="Fonts\digital-7.ttf" lastWriteTime="03/02/2013 18:41:39" />
   <file source="C:\DevTools\Git\windowsPhone\MontpellierCash\MontpellierCash\Bin\Release\Error.png" archivePath="Error.png" lastWriteTime="24/02/2013 12:11:42" />
   <file source="C:\DevTools\Git\windowsPhone\MontpellierCash\MontpellierCash\Bin\Release\Assets\Tiles\FlipCycleTileMedium.png" archivePath="Assets\Tiles\FlipCycleTileMedium.png" lastWriteTime="23/03/2013 15:26:57" />
@@ -33,13 +35,15 @@
   <file source="C:\Program Files (x86)\Microsoft SDKs\Windows Phone\v8.0\ExtensionSDKs\MSAdvertising\6.1\References\CommonConfiguration\neutral\Microsoft.Advertising.Mobile.UI.dll" archivePath="Microsoft.Advertising.Mobile.UI.dll" lastWriteTime="10/09/2012 10:43:36" />
   <file source="C:\Program Files (x86)\Microsoft SDKs\Windows Phone\v8.0\ExtensionSDKs\MSAdvertising\6.1\References\CommonConfiguration\neutral\Microsoft.Advertising.Mobile.UI.xml" archivePath="Microsoft.Advertising.Mobile.UI.xml" lastWriteTime="20/07/2012 08:57:18" />
   <file source="C:\Program Files (x86)\Microsoft SDKs\Windows Phone\v8.0\ExtensionSDKs\MSAdvertising\6.1\References\CommonConfiguration\neutral\Microsoft.Advertising.Mobile.xml" archivePath="Microsoft.Advertising.Mobile.xml" lastWriteTime="20/07/2012 08:57:18" />
-  <file source="C:\DevTools\Git\windowsPhone\FstnAnimation\Bin\Release\FstnAnimation.dll" archivePath="FstnAnimation.dll" lastWriteTime="23/03/2013 08:45:35" />
-  <file source="C:\DevTools\Git\windowsPhone\FstnCommon\Bin\Release\FstnCommon.dll" archivePath="FstnCommon.dll" lastWriteTime="23/03/2013 08:45:34" />
-  <file source="C:\DevTools\Git\windowsPhone\FstnDesign\Bin\Release\FstnDesign.dll" archivePath="FstnDesign.dll" lastWriteTime="23/03/2013 08:45:35" />
-  <file source="C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Release\FstnUserControl.dll" archivePath="FstnUserControl.dll" lastWriteTime="23/03/2013 10:43:11" />
+  <file source="C:\DevTools\Git\windowsPhone\FstnAnimation\Bin\Release\FstnAnimation.dll" archivePath="FstnAnimation.dll" lastWriteTime="28/03/2013 02:19:15" />
+  <file source="C:\DevTools\Git\windowsPhone\FstnCommon\Bin\Release\FstnCommon.dll" archivePath="FstnCommon.dll" lastWriteTime="28/03/2013 02:19:13" />
+  <file source="C:\DevTools\Git\windowsPhone\FstnDesign\Bin\Release\FstnDesign.dll" archivePath="FstnDesign.dll" lastWriteTime="28/03/2013 02:19:14" />
+  <file source="C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Release\FstnUserControl.dll" archivePath="FstnUserControl.dll" lastWriteTime="28/03/2013 02:19:16" />
   <file source="C:\Program Files (x86)\Microsoft SDKs\Expression\Blend\Windows Phone\v8.0\Libraries\Microsoft.Expression.Drawing.dll" archivePath="Microsoft.Expression.Drawing.dll" lastWriteTime="25/09/2012 02:41:02" />
   <file source="C:\Program Files (x86)\Microsoft SDKs\Windows Phone\v8.0\Libraries\Microsoft.Phone.Controls.dll" archivePath="Microsoft.Phone.Controls.dll" lastWriteTime="26/09/2012 15:30:38" />
   <file source="C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Release\Microsoft.Phone.Controls.Toolkit.dll" archivePath="Microsoft.Phone.Controls.Toolkit.dll" lastWriteTime="21/02/2013 10:42:29" />
+  <file source="C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Release\MyToolkit.Extended.dll" archivePath="MyToolkit.Extended.dll" lastWriteTime="24/03/2013 07:54:47" />
+  <file source="C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Release\MyToolkit.dll" archivePath="MyToolkit.dll" lastWriteTime="24/03/2013 07:54:46" />
   <file source="E:\DevTools\C#\project\number picker\libs\Microsoft.Phone.Controls.Toolkit.dll" archivePath="Microsoft.Phone.Controls.Toolkit.dll" lastWriteTime="02/11/2010 15:36:16" />
   <file source="C:\Program Files (x86)\Microsoft SDKs\Windows Phone\v8.0\Libraries\Microsoft.Phone.Controls.Maps.dll" archivePath="Microsoft.Phone.Controls.Maps.dll" lastWriteTime="26/09/2012 15:30:38" />
   <file source="C:\DevTools\Git\windowsPhone\Photo+You\packages\WPtoolkit.4.2012.10.30\lib\sl4-windowsphone71\Microsoft.Phone.Controls.Toolkit.dll" archivePath="Microsoft.Phone.Controls.Toolkit.dll" lastWriteTime="16/03/2013 18:57:27" />
@@ -72,5 +76,5 @@
   <file source="C:\DevTools\Git\windowsPhone\FstnUserControl\Toolkit.Content\ApplicationBar.Check.png" archivePath="Toolkit.Content\ApplicationBar.Check.png" lastWriteTime="08/02/2013 18:26:52" />
   <file source="C:\DevTools\Git\windowsPhone\FstnUserControl\Toolkit.Content\ApplicationBar.Delete.png" archivePath="Toolkit.Content\ApplicationBar.Delete.png" lastWriteTime="08/02/2013 18:26:52" />
   <file source="C:\DevTools\Git\windowsPhone\FstnUserControl\Toolkit.Content\ApplicationBar.Select.png" archivePath="Toolkit.Content\ApplicationBar.Select.png" lastWriteTime="08/02/2013 18:26:52" />
-  <file source="C:\DevTools\Git\windowsPhone\MontpellierCash\MontpellierCash\Bin\Release\Properties\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="23/03/2013 17:32:59" />
+  <file source="C:\DevTools\Git\windowsPhone\MontpellierCash\MontpellierCash\Bin\Release\Properties\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="28/03/2013 08:23:14" />
 </xapCache>

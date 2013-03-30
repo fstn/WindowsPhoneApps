@@ -24,7 +24,9 @@
         	<toolkit:PivotItem  Margin="0">
                 <Canvas x:Name="exportCanvas">
         		<Canvas x:Name="primaryCapture" Canvas.Left="0" Canvas.Top="0"/>
-                <Image x:Name="displayImage" Height="460" Width="701" Canvas.Left="-35" Canvas.Top="0"></Image>
+                <Image x:Name="displayImage" Height="460" Width="701" Canvas.Left="-35" Canvas.Top="0">
+                     
+                    </Image>
                     <Image  x:Name="maskImage"  Stretch="Fill" 
                        Height="505" 
                        Source="/Assets/Images/OldEffect.png" 

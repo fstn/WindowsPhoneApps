@@ -16,8 +16,6 @@ using Microsoft.Phone.Controls;
 using System.Windows.Data;
 using Windows.Phone.Devices.Notification;
 
-
-
 namespace FstnUserControl.Camera
 {
     public class CameraShooter : Canvas
@@ -25,23 +23,34 @@ namespace FstnUserControl.Camera
         public event InitializedEventHandler Initialized;
         public event CaptureEventHandler Captured;
         public PhotoCamera Camera { get; set; }
-        private VideoBrush brush;
-        private CompositeTransform videoBrushTransform { get; set; }
         public CameraType Type { get; set; }
+
         private DispatcherTimer dt;
+        private VideoBrush brush;
+        private CompositeTransform videoBrushTransform;
+
         private bool dtWasRunning = false;
         private bool camWasRunning = false;
+        private bool busy = false;
+        private bool mute = false;
+        private bool cameraIsInitialized = false;
+        public bool CameraIsInitialized
+        {
+            get
+            {
+                return cameraIsInitialized;
+            }
+        }
 
         private TextBlock decountText;
         private int decountNumber = 3;
+
         private SoundController sc;
         private Size resolution;
-        private bool busy = false;
         private PageOrientation orientation = PageOrientation.LandscapeLeft;
         private double angle = 0;
         private Binding HeightBinding;
         private Binding WidthBinding;
-        private bool mute = false;
 
         public bool Mute
         {
@@ -81,91 +90,101 @@ namespace FstnUserControl.Camera
             set
             {
                 orientation = value;
-                /* if (Type == CameraType.FrontFacing)
-                 {
-                     if (orientation == PageOrientation.PortraitDown)
-                         orientation = PageOrientation.PortraitUp;
-
-                     if (orientation == PageOrientation.PortraitUp)
-                         orientation = PageOrientation.PortraitDown;
-
-                     if (orientation == PageOrientation.LandscapeLeft)
-                         orientation = PageOrientation.LandscapeRight;
-
-                     if (orientation == PageOrientation.LandscapeRight)
-                         orientation = PageOrientation.LandscapeLeft;
-                 }*/
                 UpdateOrientation();
             }
         }
         public CameraShooter(CameraType type)
         {
-            if (PhotoCamera.IsCameraTypeSupported(type) == true)
+            try
             {
-                AppManager.Instance.Activated += Instance_Activated;
-                AppManager.Instance.Deactivated += Instance_Deactivated;
-                AppManager.Instance.Closed += Instance_Closed;
-                this.Type = type;
-                InitDT();
-                decountText = new TextBlock();
-                decountText.Text = "";
-                decountText.FontSize = 300;
-                decountText.TextAlignment = TextAlignment.Center;
-                decountText.VerticalAlignment = VerticalAlignment.Center;
-                this.Children.Add(decountText);
-                sc = new SoundController();
+                if (PhotoCamera.IsCameraTypeSupported(type) == true)
+                {
+                    AppManager.Instance.Activated += Instance_Activated;
+                    AppManager.Instance.Deactivated += Instance_Deactivated;
+                    AppManager.Instance.Closed += Instance_Closed;
+                    this.Type = type;
+                    InitDT();
+                    decountText = new TextBlock();
+                    decountText.Text = "";
+                    decountText.FontSize = 300;
+                    decountText.TextAlignment = TextAlignment.Center;
+                    decountText.VerticalAlignment = VerticalAlignment.Center;
+                    this.Children.Add(decountText);
+                    sc = new SoundController();
 
-                brush = new VideoBrush();
-                videoBrushTransform = new CompositeTransform();
-                videoBrushTransform.CenterX = .5;
-                videoBrushTransform.CenterY = .5;
+                    brush = new VideoBrush();
+                    videoBrushTransform = new CompositeTransform();
+                    videoBrushTransform.CenterX = .5;
+                    videoBrushTransform.CenterY = .5;
 
-                if (type == CameraType.FrontFacing)
-                    videoBrushTransform.ScaleX = -1;
+                    if (type == CameraType.FrontFacing)
+                    {
+                        videoBrushTransform.ScaleX = -1;
+                    }
 
-                brush.RelativeTransform = videoBrushTransform;
+                    brush.RelativeTransform = videoBrushTransform;
 
-                HeightBinding = new Binding();
-                HeightBinding.Source = this;
-                HeightBinding.Path = new PropertyPath("Height");
+                    HeightBinding = new Binding();
+                    HeightBinding.Source = this;
+                    HeightBinding.Path = new PropertyPath("Height");
 
-                WidthBinding = new Binding();
-                WidthBinding.Source = this;
-                WidthBinding.Path = new PropertyPath("Width");
+                    WidthBinding = new Binding();
+                    WidthBinding.Source = this;
+                    WidthBinding.Path = new PropertyPath("Width");
 
-                this.Background = brush;
+                    this.Background = brush;
+                }
             }
+            catch (Exception ex) { }
         }
 
         void Instance_Activated(object sender, EventArgs e)
         {
-            if (camWasRunning)
-                Start();
-            if (dtWasRunning)
-                dt.Start();
+            /*
+            try
+            {
+                if (camWasRunning)
+                    Start();
+                if (dtWasRunning)
+                    dt.Start();
+            }
+            catch (Exception ex)
+            {
+            }
+             * */
         }
 
         void Instance_Closed(object sender, EventArgs e)
         {
-            Stop();
+            try
+            {
+                Stop();
+            }
+            catch (Exception ex)
+            {
+            }
         }
 
         void Instance_Deactivated(object sender, EventArgs e)
         {
-            if (Camera != null)
-                camWasRunning = true;
-            else
-                camWasRunning = false;
-
-            if (dt != null)
-                dt.Stop();
-            if (dt.IsEnabled)
+            try
             {
-                dtWasRunning = true;
+                if (Camera != null)
+                    camWasRunning = true;
+                else
+                    camWasRunning = false;
+
+                if (dt != null)
+                    dt.Stop();
+                if (dt.IsEnabled)
+                {
+                    dtWasRunning = true;
+                }
+                Stop();
             }
-            Stop();
-
-
+            catch (Exception ex)
+            {
+            }
         }
 
         private void InitDT()
@@ -211,33 +230,44 @@ namespace FstnUserControl.Camera
 
         public void Start()
         {
-            Camera = new PhotoCamera(Type);
-            Camera.Initialized += cam_Initialized;
-            Camera.AutoFocusCompleted += AutoFocusCompleted;
-            Camera.CaptureCompleted += CaptureCompleted;
-            Camera.CaptureImageAvailable += CaptureImageAvailable;
-            brush.SetSource(Camera);
+            try
+            {
+                if (Camera != null)
+                    Stop();
+                Camera = new PhotoCamera(Type);
+                Camera.Initialized += cam_Initialized;
+                Camera.AutoFocusCompleted += AutoFocusCompleted;
+                Camera.CaptureCompleted += CaptureCompleted;
+                Camera.CaptureImageAvailable += CaptureImageAvailable;
+                brush.SetSource(Camera);
+            }
+            catch (Exception) { }
         }
 
         public void Stop()
         {
-            if (dt != null)
-                dt.Stop();
-            if (Camera != null)
+            try
             {
-                try
+                if (dt != null)
+                    dt.Stop();
+                if (Camera != null && cameraIsInitialized)
                 {
-                    Camera.Initialized -= cam_Initialized;
-                    Camera.AutoFocusCompleted -= AutoFocusCompleted;
-                    Camera.CaptureCompleted -= CaptureCompleted;
-                    Camera.CaptureImageAvailable -= CaptureImageAvailable;
-                    Camera.Dispose();
-                    Camera = null;
-                }
-                catch (Exception e)
-                {
+                    try
+                    {
+                        Camera.Initialized -= cam_Initialized;
+                        Camera.AutoFocusCompleted -= AutoFocusCompleted;
+                        Camera.CaptureCompleted -= CaptureCompleted;
+                        Camera.CaptureImageAvailable -= CaptureImageAvailable;
+                        //Camera.Dispose();
+                        Camera = null;
+                        cameraIsInitialized = false;
+                    }
+                    catch (Exception e)
+                    {
+                    }
                 }
             }
+            catch (Exception) { }
         }
 
         public void ListenTap()
@@ -247,11 +277,21 @@ namespace FstnUserControl.Camera
 
         private void cam_Initialized(object sender, CameraOperationCompletedEventArgs e)
         {
-            resolution = Camera.AvailableResolutions.Last();
-            Camera.Resolution = resolution;
-            if (Initialized != null)
+            try
             {
-                Initialized(this, null);
+                if (Camera != null)
+                {
+                    resolution = Camera.AvailableResolutions.Last();
+                    Camera.Resolution = resolution;
+                    if (Initialized != null)
+                    {
+                        Initialized(this, null);
+                    }
+                    cameraIsInitialized = true;
+                }
+            }
+            catch (Exception ex)
+            {
             }
         }
 
@@ -281,38 +321,32 @@ namespace FstnUserControl.Camera
             vc.Start(TimeSpan.FromMilliseconds(100));
         }
 
-
         public void Focus()
         {
-            if (!busy)
+            if (!busy && cameraIsInitialized)
             {
                 busy = true;
                 if (Camera.IsFocusSupported)
                 {
-
                     try
                     {
                         Camera.Focus();
                     }
                     catch (InvalidOperationException iose)
                     {
-                        busy = false;
-                        Camera.Initialized += (s, e) =>
-                        {
-                            Focus();
-                        };
                         Focus();
                     }
                 }
                 else
                     AutoFocusCompleted(null, null);
 
+                busy = false;
             }
         }
         private void Focus(object sender, System.Windows.Input.GestureEventArgs e)
         {
 
-            if (!busy)
+            if (!busy && cameraIsInitialized)
             {
                 busy = true;
                 this.Tap += Focus;
@@ -347,7 +381,10 @@ namespace FstnUserControl.Camera
         }
         private void CaptureImageAvailable(object sender, ContentReadyEventArgs e)
         {
-            Dispatcher.BeginInvoke(() => ThreadSafeImageCapture(e));
+            if (cameraIsInitialized)
+            {
+                Dispatcher.BeginInvoke(() => ThreadSafeImageCapture(e));
+            }
         }
 
         void ThreadSafeImageCapture(ContentReadyEventArgs e)
@@ -356,7 +393,11 @@ namespace FstnUserControl.Camera
             WriteableBitmap image = BitmapFactory.New((int)Camera.AvailableResolutions.LastOrDefault().Width,
                 (int)Camera.AvailableResolutions.LastOrDefault().Height);
             image.SetSource(e.ImageStream);
-
+            if (Type == CameraType.FrontFacing)
+            {
+                image = WriteableBitmapExtensions.Flip(image, WriteableBitmapExtensions.FlipMode.Vertical);
+                //image = WriteableBitmapExtensions.Flip(image, WriteableBitmapExtensions.FlipMode.Horizontal);
+            }
             image = WriteableBitmapExtensions.Rotate(image, (int)angle);
             OrientedCameraImage orientedImage = new OrientedCameraImage()
             {

@@ -127,7 +127,9 @@
   <ItemGroup>
     <None Include="Assets\Images\Background.psd" />
     <Content Include="Assets\Images\Background2.png" />
+    <Content Include="Assets\Images\dark\appbar.settings.png" />
     <Content Include="Assets\Images\euro.png" />
+    <Content Include="Assets\Images\light\appbar.settings.png" />
     <Content Include="Assets\Images\me.png" />
     <Content Include="Data\CashMachines.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

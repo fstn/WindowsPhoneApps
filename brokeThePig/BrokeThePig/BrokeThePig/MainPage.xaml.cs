@@ -1,35 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.IO;
 using System.IO.IsolatedStorage;
 using System.Linq;
-using System.Net;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Animation;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
-using System.Windows.Threading;
 using BrokeThePig.Resources;
 using BrokeThePig.Source.AI;
 using BrokeThePig.UC;
-using FstnAnimation.Dynamic;
 using FstnCommon.Util;
 using FstnCommon.Util.Settings;
 using FstnDesign.FstnColor;
 using FstnUserControl.ApplicationBar;
 using Microsoft.Phone.Controls;
-using Microsoft.Phone.Marketplace;
 using Microsoft.Phone.Shell;
 using Microsoft.Phone.Tasks;
-using Microsoft.Xna.Framework.Media;
 using Microsoft.Xna.Framework.Media.PhoneExtensions;
-using Windows.ApplicationModel.DataTransfer;
-using Windows.Foundation;
 
 namespace BrokeThePig
 {
@@ -62,7 +47,6 @@ namespace BrokeThePig
             AI.Instance.OnFight += Instance_OnFight;
             ApplicationBar = new ApplicationBar();
             ApplicationBarGenerator.Instance.CreateDouble(ApplicationBar, "/Images/" + theme + "/appbar.share.png", Msg.Share, AskToShare);
-            ApplicationBarGenerator.Instance.CreateDouble(ApplicationBar, "/Images/" + theme + "/appbar.marketplace.png", Msg.GetMoreMoney, AskToBuy);
             ApplicationBarGenerator.Instance.CreateDouble(ApplicationBar, "/Images/" + theme + "/appbar.lock.png", Msg.Lock, AskToLock);
 
         }
@@ -74,15 +58,22 @@ namespace BrokeThePig
 
         private void AskToShare(object sender, EventArgs e)
         {
-            ShareMediaTask task = new ShareMediaTask();
-            task.FilePath = ScreenShot.Take(LayoutRoot).GetPath();
-            task.Show();
+            try
+            {
+                ShareMediaTask task = new ShareMediaTask();
+                task.FilePath = ScreenShot.Take(LayoutRoot).GetPath();
+                task.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Sorry we can't share at the moment");
+            }
         }
 
 
         private void AskToBuy(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+           
         }
 
         void Pig_Exploded()

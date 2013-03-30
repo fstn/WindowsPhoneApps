@@ -123,6 +123,12 @@
   <data name="Back" xml:space="preserve">
     <value>Back</value>
   </data>
+  <data name="CANTSHARE" xml:space="preserve">
+    <value>Can't share, please take a pics first</value>
+  </data>
+  <data name="Flash" xml:space="preserve">
+    <value>Flash</value>
+  </data>
   <data name="ImageSaved" xml:space="preserve">
     <value>Image saved</value>
   </data>

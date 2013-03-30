@@ -9,6 +9,8 @@
     <AssemblyPart x:Name="FstnUserControl" Source="FstnUserControl.dll" />
     <AssemblyPart x:Name="Microsoft.Expression.Drawing" Source="Microsoft.Expression.Drawing.dll" />
     <AssemblyPart x:Name="Microsoft.Phone.Controls.Toolkit" Source="Microsoft.Phone.Controls.Toolkit.dll" />
+    <AssemblyPart x:Name="MyToolkit.Extended" Source="MyToolkit.Extended.dll" />
+    <AssemblyPart x:Name="MyToolkit" Source="MyToolkit.dll" />
     <AssemblyPart x:Name="Microsoft.Phone.Controls" Source="Microsoft.Phone.Controls.dll" />
   </Deployment.Parts>
 </Deployment>

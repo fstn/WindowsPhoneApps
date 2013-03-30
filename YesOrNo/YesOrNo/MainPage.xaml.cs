@@ -1,37 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
-using System.Net;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Media;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using FstnCommon.Util;
 using FstnDesign.FstnColor;
 using FstnUserControl.ApplicationBar;
-using FstnUserControl.Camera;
-using Microsoft.Devices;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using Microsoft.Phone.Tasks;
 using YesOrNo.Resources;
-using Windows.Phone.Media.Capture;
 using Microsoft.Xna.Framework.Media.PhoneExtensions;
-using FstnUserControl.Error;
-using FstnUserControl;
-using Microsoft.Expression.Shapes;
-using System.Windows.Media.Imaging;
-using System.IO;
-using Microsoft.Xna.Framework.Media;
-using Microsoft.Phone.Maps.Controls;
-using System.Runtime.Serialization.Json;
-using System.Xml.Linq;
-using System.Text.RegularExpressions;
-using System.Device.Location;
-using System.Globalization;
-using FstnUserControl.Video;
 using Windows.Phone.Speech.Synthesis;
 using Windows.Phone.Speech.Recognition;
 
@@ -47,16 +24,17 @@ namespace YesOrNo
             InitAppBar();
             InitializeComponent();
             this.Loaded += MainPage_Loaded;
-        }
-
-        void MainPage_Loaded(object sender, RoutedEventArgs e)
-        {
             indicator = new ProgressIndicator
             {
                 IsVisible = true,
                 IsIndeterminate = true
             };
             SystemTray.SetProgressIndicator(this, indicator);
+        }
+
+        void MainPage_Loaded(object sender, RoutedEventArgs e)
+        {
+            indicator.IsVisible = false;
             MicButton.Tap += MicButton_Tap;
             ss = new SpeechSynthesizer();
         }

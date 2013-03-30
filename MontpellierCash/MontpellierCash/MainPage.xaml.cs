@@ -31,6 +31,7 @@ using System.Xml.Linq;
 using System.Text.RegularExpressions;
 using System.Device.Location;
 using System.Globalization;
+using FstnCommon.Util.Settings;
 
 namespace MontpellierCash
 {
@@ -72,39 +73,59 @@ namespace MontpellierCash
             BitmapImage meBitmap = new BitmapImage(new Uri("Assets/Images/me.png", UriKind.Relative));
             MyContent.Children.Add(new Image() { Source = meBitmap });
             MyPin.Content = MyContent;
-             PosWatcher = new GeoCoordinateWatcher(GeoPositionAccuracy.High);
-            PosWatcher.MovementThreshold = 20; // 20 meters
-            PosWatcher.StatusChanged +=
-            new EventHandler<GeoPositionStatusChangedEventArgs>(OnStatusChanged);
-            PosWatcher.PositionChanged +=
-                new EventHandler<GeoPositionChangedEventArgs<GeoCoordinate>>(OnPositionChanged);
-            PosWatcher.Start();
- 
+            try
+            {
+                if (canUseLoc())
+                {
+                    PosWatcher = new GeoCoordinateWatcher(GeoPositionAccuracy.High);
+                    PosWatcher.MovementThreshold = 20; // 20 meters
+                    PosWatcher.StatusChanged +=
+                    new EventHandler<GeoPositionStatusChangedEventArgs>(OnStatusChanged);
+                    PosWatcher.PositionChanged +=
+                        new EventHandler<GeoPositionChangedEventArgs<GeoCoordinate>>(OnPositionChanged);
+                    PosWatcher.Start();
+                }
+            }
+            catch (Exception)
+            {
+            }
+
         }
 
         private void OnPositionChanged(object sender, GeoPositionChangedEventArgs<GeoCoordinate> e)
         {
-            MyPin.GeoCoordinate=new GeoCoordinate( e.Position.Location.Latitude, e.Position.Location.Longitude);
+            try
+            {
+                MyPin.GeoCoordinate = new GeoCoordinate(e.Position.Location.Latitude, e.Position.Location.Longitude);
+            }
+            catch (Exception) { }
         }
 
         private void OnStatusChanged(object sender, GeoPositionStatusChangedEventArgs e)
         {
-            MyPin.GeoCoordinate = new GeoCoordinate(PosWatcher.Position.Location.Latitude, PosWatcher.Position.Location.Longitude);
-            MyMap.Center=new GeoCoordinate(PosWatcher.Position.Location.Latitude, PosWatcher.Position.Location.Longitude);
-            double distance=MyPin.GeoCoordinate.GetDistanceTo(MontpellierGeo);
-            int zoom=1;
-            if( distance<1000)
-                zoom=19;            
-            else if( distance<10000)
-                zoom=14;     
-            else if( distance<50000)
-                zoom = 10;
-            else if (distance < 150000)
-                zoom = 7;
-            else if (distance < 300000)
-                zoom = 5;
+            try
+            {
+                if (canUseLoc())
+                {
+                    MyPin.GeoCoordinate = new GeoCoordinate(PosWatcher.Position.Location.Latitude, PosWatcher.Position.Location.Longitude);
+                    MyMap.Center = new GeoCoordinate(PosWatcher.Position.Location.Latitude, PosWatcher.Position.Location.Longitude);
+                    double distance = MyPin.GeoCoordinate.GetDistanceTo(MontpellierGeo);
+                    int zoom = 1;
+                    if (distance < 1000)
+                        zoom = 19;
+                    else if (distance < 10000)
+                        zoom = 14;
+                    else if (distance < 50000)
+                        zoom = 10;
+                    else if (distance < 150000)
+                        zoom = 7;
+                    else if (distance < 300000)
+                        zoom = 5;
 
-            MyMap.ZoomLevel=zoom;
+                    MyMap.ZoomLevel = zoom;
+                }
+            }
+            catch (Exception) { }
         }
 
         private void ReadFeux()
@@ -137,7 +158,7 @@ namespace MontpellierCash
                     euro.Tap += (o, e) =>
                     {
                         var bankName = elements[2].Replace("  ", "");
-                        if(bankName!="")
+                        if (bankName != "")
                             MessageBox.Show(bankName);
                     };
 
@@ -164,6 +185,29 @@ namespace MontpellierCash
             ApplicationBar = new ApplicationBar();
             ApplicationBar.IsMenuEnabled = false;
             ApplicationBarGenerator.Instance.CreateDouble(ApplicationBar, "/Assets/Images/" + theme + "/appbar.share.png", Msg.Save, AskToShare);
+            //ApplicationBarGenerator.Instance.CreateDouble(ApplicationBar, "/Assets/Images/" + theme + "/appbar.share.png", Msg.Help, AskToHelp);
+            //ApplicationBarGenerator.Instance.CreateDouble(ApplicationBar, "/Assets/Images/" + theme + "/appbar.settings.png", Msg.Disable, AskToDisable);
+
+        }
+
+
+        private bool canUseLoc()
+        {
+            return false;
+            // return SettingsService.Instance.Value<bool>("enable") == true;
+        }
+        private void AskToDisable(object sender, EventArgs e)
+        {
+            if (SettingsService.Instance.Value<bool>("enable") == true)
+            {
+                MessageBox.Show("Desactivation de la localisation");
+                SettingsService.Instance.Save("enable", false);
+            }
+            else
+            {
+                MessageBox.Show("Activation de la localisation");
+                SettingsService.Instance.Save("enable", true);
+            }
         }
         private void AskToShare(object sender, EventArgs e)
         {

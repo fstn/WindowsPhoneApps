@@ -76,3 +76,11 @@ C:\DevTools\Git\windowsPhone\HeartCam\HeartCam\obj\Release\HeartCam.csproj.Gener
 C:\DevTools\Git\windowsPhone\HeartCam\HeartCam\obj\Release\HeartCam.dll
 C:\DevTools\Git\windowsPhone\HeartCam\HeartCam\obj\Release\HeartCam.pdb
 C:\DevTools\Git\windowsPhone\HeartCam\HeartCam\obj\Release\XapCacheFile.xml
+C:\DevTools\Git\windowsPhone\HeartCam\HeartCam\Bin\Release\MyToolkit.Extended.dll
+C:\DevTools\Git\windowsPhone\HeartCam\HeartCam\Bin\Release\MyToolkit.dll
+C:\DevTools\Git\windowsPhone\HeartCam\HeartCam\Bin\Release\MyToolkit.Extended.pdb
+C:\DevTools\Git\windowsPhone\HeartCam\HeartCam\Bin\Release\MyToolkit.pdb
+C:\DevTools\Git\windowsPhone\HeartCam\HeartCam\Bin\Release\de\MyToolkit.Extended.resources.dll
+C:\DevTools\Git\windowsPhone\HeartCam\HeartCam\Bin\Release\fr\MyToolkit.Extended.resources.dll
+C:\DevTools\Git\windowsPhone\HeartCam\HeartCam\Bin\Release\de\MyToolkit.resources.dll
+C:\DevTools\Git\windowsPhone\HeartCam\HeartCam\Bin\Release\fr\MyToolkit.resources.dll

@@ -123,6 +123,9 @@
   <data name="Back" xml:space="preserve">
     <value>Back</value>
   </data>
+  <data name="Disable" xml:space="preserve">
+    <value>Activer</value>
+  </data>
   <data name="ImageSaved" xml:space="preserve">
     <value>Image saved</value>
   </data>
@@ -139,6 +142,9 @@
     <value>Save</value>
   </data>
   <data name="Share" xml:space="preserve">
-    <value>Share</value>
+    <value>Partager</value>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value>Désactiver</value>
   </data>
 </root>

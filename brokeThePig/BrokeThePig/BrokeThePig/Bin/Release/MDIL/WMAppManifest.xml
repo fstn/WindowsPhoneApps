@@ -25,7 +25,7 @@
           <BackContent></BackContent>
           <BackBackgroundImageURI></BackBackgroundImageURI>
           <BackTitle></BackTitle>
-          <LargeBackgroundImageURI IsRelative="true" IsResource="false"></LargeBackgroundImageURI>
+          <LargeBackgroundImageURI IsRelative="true" IsResource="false">DirtyPigIcon.png</LargeBackgroundImageURI>
           <LargeBackContent />
           <LargeBackBackgroundImageURI IsRelative="true" IsResource="false"></LargeBackBackgroundImageURI>
           <DeviceLockImageURI IsResource="false" IsRelative="true">DirtyPigIcon.png</DeviceLockImageURI>

@@ -27,7 +27,7 @@ namespace FstnCommon.Loader
                 client.DownloadStringAsync(uri);
                 Debugger.Log(0, "XML", "xml  load " + uri.AbsoluteUri);
             }
-            catch (WebException e)
+            catch (Exception e)
             {
                 if (Error != null)
                 {
@@ -46,7 +46,7 @@ namespace FstnCommon.Loader
                     Loaded(this, doc);
                 }
             }
-            catch (WebException we)
+            catch (Exception we)
             {
                 if (Error != null)
                 {

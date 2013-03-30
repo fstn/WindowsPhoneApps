@@ -123,6 +123,9 @@
   <data name="Back" xml:space="preserve">
     <value>Back</value>
   </data>
+  <data name="Flash" xml:space="preserve">
+    <value>Flash</value>
+  </data>
   <data name="ImageSaved" xml:space="preserve">
     <value>Image saved</value>
   </data>
@@ -140,5 +143,8 @@
   </data>
   <data name="Share" xml:space="preserve">
     <value>Share</value>
+  </data>
+  <data name="Switch" xml:space="preserve">
+    <value>Switch</value>
   </data>
 </root>

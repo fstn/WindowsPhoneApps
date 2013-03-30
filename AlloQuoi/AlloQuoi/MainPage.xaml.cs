@@ -17,6 +17,7 @@ using AlloQuoi.Resources;
 using Microsoft.Xna.Framework.Media.PhoneExtensions;
 using System.Xml.Linq;
 using FstnUserControl.Video;
+using System.Windows.Navigation;
 
 namespace AlloQuoi
 {
@@ -28,21 +29,32 @@ namespace AlloQuoi
         public MainPage()
         {
             InitializeComponent();
-            InitAppBar();
             this.Loaded += MainPage_Loaded;
         }
 
         void MainPage_Loaded(object sender, RoutedEventArgs e)
         {
-            CameraButtons.ShutterKeyPressed += CameraButtons_ShutterKeyPressed;
-            LoadShooter(CameraType.FrontFacing);
+            try
+            {
+                indicator = new ProgressIndicator()
+                {
+                    IsIndeterminate = true,
+                    IsVisible = true
+                };
+                InitAppBar();
+                CameraButtons.ShutterKeyPressed += CameraButtons_ShutterKeyPressed;
+                LoadShooter(CameraType.FrontFacing);
 
-            var wc = new WebClient();
-            wc.DownloadStringCompleted += DownloadStringCompleted;
-            var searchUri = string.Format(
-              "http://gdata.youtube.com/feeds/api/videos?q={0}&format=6",
-              HttpUtility.UrlEncode("alloquoi"));
-            wc.DownloadStringAsync(new Uri(searchUri));
+                var wc = new WebClient();
+                wc.DownloadStringCompleted += DownloadStringCompleted;
+                var searchUri = string.Format(
+                  "http://gdata.youtube.com/feeds/api/videos?q={0}&format=6",
+                  HttpUtility.UrlEncode("alloquoi"));
+                wc.DownloadStringAsync(new Uri(searchUri));
+            }
+            catch (Exception ex)
+            {
+            }
         }
 
 
@@ -53,6 +65,10 @@ namespace AlloQuoi
                 RootLayout.IsLocked = false;
                 RootLayout.SelectedIndex = 0;
                 RootLayout.IsLocked = true;
+                e.Cancel = true;
+            }
+            if ((primaryShooter != null && primaryShooter.CameraIsInitialized == false))
+            {
                 e.Cancel = true;
             }
         }
@@ -87,10 +103,7 @@ namespace AlloQuoi
             OrientedCameraImage OrientedImage = (OrientedCameraImage)e;
             displayImage.Source = OrientedImage.Image;
             displayImage.RenderTransformOrigin = new Point(0.5, 0.5);
-            displayImage.RenderTransform = new ScaleTransform()
-            {
-                ScaleY = -1
-            };
+
             ScreenShot.Save(exportCanvas);
             displayImage.Visibility = Visibility.Visible;
         }
@@ -176,26 +189,33 @@ namespace AlloQuoi
 
         void DownloadStringCompleted(object sender, DownloadStringCompletedEventArgs e)
         {
-            var atomns = XNamespace.Get("http://www.w3.org/2005/Atom");
-            var medians = XNamespace.Get("http://search.yahoo.com/mrss/");
-            var xml = XElement.Parse(e.Result);
-            if (xml != null)
+            try
             {
-                var videos = (
-                  from entry in xml.Descendants(atomns.GetName("entry"))
-                  select new YoutubeVideo
-                  {
-                      VideoId = entry.Element(atomns.GetName("id")).Value,
-                      VideoImageUrl = (
-                        from thumbnail in entry.Descendants(medians.GetName("thumbnail"))
-                        where thumbnail.Attribute("height").Value == "360"
-                        select thumbnail.Attribute("url").Value).FirstOrDefault(),
-                      VideoUrl = (
-                      from player in entry.Descendants(medians.GetName("player"))
-                      select player.Attribute("url").Value).FirstOrDefault(),
-                      Title = entry.Element(atomns.GetName("title")).Value
-                  }).ToArray();
-                ResultsList.ItemsSource = videos;
+                var atomns = XNamespace.Get("http://www.w3.org/2005/Atom");
+                var medians = XNamespace.Get("http://search.yahoo.com/mrss/");
+                var xml = XElement.Parse(e.Result);
+                if (xml != null)
+                {
+                    var videos = (
+                      from entry in xml.Descendants(atomns.GetName("entry"))
+                      select new YoutubeVideo
+                      {
+                          VideoId = entry.Element(atomns.GetName("id")).Value,
+                          VideoImageUrl = (
+                            from thumbnail in entry.Descendants(medians.GetName("thumbnail"))
+                            where thumbnail.Attribute("height").Value == "360"
+                            select thumbnail.Attribute("url").Value).FirstOrDefault(),
+                          VideoUrl = (
+                          from player in entry.Descendants(medians.GetName("player"))
+                          select player.Attribute("url").Value).FirstOrDefault(),
+                          Title = entry.Element(atomns.GetName("title")).Value
+                      }).ToArray();
+                    ResultsList.ItemsSource = videos;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Networking problems, please check your connection");
             }
         }
         private void InitAppBar()
@@ -207,6 +227,13 @@ namespace AlloQuoi
             ApplicationBarGenerator.Instance.CreateDouble(ApplicationBar, "/Assets/Images/" + theme + "/appbar.camera.png", Msg.Back, AskToBack);
             ApplicationBarGenerator.Instance.CreateDouble(ApplicationBar, "/Assets/Images/" + theme + "/appbar.camera.flash.png", Msg.Back, AskToFlash);
 
+        }
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            if (RootLayout.SelectedIndex != 0 || (primaryShooter != null && primaryShooter.Camera == null))
+            {
+                NavigationService.Navigate(new Uri("/MainPage.xaml?t=" + RandomService.Instance.getRand(), UriKind.Relative));
+            }
         }
 
     }

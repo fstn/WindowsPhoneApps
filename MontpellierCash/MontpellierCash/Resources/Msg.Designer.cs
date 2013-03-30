@@ -79,6 +79,15 @@ namespace MontpellierCash.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Activer.
+        /// </summary>
+        public static string Disable {
+            get {
+                return ResourceManager.GetString("Disable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Image saved.
         /// </summary>
         public static string ImageSaved {
@@ -124,11 +133,20 @@ namespace MontpellierCash.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Share.
+        ///   Looks up a localized string similar to Partager.
         /// </summary>
         public static string Share {
             get {
                 return ResourceManager.GetString("Share", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Désactiver.
+        /// </summary>
+        public static string String1 {
+            get {
+                return ResourceManager.GetString("String1", resourceCulture);
             }
         }
     }

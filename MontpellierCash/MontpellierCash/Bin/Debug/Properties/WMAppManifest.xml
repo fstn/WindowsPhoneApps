@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2012/deployment" AppPlatformVersion="8.0">
-  <DefaultLanguage xmlns="" code="en-US" />
-  <App xmlns="" ProductID="{3e14a3f4-4aed-4dbe-872f-538de11575bb}" Title="MontpellierCash" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="fstn" Description="Sample description" Publisher="fstn" PublisherID="{ce9517de-e4a5-4967-bbf6-81af9bc69911}">
+  <DefaultLanguage xmlns="" code="fr" />
+  <App xmlns="" ProductID="{3e14a3f4-4aed-4dbe-872f-538de11575bb}" Title="Montpellier Cash" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="fstn" Description="Sample description" Publisher="fstn" PublisherID="{ce9517de-e4a5-4967-bbf6-81af9bc69911}">
     <IconPath IsRelative="true" IsResource="false">Assets\Tiles\FlipCycleTileSmall.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_SENSORS" />
@@ -19,7 +19,7 @@
           <SmallImageURI IsRelative="true" IsResource="false">Assets\Tiles\FlipCycleTileSmall.png</SmallImageURI>
           <Count>0</Count>
           <BackgroundImageURI IsRelative="true" IsResource="false">Assets\Tiles\FlipCycleTileMedium.png</BackgroundImageURI>
-          <Title>MontpellierCash</Title>
+          <Title>Montpellier Cash</Title>
           <BackContent></BackContent>
           <BackBackgroundImageURI IsRelative="true" IsResource="false"></BackBackgroundImageURI>
           <BackTitle></BackTitle>
