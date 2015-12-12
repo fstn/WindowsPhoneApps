@@ -50,5 +50,20 @@ namespace FstnUserControl.ApplicationBar
             appBarMenuSave.Click += functionToCall;
             ApplicationBar.MenuItems.Add(appBarMenuSave);
         }
+        public void CreateIcon(Microsoft.Phone.Shell.IApplicationBar ApplicationBar, string image, string text, EventHandler functionToCall)
+        {
+            var appBarButtonSave = new ApplicationBarIconButton(new Uri(image, UriKind.Relative))
+            {
+                Text = text
+            };
+            appBarButtonSave.Click += functionToCall;
+            ApplicationBar.Buttons.Add(appBarButtonSave);
+        }
+        public void CreateHidden(Microsoft.Phone.Shell.IApplicationBar ApplicationBar, string text, EventHandler functionToCall)
+        {
+            var appBarMenuSave = new ApplicationBarMenuItem(text);
+            appBarMenuSave.Click += functionToCall;
+            ApplicationBar.MenuItems.Add(appBarMenuSave);
+        }
     }
 }

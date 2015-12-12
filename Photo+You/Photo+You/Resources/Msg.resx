@@ -126,17 +126,44 @@
   <data name="CANTSHARE" xml:space="preserve">
     <value>Can't share, please take a pics first</value>
   </data>
+  <data name="Error" xml:space="preserve">
+    <value>Error</value>
+  </data>
   <data name="Flash" xml:space="preserve">
     <value>Flash</value>
   </data>
+  <data name="Help" xml:space="preserve">
+    <value>Help</value>
+  </data>
+  <data name="HelpContent1" xml:space="preserve">
+    <value>Tap to take the background picture  </value>
+  </data>
+  <data name="HelpContent2" xml:space="preserve">
+    <value>Wait for decounter end to take you picture</value>
+  </data>
+  <data name="HelpContent3" xml:space="preserve">
+    <value>Tap  to place your picture where you wan</value>
+  </data>
+  <data name="HelpContent4" xml:space="preserve">
+    <value>Share and enjoy it!</value>
+  </data>
+  <data name="HelpTitle" xml:space="preserve">
+    <value>Help</value>
+  </data>
   <data name="ImageSaved" xml:space="preserve">
     <value>Image saved</value>
+  </data>
+  <data name="NewOne" xml:space="preserve">
+    <value>Take new one</value>
   </data>
   <data name="Off" xml:space="preserve">
     <value>Flash Off</value>
   </data>
   <data name="On" xml:space="preserve">
     <value>Flash On</value>
+  </data>
+  <data name="Rate" xml:space="preserve">
+    <value>Rate</value>
   </data>
   <data name="RedEye" xml:space="preserve">
     <value>Flash Red Eye</value>
@@ -146,5 +173,8 @@
   </data>
   <data name="Share" xml:space="preserve">
     <value>Share</value>
+  </data>
+  <data name="WaitForCam" xml:space="preserve">
+    <value>"Please wait for camera initialization"</value>
   </data>
 </root>

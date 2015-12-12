@@ -42,6 +42,15 @@ namespace FstnUserControl.Camera
             }
         }
 
+        private bool cameraIsRunning = false;
+        public bool CameraIsRunning
+        {
+            get
+            {
+                return cameraIsRunning;
+            }
+        }
+
         private TextBlock decountText;
         private int decountNumber = 3;
 
@@ -219,6 +228,7 @@ namespace FstnUserControl.Camera
 
         public void StartAndShoot()
         {
+            cameraIsRunning = true;
             decountText.SetBinding(TextBlock.HeightProperty, HeightBinding);
             decountText.SetBinding(TextBlock.WidthProperty, WidthBinding);
             decountText.Width = Width;
@@ -230,6 +240,7 @@ namespace FstnUserControl.Camera
 
         public void Start()
         {
+            cameraIsRunning = true;
             try
             {
                 if (Camera != null)
@@ -246,6 +257,7 @@ namespace FstnUserControl.Camera
 
         public void Stop()
         {
+            cameraIsRunning = false;
             try
             {
                 if (dt != null)
@@ -422,28 +434,31 @@ namespace FstnUserControl.Camera
 
         public void UpdateOrientation()
         {
-            switch (orientation)
+            if (orientation != null && videoBrushTransform != null)
             {
-                case PageOrientation.Landscape:
-                case PageOrientation.LandscapeLeft:
-                    angle = 0;
-                    WidthToLandscape();
-                    break;
-                case PageOrientation.LandscapeRight:
-                    angle = 180;
-                    WidthToLandscape();
-                    break;
-                case PageOrientation.Portrait:
-                case PageOrientation.PortraitUp:
-                    angle = 90;
-                    WidthToPortrait();
-                    break;
-                case PageOrientation.PortraitDown:
-                    angle = -90;
-                    WidthToPortrait();
-                    break;
+                switch (orientation)
+                {
+                    case PageOrientation.Landscape:
+                    case PageOrientation.LandscapeLeft:
+                        angle = 0;
+                        WidthToLandscape();
+                        break;
+                    case PageOrientation.LandscapeRight:
+                        angle = 180;
+                        WidthToLandscape();
+                        break;
+                    case PageOrientation.Portrait:
+                    case PageOrientation.PortraitUp:
+                        angle = 90;
+                        WidthToPortrait();
+                        break;
+                    case PageOrientation.PortraitDown:
+                        angle = -90;
+                        WidthToPortrait();
+                        break;
+                }
+                videoBrushTransform.Rotation = angle;
             }
-            videoBrushTransform.Rotation = angle;
         }
 
         private void WidthToLandscape()

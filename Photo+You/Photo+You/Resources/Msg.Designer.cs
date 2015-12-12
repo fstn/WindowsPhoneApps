@@ -88,6 +88,15 @@ namespace Photo_You.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Error.
+        /// </summary>
+        public static string Error {
+            get {
+                return ResourceManager.GetString("Error", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Flash.
         /// </summary>
         public static string Flash {
@@ -97,11 +106,74 @@ namespace Photo_You.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Help.
+        /// </summary>
+        public static string Help {
+            get {
+                return ResourceManager.GetString("Help", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tap to take the background picture  .
+        /// </summary>
+        public static string HelpContent1 {
+            get {
+                return ResourceManager.GetString("HelpContent1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Wait for decounter end to take you picture.
+        /// </summary>
+        public static string HelpContent2 {
+            get {
+                return ResourceManager.GetString("HelpContent2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tap  to place your picture where you wan.
+        /// </summary>
+        public static string HelpContent3 {
+            get {
+                return ResourceManager.GetString("HelpContent3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Share and enjoy it!.
+        /// </summary>
+        public static string HelpContent4 {
+            get {
+                return ResourceManager.GetString("HelpContent4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Help.
+        /// </summary>
+        public static string HelpTitle {
+            get {
+                return ResourceManager.GetString("HelpTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Image saved.
         /// </summary>
         public static string ImageSaved {
             get {
                 return ResourceManager.GetString("ImageSaved", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Take new one.
+        /// </summary>
+        public static string NewOne {
+            get {
+                return ResourceManager.GetString("NewOne", resourceCulture);
             }
         }
         
@@ -120,6 +192,15 @@ namespace Photo_You.Resources {
         public static string On {
             get {
                 return ResourceManager.GetString("On", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rate.
+        /// </summary>
+        public static string Rate {
+            get {
+                return ResourceManager.GetString("Rate", resourceCulture);
             }
         }
         
@@ -147,6 +228,15 @@ namespace Photo_You.Resources {
         public static string Share {
             get {
                 return ResourceManager.GetString("Share", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &quot;Please wait for camera initialization&quot;.
+        /// </summary>
+        public static string WaitForCam {
+            get {
+                return ResourceManager.GetString("WaitForCam", resourceCulture);
             }
         }
     }

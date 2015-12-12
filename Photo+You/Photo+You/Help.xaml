@@ -1,0 +1,60 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="Photo_You.Help"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+    <phone:PhoneApplicationPage.Resources>
+    </phone:PhoneApplicationPage.Resources>
+
+    <!--TitlePanel contains the name of the application and page title-->
+    <StackPanel >
+        <StackPanel.Background>
+            <ImageBrush ImageSource="Assets/Images/Background.png" Opacity="1"/>
+        </StackPanel.Background>
+        <TextBlock Style="{StaticResource PhoneTextTitle2Style}" Foreground="White"
+                   Text="{Binding ResourceGetter.HelpTitle,Source={StaticResource LocalizedStrings}}" Height="97"/>
+
+        <StackPanel Margin="5" Orientation="Horizontal" >
+            <StackPanel.Background>
+                <SolidColorBrush Color="Black" Opacity="0.5"></SolidColorBrush>
+            </StackPanel.Background>
+            <Image Source="Assets/Images/dark/appbar.card.1.png" />
+            <TextBlock TextAlignment="Center"  VerticalAlignment="Center" Style="{StaticResource PhoneTextTitle3Style}" Foreground="White"
+                   TextWrapping="Wrap" Text="{Binding ResourceGetter.HelpContent1,Source={StaticResource LocalizedStrings}}" Width="390"/>
+        </StackPanel>
+        <StackPanel Margin="5" Orientation="Horizontal" >
+            <StackPanel.Background>
+                <SolidColorBrush Color="Black" Opacity="0.5"></SolidColorBrush>
+            </StackPanel.Background>
+            <Image Source="Assets/Images/dark/appbar.card.2.png" />
+            <TextBlock TextAlignment="Center"  VerticalAlignment="Center" Style="{StaticResource PhoneTextTitle3Style}" Foreground="White"
+                   TextWrapping="Wrap" Text="{Binding ResourceGetter.HelpContent2,Source={StaticResource LocalizedStrings}}" Width="388" />
+        </StackPanel>
+        <StackPanel Margin="5" Orientation="Horizontal" >
+            <StackPanel.Background>
+                <SolidColorBrush Color="Black" Opacity="0.5"></SolidColorBrush>
+            </StackPanel.Background>
+            <Image Source="Assets/Images/dark/appbar.card.3.png" />
+            <TextBlock TextAlignment="Center"  VerticalAlignment="Center" Style="{StaticResource PhoneTextTitle3Style}" Foreground="White"
+                        TextWrapping="Wrap" Text="{Binding ResourceGetter.HelpContent3,Source={StaticResource LocalizedStrings}}" Width="389"/>
+        </StackPanel>
+        <StackPanel Margin="5" Orientation="Horizontal" >
+            <StackPanel.Background>
+                <SolidColorBrush Color="Black" Opacity="0.5"></SolidColorBrush>
+            </StackPanel.Background>
+            <Image Source="Assets/Images/dark/appbar.card.4.png" />
+            <TextBlock  TextAlignment="Center"  VerticalAlignment="Center" Style="{StaticResource PhoneTextTitle3Style}" Foreground="White"
+                       TextWrapping="Wrap" Text="{Binding ResourceGetter.HelpContent4,Source={StaticResource LocalizedStrings}}" Width="389"/>
+        </StackPanel>
+    </StackPanel>
+
+    </phone:PhoneApplicationPage>

@@ -26,15 +26,17 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <toolkit:Pivot Grid.Row="0"  x:Name="RootLayout" Padding="0" Margin="0">
-            <toolkit:PivotItem  Margin="0">
-                <Canvas x:Name="primaryCapture" Canvas.Left="0" Canvas.Top="0">
-                    <Image Source="/Assets/Images/back.png" Height="74" Width="74" Opacity="0.5" Canvas.ZIndex="100"/>
+            <toolkit:PivotItem  Margin="0"> 
+                <Canvas x:Name="firstPivotItem">
+                    <Canvas x:Name="primaryCapture" Canvas.Left="0" Canvas.Top="0">
+                        <Image Source="/Assets/Images/back.png" Height="74" Width="74" Opacity="0.5" Canvas.ZIndex="100"/>
+                    </Canvas>
                 </Canvas>
             </toolkit:PivotItem>
             <toolkit:PivotItem  Margin="0">
                 <Canvas x:Name="secondCapture" Canvas.Left="0" Canvas.Top="0" Opacity="1">
                     <Image Source="/Assets/Images/front.png" Height="74" Width="74" Canvas.ZIndex="100"/>
-                  </Canvas>
+                </Canvas>
             </toolkit:PivotItem>
             <toolkit:PivotItem x:Name="overview"  Margin="0" VerticalAlignment="Top" HorizontalAlignment="Left">
                 <Canvas>

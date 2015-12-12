@@ -46,7 +46,7 @@ namespace Photo_You {
                 return;
             }
             _contentLoaded = true;
-            System.Windows.Application.LoadComponent(this, new System.Uri("/Photo+You;component/App.xaml", System.UriKind.Relative));
+            System.Windows.Application.LoadComponent(this, new System.Uri("/DoubleTake;component/App.xaml", System.UriKind.Relative));
         }
     }
 }

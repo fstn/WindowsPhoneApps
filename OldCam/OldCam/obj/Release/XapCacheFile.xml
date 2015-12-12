@@ -1,5 +1,5 @@
-﻿<xapCache source="C:\DevTools\Git\windowsPhone\OldCam\OldCam\Bin\Release\OldCam_AnyCPU.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="28/03/2013 02:19:19">
-  <file source="C:\DevTools\Git\windowsPhone\OldCam\OldCam\obj\Release\OldCam.dll" archivePath="OldCam.dll" lastWriteTime="28/03/2013 02:19:18" />
+﻿<xapCache source="C:\DevTools\Git\windowsPhone\OldCam\OldCam\Bin\Release\OldCam_AnyCPU.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="03/04/2013 07:31:34">
+  <file source="C:\DevTools\Git\windowsPhone\OldCam\OldCam\obj\Release\OldCam.dll" archivePath="OldCam.dll" lastWriteTime="03/04/2013 07:31:33" />
   <file source="C:\DevTools\Git\windowsPhone\OldCam\OldCam\Assets\AlignmentGrid.png" archivePath="Assets\AlignmentGrid.png" lastWriteTime="16/03/2013 17:46:48" />
   <file source="C:\DevTools\Git\windowsPhone\OldCam\OldCam\Assets\ApplicationIcon.png" archivePath="Assets\ApplicationIcon.png" lastWriteTime="16/03/2013 17:46:48" />
   <file source="C:\DevTools\Git\windowsPhone\OldCam\OldCam\Assets\Audio\bip.wav" archivePath="Assets\Audio\bip.wav" lastWriteTime="16/03/2013 22:37:32" />
@@ -34,10 +34,10 @@
   <file source="C:\Program Files (x86)\Microsoft SDKs\Windows Phone\v8.0\ExtensionSDKs\MSAdvertising\6.1\References\CommonConfiguration\neutral\Microsoft.Advertising.Mobile.UI.dll" archivePath="Microsoft.Advertising.Mobile.UI.dll" lastWriteTime="10/09/2012 10:43:36" />
   <file source="C:\Program Files (x86)\Microsoft SDKs\Windows Phone\v8.0\ExtensionSDKs\MSAdvertising\6.1\References\CommonConfiguration\neutral\Microsoft.Advertising.Mobile.UI.xml" archivePath="Microsoft.Advertising.Mobile.UI.xml" lastWriteTime="20/07/2012 08:57:18" />
   <file source="C:\Program Files (x86)\Microsoft SDKs\Windows Phone\v8.0\ExtensionSDKs\MSAdvertising\6.1\References\CommonConfiguration\neutral\Microsoft.Advertising.Mobile.xml" archivePath="Microsoft.Advertising.Mobile.xml" lastWriteTime="20/07/2012 08:57:18" />
-  <file source="C:\DevTools\Git\windowsPhone\FstnAnimation\Bin\Release\FstnAnimation.dll" archivePath="FstnAnimation.dll" lastWriteTime="28/03/2013 02:19:15" />
-  <file source="C:\DevTools\Git\windowsPhone\FstnCommon\Bin\Release\FstnCommon.dll" archivePath="FstnCommon.dll" lastWriteTime="28/03/2013 02:19:13" />
-  <file source="C:\DevTools\Git\windowsPhone\FstnDesign\Bin\Release\FstnDesign.dll" archivePath="FstnDesign.dll" lastWriteTime="28/03/2013 02:19:14" />
-  <file source="C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Release\FstnUserControl.dll" archivePath="FstnUserControl.dll" lastWriteTime="28/03/2013 02:19:16" />
+  <file source="C:\DevTools\Git\windowsPhone\FstnAnimation\Bin\Release\FstnAnimation.dll" archivePath="FstnAnimation.dll" lastWriteTime="29/03/2013 08:06:13" />
+  <file source="C:\DevTools\Git\windowsPhone\FstnCommon\Bin\Release\FstnCommon.dll" archivePath="FstnCommon.dll" lastWriteTime="29/03/2013 08:06:13" />
+  <file source="C:\DevTools\Git\windowsPhone\FstnDesign\Bin\Release\FstnDesign.dll" archivePath="FstnDesign.dll" lastWriteTime="28/03/2013 22:57:01" />
+  <file source="C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Release\FstnUserControl.dll" archivePath="FstnUserControl.dll" lastWriteTime="29/03/2013 08:09:31" />
   <file source="C:\Program Files (x86)\Microsoft SDKs\Expression\Blend\Windows Phone\v8.0\Libraries\Microsoft.Expression.Drawing.dll" archivePath="Microsoft.Expression.Drawing.dll" lastWriteTime="25/09/2012 02:41:02" />
   <file source="C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Release\Microsoft.Phone.Controls.Toolkit.dll" archivePath="Microsoft.Phone.Controls.Toolkit.dll" lastWriteTime="21/02/2013 10:42:29" />
   <file source="C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Release\MyToolkit.Extended.dll" archivePath="MyToolkit.Extended.dll" lastWriteTime="24/03/2013 07:54:47" />

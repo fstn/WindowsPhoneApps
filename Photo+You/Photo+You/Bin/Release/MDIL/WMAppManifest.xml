@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2012/deployment" AppPlatformVersion="8.0">
   <DefaultLanguage xmlns="" code="en-US" />
-  <App xmlns="" ProductID="{3e14a3f4-4aed-4dbe-872f-538de11575bb}" Title="CamDo" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="fstn" Description="Sample description" Publisher="CamDo" PublisherID="{ce9517de-e4a5-4967-bbf6-81af9bc69911}">
-    <IconPath IsRelative="true" IsResource="false">Assets\Images\FlipCycleTileMedium.png</IconPath>
+  <App xmlns="" ProductID="{3e14a3f4-4aed-4dbe-872f-538de11575bb}" Title="Double Take" RuntimeType="Silverlight" Version="2.0.0.0" Genre="apps.normal" Author="fstn" Description="Apps that allow to take phot with you and your background" Publisher="Fstn" PublisherID="{ce9517de-e4a5-4967-bbf6-81af9bc69911}">
+    <IconPath IsRelative="true" IsResource="false">Assets\Tiles\FlipCycleTileMedium.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_NETWORKING" />
       <Capability Name="ID_CAP_MEDIALIB_AUDIO" />
@@ -18,14 +18,14 @@
     <Tokens>
       <PrimaryToken TokenID="Photo_YouToken" TaskName="_default">
         <TemplateFlip>
-          <SmallImageURI IsRelative="true" IsResource="false">Assets\Images\FlipCycleTileSmall.png</SmallImageURI>
+          <SmallImageURI IsRelative="true" IsResource="false">Assets\Tiles\FlipCycleTileSmall.png</SmallImageURI>
           <Count>0</Count>
-          <BackgroundImageURI IsRelative="true" IsResource="false">Assets\Images\FlipCycleTileMedium.png</BackgroundImageURI>
-          <Title>CamDo</Title>
+          <BackgroundImageURI IsRelative="true" IsResource="false">Assets\Tiles\FlipCycleTileMedium.png</BackgroundImageURI>
+          <Title></Title>
           <BackContent></BackContent>
           <BackBackgroundImageURI IsRelative="true" IsResource="false"></BackBackgroundImageURI>
           <BackTitle></BackTitle>
-          <LargeBackgroundImageURI IsRelative="true" IsResource="false">Assets\Images\FlipCycleTileLarge.png</LargeBackgroundImageURI>
+          <LargeBackgroundImageURI IsRelative="true" IsResource="false">Assets\Tiles\FlipCycleTileLarge.png</LargeBackgroundImageURI>
           <LargeBackContent />
           <LargeBackBackgroundImageURI IsRelative="true" IsResource="false"></LargeBackBackgroundImageURI>
           <DeviceLockImageURI IsRelative="true" IsResource="false"></DeviceLockImageURI>

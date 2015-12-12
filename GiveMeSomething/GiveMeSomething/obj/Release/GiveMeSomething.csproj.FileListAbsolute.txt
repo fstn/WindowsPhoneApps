@@ -13,7 +13,6 @@ C:\DevTools\Git\windowsPhone\GiveMeSomething\GiveMeSomething\Bin\Release\GalaSof
 C:\DevTools\Git\windowsPhone\GiveMeSomething\GiveMeSomething\Bin\Release\Microsoft.Advertising.Mobile.dll
 C:\DevTools\Git\windowsPhone\GiveMeSomething\GiveMeSomething\Bin\Release\Microsoft.Advertising.Mobile.UI.dll
 C:\DevTools\Git\windowsPhone\GiveMeSomething\GiveMeSomething\Bin\Release\Microsoft.Phone.Controls.dll
-C:\DevTools\Git\windowsPhone\GiveMeSomething\GiveMeSomething\Bin\Release\Microsoft.Phone.Controls.Toolkit.dll
 C:\DevTools\Git\windowsPhone\GiveMeSomething\GiveMeSomething\Bin\Release\MyToolkit.Extended.dll
 C:\DevTools\Git\windowsPhone\GiveMeSomething\GiveMeSomething\Bin\Release\MyToolkit.dll
 C:\DevTools\Git\windowsPhone\GiveMeSomething\GiveMeSomething\Bin\Release\Microsoft.Phone.Controls.Maps.dll

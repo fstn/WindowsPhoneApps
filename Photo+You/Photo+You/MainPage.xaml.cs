@@ -90,18 +90,34 @@ namespace Photo_You
 
         void MainPage_BackKeyPress(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            if (RootLayout.SelectedIndex > 0)
+            if ((primaryShooter != null && primaryShooter.CameraIsRunning == true && primaryShooter.CameraIsInitialized == false) || (secondShooter != null && secondShooter.CameraIsInitialized == false && secondShooter.CameraIsRunning == true))
             {
-                RootLayout.IsLocked = false;
-                RootLayout.SelectedIndex = 0;
-                RootLayout.IsLocked = true;
                 e.Cancel = true;
+                MessageBox.Show(Msg.WaitForCam);
+            }
+            else
+            {
+                if (RootLayout.SelectedIndex > 0)
+                {
+                    RootLayout.IsLocked = false;
+                    RootLayout.SelectedIndex = 0;
+                    RootLayout.IsLocked = true;
+                    e.Cancel = true;
+                }
+                else
+                {
+                    var buttonInfo = MessageBox.Show("Are you sure you want to exit?", "Exit", MessageBoxButton.OKCancel);
+                    if (buttonInfo == MessageBoxResult.OK)
+                    {
+                    }
+                    else
+                    {
+                        //Stop page from navigating
+                        e.Cancel = true;
+                    }
+                }
             }
 
-            if ((primaryShooter != null && primaryShooter.CameraIsInitialized == false) && (secondShooter != null && secondShooter.CameraIsInitialized == false))
-            {
-                e.Cancel = true;
-            }
         }
 
         void MainPage_OrientationChanged(object sender, OrientationChangedEventArgs e)
@@ -244,13 +260,14 @@ namespace Photo_You
                     try
                     {
                         var picture = lib.SavePicture(String.Format(name), ms);
+                        MessageBox.Show(Msg.ImageSaved);
                     }
                     catch (NullReferenceException ex)
                     {
+                        MessageBox.Show(Msg.Error);
                         Debugger.Log(4, "", ex.Message);
                     }
                 }
-                MessageBox.Show(Msg.ImageSaved);
             }
         }
 
@@ -329,11 +346,24 @@ namespace Photo_You
         {
             var theme = ThemeManager.Instance.Theme;
             ApplicationBar = new ApplicationBar();
-            ApplicationBar.IsMenuEnabled = false;
-            ApplicationBarGenerator.Instance.CreateDouble(ApplicationBar, "/Assets/Images/" + theme + "/appbar.camera.flash.png", Msg.Flash, AskToFlash);
- ApplicationBarGenerator.Instance.CreateDouble(ApplicationBar, "/Assets/Images/" + theme + "/appbar.share.png", Msg.Share, AskToShare);
-            ApplicationBarGenerator.Instance.CreateDouble(ApplicationBar, "/Assets/Images/" + theme + "/appbar.save.png", Msg.Save, AskToSave);
-            ApplicationBarGenerator.Instance.CreateDouble(ApplicationBar, "/Assets/Images/" + theme + "/appbar.camera.png", Msg.Back, AskToBack);
+            ApplicationBar.IsMenuEnabled = true;
+            ApplicationBarGenerator.Instance.CreateHidden(ApplicationBar, Msg.Rate, AskToRate);
+            ApplicationBarGenerator.Instance.CreateHidden(ApplicationBar, Msg.Help, AskToHelp);
+            ApplicationBarGenerator.Instance.CreateIcon(ApplicationBar, "/Assets/Images/" + theme + "/appbar.camera.flash.png", Msg.Flash, AskToFlash);
+            ApplicationBarGenerator.Instance.CreateIcon(ApplicationBar, "/Assets/Images/" + theme + "/appbar.share.png", Msg.Share, AskToShare);
+            ApplicationBarGenerator.Instance.CreateIcon(ApplicationBar, "/Assets/Images/" + theme + "/appbar.save.png", Msg.Save, AskToSave);
+            ApplicationBarGenerator.Instance.CreateIcon(ApplicationBar, "/Assets/Images/" + theme + "/appbar.camera.png", Msg.NewOne, AskToBack);
+        }
+
+        private void AskToRate(object sender, EventArgs e)
+        {
+            MarketplaceReviewTask marketplaceReviewTask = new MarketplaceReviewTask();
+            marketplaceReviewTask.Show();
+        }
+
+        private void AskToHelp(object sender, EventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Help.xaml", UriKind.Relative));
         }
 
         private void AskToFlash(object sender, EventArgs e)

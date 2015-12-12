@@ -1,5 +1,5 @@
-﻿<xapCache source="C:\DevTools\Git\windowsPhone\HarlemShake\HarlemShake\Bin\Release\HarlemShake_AnyCPU.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="29/03/2013 13:00:45">
-  <file source="C:\DevTools\Git\windowsPhone\HarlemShake\HarlemShake\obj\Release\HarlemShake.dll" archivePath="HarlemShake.dll" lastWriteTime="29/03/2013 13:00:44" />
+﻿<xapCache source="C:\DevTools\Git\windowsPhone\HarlemShake\HarlemShake\Bin\Release\HarlemShake_AnyCPU.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="03/04/2013 13:48:11">
+  <file source="C:\DevTools\Git\windowsPhone\HarlemShake\HarlemShake\obj\Release\HarlemShake.dll" archivePath="HarlemShake.dll" lastWriteTime="03/04/2013 13:48:09" />
   <file source="C:\DevTools\Git\windowsPhone\HarlemShake\HarlemShake\Assets\Images\Background2.png" archivePath="Assets\Images\Background2.png" lastWriteTime="24/03/2013 15:27:55" />
   <file source="C:\DevTools\Git\windowsPhone\HarlemShake\HarlemShake\Assets\Images\HarlemMask.png" archivePath="Assets\Images\HarlemMask.png" lastWriteTime="24/03/2013 14:24:10" />
   <file source="C:\DevTools\Git\windowsPhone\HarlemShake\HarlemShake\Assets\Images\HarlemMaskShake.png" archivePath="Assets\Images\HarlemMaskShake.png" lastWriteTime="24/03/2013 14:35:47" />
@@ -36,7 +36,7 @@
   <file source="C:\DevTools\Git\windowsPhone\FstnAnimation\Bin\Release\FstnAnimation.dll" archivePath="FstnAnimation.dll" lastWriteTime="29/03/2013 08:06:13" />
   <file source="C:\DevTools\Git\windowsPhone\FstnCommon\Bin\Release\FstnCommon.dll" archivePath="FstnCommon.dll" lastWriteTime="29/03/2013 08:06:13" />
   <file source="C:\DevTools\Git\windowsPhone\FstnDesign\Bin\Release\FstnDesign.dll" archivePath="FstnDesign.dll" lastWriteTime="28/03/2013 22:57:01" />
-  <file source="C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Release\FstnUserControl.dll" archivePath="FstnUserControl.dll" lastWriteTime="29/03/2013 08:09:31" />
+  <file source="C:\DevTools\Git\windowsPhone\FstnUserControl\Bin\Release\FstnUserControl.dll" archivePath="FstnUserControl.dll" lastWriteTime="03/04/2013 13:48:07" />
   <file source="C:\Program Files (x86)\Microsoft SDKs\Expression\Blend\Windows Phone\v8.0\Libraries\Microsoft.Expression.Drawing.dll" archivePath="Microsoft.Expression.Drawing.dll" lastWriteTime="25/09/2012 02:41:02" />
   <file source="C:\Program Files (x86)\Microsoft SDKs\Windows Phone\v8.0\Libraries\Microsoft.Phone.Controls.dll" archivePath="Microsoft.Phone.Controls.dll" lastWriteTime="26/09/2012 15:30:38" />
   <file source="C:\DevTools\Git\windowsPhone\MyToolkit\Phone\Bin\Debug\WP7.Extended\MyToolkit.dll" archivePath="MyToolkit.dll" lastWriteTime="24/03/2013 07:54:46" />

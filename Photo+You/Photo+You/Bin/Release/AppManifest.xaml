@@ -1,6 +1,6 @@
-﻿<Deployment xmlns="http://schemas.microsoft.com/client/2007/deployment" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" EntryPointAssembly="Photo+You" EntryPointType="Photo_You.App" RuntimeVersion="4.7.50308.0">
+﻿<Deployment xmlns="http://schemas.microsoft.com/client/2007/deployment" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" EntryPointAssembly="DoubleTake" EntryPointType="Photo_You.App" RuntimeVersion="4.7.50308.0">
   <Deployment.Parts>
-    <AssemblyPart x:Name="Photo+You" Source="Photo+You.dll" />
+    <AssemblyPart x:Name="DoubleTake" Source="DoubleTake.dll" />
     <AssemblyPart x:Name="Microsoft.Advertising.Mobile" Source="Microsoft.Advertising.Mobile.dll" />
     <AssemblyPart x:Name="Microsoft.Advertising.Mobile.UI" Source="Microsoft.Advertising.Mobile.UI.dll" />
     <AssemblyPart x:Name="FstnAnimation" Source="FstnAnimation.dll" />

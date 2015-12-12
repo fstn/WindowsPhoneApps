@@ -9,7 +9,8 @@
     xmlns:es="clr-namespace:Microsoft.Expression.Shapes;assembly=Microsoft.Expression.Drawing"
     xmlns:edc="clr-namespace:Microsoft.Expression.Controls;assembly=Microsoft.Expression.Drawing"   
     xmlns:maps="clr-namespace:Microsoft.Phone.Maps.Controls;assembly=Microsoft.Phone.Maps"
-    xmlns:fstnUCVideo="clr-namespace:FstnUserControl.Video;assembly=FstnUserControl"
+     xmlns:advertising ="clr-namespace:Microsoft.Advertising.Mobile.UI;assembly=Microsoft.Advertising.Mobile.UI"
+      xmlns:fstnUCVideo="clr-namespace:FstnUserControl.Video;assembly=FstnUserControl"
     x:Class="HarlemShake.MainPage"
     mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="480"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
@@ -26,8 +27,22 @@
                                  Text="Chargement" />
     </shell:SystemTray.ProgressIndicator>
     <Grid    Margin="0">
-        <Image Stretch="Fill" Visibility="Visible" Source="/Assets/Images/Background.png" Margin="0,0,0,-138"></Image>
-        <toolkit:Pivot Grid.Row="0"  x:Name="RootLayout" Padding="0">
+        <Grid.Background>
+            <ImageBrush ImageSource="/Assets/Images/Background.png" />
+
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0">
+            <Border Background="Transparent">
+                <advertising:AdControl Name="AdControl" Height="80"  Width="480"  BorderThickness="0" 
+                                       Background="Transparent"                                  
+                                       AdUnitId="124705" ApplicationId="259f446a-0f18-441d-96e8-8ffab00f317b" />
+            </Border>
+        </StackPanel>
+        <toolkit:Pivot Grid.Row="1"  x:Name="RootLayout" Padding="0">
             <toolkit:Pivot.HeaderTemplate>
                 <DataTemplate>
                     <TextBlock Text="{Binding}" Foreground="Yellow" FontFamily="/HarlemShake;component/Fonts/killcrazybb_reg.ttf#KillCrazy BB" FontSize="76"/>
